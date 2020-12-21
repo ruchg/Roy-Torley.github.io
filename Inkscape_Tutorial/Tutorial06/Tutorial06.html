@@ -1,0 +1,1438 @@
+<!doctype html>
+
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 6 &ndash; Working with Layers</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+
+<body>
+  <div class = "container">
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 6 &ndash; Working with Layers</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-4">
+          <img src = "images/Tutorial06FinishedImage.gif"
+          alt = "Finished practice image file for Tutorial 6" class =
+          "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6">
+<p class = "lead">Layers let you organize your work into distinct levels that
+can be edited and viewed as individual units. Every Inkscape document contains
+at least one layer. Creating multiple layers in your artwork lets you easily
+control how artwork is printed, displayed, and edited.</p>
+      </div>
+    </div>
+<hr>
+
+<section>
+<header>
+<h4>In this tutorial, you&rsquo;ll learn how to do the following: </h4>
+  <ul>
+    <li>Work with the Layers palette.</li>
+    <li>Create and name new layers and sublayers.</li>
+    <li>Move layers and sublayers to change their position in the layer
+    stack.</li>
+    <li>Move objects between layers.</li>
+    <li>Lock layers to prevent editing.</li>
+    <li>Hide layers to make viewing and editing easier, and redisplay them.</li>
+    <li>Paste objects from another file into your artwork.</li>
+    <li>Create clipping masks to control how artwork is hidden or revealed.</li>
+    <li>Add an appearance attribute to a layer.</li>
+  </ul>
+</header>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+<p>In this lesson, you&rsquo;ll finish the artwork of a wall clock as you
+explore the various ways to use the Layers palette. Before you begin, you will
+open the finished art file for this lesson to see what you&rsquo;ll create.</p>
+<ol>
+  <li><p>Start Inkscape.</p>
+  </li>
+  <li><p>Download and <u>F</u>ile &gt; <u>O</u>pen file <a href =
+  "Tutorial06End.svg"><b>Tutorial06End.svg</b></a>.</p>
+    <figure>
+      <img src = "images/Tutorial06FinishedImage.gif"
+      alt = "Tutorial 06 finished images"
+      class = "img-fluid">
+      <figcaption>Finished artwork.</figcaption>
+    </figure>
+    <p>Separate layers are used for the objects that make up the clock&rsquo;s
+    frame, striped clock face, hands, and numbers &ndash; as indicated by
+    their layer names in the Layers palette.</p>
+<div>
+  <ol style = "float: left; margin-top: 3rem; font-style: italic;
+  font-weight: bold; list-style-type: upper-alpha;">
+    <li>Layers palette menu bar.
+    </li>
+    <li>Eye icon (Hide/Show).
+    </li>
+    <li>Current layer indicator.
+    </li>
+    <li>Edit column (Lock/Unlock).
+    </li>
+    <li>Create a new layer.
+    </li>
+    <li>Delete the current layer in the stacking order.
+    </li>
+    <li>Raise the current layer to the top.
+    </li>
+    <li>Raise the current layer.
+    </li>
+    <li>Lower the current layer in the stacking order.
+    </li>
+    <li>Lower the current layer to the bottom.<br><br>
+    </li>
+  </ol>
+  <figure style = "float: left;" class = "ml-5">
+    <img src = "images/LayersPalette.png" alt = "Layers palette"
+    class = "img-fluid">
+    <figcaption>Layers palette.</figcaption>
+  </figure>
+</div>
+  <div style = "clear: both;"></div>
+  </li>
+  <li><p>If you like, you may leave the file open as a visual reference. Do this
+  by reducing the size of your Inkscape window, then press the number <b>5</b>
+  to fit the artboard in the screen. If you don&rsquo;t want to leave the image
+  open, choose <u>F</u>ile &gt; <u>C</u>lose.</p>
+
+  <aside><p><b>Tip:</b> For an illustration of the finished artwork in this
+  lesson, see the illustration at the very beginning of this lesson.</p>
+  </aside>
+
+  <p>To begin working, you&rsquo;ll open an existing file.</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; <u>O</u>pen, and open file
+  <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial06/Tutorial06Start.svg"><b>Tutorial06Start.svg</b></a>.
+  If you left the earlier reduced-sized window open, Inkscape will show the new
+  artwork in a new Inkscape workspace window. Otherwise, the new image will
+  appear the reduced-size screen. Expand the screen to full size for your
+  computer monitor.</p>
+    <figure>
+      <img src = "images/Tutorial06StartingImage.gif"
+      alt = "Starting image for Tutorial 06"
+      class = "img-fluid">
+      <figcaption>The artwork contains some of the basic objects for the
+      clock illustration.</figcaption>
+  </figure>
+  </li>
+  <li>Choose <u>F</u>ile &gt; Save <u>A</u>s, name the file <b>Clock.svg</b>,
+  and save it in a convenient location.
+  </li>
+</ol>
+<aside>
+<p>Using the Layers palette, you can create multiple levels of artwork that
+reside on separate, overlapping layers, sublayers, and groups in the same file.
+Layers act like individual, clear sheets containing one or more objects. Where
+no filled (or nontransparent) objects overlap, you can see through any layer to
+the layer below.</p>
+
+<p>You can create and edit objects on any layer without affecting the artwork
+on any other layer. You can also display, print, lock, and reorder layers as
+distinct units.</p>
+<figure>
+  <img src = "images/PlowingTheSeasBox.png"
+  alt = "Composite artwork" width = "900"
+  class = "img-fluid">
+  <figcaption>Example of composite art and how layers break out
+  individually.</figcaption>
+</figure>
+</aside>
+</section>
+<section>
+<header>
+  <h2>Creating Layers</h2>
+</header>
+<p>Every document in Inkscape contains one layer by default. You can rename the
+layer and add more layers at any time as you create the artwork. Placing
+objects on separate layers lets you easily select and edit them by their
+organization. For example, by placing type on a separate layer, you can change
+the type all at once without affecting the rest of the artwork.</p>
+
+<p>You&rsquo;ll change the layer name to &ldquo;Clock,&rdquo; and then
+you&rsquo;ll create another layer.</p>
+
+<ol>
+  <li><p>If the Layers palette isn&rsquo;t visible on-screen, choose
+  <u>L</u>ayer &gt; Layer<u>s</u> to display it. Alternatively, you can click
+  on the <b>View Layers</b> icon (<img src = "images/ViewLayersIcon.gif" alt =
+  "View Layers icon">) in the Commands Bar.</p>
+  <p><b>Layer 1</b> (the default name for the first layer) is highlighted,
+  indicating that it is active.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/StartingArtboard.gif" alt = "Starting image in
+      artboard" class = "img-fluid">
+      <figcaption>Starting image on the artboard.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/LayersPalette.gif" alt = "Layers palette">
+      <figcaption>The Layers palette. Layer 1 is highlighted.</figcaption>
+    </figure>
+    <div style = "clear: both;"></div>
+  </li>
+  <li><p>In the Layers palette, double-click the layer name to highlight it.
+  Type <b>Clock</b> in the text box, and then press &lt;Enter&gt; to set the
+  new name.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/DoubleClickLayer1.gif"
+    alt = "Double-click Layer 1 to highlight it." class = "img-fluid">
+    <figcaption>Double-click on the <b>Layer 1</b> name to highlight
+    it.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/Rename2Clock.gif" alt = "Rename Layer 1 to Clock"
+    class = "img-fluid">
+    <figcaption>Layer 1 renamed to <b>Clock</b>.</figcaption>
+  </figure>
+  <div style = "clear: both;"></div>
+  <p>Now you&rsquo;ll create a sublayer for the clock numbers.</p>
+</li>
+  <li><p>Choose <u>L</u>ayer &gt; <u>A</u>dd Layer&hellip; You can also
+  right-click on the <b>Clock</b> layer bar in the Layers palette. The Layers
+  short-cut menu appears.</p>
+  </li>
+  <li><p>Click on <b><u>A</u>dd Layer&hellip;</b></p>
+  <p>The Add Layer Dialog box appears. The <b>Layer name</b> is <b>Clock 1</b>.
+  It is highlighted, which means that you can edit it. Change the <b>Layer
+  name</b> to <b>Numbers</b>.</p>
+  </li>
+  <li><p>Click on the down selector arrow (<img src = "images/DownArrow.gif"
+  alt = "Selection list arrow" >) in the <b>Position</b> selection box and
+  select <b>As sublayer of current</b> (as a sublayer of the current active
+  layer). Click the <b>Add</b> button to create the <b>Numbers</b> layer as a
+  sublayer to <b>Clock</b>.</p>
+  <figure class = "ml-5 mr-5" style = "float: left;">
+    <img src = "images/LayersShortCutMenu.gif"
+    alt = "Layers short-cut menu"
+    class = "img-fluid">
+    <figcaption>Layers short-cut menu</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/ChooseSublayer.gif" alt = "Choose sublayer position"
+    class = "img-fluid">
+    <figcaption>Choose Position: As a sublayer of current</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/NumbersSublayer.gif"
+    alt = "Numbers sublayer"
+    class = "img-fluid">
+    <figcaption><b>Numbers</b> sublayer &ndash; note the indentation<br>
+    to show that <b>Numbers</b> is a sublayer of the<br>layer above it.
+    </figcaption>
+  </figure>
+  <div style = "clear: both;"></div>
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Moving Objects and Layers</h2>
+</header>
+<p>By rearranging the layers in the <b>Layers</b> palette, you can reorder
+layered objects in your artwork. You can also move selected objects from one
+layer or sublayer to another.</p>
+
+<p>First, you&rsquo;ll move the clock numbers onto their own sublayer.</p>
+
+<ol>
+  <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), click on the numeral <b>1</b> on the clock
+  face to select it.</p>
+  <figure>
+    <img src = "images/Select1.gif" alt = "Select the numeral 1."
+    class = "img-fluid">
+    <figcaption>Select the numeral <b>1</b>.</figcaption>
+  </figure>
+  </li>
+  <li><p>Choose <u>L</u>ayer &gt; Move Selection to Layer Bel<u>o</u>w. The
+  <b>Numbers</b> layer bar in the <b>Layers</b> palette is highlighted,
+  indicating that it is now the active layer and that the numeral <b>1</b> is
+  now located on the <b>Numbers</b> layer.</p>
+  <figure>
+    <img src = "images/NumbersSublayerHighlighted.gif"
+    alt = "Numeral 2 moved to Numbers sublayer." class = "img-fluid">
+    <figcaption>Move the numeral <b>2</b> to the <b>Numbers</b>
+    sublayer.</figcaption>
+  </figure>
+  </li>
+    <li><p>Click on the numeral <b>2</b> on the clock face. The numeral <b>2</b>
+    is now selected and the <b>Clock</b> layer is highlighted, indicating that
+    you have moved off the <b>Numbers</b> layer and onto the <b>Clock</b> layer,
+    where numeral <b>2</b> is actually located.<br>
+      <figure>
+        <img src = "images/SelectNumeral2.gif"
+        alt = "Select the numeral 2."
+        class = "img-fluid">
+        <figcaption>Select the numeral <b>2</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Again, choose Layer &gt; Move Selection to Layer Below. The
+    <b>Numbers</b> layer bar in the Layers palette is highlighted again. The
+    numeral <b>2</b> is now on the <b>Numbers</b> layer.</p>
+    </li>
+    <li><p>Select numeral <b>3</b>, but this time, press the hot-key combination
+    &lt;Shift&gt;-&lt;Page Down&gt; to make the <b>Numbers</b> layer active and
+    add the <b>3</b> onto this layer. Repeat this step for numbers <b>4</b>,
+    <b>5</b>, and <b>6</b>.</p>
+    </li>
+    <li><p>For numerals <b>7</b> through <b>12</b>, move them to the
+    <b>Numbers</b> layer <u>as a group</u> by &lt;Shift&gt;-clicking on them
+    (see Tutorial 2, Using the Select Tool), and then pressing
+    &lt;Shift&gt;-&lt;Page Down&gt;.</p>
+    <figure>
+      <img src = "images/ShiftClickOn7To12.gif" alt = "Select numerals 7 to 12."
+      class = "img-fluid">
+      <figcaption>Select numerals <b>7</b> to <b>12</b>.</figcaption>
+    </figure>
+    </li>
+    <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select. Then choose <u>F</u>ile &gt;
+    <u>S</u>ave.</p>
+    <p>Now you&rsquo;ll move the face of the clock to a new layer to use later
+    when you add the stripes, hands, and brand name of the clock, and
+    you&rsquo;ll rename the <b>Clock</b> layer to reflect the new organization
+    of the artwork.</p>
+    </li>
+    <li><p>Click on the <b>Clock</b> layer bar to highlight it. Then click on
+    the boxed minus sign (<img src = "images/BoxedMinusSign.gif" alt = "Boxed
+    minus sign" >)to collapse the <b>Numbers</b> layer bar underneath. This
+    will help simplify your work. We will add the new layer above
+    <b>Clock</b>.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/HighlightClockLayerBar.gif"
+        alt = "Highlight the Clock layer bar."
+        class = "img-fluid">
+        <figcaption>Click on the <b>Clock</b> layer bar to highlight
+        it.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/CollapsedNumbersLayerBar.gif"
+        alt = "Collapse the Numbers layer bar."
+        class = "img-fluid">
+        <figcaption>Collapse the <b>Numbers</b> layer bar.</figcaption>
+      </figure>"
+    <div style = "clear: left;"></div>
+    <p>Note how the boxed plus sign becomes a boxed plus sign (<img src =
+    "images/BoxedPlusSign.gif" alt = "Boxed plus sign" width = "26">),
+    indicating that the <b>Clock</b> layer contains a sublayer which becomes
+    visible when you click on the plus sign.</p>
+    </li>
+    <li><p>Add a new layer by clicking on the plus sign icon
+    (<img src = "images/PlusSignIcon.gif" alt = "Plus sign icon" >) on the
+    bottom left of the <b>Layers</b> palette. Label the new layer
+    <b>Face</b>.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/NewLayer2.gif"
+        alt = "Create a new layer."
+        class = "img-fluid">
+        <figcaption>Create a new layer by clicking on the plus sign
+        icon.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/Face.gif"
+        alt = "Label the new layer Face."
+        class = "img-fluid">
+        <figcaption>Label the new layer <b>Face</b>.</figcaption>
+      </figure>
+    <div style = "clear: left;"></div>
+    </li>
+    <li><p>Click on the <b>Add</b> button. The <b>Face</b> layer is added above
+    the <b>Clock</b> layer and becomes active.</p>
+      <figure>
+        <img src = "images/FaceAboveClock.gif"
+        alt = "The new layer Face is added above the Clock layer."
+        class = "img-fluid">
+        <figcaption>The new layer <b>Face</b> is added above the <b>Clock</b>
+        layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>In the artwork, click behind the numbers to select the clock face.
+    Notice that the <b>Clock</b> layer bar is highlighted, signaling that it is
+    now the active layer.</p>
+      <figure style = "float: left" class = "ml-5 mr-5">
+        <img src = "images/SelectFace1.gif" alt = "Select the clock face."
+        class = "img-fluid">
+        <figcaption>Select the clock face.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/SelectFace2.gif" alt = "Selection shows in Layers
+        palette." class = "img-fluid">
+        <figcaption>Selection shows in Layers palette.</figcaption>
+      </figure>
+      <div style = "clear: both;"></div>
+    </li>
+    <li><p>Press &lt;Shift&gt;-&lt;Page Up&gt; to make the <b>Face</b> layer
+    active and have it contain the clock&rsquo;s face.</p>
+      <figure>
+        <img src = "images/ClockFaceInFaceLayer.gif"
+        alt = "Clock face is now in the Face layer." class = "img-fluid">
+        <figcaption>The <b>Face</b> layer now contains the clock face
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Deselect the clock face by clicking anywhere off the face.</p>
+    <p>What we have done now is put the clock face over the numbers so we
+    can&rsquo;t see them. It is as if we pulled a sheet of tracing paper with
+    the face circle drawn on it out of a stack of tracing paper sheets, each
+    sheet having a drawing of the clock frame, clock face, and numbers, and put
+    the face drawing on the very top of the stack, covering up the numbers.</p>
+    <p>We will now relocate the numbers so that they are on top of the clock
+    face.</p>
+    </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Moving a Sublayer</h2>
+</header>
+<p>The numbers for the hours are covered over now by the image of the clock
+face. The clock face is topmost in the stack of layers that make up the
+artwork. The numbers that represent the hours are on the <b>Numbers</b>
+sublayer. This sublayer is subordinate to the <b>Clock</b> layer.</p>
+  <figure style = "float: left; margin-right: 0;">
+    <img src = "images/Layers.gif" alt = "Layer decomposition."
+    class = "img-fluid">
+    <figcaption>Layer decomposition</figcaption>
+  </figure>
+  <figure style = "margin-left: 0;">
+    <img src = "images/Layers2.gif" alt = "Layer decomposition."
+    class = "img-fluid">
+  </figure>
+  <div style = "clear: left;"></div>
+<ol>
+  <li><p>Click on the <b>Numbers</b> sublayer bar and drag it up until you see
+  the <b>Placement line</b> appear above the <b>Face</b> layer. Release the
+  mouse button.</p>
+  <figure>
+    <img src = "images/MoveSublayer.png"
+    alt = "Drag the Numbers sublayer up"
+    class = "img-fluid">
+    <figcaption>Drag the <b>Numbers</b> sublayer up until the <b>Placement
+    line</b> appears above<br>the <b>Face</b> layer bar.</figcaption>
+  </figure>
+  <p>You will see the <b>Move Indicator</b> (<img src =
+  "images/MoveIndicator.gif" alt = "Move Indicator" >) as you drag the bar.</p>
+  </li>
+  <li><p>Release the mouse button. The <b>Numbers</b> bar settles into place
+  above the <b>Face</b> layer bar and the numbers appear on the artwork on the
+  clock face.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/NumbersAtTop.gif"
+    alt = "Numbers layer topmost and numbers appear on face"
+    class = "img-fluid">
+    <figcaption>The <b>Numbers</b> layer bar is topmost in the layers list
+    and<br>numbers appear on the artwork.</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/NumbersAtTopOfLayersList.gif"
+    alt = "Numbers Layer topmost in Layers palette" class = "img-fluid">
+  </figure>
+  <div style = "clear: both;"></div>
+  </li>
+  <li><p>Double-click the <b>Clock</b> layer to highlight the layer name. Change
+  the layer name to <b>Frame</b> and press &lt;Enter&gt; to set the name.</p>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select to deselect all active objects,
+  and then choose <u>F</u>ile &gt; <u>S</u>ave.
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Locking Layers</h2>
+</header>
+<p>As you edit objects on a layer, use the <b>Layers</b> palette to lock other
+layers and prevent selecting or changing the rest of the artwork.</p>
+<p>Now you&rsquo;ll lock all the layers except the <b>Numbers</b> layer so that
+you can easily edit the clock numbers without affecting objects on other layers.
+Locked layers cannot be selected or edited in any way.</p>
+
+<ol>
+  <li><p>Click on the open padlock icon (<img src =
+  "images/OpenPadlockIcon.gif" alt = "Open Padlock icon" >) in the
+  <b>Face</b> and <b>Frame</b> layer bars to lock them. The closed padlock
+  icon (<img src = "images/ClosedPadlockIcon.gif" alt = "Closed Padlock icon"
+  class = "center">) indicates that a layer is locked. You cannot select it
+  or make any changes to it.</p>
+  <figure>
+    <img src = "images/LockFaceFrame.gif"
+    alt = "Locking the Face and Frame layers"
+    class = "img-fluid">
+    <figcaption>Locking the <b>Face</b> and <b>Frame</b> layers.</figcaption>
+  </figure>
+  <p>Now you&rsquo;ll change the type size and font of the numbers.</p>
+  </li>
+  <li><p>Click on the Numbers bar to make the Numbers layer active.</p>
+  </li>
+  <li><p>Press the &lt;Ctrl&gt;-A (case-insensitive) hot key pair to select
+  all the numbers on the clock face. Notice that only the numbers are
+  selected. The clock face and frame are unaffected because they are in layers
+  that have been locked.<br>
+  <figure>
+      <img src = "images/SelectAllNumbers.gif" alt = "Selecting all numbers"
+      class = "img-fluid">
+      <figcaption>Selecting all numbers on the clock face.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the <b>Text and Font</b> icon (<img src =
+  "images/TextAndFontIcon.gif" alt = "Text and Font icon" >) in the Commands
+  menu bar. The <b>Text and Font</b> palette appears. Select the <b>Font</b>
+  tab if it isn&rsquo;t selected already. Select another font or size for the
+  group of numbers. (We used Myriad Pro Bold, size 28 points.)</p>
+  <aside>
+  <b>Note:</b> Myriad Pro is an OpenType font that I included in the Tutorial
+  6 folder. If it is not installed on your computer and you want to use it,
+  download and install it (<a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial06/MyriadPro-Bold.otf"
+	title =	"Click here to access the Myriad Pro Bold font"><b>Myriad Pro
+  Bold</b></a>).</p>
+  <p>Choose <u>F</u>ile &gt; <u>S</u>ave, exit Inkscape, and then restart
+  Inkscape. When Inkscape is restarted, it will "see" the Myriad Pro font and
+  include in its font list, ready for you to use.</p>
+  </aside>
+  <figure>
+    <img src = "images/TextAndFontPalette.gif" alt = "Text and Font palette"
+    class = "img-fluid">
+    <figcaption><b>Text and Font</b> palette with the Myriad Pro Bold font 28
+    pt selected.</figcaption>
+  </figure>
+  </li>
+  <li><p>If you wish, use the <b>Color</b> palette or <b>Swatches</b> palette
+  to change the color of the selected numbers.</p>
+  </li>
+  <li><p>Click on the <b><u>A</u>pply</b> button. The numbers change font and
+  size.</p>
+  <figure>
+    <img src = "images/NumbersMyriadProBold.gif"
+    alt = "Numbers are now Myriad Pro Bold" class = "img-fluid">
+    <figcaption>Numbers in Myriad Pro Bold 28 pt font.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the Select tool (<img src = "images/SelectionTool.gif"
+  alt = "Selection tool" >) and then click anywhere away from the numbers to
+  deselect them.</p>
+  <figure>
+    <img src = "images/NumbersDeselected.gif" alt = "Deselect numbers"
+    class = "img-fluid">
+    <figcaption>Deselect numbers.</figcaption>
+  </figure>
+  </li>
+  <li><p>In the <b>Layers</b> palette, click the padlock icons in the
+    <b>Face</b> and <b>Frame</b> layers to unlock them.</p>
+	</li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Viewing Layers</h2>
+</header>
+<p>The <b>Layers</b> palette lets you hide layers, sublayers, or individual
+objects from view. When a layer is hidden, objects on that layer are also
+locked and cannot be selected or printed. You can also use the <b>Layers</b>
+palette to display layers or objects in <b>Outline</b> mode, <b>Grayscale</b>
+mode, or <b>No Filters</b> mode to view independently from other layers in the
+artwork.</p>
+
+<p>Now you&rsquo;ll edit the frame on the clock, using gradient-painting
+techniques to create a three-dimensional effect on the frame.</p>
+
+<p>You will start by creating sublayers to the <b>Frame</b> layer that will
+contain individual parts of the frame that you can modify without affecting
+other neighboring parts.</p>
+
+<ol>
+  <li><p>In the <b>Layers</b> palette, right-click the <b>Frame</b> layer to
+  select it and bring up the <b>Layers</b> short-cut menu.</p>
+    <figure>
+      <img src = "images/LayersShortCutMenu2.gif" alt = "Layers short-cut menu"
+      class = "img-fluid">
+      <figcaption><b>Layers</b> short-cut menu</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on <b>Show/hide other layers</b> to hide the other layers. The
+  <b>Show/hide Layer</b> icons (<img src = "images/OpenEyeIcon.gif" alt = "Open
+  Eye icon" width = "26">) on the <b>Face</b> and <b>Numbers</b> layer bars are
+  now closed (<img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye icon"
+  width = "26">), indicating that those layers are hidden.</p>
+  <aside><p><i><b>Tip:</b> Clicking the layer <b>Show/hide Layer</b> icon
+  alternately hides (<img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye
+  icon" width = "26">) and shows (<img src = "images/OpenEyeIcon.gif" alt =
+  "Open Eye icon" width = "26">) a layer. Hiding layers also locks them and
+  prevents them from being changed.</i></p>
+  </aside>
+  <figure>
+    <img src = "images/OtherLayersHidden.gif" alt = "Hide the Face and Numbers
+    layers" class = "img-fluid">
+    <figcaption>Hide the <b>Face</b> and <b>Numbers</b> layers. Only objects in
+    the <b>Frame</b> layer appear.</figcaption>
+  </figure>
+  </li>
+  <li><p>Using the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), click on the locked padlock icon to the
+  <b>Frame</b> layer to unlock it. Click on the plus sign icon (<img src =
+  "images/PlusSignIcon.gif" alt = "Plus sign icon" width = "26">) on the bottom
+  left of the <b>Layers</b> palette. Label the new layer <b>Outer Lower
+  Frame</b>. Select <b>As sublayer of current</b> from the drop-down selection
+  box. Click on <u>A</u>dd.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/SelectLowerOuterFrame.gif"
+    alt = "Select the outer circle of the clock frame." class = "img-fluid">
+    <figcaption>Create a sublayer to the <b>Frame</b> layer.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/OuterLowerFrameSublayerCreated.gif"
+    alt = "Sublayer to the Frame layer created." class = "img-fluid">
+    <figcaption>Sublayer to <b>Frame</b> layer created.</figcaption>
+  </figure>
+  <div style = "clear: both;"></div>
+  </li>
+  <li><p>Select the outermost circle of the outer frame. Note that the
+  <b>Frame</b> layer bar is highlighted.</p>
+  <figure>
+    <img src = "images/OutermostCircleSelected.gif"
+    alt = "Select the outermost circle." class = "img-fluid">
+    <figcaption>Select the outermost circle.</figcaption>
+  </figure>
+  </li>
+  <li><p>Press &lt;Shift&gt;-&lt;Page Down&gt; to highlight the <b>Outer Lower
+  Frame</b> layer bar. The outermost circle has now been added to the <b>Outer
+  Lower Frame</b> layer bar. Note that it has changed to a dark brown
+  circle.</p>
+  <figure>
+    <img src = "images/OuterLowerFrameSublayerPopulated.gif"
+    alt = "The outermost circle is now in its own layer." class = "img-fluid">
+    <figcaption>The outermost circle is now in its own layer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the <b>Open Eye</b> icon (<img src = "images/OpenEyeIcon.gif"
+  alt = "Open Eye icon" width = "26">) in the <b>Outer Lower Frame</b> layer
+  bar to hide (<img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye icon"
+  width = "26">) the brown circle.</p>
+  <figure>
+    <img src = "images/OuterLowerCircleHidden.gif" alt = "Hide the outermost
+    circle." class = "img-fluid">
+    <figcaption>Hide the outermost circle.</figcaption>
+  </figure>
+  </li>
+  <li><p>The bronze ring is the upper part of the outer frame that will help
+  create a quasi-three-dimensional effect using a gradient. You will isolate
+  the bronze ring, which is actually a circle, by putting it into its own
+  layer.</p>
+  <p>Click on the plus sign icon (<img src = "images/PlusSignIcon.gif" alt =
+  "Plus sign icon" width = "26">) on the bottom left of the <b>Layers</b>
+  palette. In the Position field, select <b>Below current</b> to make a second
+  sublayer. Change its name to <b>Inner Lower Frame</b></p>
+  <figure>
+    <img src = "images/InnerLowerFrame.gif"
+    alt = "Create an inner lower frame sublayer." class = "img-fluid">
+    <figcaption>Create an <b>Inner Lower Frame</b> sublayer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the bronze ring. Note that the <b>Frame</b> layer bar is
+  highlighted.</p>
+  <figure>
+    <img src = "images/BronzeRingSelected.gif" alt = "Select the bronze ring."
+    class = "img-fluid">
+    <figcaption>Select the bronze ring.</figcaption>
+  </figure>
+  </li>
+  <li><p>Press &lt;Shift&gt;-&lt;Page Down&gt; twice to highlight the <b>Inner
+  Lower Frame</b> sublayer. The bronze ring, actually a bronze circle, now
+  resides in the <b>Inner Lower Frame</b> sublayer.</p>
+  <figure>
+    <img src = "images/BronzeRingInOwnSublayer.gif"
+    alt = "The bronze ring is now in its own layer." class = "img-fluid">
+    <figcaption>The bronze ring (actually, bronze circle) is in its own
+    sublayer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the <b>Open Eye</b> icon (<img src = "images/OpenEyeIcon.gif"
+  alt = "Open Eye icon" width = "26">) in the <b>Inner Lower Frame</b> layer
+  bar to hide (<img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye icon"
+  width = "26" >) the bronze circle.</p>
+  <figure>
+    <img src = "images/BronzeRingHidden.gif" alt = "The bronze ring is
+    hidden." class = "img-fluid">
+    <figcaption>Hide the bronze circle.</figcaption>
+  </figure>
+  </li>
+  <li><p>Finally, create a new sublayer to the <b>Frame</b> layer and name it
+  <b>Inner Frame</b>. Select the remaining medium-sized brown circle, press
+  &lt;Shift&gt;-&lt;Page Down&gt; once to highlight the <b>Inner Frame</b>
+  layer bar, and click off the circle to deselect it.</p>
+  <figure>
+      <img src = "images/LastBrownCircleInOwnSublayer.gif"
+      alt = "The last brown circle is in its own sublayer."
+      class = "img-fluid">
+      <figcaption>Put the last brown circle into its own sublayer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Hide all the layers and then turn them on individually. See how each
+  circle has its own layer that you can control. Turn them off and on in
+  different combinations. Finally, make them all visible.</p>
+  <figure>
+    <img src = "images/AllLayersVisible.gif" alt = "All layers visible."
+    class = "img-fluid">
+    <figcaption>Make all layers visible.</figcaption>
+  </figure>
+  <p>Your result should be similar to the figure above. The bronze ring that
+  makes up the second outer circle isn&rsquo;t there. It turns out that it is,
+  but it&rsquo;s covered over by the <b>Outer Lower Frame</b> circle. The
+  bottommost two sublayers are in opposite order. You will now move the
+  <b>Outer <u>Upper</u> Frame</b> layer above the <b>Outer <u>Lower</u>
+  Frame</b> layer to make the bronze circle visible. It will be as if you
+  interchanged two sheets of tracing paper with drawings on them.</p>
+  </li>
+  <li><p>Click on the lowest layer bar (<b>Outer Upper Frame</b>) to highlight
+  it. Then click on the <b>Raise current layer</b> arrow (<img src =
+  "images/RaiseLayerBarArrow.gif" alt = "Raise current layer arrow" width =
+  "26">) to reposition the layer above the <b>Outer Lower Frame</b> layer.</p>
+  <figure>
+    <img src = "images/RepositionSublayer.gif"
+    alt = "Reposition the two bottommost sublayers." class = "img-fluid">
+    <figcaption>Reposition the two bottommost sublayers.</figcaption>
+  </figure>
+  <p>With each circle in its own layer, you can now create gradients to achieve
+  a quasi-three-dimensional effect with your artwork.</p>
+  </li>
+  <li><p>Hide the <b>Numbers</b> and <b>Face</b> layers, and the <b>Inner
+  Frame</b> sublayer. Lock the <b>Outer Lower Frame</b> but keep it
+  visible.</p>
+  <figure>
+    <img src = "images/PreparingTheGradientLayer.gif"
+    alt = "Preparing the gradient layer." class = "img-fluid">
+    <figcaption>Preparing to make a gradient.</figcaption>
+  </figure>
+  </li>
+  <li><p>If the <b>Fill and Stroke</b> palette isn&rsquo;t visible, then click
+  on the <b>Fill and Stroke</b> icon in the Commands menu bar (<img src =
+  "images/FillAndStrokeIcon.gif" alt = "Fill and Stroke icon" width = "26">) to
+  bring it up. Select the bronze circle. If the <b>Fill</b> isn&rsquo;t
+  selected in the <b>Fill and Stroke</b> palette, select it. Click on the
+  <b>Linear gradient</b> button. The bronze circle will now show a color
+  gradient changing from bronze to brown.</p>
+  <figure>
+    <img src = "images/FirstGradient.gif" alt = "Creating the first gradient."
+    class = "img-fluid">
+    <figcaption>Creating the first gradient.</figcaption>
+  </figure>
+  <aside><p>To see how Inkscape&rsquo;s gradient feature works, turn the
+  visibility off on the <b>Outer Lower Frame</b> layer. You will see that the
+  bronze circle fades from left to right, actually becoming more transparent
+  from left to right. When the underlying dark brown circle is made visible
+  again, it shows through from underneath, making the resultant circle appear
+  lit from the left.<br>
+   <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/BronzeGradient.gif" alt = "Bronze gradient layer only."
+    class = "img-fluid">
+    <figcaption>Bronze gradient layer without background.</figcaption>
+  </figure>
+   <figure>
+    <img src = "images/BronzeGradientWithBackground.gif"
+    alt = "Bronze gradient layer with dark brown background." class =
+    "img-fluid">
+    <figcaption>Bronze gradient layer with dark brown<br>background.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  </aside>
+  </li>
+  <li>Choose <u>E</u>dit &gt; D<u>e</u>select to deselect your artwork and
+  choose <u>F</u>ile &gt; <u>S</u>ave.</p>
+  </li>
+  <aside><p><b>Note:</b> The <b>Gradient control line</b> which guides the
+  direction the gradient takes has a circle at one end and a square at the
+  other. When you hover the cursor over one end, its color changes to red. When
+  you select an end, its color changes to blue, indicating that it is the
+  active end of the control line. They are white when deselected.</p>
+  <p>The <b>Gradient Control</b> tool works only on selected objects that are
+  filled with gradients.</p>
+  </aside>
+  <li>
+    <p>You will now create a second inner circle with its gradient changing in a
+  vertical direction.</p>
+  </li>
+  <li><p>Click on the <b>Closed Eye</b> icon (<img src =
+  "images/ClosedEyeIcon.gif" alt = "Closed Eye icon" width = "26">) in the
+  <b>Inner Frame</b> layer bar to make it visible, and click on the <b>Open
+  Eye</b> icon (<img src = "images/OpenEyeIcon.gif" alt = "Open Eye icon"
+  width = "26">) in the <b>Outer Upper Frame</b> and <b>Outer Lower Frame</b>
+  sublayer bars to hide them.</p>
+  <figure>
+    <img src = "images/MakeInnerFrameCircleVisible.gif"
+    alt = "Make the Inner Frame circle visible." class = "img-fluid">
+    <figcaption>Make the <b>Inner Frame</b> circle visible and hide the two
+    lower sublayers.</figcaption>
+  </figure>
+  <p>To create a gradient in the <b>Inner Frame</b> circle, you need to make a
+  second circle that will contain the semi-transparent gradient underlain by
+  the dark brown circle. You will make a duplicate layer containing a duplicate
+  of the first circle.</p>
+  </li>
+  <li><p>Right-click on the <b>Inner Frame</b> layer and click on <b>Duplicate
+  Current Layer</b>.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/DuplicateCurrentLayer.gif"
+    alt = "Duplicate the current layer." class = "img-fluid">
+    <figcaption>Duplicate the current layer.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/InnerFrameCopy.png" alt = "Current layer duplicated"
+    class = "img-fluid">
+    <figcaption>Current layer duplicated.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  <p>The new layer is automatically named <b>Inner Frame copy</b>. It contains
+  a similar dark brown circle, which is positioned directly over the original
+  circle in the original <b>Inner Frame</b> layer. You can test for duplication
+  by hiding the original <b>Inner Frame</b> sublayer and then hiding the
+  <b>Inner Frame copy</b> sublayer. The circle disappears only after you hide
+  the duplicated layer.</p>
+
+  <p>Have both <b>Inner Frame copy</b> and <b>Inner Frame</b> sublayers
+  visible. You need them to make the gradient.</p>
+  </li>
+  <li><p>Lock the <b>Inner Frame</b> sublayer but keep it visible.</p>
+  </li>
+  <li><p>Click on the circle. The <b>Inner Frame copy</b> sublayer is
+  highlighted.</p>
+  <figure>
+    <img src = "images/HighlightBrownCircle.gif"
+    alt = "Select the brown circle." class = "img-fluid">
+    <figcaption>Select the dark brown circle.</figcaption>
+  </figure>
+  </li>
+  <li><p>Bring up the <b>Fill and Stroke</b> palette, type the following
+  <b><i>hexadecimal code</i></b> for a light bronze into the <b>RGBA</b> field:
+  <b>b39a47ff</b>. Press &lt;Enter&gt; to set the code.</p>
+  <p><b>RGBA</b> means <b><u>R</u></b>ed, <b><u>G</u></b>reen,
+  <b><u>B</u></b>lue, and <b><u>A</u></b>lpha channel. The <b>alpha channel</b>
+  controls an object&rsquo;s degree of transparency from 0% (totally
+  transparent) to 100% (totally opaque). Check the <b>Stroke</b> palette.
+  There should be no stroke as shown by a message: <b>Paint is
+  undefined.</b></p>
+  <figure>
+    <img src = "images/Brown2Bronze.gif"
+    alt = "Make the dark brown circle bronze-colored." class = "img-fluid">
+    <figcaption>Change the circle&rsquo;s color from dark brown to
+    bronze.</figcaption>
+  </figure>
+  <p>You will now change the direction of the gradient from a horizontal change
+  to a vertical change.</p>
+  </li>
+  <li><p>Click on the <b>Linear gradient</b> button in the <b>Fill</b> palette.
+  The bronze circle now shows a color gradient.</p>
+  <figure>
+    <img src = "images/ClickOnLinearGradientButton.gif"
+    alt = "Click on the linear gradient button." class = "img-fluid">
+    <figcaption>Click on the linear gradient button in the <b>Fill</b>
+    palette.</figcaption>
+  </figure>
+  <p>The gradient changes from left to right. You will now make the gradient
+  change from bottom to top.</p>
+  </li>
+  <li><p>Click on the double arrow button (<img src =
+  "images/DoubleArrowButton.gif" alt = "Double-arrow button" width = "26">) at
+  the bottom of the toolbox to bring up the hidden tools box.</p>
+    <figure>
+        <img src = "images/DoubleArrow.gif" alt = "Double arrow"
+        class = "img-fluid">
+        <figcaption>Clicking on the double arrow<br>brings up more
+        options.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Gradient</b> option. A <b>gradient guide line</b>
+  appears across the circle. The cursor also changes into a <b>Gradient
+  Control</b> cursor (<img src = "images/GradientControlCursor.gif" alt =
+  "Gradient Control cursor" width = "26">).</p>
+    <figure>
+      <img src = "images/PreparingToChangeGradientDirection.gif"
+      alt = "Gradient guide line" class = "img-fluid">
+      <figcaption>Gradient guide line.</figcaption>
+    </figure>
+  </li>
+  <li><p>Change the direction of the gradient by dragging the square marker to
+  the top of the circle and the circular marker to the bottom of the circle.
+  Choose <u>E</u>dit &gt; D<u>e</u>select to deselect the circle.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/GradientVertical.gif" alt = "Gradient is now vertical"
+      class = "img-fluid">
+      <figcaption>Gradient is now vertical.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/VerticalGradientResult.gif"
+      alt = "Vertical gradient result" class = "img-fluid">
+      <figcaption>Result.</figcaption>
+    </figure>
+    <div style = "clear: left;"></div>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select to deselect the artwork, and
+  then choose <u>F</u>ile &gt; <u>S</u>ave.</p>
+  </li>
+  <li><p>In the <b>Layers</b> palette, right-click on any layer bar and select
+  <b>Show all layers</b> from the short-cut menu.</p>
+    <figure>
+      <img src = "images/ShowAllLayers.gif" alt = "Show all layers"
+      class = "img-fluid">
+      <figcaption>Show all layers. Note that all eye icons are open.</figcaption>
+    </figure>
+  </li>
+  <li><p>As you edit objects in layered artwork, you can hide individual
+  layers, keeping the others in <b>Normal</b> view. Click on the <b>Show/hide
+  Layer</b> icon (<b>Open Eye</b> icon &ndash; <img src =
+  "images/OpenEyeIcon.gif" alt = "Open Eye icon" width = "26">) on the
+  <b>Face</b> layer to hide that layer.</p>
+  <figure>
+    <img src = "images/HideFaceLayer2.gif" alt = "Hide the Face layer."
+    class = "img-fluid">
+    <figcaption>Hide the <b>Face</b> layer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the <b>Show/hide Layer</b> icon (<b>Closed Eye</b> icon
+  &ndash; <img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye icon" width =
+  "26">) in the <b>Face</b> layer to return to <b>Normal</b> view for that
+  layer.</p>
+  <figure>
+    <img src = "images/ShowFaceLayer.gif" alt = "Show the Face layer."
+    class = "img-fluid">
+    <figcaption><b>Face</b> layer visible (<b>Normal</b> view).</figcaption>
+  </figure>
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Pasting Layers</h2>
+</header>
+<p>To complete the clock, you&rsquo;ll copy and paste the finishing parts of
+artwork from another file. You can paste layered files into another file while
+keeping all the layers intact.</p>
+<ol>
+  <li><p>Download and <u>F</u>ile &gt; <u>O</u>pen file
+	<a href = "Details.svg"><b>Details.svg</b></a>.</p>
+  <p>The font for the brand might look different on your computer than what you
+  see in the example below. The font is called <b>Ametist</b>. If this font is
+  not installed on your computer and you want to use it, you can download it
+  here (<a href = "https://github.com/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial06/Ametist.ttf" title = "Click here to access the Ametist font"><b>Ametist</b></a>).
+	After installing the <b>Ametist</b> font, exit <b>Inkscape</b> if it is
+  active, and then restart it so it will &ldquo;see&rdquo; and include
+  <b>Ametist</b> in its font library.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/Clock.gif" alt = " CurrentClock svg file"
+    class = "img-fluid">
+    <figcaption>Current <b>Clock.svg</b> artwork</figcaption>
+  </figure>
+  <figure style = "float: left;" class = "mr-5">
+    <img src = "images/Details.gif" alt = "Details svg file"
+    class = "img-fluid">
+    <figcaption><b>Details.svg</b></figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/DetailsLayersPalette.gif"
+    alt = "Layers palette for Details svg file"
+    class = "img-fluid">
+    <figcaption><b>Layers</b> palette for <b>Details.svg</b></figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  </li>
+  <li><p>If you want to see how the objects in <b>Details.svg</b> are organized
+  in the layers, right-click on any of the layers in the <b>Layers</b> and
+  select <b>Show/hide other layers</b> to alternately display each layer
+  and hide the others. When you&rsquo;ve finished, make sure that all the
+  layers are showing and that they are unlocked.</p>
+  <p>If a layer is hidden, its objects are locked and cannot be selected or
+  copied.</p>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; Select All in All La<u>y</u>ers and then
+  <u>E</u>dit &gt; <u>C</u>opy to select and copy the clock details to the
+  Clipboard.</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; <u>C</u>lose to close the <b>Details.svg</b>
+  file. Do not save any changes if asked.</p>
+  </li>
+  <li><p>In the <b>Clock.svg</b> file, create a new layer between the
+  <b>Face</b> and <b>Numbers</b> layers and name it <b>Details</b>.
+  <b>Details</b> is now the currently active layer.</p>
+  <figure>
+    <img src = "images/DetailsLayer.gif" alt = "Details layer"
+    class = "img-fluid">
+    <figcaption>Create a <b>Details</b> layer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; Paste <u>I</u>n Place to paste the
+  <b>Details</b> artwork into the <b>Details</b> layer.</p>
+  <figure>
+    <img src = "images/PasteInPlace.gif"
+    alt = "Paste the Details artwork in place into the Clock artwork."
+    class = "img-fluid">
+    <figcaption>Paste the <b>Details.svg</b> artwork in place into the
+    <b>Clock</b> artwork.</figcaption>
+  </figure>
+  <p>Now you&rsquo;ll move the highlight, brand, hands, and stripes into their
+  own layers.</p>
+  </li>
+  <li><p>Choose the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">) and click away from the artwork to deselect
+  it.</p>
+  </li>
+  <li><p>In the <b>Layers</b> palette, create a new layer <b>Highlight</b> above
+  the <b>Numbers</b> layer.</p>
+  <figure>
+    <img src = "images/HighlightLayer.gif"
+    alt = "Create a Highlight layer."
+    class = "img-fluid">
+    <figcaption>Create a new layer <b>Highlight</b>.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the highlight in the artwork. The <b>Details</b> layer
+  becomes the active layer.</p>
+  </li>
+  <li><p>Press &lt;Shift&gt;-&lt;Page Up&gt; twice to put the highlight into
+  its own layer.</p>
+  <figure>
+    <img src = "images/PressShiftPageUpTwice.gif"
+    alt = "Put highlight into its own layer."
+    class = "img-fluid">
+    <figcaption>Press &lt;Shift&gt;-&lt;Page Up&gt; twice. The highlight is now
+    in its own layer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click anywhere off the highlight object to deselect it. Click on the
+  <b>Show/hide</b> icon in the <b>Highlight</b> layer to verify that the
+  highlight object is indeed where it is supposed to be. Click the
+  <b>Show/hide</b> icon again to bring the highlight back into view.</p>
+  <figure>
+    <img src = "images/TestHighlight.gif"
+    alt = "Test that the highlight object is in its own layer."
+    class = "img-fluid">
+    <figcaption>Hide the highlight to verify that it is in its own
+    layer.</figcaption>
+  </figure>
+  </li>
+  <li>Create new layers <b>Brand</b>, <b>Hands</b>, and <b>Stripes</b> between
+  the <b>Details</b> and <b>Face</b> layers. As you create new layers, you
+  might need to lengthen the <b>Layers</b> palette to see all the layers.</p>
+  <figure>
+    <img src = "images/BrandHandsStripesLayers.gif"
+    alt = "Create the Brand, Hands, and Stripes layers."
+    class = "img-fluid">
+    <figcaption>Create the <b>Brand</b>, <b>Hands</b>, and <b>Stripes</b>
+    layers.</figcaption>
+  </figure>
+  </li>
+  <li>Click on the <b>Munroe</b> text and &lt;Shift&gt;-click on the
+  <b>PORTLAND</b> text to group highlight them (see Tutorial 2, Using the
+  Select Tool, for review). The <b>Details</b> layer bar is highlighted in the
+  <b>Layers</b> palette. Press &lt;Shift&gt;-&lt;Page up&gt; three times to
+  highlight the <b>Brand</b> layer bar. Click on the <b>Show/hide</b> icon to
+  verify that the brand text is in the <b>Brand</b> layer. Deselect the text in
+  the artwork.</p>
+  <figure>
+      <img src = "images/BrandHighlighted.gif"
+      alt = "Highlight the brand text."
+      class = "img-fluid">
+      <figcaption>Group select the <b>Brand</b> text.</figcaption>
+  </figure>
+  </li>
+  <li>Repeat for the clock hands and background stripes, testing each time to
+  make sure that they are in their appropriate layers.</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; <u>S</u>ave to save the changes.</p>
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Creating Clipping Masks</h2>
+</header>
+<p>The Layers palette lets you create clipping masks to control how artwork on
+a layer (or in a group) is hidden or revealed. A clipping mask is an object or
+group of objects whose shape masks artwork below it so that only artwork within
+the shape is visible.</p>
+
+<p>Now you&rsquo;ll create a clipping mask with the circle shape in the
+<b>Face</b> layer. You&rsquo;ll group it with the <b>Stripes</b> layer so that
+only the stripes show through the circle shape.</p>
+
+<ol>
+  <li><p>In the <b>Layers</b> palette, drag the <b>Stripes</b> layer so that it
+  is located immediately underneath the <b>Face</b> layer. If the <b>Stripes</b>
+  layer ends up as a sublayer to the <b>Face</b> layer, that is absolutely fine.
+  The important thing is that the <b>Face</b> be <u>immediately</u> above the
+  <b>Stripes</b> layer.</p>
+  <figure>
+    <img src = "images/StripesUnderneathFace.gif"
+    alt = "Stripes layer placed underneath Face layer" class = "img-fluid">
+    <figcaption>The <b>Stripes</b> layer has been put underneath the
+    <b>Face</b> layer (here, as a sublayer to <b>Face</b>).</figcaption>
+  </figure>
+  <p>A masking object <b><u>must</u></b> reside <u>above</u> the objects it
+  will mask in the <b>Layers</b> palette. Since you want to mask only the
+  stripes, you&rsquo;ll move the circular <b>Face</b> object to above the
+  <b>Stripes</b> layer before you create the clipping mask.</p>
+  </li>
+  <li><p>In the <b>Layers</b> palette, right-click on the <b>Face</b> layer and
+  choose <b>Lock/Unlock Other layers</b> in the short-cut menu. All layers
+  other than <b>Face</b> are now locked. Unlock the <b>Stripes</b> layer by
+  clicking on its <b>Show/hide</b> icon.</p>
+  <figure>
+      <img src = "images/FaceStripesUnlocked.gif"
+      alt = "Face and Stripes layers are unlocked." class = "img-fluid">
+      <figcaption>The <b>Face</b> and <b>Stripes</b> layers are unlocked. All
+      other layers are locked.</figcaption>
+  </figure>
+  <p>Both the masking object above and object to be masked below must be
+  selected in order for clipping to happen.</p>
+  </li>
+  <li><p>Using the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" >), marquee select the <b>Stripes</b> object and the
+  <b>Face</b> object in the artwork. (See Tutorial 2, Marquee Select, for
+  review.)</p>
+  <figure>
+      <img src = "images/SelectFaceStripes.gif"
+      alt = "Select the Face and Stripes objects."
+      class = "img-fluid">
+      <figcaption>Select the <b>Face</b> and <b>Stripes</b> objects.
+      </figcaption>
+  </figure>
+  </li>
+  <li><p>Choose <u>O</u>bject &gt; Clip &gt; <u>S</u>et.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/StripesClipped.gif" alt = "Clip the Stripe object."
+    class = "img-fluid">
+    <figcaption>The <b>Stripes</b> object is now clipped.</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/ClipResult.gif" alt = "Clip result" class = "img-fluid">
+    <figcaption>Result.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; <u>S</u>ave.</p>
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Applying Appearance Attributes to Layers</h2>
+</header>
+<p>You can apply appearance attributes such as styles, effects, and
+transparency to layers, groups, and objects with the <b>Layers</b> palette.
+When an appearance attribute is applied to a layer, any object on that layer
+will take on that attribute. If an appearance attribute is applied only to a
+specific object on a layer, it affects only that object, not the entire
+layer.</p>
+
+<p>You will apply an effect to an object on a layer. Then you&rsquo;ll copy
+that effect to a layer to change all objects on that layer.</p>
+
+<ol>
+  <li><p>In the <b>Layers</b> palette, collapse the <b>Face</b> layer and expand
+  the <b>Frame</b> layer to reveal all its objects.</p>
+  </li>
+	<li><p>Right-click on any layer bar and choose <b>Lock all layers</b>. Then,
+  unlock the <b>Frame</b> layer and <b>Outer Lower Frame</b> sublayer. You will
+  apply an effect to the <b>Outer Lower Frame</b> sublayer.</p>
+    <figure>
+      <img src = "images/CollapseFaceExpandFrame.gif"
+      alt = "Collapse the Face layer and expand the Frame layer."
+      class = "img-fluid">
+      <figcaption>Lock all layers, then unlock the <b>Frame</b> layer
+      and<br><b>Outer Lower Frame</b> sublayer.</figcaption>
+    </figure>
+    </li>
+    <li><p>Select the bottom path in the <b>Frame</b> layer (<b>Outer Lower
+    Frame</b>) and then click on the artwork to select the bottommost circle in
+    the artwork.</p>
+    <figure>
+      <img src = "images/SelectArtwork.gif" alt = "Select artwork."
+      class = "img-fluid">
+      <figcaption>Click on the artwork to select the bottommost circle.</figcaption>
+    </figure>
+    </li>
+    <li><p>Choose Filter<u>s</u> &gt; Shadows and Glows &gt; Drop
+    Shadow&hellip;</p>
+    </li>
+    <li><p>The <b>Drop Shadow</b> dialog box appears. Choose:</p>
+      <ul style = "list-style-type: disc;">
+        <li><b>Blur radius (px): 5.0</b>
+        </li>
+        <li><b>Horizontal offset (px): 5.0</b>
+        </li>
+        <li><b>Vertical offset (px): 5.0</b>
+        </li>
+        <li><b>Shadow type: Outer</b>
+        </li>
+        <li><p>check the <b>Live preview</b> checkbox so you can see the
+        immediate effect of the drop shadow.</p>
+      </ul>
+    <figure>
+        <img src = "images/DropShadow1.gif" alt = "Drop shadow"
+        class = "img-fluid">
+        <figcaption>Drop shadow.</figcaption>
+    </figure>
+    </li>
+    <li><p>You will now add drop shadows to the clock hands and numbers. You will
+    group the hands and numbers and copy them into their own layer and use the
+    blur feature to make shadows out of them, and reposition them all as a
+    group.</p>
+    </li>
+    <li><p>Rename the <b>Details</b> layer by double-clicking on the name and
+    typing <b>Drop Shadows</b>. Press &lt;Enter&gt; to set the name. This layer
+    should already be located below the <b>Numbers</b> and <b>Hands</b> layers.
+    This position indicates that the drop shadow objects are indeed located
+    underneath the artwork&rsquo;s original numbers and hands, giving an
+    illusion of depth.</p>
+    </li>
+    <li><p>Lock all the layers except for the <b>Numbers</b>, <b>Hands</b>, and
+    <b>Drop Shadow</b> layers.</p>
+    <figure>
+      <img src = "images/Prepping4Merging.gif"
+      alt = "Getting the layers ready for merging" class = "img-fluid">
+      <figcaption>Preparing for merging objects into one layer.</figcaption>
+    </figure>
+    </li>
+    <li><p>Marquee select the artwork and then press &lt;Ctrl&gt;-D to make a
+    copy of the numbers and hands as a group. Even though you made a group copy
+    of these details, they are still individual objects. Choose <u>O</u>bject
+    &gt; <u>G</u>roup to group the numbers and hands into one object.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/MarqueeSelectingNumbersHands.gif"
+      alt = "Marquee select the numbers and hands." class = "img-fluid">
+      <figcaption>Marquee select the numbers and hands.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/NumbersHandsGrouped.gif"
+      alt = "Group the numbers and hands." class = "img-fluid">
+      <figcaption>Group the numbers and hands.</figcaption>
+    </figure>
+    <div style = "clear: both;"></div>
+  </li>
+    <li><p>Press &lt;Shift&gt;-&lt;Page Down&gt; until the <b>Drop Shadows</b>
+    layer is highlighted. At this point, the grouped copies of the numbers and
+    hands are located in the <b>Drop Shadows</b> layer.</p>
+    <figure>
+        <img src = "images/DropShadowsLayerSelected.gif"
+        alt = "Move the grouped objects to the Drop Shadows layer."
+        class = "img-fluid">
+        <figcaption>Move the grouped objects to the Drop Shadows layer.</figcaption>
+    </figure>
+    </li>
+    <li>Now lock the <b>Numbers</b> and <b>Hands</b> layers, but keep the
+    <b>Drop Shadows</b> layer unlocked.<br><br>
+    </li>
+    <li><p>Open the <b>Fill and Stroke</b> palette. With the duplicated numbers
+    and clock hands still selected, set the <b>Blur (%)</b> feature to
+    <b>2.0</b>. Click off the artwork to set the blur and then reselect the
+    artwork for repositioning. Press the down arrow twice and the right arrow
+    twice to offset the shadows&rsquo; positions to the lower right of their
+    supposed shadow source.</p>
+    <figure>
+      <img src = "images/Blur2.0.gif" alt = "Set the blur to 2.0."
+      class = "img-fluid">
+      <figcaption>Set <b>Blur (%)</b> to <b>2.0</b>.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/Offset2LowerRight.gif"
+      alt = "Offset the drop shadows to the lower right." class = "img-fluid">
+      <figcaption>Offset the drop shadows to the lower right.</figcaption>
+  </figure>
+	<div style = "clear: left;"></div>
+    </li>
+    <li>Choose <u>E</u>dit &gt; D<u>e</u>select.</p>
+    <figure>
+      <img src = "images/AllDone.gif" alt = "Finished artwork."
+      class = "img-fluid">
+      <figcaption>Finished artwork.</figcaption>
+    </figure>
+    </li>
+    <li>Choose <u>F</u>ile &gt; </u>S</u>ave. Choose <u>F</u>ile &gt;
+    <u>C</u>lose to close the file.</p>
+	</ol>
+
+  <p>You have completed building a layered file.</p>
+  <p>In some cases after the artwork is complete, you may want to place all the
+  layers of art onto a single layer and delete the empty layers. This is called
+  flattening artwork. Delivering finished artwork in a single layer file can
+  prevent accidents, such as hiding layers, and not printing parts of the
+  artwork, from happening.</p>
+
+<aside>
+  <header>
+    <h2>Merging and Flattening Artwork</h2>
+  </header>
+  <p>Merging and flattening are similar in that they let you consolidate paths,
+  groups, and sublayers. With merging, you can select which items you want to
+  consolidate; with flattening, all visible items in the artwork are
+  consolidated in a single, parent layer. With either option, the stacking
+  order of the artwork remains the same.</p>
+
+<h3>To Merge Artwork into a Single Layer or Group:</h3>
+<ol>
+  <li><p>Unlock just those layers that contain items you want to merge into one
+  layer. It is wise to have a new receptacle layer already created to put the
+  selected items into.</p>
+  </li>
+  <li><p>Select the items that you want to merge in the <b>Layers</b>
+  palette.</p>
+  </li>
+  <li><p>Marquee select your artwork and group (choose <u>O</u>bject &gt;
+  <u>G</u>roup) the items that are selected from the marquee select.</p>
+  </li>
+  <li><p>&lt;Shift&gt;-&lt;Page Up&gt; or &lt;Shift&gt;-&lt;Page Down&gt; to
+  make the destination layer active. At this point, the selected items are
+  located in the destination layer.</p>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select or click off the selected
+  artwork to deselect it.</p>
+  </li>
+</ol>
+<h3>To Flatten Artwork:</h3>
+<ol>
+  <li><p>Make sure that all the layers you want to flatten are visible.</p>
+  </li>
+  <li><p>Select the layer into which you will flatten the artwork or create a
+  new destination layer. You cannot flatten artwork into hidden, locked, or
+  template layers. They won&rsquo;t accept incoming items. Regardless of the
+  layer you select, the options for the layer and the stacking order of the
+  artwork don&rsquo;t change.</p>
+  </li>
+  <li><p>Marquee select your artwork and group the items (choose <u>O</u>bject
+  &gt; <u>G</u>roup) that are selected from the marquee select into one
+  object.</p>
+  </li>
+  <li><p>&lt;Shift&gt;-&lt;Page Up&gt; or &lt;Shift&gt;-&lt;Page Down&gt; to
+  make the destination layer active. At this point, all the items in the
+  selected layers are located in the destination layer. It might be wise to
+  delete the original source layers. Test each source layer against the
+  flattened layer to verify that you do indeed have a copy of the original in
+  the destination layer. If you find a discrepancy between source and
+  destination layers, either choose <u>E</u>dit &gt; <u>U</u>ndo or use the
+  hot-key combination &lt;Ctrl&gt;-Z (case insensitive) to undo your most
+  recent action or actions to help you troubleshoot. If you find an error, you
+  will be in a good position to resolve the graphics design error and maintain
+  the integrity of your artwork.</p>
+  </li>
+</ol>
+</aside>
+<p><b>Resource:</b> For a complete list of shortcuts that you can use with the
+<b>Layers</b> palette, see <u>H</u>elp &gt; Keys and Mouse Reference &gt;
+Layers in the navigation list on the left side of the screen.</p>
+</section>
+
+<hr>
+
+<section>
+<header>
+  <h2>Review Questions</h2>
+</header>
+<ol>
+  <li><p>Name two benefits of using layrs when creating artwork.</p>
+  </li>
+  <li><p>How do you hide layers? Display individual layers?</p>
+  </li>
+  <li><p>Describe how to reorder layers in a file.</p>
+  </li>
+  <li><p>How can you lock layers?</p>
+  </li>
+  <li><p>How do you move objects from one layer to another?</p>
+  </li>
+  <li><p>How do you create a layer clipping mask?</p>
+  </li>
+  <li><p>How do you apply an effect to a layer?
+  </li>
+</ol>
+</section>
+<section>
+<header>
+  <h2>Review answers</h2>
+</header>
+<ol>
+  <li><p>Benefits of using layers when creating artwork include: You can protect
+  artwork that you don&rsquo;t want to change, you can hide artwork that you
+  aren&rsquo;t working with so that it&rsquo;s not distracting, and you can
+  control what prints.</p>
+  </li>
+  <li><p>To hide a layer, you click the eye icon The <b>Open Eye</b> icons (<img
+  src = "images/OpenEyeIcon.gif" alt = "Open Eye icon" width = "26">) to the
+  left of the layer name. To redisplay a layer, click the <b>Closed Eye</b>
+  icon (<img src = "images/ClosedEyeIcon.gif" alt = "Closed Eye icon"
+  class = "center" width = "26">) to the left of the layer name.</p>
+  </li>
+  <li><p>You reorder layers by selecting a layer name in the <b>Layers</b>
+  palette and dragging the layer to its new location. You can also click on a
+  layer to be moved to select it, and then click on the Up Arrow (<img src =
+  "images/RaiseLayerBarArrow.gif" alt = "Raise Layer Bar Arrow" width = "26">)
+  or Down Arrow (<img src = "images/LowerLayerBarArrow.gif" alt = "Lower Layer
+  Bar Arrow" width = "26">) at the bottom of the <b>Layers</b> palette to move
+  that layer up or down in the layer order. The order of layers in the
+  <b>Layers</b> palette controls the document&rsquo;s layer order &ndash;
+  topmost in the palette is frontmost in the artwork.</p>
+  </li>
+  <li><p>You can lock layers in a few different ways:</p>
+    <ul style = "list-style-type: disc;">
+      <li><p>You can choose Lock All Layers from the <b>Layers</b> palette
+      menu to lock all layers.</p>
+      </li>
+      <li><p>You can choose Lock Others from the <b>Layers</b> palette menu
+      to lock all layers but the active layer.</p>
+      </li>
+      <li><p>You can hide a layer to protect it.</p>
+      </li>
+    </ul>
+  </li>
+  <li><p>Select the object you want to move. Press &lt;Shift&gt;-&lt;Page
+  Up&gt; or &lt;Shift&gt;-&lt;Page Down&gt; to highlight the layer bar of the
+  destination layer.</p>
+</li>
+  <li><p>Create a clipping mask on a layer by selecting the layer and then
+  choosing <u>O</u>bject &gt; Clip &gt; <u>S</u>et. The topmost object in the
+  layer will become the clipping mask.</p>
+  </li>
+  <li><p>Select the layer bar of the layer to which you want to apply an
+  effect. Make sure that the layer is visible (<img src =
+  "images/OpenEyeIcon.gif" alt = "Open Eye icon" width = "26">) and unlocked
+  (<img src = "images/OpenPadlockIcon.gif" alt = "Open Padlock icon" width =
+  "26">) so you can edit it. Select all objects in the layer (you might need to
+  do a marquee select) and then apply the desired effect.</p>
+  </li>
+</ol>
+</section>
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+  <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+  alt = "Creative Commons ShareAlike License" class = "img-fluid">&nbsp;This
+  work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+  International License</a>.
+</footer>
+		</div>
+	</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
