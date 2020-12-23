@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 8 &ndash; Transparencies and Color Blending</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+
+<body>
+  <div class = "container">
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 8 &ndash; Transparencies and Color Blending</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-4">
+          <img src = "images/RadioWave.gif"
+          alt = "Finished practice image file for Tutorial 8"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6">
+<p class = "lead">Inkscape&rsquo;s Transparency feature gives you the
+opportunity of adding a new dimension to your artwork that can exceed your
+expectations and expand your imagination. You can create special effects using
+the transparency and color blending features, such as knocking out underlying
+colors or creating graduated transparencies and blends.</p>
+      </div>
+    </div>
+<hr>
+
+<section>
+<header>
+<h4>In this tutorial, you&rsquo;ll learn how to do the following: </h4>
+  <ul>
+    <li>Use the Transparency feature.</li>
+    <li>Change the opacity of objects.</li>
+    <li>Use color blending modes.</li>
+    <li>Use group options for transparency.</li>
+  </ul>
+</header>
+
+<section>
+<header>
+  <h2>Getting Started</h2>
+</header>
+<p>In this lesson, you&rsquo;ll add transparency to artwork in several ways.
+You can vary the degree of transparency of an object&rsquo;s fill or stroke (or
+both), a group of objects, or a layer from 100% opacity (completely solid) to
+0% opacity (completely transparent). When you decrease an object&rsquo;s
+opacity, the underlying artwork becomes visible through that object as if you
+were working with stained glass.</p>
+<p>Using transparency features, you can also create special effects, such as
+knocking out underlying colors or creating graduated transparencies or blends.
+Transparency can be applied to multiple objects, groups, and even to entire
+layers. In this lesson you will focus on the transparency and color blending
+features and their capabilities. Learn how to apply transparency to layers in
+Lesson 7, "Working with Layers."</p>
+<ol>
+  <li><p>Start Inkscape.</p>
+  </li>
+  <li><p>Download and <u>F</u>ile &gt; <u>O</u>pen file
+  <a href = "#"><b>RadioWave.gif</b></a>.</p>
+    <figure>
+      <img src = "images/RadioWave.gif" alt = "Finished artwork"
+      class = "img-fluid">
+    </figure>
+  </li>
+  <li><p>If you like, use the Zoom tool (<img src = "images/ZoomInOut.gif" alt =
+  "Zoom In/Out tool" width = "26">) to reduce the view of the finished artwork,
+  adjust the window size, and leave it on your screen as you work. (Use the
+  mouse wheel with and without pressing the &lt;Shift&gt; key to move the
+  artwork where you want it in the window.) If you don&rsquo;t want to leave
+  the image open, choose <u>F</u>ile &gt; <u>C</u>lose.</p>
+  </li>
+  <li>
+  <p>To begin working, you&rsquo;ll open an existing file set up for
+  experimenting with Inkscape&rsquo;s transparency and color blending
+  features.</p>
+
+  <p>Download and <u>F</u>ile &gt; <u>O</u>pen file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial08/Tutorial08Image01.svg"><b>Tutorial08Start.svg</b></a>.
+  </p>
+    <figure>
+      <img src = "images/Tutorial08Start.png"
+      alt = "Starting image for Tutorial 08" width = "500"
+      class = "img-fluid">
+      <figcaption>Starting artwork.</figcaption>
+    </figure>
+    <p>The artwork in this file contains four ungrouped pieces of artwork: a text
+    object and three individual wave images. You will apply different degrees of
+    transparency and color blending to each wave.</p>
+  </li>
+  <li>Choose <u>F</u>ile &gt; Save <u>A</u>s, name the file
+  <b>Radio.svg</b>, store it in a convenient location, and click on the
+  <b>Save</b> button.
+  </li>
+</ol>
+</section>
+
+<section>
+  <header>
+    <h2>Applying Transparencies to Objects</h2>
+  </header>
+  <ol>
+    <li>
+  <p>Using the Select tool (<img src = "images/SelectionTool.gif"
+  alt = "Selection tool" width = "26">), select the first wave on the left.</p>
+  <figure>
+    <img src = "images/FirstWaveSelected.png" alt = "First wave selected"
+    width = "500" class = "img-fluid">
+    <figcaption>First wave selected.</figcaption>
+  </figure>
+    </li>
+    <li><p>Choose <u>O</u>bject &gt; <u>F</u>ill and Stroke &gt; <u>F</u>ill
+    tab, and type <b>90</b> in the right end of the Opacity (%) sliding bar.</p>
+    <figure>
+      <img src = "images/FirstWave90percent.png" alt = "First wave set to 90
+      percent opacity" width = "500" class = "img-fluid">
+      <figcaption>First wave set to 90 percent opacity.</figcaption>
+    </figure>
+    <p>You can just see text through the first wave.</p>
+    </li>
+    <li><p>Select the middle wave with the Select tool (<img src =
+     "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and,
+    with the <b>Fill and Stroke</b> palette still open, move the Opacity (%)
+    sliding bar with the adjustment arrow (<img src =
+    "images/AdjustTransparencyArrow.gif" alt = "Transparency adjustment arrow"
+    width = "26">) to <b>80.0</b>. If you experience difficulty because of the
+    arrow&rsquo;s sensitivity to movement, you can type in <b>80</b>
+    &lt;Enter&gt;. The up and down arrows at the end of the bar also allow for
+    fine numerical adjustment.</p>
+    <figure>
+      <img src = "images/SecondWave80percent.png" alt = "Second wave set to 80
+      percent opacity" width = "700" class = "img-fluid">
+      <figcaption>Second wave set to 80 percent opacity.</figcaption>
+    </figure>
+    <p>Text is relatively more visible through the second wave.</p>
+    </li>
+    <li><p>Select the third wave with the Select tool (<img src =
+     "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and,
+    with the <b>Fill and Stroke</b> palette still open, move the Opacity (%)
+    sliding bar with the adjustment arrow (<img src =
+    "images/AdjustTransparencyArrow.gif" alt = "Transparency adjustment arrow"
+    width = "26">) to <b>70.0</b> or by typing in <b>70</b> &lt;Enter&gt;.</p>
+    <figure>
+      <img src = "images/AllWavesTransparent.png" alt = "Waves at 70, 80, and
+      90 percent opacity" width = "800" class = "img-fluid">
+      <figcaption>Waves at 90, 80, and 70 percent opacity,
+      respectively.</figcaption>
+    </figure>
+    <p>With each wave, the underlying text becomes more visible.</p>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; <u>S</u>ave. Keep the file open if you plan
+    to continue on to the next exercise.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Basic color blending and blending modes</h2>
+  </header>
+  <p>Color blending works with layers to produce its visual effects. When an
+  object needs to have its own special see-through effect, it is best to have
+  that object in its own layer. Several objects that use the same blending mode
+  can be in the same layer for the sake of efficiency.</p>
+  <p>You will create a layer and move the leftmost wave to that layer to see how
+  blending modes work.</p>
+  <aside><p><b>Note:</b> If you did not practice Tutorial 6, Working with
+  Layers, I strongly recommend that you take time to become acquainted with
+  layer techniques now. The material is this tutorial will be easier to work
+  with.</p>
+  </aside>
+  <h3>Creating a layer to house the leftmost wave</h3>
+  <ol>
+    <li><p>Click on the leftmost wave with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool" width = "26">).</p>
+    </li>
+    <li><p>Click on the Layers icon (<img src = "images/LayersIcon.gif"
+    alt = "Layers icon" width = "26">) in the Command menu bar.<p>
+      <figure>
+        <img src = "images/FirstWaveLayersPalette.png" alt = "Leftmost wave is
+        selected and the Layers palette is active." width = "700" class =
+        "img-fluid">
+        <figcaption>Leftmost wave is selected and the Layers palette is
+        active.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Add layer plus sign (<img src = "images/AddLayerPlusSign.gif"
+    alt = "Add layer plus sign icon" width = "26">) to create a new layer.</p>
+    </li>
+    <li><p>When the Add Layer dialog box appears, type <b>First wave</b> in the
+    <b>Layer name</b> text box, keep the <b>Position</b> as
+    <b>Above current</b>.</p>
+    </li>
+    <li><p>Click on the <u>A</u>dd button.</p>
+      <figure>
+        <img src = "images/FirstWaveLayerCreated.png" alt = "Layer for the
+        leftmost wave is created." width = "700" class =
+        "img-fluid">
+        <figcaption>The layer for the leftmost wave is created.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the leftmost wave. Note that the Layer 1 bar is highlighted
+    in the Layers palette.</p>
+    <figure>
+      <img src = "images/ClickOnLeftmostWave.png" alt = "Click on the leftmost
+      wave." width = "700" class = "img-fluid">
+      <figcaption>Clicking the leftmost wave still in Layer 1.</figcaption>
+    </figure>
+    </li>
+    <li><p>With the leftmost wave still selected, press the
+    &lt;Shift&gt;-&lt;PgUp&gt; key combination to move the wave to the <b>First
+    wave</b> layer. Note that the top layer bar (First wave) is now
+    highlighted. Also, note that the Layer palette now shows a <b>Blend mode</b>
+    option, currently showing <b>Normal</b>.</p>
+    <figure>
+      <img src = "images/LeftmostWaveMoved.png" alt = "Leftmost wave is moved
+      to the top layer." width = "700" class = "img-fluid">
+      <figcaption>Leftmost wave has been moved to the top layer.</figcaption>
+    </figure>
+    </li>
+    <h3>Exploring color blend modes</h3>
+    <h4>Multiply</h4>
+    <li><p>Click on the arrow at the right end of the Blend mode options bar
+    and select <b>Multiply</b> from the dropdown option list.</p>
+    <figure>
+      <img src = "images/BlendModesDropdownList.gif" alt = "Blend BlendModes
+      Dropdown List" class = "img-fluid">
+      <figcaption>Blend modes dropdown list.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/FirstWaveMultiplied.png" alt = "Multiply color
+      blending applied to leftmost wave" width = "600" class = "img-fluid">
+      <figcaption>Result of applying the <b>Multiply</b> color blend mode to the
+      leftmost wave.</figcaption>
+    </figure>
+  <p><b>Multiply</b> multiplies the underlying color with the overlapping
+  object&rsquo;s color. The result is always a darker color. Multiplying any
+  color with black produces black. Multiplying any color with white leaves the
+  color unchanged. The effect is similar to drawing with multiple magic markers.
+  This blending mode is used often for drop shadows.</p>
+  </li>
+  <h4>Difference</h4>
+  <li><p>With the leftmost wave still selected (if it isn&rsquo;t, then
+  reselect it) select <b>Difference</b> from the dropdown option list.</p>
+  <figure>
+    <img src = "images/SelectingDifference.gif" alt = "Select the Difference
+    blending mode" class = "img-fluid">
+    <figcaption>Select the <b>Difference</b> blending mode.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/LeftmostWaveDifference.png" alt = "Difference color
+    blending applied to leftmost wave" width = "600" class = "img-fluid">
+    <figcaption>Result of applying the <b>Difference</b> color blend mode to the
+    leftmost wave.</figcaption>
+  </figure>
+  <p><b>Difference</b> creates the effect of seeing underlying objects as a
+  color film negative. Using it subtracts either the overlaying color from the
+  underlying color or the underlying color from the overlaying color, depending
+  on which one has the greater brightness value. Blending with white inverts
+  the underlying color values; blending with black produces no change.</p>
+  </li>
+  <h4>Screen</h4>
+  <li><p>With the leftmost wave still selected (if it isn&rsquo;t, then
+  reselect it) select <b>Screen</b> from the dropdown option list.</p>
+  <figure>
+    <img src = "images/SelectingScreen.gif" alt = "Select the Screen
+    blending mode" class = "img-fluid">
+    <figcaption>Select the <b>Screen</b> blending mode.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/FirstWaveScreen.png" alt = "Screen color
+    blending applied to leftmost wave" width = "600" class = "img-fluid">
+    <figcaption>Result of applying the <b>Screen</b> color blend mode to the
+    leftmost wave.</figcaption>
+  </figure>
+  <p><b>Screen</b> multiplies the inverse of the overlying and underlying
+  colors. The resulting color is always a lighter color. Screening with black
+  leaves the color unchanged, and screening with white produces white. The
+  effect is similar to projecting multiple slide images on top of each
+  other.</p>
+  </li>
+  <li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+  </li>
+  </ol>
+  <p>Experiment with the other blending modes available in the dropdown list.
+  If you want to undo a color blend, click on the object and then choose
+  <b>Normal</b> from the <b>Blend mode</b> dropdown list in the Layers palette.
+</section>
+
+<section>
+  <header>
+    <h2>Forthcoming color blending functionality in Inkscape.</h2>
+  </header>
+  <p>In the interest of putting this tutorial on the Web sooner rather than
+  later, I chose not to include sections on blend isolation, blend knockouts,
+  and working with opacity masks. These three topics are good graphic design
+  techniques for further exploration in development and implementation to add
+  to Inkscape&rsquo;s already impressive armada of features and functions.</p>
+</section>
+<hr>
+
+<section>
+<header>
+  <h2>Review Questions</h2>
+</header>
+<ol>
+  <li><p>What is the difference between transparency and opacity?</p>
+  <li><p>What is a blending mode and how is it applied?</p>
+  </li>
+  <li><p>Can transparency and color blending be combined?</p>
+  </li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Review Answers</h2>
+</header>
+<ol>
+  <li><p>Transparency and opacity are opposites of each other. Transparency
+  has to do with how much you can see through an object (how transparent it is);
+  opacity has to do with how much you can&rsquo;t see through an object, or how
+  opaque it is.</p>
+  </li>
+  <li><p>Blending modes allow you to vary the way that colors in objects
+  interact or blend with the underlying objects. Modes can be selected from the
+  Blend mode dropdown menu in the Layers palette.</p>
+  </li>
+  <li><p>Yes, transparency and color blending can be combined to produce a
+  broad range of design effects, such as images produced with stained glass,
+  tracing paper, lighting effects, and more.</p>
+  </li>
+</ol>
+</section>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+  <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+  alt = "Creative Commons ShareAlike License" class = "img-fluid">&nbsp;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+		</div>
+	</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
