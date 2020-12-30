@@ -1,0 +1,1161 @@
+<!doctype html>
+
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 9 &ndash; Working with Typography</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+
+<body>
+  <div class = "container">
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 8 &ndash; Working with Typography</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-5 offset-md-1">
+        <figure class = "mt-4">
+          <img src = "images/FinishedPoster.gif"
+          alt = "Finished practice image file for Tutorial 9"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6">
+<p class = "lead">One of the most powerful features of Inkscape is the ability
+to use type as a graphic element. Like other objects, type can be painted,
+scaled, rotated, and so on. You can also wrap type around objects, make it
+follow along the shape of a path, create type masks, import text files into
+containers, and modify the shapes of individual letters in a block of type.</p>
+      </div>
+    </div>
+<hr>
+
+<section>
+<header>
+<h4>In this tutorial, you&rsquo;ll learn how to do the following: </h4>
+  <ul>
+    <li>Create type in containers and along paths.</li>
+    <li>Import text files into type containers.</li>
+    <li>Apply an envelope effect to type, and edit the envelope contents.</li>
+    <li>Adjust type attributes and formatting, including the font, leading, and
+    paragraph alignment.</li>
+    <li>Format text and adjust the text flow.</li>
+    <li>Use Open Type.</li>
+    <li>Wrap type around a graphic.</li>
+    <li>Create stylized letterforms with outlined type.</li>
+    <li>Create type masks.</li>
+    <li>Place text on a path.</li>
+    <li>Save a file in PDF format for online distribution and viewing.</li>
+  </ul>
+</header>
+</section>
+
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this lesson, you&rsquo;ll create a T&rsquo;ai Chi lecture series
+  poster. You will need to have the Chaparral Pro font installed in your system.
+  Chaparral Pro is an OpenType&reg; font that can be
+  used on both Windows and Macintosh operating systems. You can download it
+  from here as a zipped package of Chaparral Pro font faces <a href =
+  "chaparral-pro.zip">Chaparral Pro font</a>, or from a font site on the Web,
+  such as <a href = "https://www.wfonts.com/font/chaparral-pro">Wfonts</a> or
+  <a href = "https://www.cufonfonts.com/font/chaparral-pro">Cufon Fonts</a>.<p>
+
+  <p>To see the finished version of this tutorial, go to the top of the
+  page.</p>
+
+  <ol>
+    <li><p>Download file <a href = "Tutorial09Start.svg">Tutorial09Start.svg</a>.</p>
+    <figure>
+      <img src = "images/Tutorial09Start.gif" alt = "Starting artwork file for
+      Tutorial 9" class = "img-fluid">
+      <figcaption>Starting artwork.</figcaption>
+    </figure>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; <u>O</u>pen. Once Inkscape has opened the
+    starting file, choose <u>F</u>ile &gt; Save <u>A</u>s&hellip;, and save
+    it as <b>TaiChi.svg</b> in a convenient storage location.</p>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Adding Type to a Document</h2>
+  </header>
+  <p>You can add type into an Inkscape document in different ways. You can type
+  directly into the artwork, copy and paste type from other documents, and
+  import entire text files.</p>
+
+  <p>To begin adding type to your artwork, you&rsquo;ll type the Tai Chi title
+  on the poster.<p>
+
+  <ol>
+    <li><p>Select the Text tool (<img src = "images/TextTool.gif" alt = "Text
+    tool" width = "26">) in the toolbox. The Select tool cursor changes to the
+    Text tool cursor (<img src = "images/TextToolCursor.gif" alt = "Text tool
+    cursor" width = "26">). Position the Text tool cursor so that the center
+    of the cross hair is in the top left corner of the artwork.</p>
+    <figure>
+      <img src = "images/TextToolCursorPositioned.gif" alt = "Text tool
+      positioned" class = "img-fluid">
+      <figcaption>Text tool cursor positioned at intersection of guide
+      lines.</figcaption>
+    </figure>
+    </li>
+    <li><p>Create a text box by clicking and dragging down and to the right
+    using the guides that already exist in the document, then release.</p>
+    <figure>
+      <img src = "images/CreateTextBox.png" alt = "Creating a text box" width =
+      "280" class = "img-fluid">
+      <figcaption>Creating a text box.</figcaption>
+    </figure>
+    <p>The center of the Text tool cursor cross line marks the drawing center
+    of the tool.</p>
+    </li>
+    <li><p>Click to set the type baseline and type <b>T&rsquo;ai Chi</b>. Note
+    that a small guide square appears at the bottom left of the <b>T</b>,
+    marking the start of the baseline of the text.</p>
+    <figure>
+      <img src = "images/TaiChiTitleText.gif" alt = "Tai chi title text"
+      class = "img-fluid">
+      <figcaption>Typing in the poster title text.</figcaption>
+    </figure>
+    </li>
+    <p>By default, the type you create is 12-point sans-serif, filled with
+    black, and stroked with None. The Fill and Stroke boxes in the toolbox
+    (in the lower left corner of the working window) display the type&rsquo;s
+    current paint attributes.</p>
+    <figure>
+      <img src = "images/FillAndStrokeBoxForPosterTitleText.gif" alt = "Fill and
+      Stroke attributes of the poster title text" class = "img-fluid">
+      <figcaption>Fill and Stroke attributes of the poster title
+      text.</figcaption>
+    </figure>
+</ol>
+  </section>
+  <section>
+    <header>
+      <h2>Applying Attributes of One Body of Text to Another</h2>
+    </header>
+    <p>Now, you&rsquo;ll apply attributes of other text in the poster to
+    the title text.</p>
+  <ol>
+    <li><p>With the Text tool active, click on the line &ldquo;Lecture Series
+    300&rdquo;. Note that the text font is 18 point Chaparral Pro bold
+    italic.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/LectureSeries300_1.gif" alt = "Lecture Series 300"
+      class = "img-fluid">
+      <figcaption>Clicking on the <b>Lecture Series<br>600</b> text with the
+      Text tool.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/LectureSeries300_2.gif" alt = "Text attributes of the
+      Lecture Series subheading" class = "img-fluid">
+      <figcaption>Text attributes of the class subheader.</figcaption>
+    </figure>
+    <div style = "clear: left;"></div>
+    </li>
+    <li><p>With the text still selected, click on the Fill and Stroke icon in
+    the Commands Bar (<img src = "images/FillAndStrokeIcon.gif" alt = "Fill and
+    Stroke icon" width = "26">). Click on the Fill tab if it is not
+    highlighted. Note that the text fill is 60% gray (<b>K</b> for blac<b>k</b>
+    is <b>60</b> on the <b>K</b> color bar.).</p>
+    <figure>
+      <img src = "images/Gray60Percent.png" alt = "Color and Stroke
+      attributes of the Lecture Series subheading" class = "img-fluid">
+      <figcaption>Color and Stroke attributes of the class
+      subheader.</figcaption>
+  </figure>
+    </li>
+    <li><p>With the Fill and Stroke palette still active (bring it back up if
+    it isn&rsquo;), double-click on the <b>RGBA</b> hexadecimal code to
+    highlight it, and press &lt;Ctrl&gt;-C to copy the code to the
+    Clipboard.</p>
+    <figure>
+      <img src = "images/CopyColorCode.png" alt = "Double-click on the
+      hexadecimal color code" class = "img-fluid">
+      <figcaption>Double-click on the hexadecimal color code to highlight it,
+      and &lt;Ctrl&gt;-C to copy it to the Clipboard.</figcaption>
+    </figure>
+    <p>Note the <b>666666ff</b> code. This code represents <b>60% gray</b>.
+    80% gray is <b>888888</b>. The two <b>ff</b>s represent 100% opacity.</p>
+    </li>
+    <li><p>Now click on the title text <b>T&rsquo;ai Chi</b> to select it,
+    double-click on the hexadecimal color code to highlight it, press
+    &lt;Ctrl&gt;-V to paste the new color code in from the Clipboard, and
+    press &lt;Enter&gt; to set the value. The title text has the same gray color
+    as the course subheader.</p>
+    <figure>
+      <img src = "images/SameGrayColor.gif" alt = "Gray color of subheader
+      text copied to title text" class = "img-fluid">
+      <figcaption>Gray color copied to title text.</figcaption>
+    </li>
+    <aside><p>The <b>RGBA</b> label to the color code bar stands for <b>R</b>ed,
+    <b>G</b>reen, <b>B</b>lue, and <b>A</b>lpha Channel. An <b>Alpha Channel</b>
+    value determines how transparent (or conversely, how opaque) an object is.
+    A value of <b>00</b> means that an object is fully transparent, while a
+    value of <b>ff</b> means fully opaque.</p>
+    </aside>
+    <li><p>Click on the <b>Text and Font</b> icon (<img src = "images/TextAndFontIcon.gif"
+    alt = "Text and Font Icon" width = "26">) in the Commands Bar. Locate
+    and choose the <b>Chaparral Pro</b> font in the <b>Font family</b> dropdown
+    listing, <b>Bold Italic</b> in the <b>Style</b> listing, and <b>18</b> in
+    the <b>Font size</b> dropdown listing.</b></p>
+    <figure>
+      <img src = "images/TextAndFontPalette.gif" alt = "Text and Font palette"
+      class = "img-fluid">
+      <figcaption>New text attributes chosen in the Text and Font palette.</figcaption>
+    </figure>
+    </li>
+    <li><p>Click on the <u>A</u>pply button. The poster title appearance now
+    reflects the new text attributes.</p>
+    <figure>
+      <img src = "images/NewTextAttributesApplied.gif" alt = "New text
+      Attributes applied to poster title" class = "img-fluid">
+      <figcaption>The Chaparral Pro, bold italic, 18 point font face is applied
+      to the poster title text.</figcaption>
+    </figure>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Changing Character Size</h2>
+  </header>
+  <p>Now you&rsquo;ll use the <b>Text and Font</b> palette to make the title
+  text bigger.</p>
+  <ol>
+    <li><p>Click on the Text Tool icon (<img src = "images/TextToolIcon.gif"
+    alt = "Text tool icon selected in the toolbox" width = "26">) in the
+    toolbox. The Text and Font Command Bar appears above the work window.</p>
+    <figure>
+      <img src = "images/TextCommandBar.gif" alt = "Text and Font Command Bar"
+      class = "img-fluid">
+      <figcaption>Text and Font Command Bar.</figcaption>
+    </figure>
+    <h4>Left Half of the Text and Font Command Bar</h4>
+    <figure>
+      <img src = "images/TextCommandBarLeftWithLabels.png" alt = "Left half of
+      the Text and Font Command Bar" class = "img-fluid">
+    </figure>
+    <h4>Right Half of the Text and Font Command Bar</h4>
+    <figure>
+      <img src = "images/TextCommandBarRightWithLabels.png" alt = "Right half
+      of the Text and Font Command Bar" class = "img-fluid">
+    </figure>
+    <h4>Hidden Features</h4>
+    <figure style = "float: left" class = "ml-5 mr-5">
+      <img src = "images/TextCommandBarDoubleArrow.gif" alt = "Options in the
+      Hidden Features box" class = "img-fluid">
+      <figcaption>Two hidden features.</figcaption>
+    </figure>
+    <figure style = "float: left;" class = "mr-5">
+      <img src = "images/TextOrientationSubMenu.gif" alt = "Text orientation
+      submenu" class = "img-fluid">
+      <figcaption>Text orientation submenu.</figcaption>
+    </figure>
+    <figure style = "float: left;">
+      <img src = "images/TextDirectionSubMenu.gif" alt = "Text direction
+      submenu" class = "img-fluid">
+      <figcaption>Text direction submenu.</figcaption>
+    </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <p>By default, the <b>Text and Font Command Bar</b> displays the selected
+    font and its style, size, kerning, leading, and tracking values. If the
+    type selection contains two or more attributes, the corresponding text
+    boxes are blank. (<b>Leading</b> is the amount of space between lines or
+    paragraphs. <b>Kerning</b> is the space between two characters.
+    <b>Tracking</b> is the spacing between a string of characters.)</p>
+
+    <li><p>Type <b>120</b> in the Font Size text box and press &lt;Enter&gt;
+    or &lt;Return&gt; to increase the font size to 120 points. The text box
+    you drew earlier appears and a blinking angled line segment also
+    appears.</p>
+    <figure>
+      <img src = "images/TitleTextSize120_1.gif" alt = "Change title text size
+      to 120 points. The text box and a blinking angled line segment appear."
+      class = "img-fluid">
+      <figcaption>Title text now at 120 points but doesn&rsquo;t fit into
+      the text box.</figcaption>
+    </figure>
+    </li>
+    <li><p>The title text has been magnified so much that it no longer fits
+    into the text box. To remedy this situation, click on the diamond on the
+    lower right corner of the text box and drag it down and to the right until
+    the title text appears in its entirety.</p>
+    <figure>
+      <img src = "images/ExpandTextBox.gif" alt = "Expand the text box"
+      class = "img-fluid">
+      <figcaption>Expand the text box until the title text appears.</figcaption>
+    </figure>
+    </li>
+    <p>You can also select a font and font size using the <b>Text and Font</b>
+    palette dropdown listings.</p>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Reshaping Text with a Deformation Lattice</h2>
+  </header>
+  <p>A <b>deformation lattice</b> is just a grid that allows you to manipulate
+  a shape inside it. The grid you&rsquo;ll be using has points where grid lines
+  intersect that you can move to reshape your object. You will distort the
+  text to make it follow the shape of the image of the person.</p>
+  <ol>
+    <li><p>Select the title text and press &lt;Ctrl&gt;-D to make a copy of
+    it.</p>
+    </li>
+    <li><p>&lt;Ctrl&gt;-drag the copy of the text off to the side of the artboard
+    and leave the original text in place. The copy of the text object serves as
+    a backup copy.</p>
+    <figure>
+      <img src = "images/CopyOfTitleText.gif" alt = "Make a copy of the title
+      text." class = "img-width">
+      <figcaption>Make a copy of the title text.</figcaption>
+    </figure>
+    </li>
+    <li><p>Select the original title text with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool" width = "26">).</p>
+    </li>
+    <li>Choose <u>P</u>ath &gt; <u>O</u>bject to path to convert the original
+    title text from a text object to a grouped path.</p>
+    </li>
+    <li><p>Choose <u>P</u>ath &gt; Path E<u>f</u>fects&hellip;</p>
+    <p>The <b>Path Effects</b> dialog box appears.</p>
+    <figure>
+      <img src = "images/PathEffectsDialogBox.gif" alt = "Path Effect dialog
+      box" class = "img-width">
+      <figcaption><b>Path Effects</b> dialog box.</figcaption>
+    </figure>
+    </li>
+    <li><p>Click on the Plus Sign icon (<img src = "images/PlusSignIcon.gif"
+    alt = "Plus sign icon" width = "26">) to add a path effect to the Effect
+    list window.</p>
+    <p>The <b>Add Path Effect</b> listing appears. Select <b>Bend</b>.</p>
+    <figure>
+      <img src = "images/SelectBend.gif" alt = "Select Bend" class =
+      "img-width">
+      <figcaption>Select <b>Bend</b>.</figcaption>
+    </figure>
+    </li>
+    <li><p>Click on the <u>A</u>dd button. The <b>Bend</b>
+    effect is added to the effects window.</p>
+    <figure>
+      <img src = "images/BendAdded.gif" alt = "Bend added to the Path Effects
+      window" width = "300" class = "img-width">
+      <figcaption><b>Bend</b> added to the Path Effects window.</figcaption>
+    </figure>
+    </li>
+    <p>You can add more than one path effect to your shape object. When you
+    want to use one particular effect, click on it to select it, it will
+    highlight to show you that it is the currently active effect and immediately
+    available for use.</p>
+    <li><p>Click on the Bend path node tool option. The title text is
+    immediately surrounded by a deformation bounding box with a bend tool line
+    running through its length.</p>
+    <figure>
+      <img src = "images/BendPathOption.gif" alt = "Node Tool is selected and
+      deformation bounding box appears." class = "img-width">
+      <figcaption><b>Node Tool</b> is selected and deformation bounding box
+      appears.</figcaption>
+    </figure>
+    </li>
+    <li><p>With the Node Tool cursor, click on the Bend tool line and drag it
+    down to create a curve in the title text that mimics the curvature of the
+    person&rsquo;s upper body (the result does not have to be exact).</p>
+    <figure>
+      <img src = "images/BendToolCurved.gif" alt = "The Bend tool line is
+      curved." class = "img-width">
+      <figcaption>Pull down on the <b>Bend Tool</b> line with the <b>Node
+      tool</b> cursor to curve it.</figcaption>
+    </figure>
+    </li>
+    <li><p>You will now fine tune the placement and curvature of the poster
+    title text.</p>
+    <p>Alternate between using the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool" width = "26">) to move,
+    rotate, and resize the entire text object and using the Edit On-canvas tool
+    (<img src = "images/EditOnCanvasIcon.gif" alt = "Edit On-canvas icon" width
+    = "26">) to fine-adjust the downward bend in the curvature. When the Select
+    tool (<img src = "images/SelectionTool.gif" alt = "Selection tool" width =
+    "26">) is active and you need to use the Bend tool, click on the Edit
+    On-canvas tool (<img src = "images/EditOnCanvasIcon.gif" alt = "Edit
+    On-canvas icon" width = "26">) in the <b>Path Effects</b> palette so the
+    Bend Tool line will reappear as the active tool.</p>
+    <p>If the Bend tool disappears for no reason, just click on the Edit
+    On-canvas tool (<img src = "images/EditOnCanvasIcon.gif" alt = "Edit
+    On-canvas icon" width = "26">) to reactivate it.</p>
+    <figure>
+      <img src = "images/Fine-TunedTitleText.gif" alt = "Fine-tuned poster
+      title text" class = "img-fluid">
+      <figcaption>Select Tool and Bend Tool used to fine-adjust the poster
+      title text. The text was just rotated &ndash; note<br>the rotation
+      handle in the lower right corner of the text&rsquo;s
+      bounding box.</figcaption>
+    </li>
+    <li><p>With the title text still selected, place it below the person by
+    clicking on the <b>Lower selection one step</b> icon (<img src =
+    "images/Lower1StepIcon.gif" alt = "Lower One Step icon" width = "26">) in
+    the Tool Control Bar.</p>
+    <figure>
+      <img src = "images/FigureLowered1Step.gif" alt = "Figure lowered behind
+      poster title text" width = "img-fluid">
+      <figcaption>Figure placed behind poster title text.</figcaption>
+    </figure>
+  </li>
+  <li><p>The person&rsquo;s face hides the <b>i</b> in the word
+  <b>T&rsquo;ai</b>. Adjust the size and placement of both title text and
+  figure so that all the text is visible. Place the text so that the <b>T</b>
+  at the beginning of the text touches against the two guide lines in the upper
+  left corner of the artboard. You might also need to move the course
+  heading and subheading that are near the person&rsquo;s back foot.</p>
+  <figure>
+    <img src = "images/FinalAdjustmentTextAndFigure.gif" alt = "Poster title
+    text and figure fine-adjusted for good composition" width = "img-fluid">
+    <figcaption>Poster title text and figure fine-adjusted for better visual
+    composition.</figcaption>
+  </figure>
+  </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Creating Type Paths</h2>
+  </header>
+  <p>You can modify the shapes of individual letters in a block of type by
+  converting the block to type paths or letterforms. When you create type paths,
+  each character becomes a separate object with compound paths outlining the
+  character. This is helpful when creating logos or other artwork that is
+  distributed to many people and might not have the same fonts that you
+  used.</p>
+  <p>Now you will create the number 300 and convert it into paths.</p>
+  <ol>
+    <li><p>Click on the Text tool (<img src = "images/TextTool.gif" alt = "Text
+    tool" width = "26">) in the toolbox. Position the cursor and click on a
+    spot to the right of the filled rectangle in the upper right section of the
+    page. You will start typing here.</p>
+    <figure>
+      <img src = "images/StartTypingHere.gif" alt = "Start typing here."
+      class = "img-fluid">
+      <figcaption>Start typing here.</figcaption>
+    </figure>
+    </li>
+    <li><p>Type <b>6</b> &lt;Enter&gt; <b>0</b> &lt;Enter&gt;<b>0</b>
+    &lt;Enter&gt;. The text looks like it flows down from the top. We used
+    Chaparral Pro, bold, 45 points for the font. We also changed the Spacing
+    between baselines (<img src = "images/LineSpacing.9Percent.gif"
+    alt = "Spacing between baselines icon">) from <b>1.25 %</b> to
+    <b>0.90 %</b>. Note the baseline marker square at the lower left of the
+    number <b>6</b>.</p>
+    <figure>
+      <img src = "images/600Text.gif" alt = "Type in the number
+      text object" class = "img-fluid">
+      <figcaption>Typing in the number text object.</figcaption>
+    </figure>
+    </li>
+    <li><p>Group select the three numbers (click on one number or marquee
+    select). The three numbers are currently one group of text, so clicking on
+    one number selects the entire group.</p>
+    <figure>
+      <img src = "images/SelectNumberObject.gif" alt = "Select the number
+      text object" class = "img-fluid">
+      <figcaption>Select the number text object.</figcaption>
+    </figure>
+    </li>
+    <li><p>Choose <u>P</u>ath &gt; <u>O</u>bject to path. Inkscape now no longer
+    considers these numbers as a single text object but as a group of individual
+    paths whose shapes can be modified in many different ways. Note that <thead>
+    baseline marker square at the bottom left of the character <b>6</b> has
+    disappeared. We will create our own custom stylization.</p>
+    </li>
+    <li><p>Deselect the character <b>6</b>.</p>
+    </li>
+    <li><p>Choose the Node tool (<img src = "images/NodeTool.gif" alt = "Node
+    tool" width = "26">) and click on the character <b>6</b>. Nodes appear on
+    the inner and outer curved paths that make up the shape of the character
+    <b>6</b>.</p>
+    <figure>
+      <img src = "images/6AsAPath.gif" alt = "The character 6 is now a path"
+      class = "img-fluid">
+      <figcaption>The character 6 as a path.</figcaption>
+    </figure>
+  </li>
+  <li><p>Magnify the <b>6</b>. With the Node tool (<img src =
+  "images/NodeTool.gif" alt = "Node tool" width = "26">) still selected,
+  marquee select the inner path. If you accidentally include a node from the
+  outer path, click off the object to deselect and start again.</p>
+  <figure>
+    <img src = "images/SelectInnerPath.gif" alt = "Select inner path of the
+    character 6" class = "img-fluid">
+    <figcaption>Select the inner path of the character 6.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/InnerPathSelected.gif" alt = "Inner path of the
+    character 6 selected" class = "img-fluid">
+    <figcaption>Inner path of the character 6 is selected.</figcaption>
+  </figure>
+  </li>
+  <li><p>With the inner path of the <b>6</b> still selected, press the Down
+  Arrow key a couple of times to move the inner path downward.</p>
+  <figure>
+    <img src = "images/InnerPathMovedDown.gif" alt = "Inner path of the
+    character 6 moved down" class = "img-fluid">
+    <figcaption>Inner path of the character 6 is moved down.</figcaption>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select twice &mdash; first time to
+  deselect the nodes on the inner path, and the second time to deselect the
+  entire character <b>6</b>.</p>
+  <figure>
+    <img src = "images/Stylized6.gif" alt = "Stylized character 6"
+    class = "img-fluid">
+    <figcaption>Stylized character 6.</figcaption>
+  </li>
+  <li><p>Repeat Steps 6 through 9 for the two zeroes. You should see a stylized
+  string of numbers like the one below.</p>
+  <figure>
+    <img src = "images/Stylized600.gif" alt = "Stylized character string 600"
+    class = "img-fluid">
+    <figcaption>Stylized character string 600.</figcaption>
+  </li>
+  <li><p>Move the <b>600</b> so it is inside the gray rectangle on the
+  right.</p>
+  <figure>
+    <img src = "images/600Move.gif" alt = "Move the 600 to inside the gray
+    rectangle." class = "img-fluid">
+    <figcaption><b>600</b> moved to inside the gray rectangle.</figcaption>
+  </li>
+  <li><p>The <b>600</b> needs to be properly positioned in the rectangle. With
+  the character string still selected, &lt;Shift&gt;-click on the gray
+  rectangle to select it, also.</p>
+  <figure>
+    <img src = "images/GroupSelect600AndRectangle.gif" alt = "Group select the
+    600 and the background gray rectangle" class = "img-fluid">
+    <figcaption>Group select the <b>600</b> and the background gray
+    rectangle.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the <b>Align and distribute objects&hellip;</b> icon (<img
+  src = "images/AlignAndDistributeIcon.gif" alt = "Align and Distribute icon"
+  width = "26">) in the Tool Controls Bar. The <b>Align and Distribute</b>
+  panel appears.</p>
+  <figure>
+    <img src = "images/AlignAndDistributePanel.gif" alt = "Align and distribute
+    panel" class = "img-fluid">
+    <figcaption><b>Align and Distribute</b> panel.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the down-arrow at the right of the <b>Relative to:</b> text
+  field box in the <b>Align</b> section and choose <b>Last selected</b> &mdash;
+  the gray background rectangle is the last item we selected and we will center
+  the <b>600</b> character object on the rectangle&rsquo;s center line.</p>
+  <p>The <b>600</b> automatically moves to center line.</p>
+  <figure>
+    <img src = "images/Centering600.gif" alt = "Centering the 600." width =
+    "img-width">
+    <figcaption>Centering the <b>600</b> character string.</figcaption>
+  </figure>
+  </li>
+  <li><p>With the <b>600</b> still selected, press the Up Arrow key until the
+  top of the <b>6</b> hits the blue guide line. Now, &lt;Ctrl&gt;-drag the
+  bottom center handle arrow up until the character string is about &frac23;
+  the height of the clouds image.</p>
+  <figure>
+    <img src = "images/600MoveUpThen2Thirds.gif" alt = "Move the 600 up, then
+    resize the character to two-thirds the height of the clouds image." width =
+    "img-width">
+    <figcaption>Moving the <b>600</b> character string up and then<br>
+    resizing it to &frac23; the height of the cloud picture.</figcaption>
+  </figure>
+  <p>We just did a &ldquo;quick &rsquo;n dirty&rdquo; size adjustment of the
+  <b>600</b> character string so it is not out of balance with the whole
+  clouds and rectangle composition.</p>
+</li>
+<li><p>Now, with the character string still selected, press the Down Arrow key
+until the top of the <b>6</b> is about half a character height down from the
+top of the rectangle.</p>
+  <figure>
+    <img src = "images/HalfACharacterHeight.gif" alt = "600 moved hald a
+    character height from the top of the background rectangle" class =
+    "img-width">
+    <figcaption><b>600</b> moved down half a character from the top of the
+    background rectangle.</figcaption>
+  </figure>
+</li>
+<li><p>With the <b>600</b> still selected, click on the White square in the
+color palette. The lettering is now white.</p>
+  <figure>
+    <img src = "images/600WhiteFill.gif" alt = "The 600 now has a white fill."
+    class = "img-fluid">
+    <figcaption>The <b>600</b> now has a white fill.</figcaption>
+  </figure>
+</li>
+<li><p>Click away from the artwork to deselect it.</p>
+  <figure>
+    <img src = "images/ResultSoFar.gif" alt = "Poster is partially done."
+    class = "img-fluid">
+    <figcaption>Result.</figcaption>
+  </figure>
+</li>
+<li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+</li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Creating Type Masks</h2>
+  </header>
+  <p>Masks crop part of an image so that only a portion of it is revealed
+  through the shape or shapes that you create. You can use type as a mask
+  without having to convert the type to outlines first.</p>
+  <p>In this tutorial, you&rsquo;ll create a mask using type and an embedded
+  bitmap image. An image of a cloudy sky was pasted into the document to use as
+  the background of the mask.</p>
+  <p>You will add the heading "ASIAN STUDIES PROGRAM" in the top right corner
+  of the poster and convert it to a type mask over the cloudy sky image.</p>
+  <ol>
+    <li><p>Click on the Text tool (<img src = "images/TextTool.gif" alt = "Text
+    tool" width = "26">) in the toolbox, and then click in a clear area
+    underneath the sky image where you will type the course title. Type, in
+    capital letters, ASIAN STUDIES PROGRAM. Use Chaparral Pro, bold, 28 pt.
+    Press &lt;Enter&gt; or &lt;Return&gt; after each word to left
+    justify-them.</p>
+      <figure>
+        <img src = "images/AsianStudiesProgramLeftJustified.gif" alt = "Asian
+        Studies Program left justified" class = "img-fluid">
+        <figcaption>Type ASIAN STUDIES PROGRAM in capitals.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the text still selected, click on the Align right icon (<img
+    src = "images/RightJustifyIcon.gif" alt = "Align right icon" width = "26">)
+    in the Tool Controls Bar. The text immediately justifies right.</p>
+      <figure>
+        <img src = "images/AsianStudiesProgramRightJustified.gif" alt = "Asian
+        Studies Program Right justified" class = "img-fluid">
+        <figcaption>Text right-justified.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), click-drag the image of the cloudy
+    sky down so that it lies behind the course title text. If it covers the
+    text, then click on the <b>Lower selection one step</b> icon (<img src =
+    "images/Lower1StepIcon.gif" alt = "Lower One Step icon" width = "26">) in
+    the Tool Controls Bar to place the image behind the text. We placed the
+    image so the lettering is superimposed over the upper left corner where
+    there is relatively strong contrast in colors.</p>
+    <p><b>Note:</b> the image that is to be used as a mask is like a cookie
+    cutter that cuts out the cookies from the image underneath. <u>Always</u>
+    put the masking image or text above the image that you want to have shaped
+    like your &ldquo;cookie-cutter&rdquo; image.</p>
+      <figure>
+        <img src = "images/Prep4Clipping.gif" alt = "Preparing for clipping"
+        class = "img-fluid">
+        <figcaption>Sky image placed behind course title text.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose <u>O</u>bject &gt; Clip &gt; <u>S</u>et to perform the
+    clipping action.</p>
+      <figure>
+        <img src = "images/ObjectClipSet.gif" alt = "Object clip set"
+        class = "img-fluid">
+        <figcaption>Choose <u>O</u>bject &gt; Clip &gt; <u>S</u>et to clip the
+        underlying image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Instead of a black fill, the text string now shows what lies behind
+    it. That rest of the sky image has been made transparent and so is not
+    visible. The result is a &ldquo;cookie-cutter&rdquo; effect that falls
+    pleasingly on the eye.</p>
+      <figure>
+        <img src = "images/ClipResult.gif" alt = "Result of clipping"
+        class = "img-fluid">
+        <figcaption>Clipping result.</figcaption>
+      </figure>
+    </li>
+    <li><p>We will now align the clip text and the <b>600</b> course number so
+    their top edges are aligned to improve visual composition.</p>
+    <p>Click on the <b>600</b> text in the adjacent gray rectangle and
+    <u>then</u> &lt;Shift&gt;-click on the clip text.</p>
+    <p>Choose <u>O</u>bject &gt; <u>A</u>lign and Distribute&hellip;, choose
+    <b>First selected</b> in the <b>Align</b> section, and finally select the
+    <b>Align top edges</b> icon in the option listing.</p>
+    <p>The two items automatically line up along their tops.</p>
+      <figure>
+        <img src = "images/AlignTopEdges.gif" alt = "Align top edges."
+        class = "img-fluid">
+        <figcaption>Top-aligning the two text objects.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>ASIAN STUDIES PROGRAM</b> text is partially behind the
+    <b>i</b> in the <b>T&rsquo;ai Chi</b> title text. We need to bring it
+    forward.</p>
+    <p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">) active, select the clip text and then
+    click on the <b>Raise selection one step</b> icon (<img src =
+    "images/Raise1StepIcon.gif" alt = "Raise One Step icon" width = "26">) to
+    bring the text up one level. If the <b>600</b> text is still selected, no
+    change will happen with it &mdash; the characters are already so
+    &ldquo;up&rdquo; as they will go.</p>
+      <figure>
+        <img src = "images/AsianStudiesProgramUpOneStep.gif" alt = "Move the
+        lettering up one step." class = "img-fluid">
+        <figcaption>Raising the clip text one level.</figcaption>
+      </figure>
+    </li>
+    <li><p>Below is the poster-in-progress.</p>
+      <img src = "images/ResultSoFar2.gif" alt = "Result so far"
+      class = "img-fluid">
+      <figcaption>Result.</figcaption>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Typing Along a Path</h2>
+  </header>
+  <p>You can enter type along a path in Inkscape. In this exercise, you&rsquo;ll
+  add a freeform line of text to the poster. We will use the Adobe Garamond Pro
+  Regular font in this section. If this font is not on your computer, you can
+  download it from here, <a href = "Adobe Garamond Pro Regular.zip">Adobe
+  Garamond Pro Regular</a>, or from the Internet at <a href = "https://fontsgeek.com/fonts/Adobe-Garamond-Pro-Regular">Fonts
+  geek</a> or <a href = "https://www.cufonfonts.com/font/adobe-garamond-pro-2">Cufon
+  Fonts</a>. Unzip the files and install them. If Inkscape is currently running,
+  exit and restart it so it will &ldquo;see&rdquo; the newly installed
+  font(s).</p>
+  <ol>
+    <li><p>Select the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    tool icon" width = "26">).</p>
+    </li>
+    <li><p>Magnify the left arm of the figure so it&rsquo;ll be easier to draw
+    the type path underneath it.</p>
+    </li>
+    <li><p>Start the type path by clicking with the Pen tool (<img src =
+    "images/PenToolIcon.gif" alt = "Pen tool icon" width = "26">) under the
+    drop shadow where the arm joins the body. Click again underneath the elbow
+    and under the drop shadow. Click a third time at the sleeve of the tunic,
+    and then press &lt;Enter&gt; or &lt;Return&gt; to terminate the line
+    segment.</p>
+      <figure>
+        <img src = "images/DrawingTypePath.gif" alt = "Drawing the type path"
+        class = "img-fluid">
+        <figcaption>Drawing the type path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeTool.gif" alt = "Node
+    tool" width = "26">) and click on the line node that appears under the elbow
+    to make that node active. The node turns red when the Node tool cursor
+    hovers over it to indicate that it is active.</p>
+      <figure>
+        <img src = "images/ClickOnElbowNode.gif" alt = "Selecting the elbow
+        node" class = "img-fluid">
+        <figcaption>Selecting the elbow node.</figcaption>
+      </figure>
+  </li>
+  <li><p>With the Node tool (<img src = "images/NodeTool.gif" alt = "Node
+  tool" width = "26">) still active, select the <b>Make selected nodes
+  smooth</b> icon (<img src = "images/SmoothNodesIcon.gif" alt = "Make selected
+  nodes smooth icon" width = "26">) in the Tool Controls Bar. The selected node
+  becomes a smooth curve.</p>
+    <figure>
+      <img src = "images/SmoothCurve.gif" alt = "Smoothened curve" class =
+      "img-fluid">
+      <figcaption>Angular bend made smooth.</figcaption>
+    </figure>
+  </li>
+  <li><p>Select the Text tool (<img src = "images/TextToolIcon.gif"
+  alt = "Text tool icon selected in the toolbox" width = "26">) in the toolbox,
+  select the Adobe Garamond Pro Regular font, 6 points, and type underneath the
+  curve <b>Combine mind intent and inner body skill</b>.</p>
+    <figure>
+      <img src = "images/Text4Path.gif" alt = "Text for the path" class =
+      "img-fluid">
+      <figcaption>Text to be set to the above-lying path.</figcaption>
+    </figure>
+  </li>
+  <li><p>Deselect the text by choosing <u>E</u>dit &gt; D<u>e</u>select. Then,
+  with the Select tool (<img src = "images/SelectionTool.gif" alt = "Selection
+  tool" width = "26">), group-select the text and curve by
+  &lt;Shift&gt;-clicking the two objects (order is not important). Choose
+  <u>T</u>ext &gt; <u>P</u>ut on Path to combine them.</p>
+    <figure>
+      <img src = "images/PutTextOnPath.gif" alt = "Putting the line of text on
+      the path" class = "img-width">
+      <figcaption>Placing the text on the curve.</figcaption>
+    </figure>
+  </li>
+  <li><p>Note that the words <b>body skill</b> are cut off. The hidden parts
+  still exist. To retrieve them, click on the Node tool icon (<img src =
+  "images/NodeTool.gif" alt = "Node tool" width = "26">) and click-drag the
+  right end node that appears to the right to lengthen the curve until the
+  remainder of the text appears.</p>
+    <figure>
+      <img src = "images/RetrievingEndOfText.gif" alt = "Retrieving the end of
+      the text" class = "img-width">
+      <figcaption>Lengthening the curve to make the remaining text
+      visible.</figcaption>
+    </figure>
+  </li>
+  <li><p>Press &lt;Esc&gt; twice to deselect the text and curve.</p>
+  </li>
+  <li><p>We will now eliminate the curve. Actually, we will render it
+  transparent.</p>
+  <p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), select the curve. You might need to magnify
+  where you want to click to separate the curve from the text.</p>
+  <p><b>Tip:</b>You can click on one or the other end of the curve with the
+  Node tool (<img src = "images/NodeTool.gif" alt = "Node tool" width = "26">)
+  and elongate the curve for greater separation from the text.</p>
+  <p>Choose <u>O</u>bject &gt; <u>F</u>ill and Stroke &gt; Stroke paint tab &gt;
+  No paint icon (<img src = "images/NoPaintIcon.gif" alt = "No paint icon"
+  width = "26">).</p>
+  <p>The curve disappears. Only the text remains with its curvature intact.</p>
+  <figure>
+    <img src = "images/CurveDisappears.gif" alt = "The curve disappears."
+    class = "img-fluid">
+    <figcaption>The curve is rendered transparent and disappears.</figcaption>
+  </figure>
+  <aside><b>Note:</b> You can still edit the curvature of the text. To see it,
+  choose <u>V</u>iew &gt; <u>D</u>isplay mode &gt; <u>O</u>utline. The curve
+  becomes visible. You can edit it in <b>Outline</b> mode and switch between
+  <b>Outline</b> and <b>Normal</b> mode as desired.</p>
+  <p>You can also change the font size, weight, placement, and color as you can
+  with straight text.</p>
+  </aside>
+  </li>
+  <li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+    <figure>
+      <img src = "images/ResultSoFar3.gif" alt = "Result."
+      class = "img-fluid">
+      <figcaption>Result.</figcaption>
+    </figure>
+</li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Having Text Flow into an Arbitrary Shape</h2>
+  </header>
+  <p>With Inkscape, you can fit text into a shape envelope you create. You can
+  edit the text as you would regular text: changing font family, font size,
+  color, and more. In this exercise, you will create a custom text box that will
+  contain type that conforms to the envelope&rsquo;s shape.</p>
+  <ol>
+    <li><p>Marquee-select all the contents of the artboard and &lt;Ctrl&gt;-drag
+    the lower right corner sizing handle until it meets the right-hand
+    guideline. The width of the poster image should now fill all the width
+    between the left-hand and right-hand guidelines.</p>
+      <figure>
+        <img src = "images/ExpandFullPosterImage.gif" alt = "Expand the full
+        poster image" class = "img-fluid">
+        <figcaption>Expand the full poster image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose <u>V</u>iew &gt; Page <u>G</u>rid to bring up the background
+    grid. We&rsquo;ll use it to create a text containment box. Then, if the
+    Snap Controls Bar isn&rsquo;t active, choose <u>V</u>iew &gt;
+    Sh<u>o</u>w/Hide &gt; Sn<u>a</u>p Controls Bar to bring it up. Click on the
+    <b>Enable Snapping</b> (%) icon (<img src = "images/EnableSnappingIcon.gif"
+    alt = "Enable snapping icon" width = "26">), the Snap Bounding Boxes icon
+    (<img src = "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes
+    icon" width = "26">), Snap node, paths, and handles icon (<img src =
+    "images/SnapNodesPathsHandlesIcon.gif" alt = "Snap nodes, paths, and handles
+    icon" width = "26">), Snap cusp nodes, incl. rectangle corners icon
+    (<img src = "images/SnapCuspsNodesRectCornersIcon.gif"
+    alt = "Snap cusp nodes, nodes, and rectangle corners icon" width = "26">),
+    and finally, the Snap to grids icon (<img src = "images/SnapToGridsIcon.gif"
+    alt = "Snap to Grids icon" width = "26">).
+  </p>
+    <p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    tool icon" width = "26">), draw a containment box that follows the
+    person&rsquo;s shape on the right, preferably avoiding the drop shadow,
+    goes straight to the right from the figure to the right guideline, then
+    going straight down to the bottom guideline, over to the left on the bottom
+    guide line, and then up, avoiding the drop shadow and reconnecting with the
+    starting point. Use the figure below as a template.</p>
+    <p><b>Note:</b> You can draw the containment box any way you wish. The
+    direction in this exercise is completely arbitrary. The Snap to grids
+    function is meant to help you draw straight horizontal and vertical lines
+    with minimal fuss.</p>
+      <figure>
+        <img src = "images/DrawTextArea.gif" alt = "Draw the text area" class =
+        "img-fluid">
+        <figcaption>Draw the text containment box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Open the <b>Text.rtf</b> file and copy the text to the Clipboard.
+    Return to the <b>TaiChi.svg</b> file, and paste the text (&lt;Ctrl&gt;-V)
+    onto the artboard.</p>
+      <figure>
+        <img src = "images/ImportText.gif" alt = "Import the text." class =
+        "img-fluid">
+        <figcaption>Copy and paste the text from an outside file.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now flow the text into the containment box.
+    &lt;Shift&gt;-click on the containment box and the text to group-select
+    them (order doesn&rsquo;t matter).</p>
+      <figure>
+        <img src = "images/GroupSelectTextAndBox.gif" alt = "Group-select the
+        text and the containment box." class = "img-fluid">
+        <figcaption>Group-select the text and the containment
+        envelope.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose <u>T</u>ext &gt; <u>F</u>low into Frame. The text is
+    automatically placed inside the containment box so that it wordwraps around
+    to the next line down when it reaches the right side of the box.</p>
+      <figure>
+      <img src = "images/FlowIntoFrame.gif" alt = "Flow the imported text into
+      the box frame." class = "img-fluid">
+      <figcaption>Flow the imported text into the envelope frame.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Text tool (<img src = "images/TextToolIcon.gif" alt = "Text
+    tool icon selected in the toolbox" width = "26">) active, insert hard
+    returns (press &lt;Enter&gt; or &lt;Return&gt;) in appropriate places to
+    put a space between paragraphs.</p>
+      <figure>
+        <img src = "images/SeparateParagraphs.gif" alt = "Separate the
+        paragraphs." class = "img-fluid">
+        <figcaption>Separating the paragraphs.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Text tool (<img src = "images/TextToolIcon.gif"
+    alt = "Text tool icon selected in the toolbox" width = "26">), select the
+    first two lines of the text. Choose the Chaparral Pro font, italic font
+    style.</p>
+      <figure>
+        <img src = "images/ChaparralProItalicFirstTwoLines.gif" alt = "First two
+        lines will be in Chaparral Pro italic font" class = "img-fluid">
+        <figcaption>The first two lines are selected and Chapparal Pro italic
+        font used.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now select the first sentence &ldquo;The master of one
+    move&hellip;&rdquo; and increase its font size to 22 points and its leading
+    to <b>150 %</b> (33 points).</p>
+      <figure>
+        <img src = "images/FirstLine22pt.gif" alt = "First line is at 22 points"
+        class = "img-fluid">
+        <figcaption>Chapparal Pro italic 22 points with 33 point leading
+        (note the 150 % in the Tool Controls Bar).</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the attribution line with the Text tool (<img src =
+    "images/TextToolIcon.gif" alt = "Text tool icon selected in the toolbox"
+    width = "26">) and increase its font size to 14 points.</p>
+    <p><b>Note:</b> Inkscape occasionally doesn&rsquo;t give you the exact
+    number of points, but gives you a closest approximation, as you can
+    see in the figure below, of 13.99 pt, instead of 14 pt. Don&rsquo;t be
+    concerned about it &mdash; it&rsquo;s a mathematical artifact of the
+    resizing process inside Inkscape&rsquo;s program machinery.</p>
+      <figure>
+        <img src = "images/Attribution14pt.gif" alt = "Attribution line is set to
+        14 points" class = "img-fluid">
+        <figcaption>The attribution line is set to 14 points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Align right</b> icon (<img src =
+    "images/RightJustifyIcon.gif" alt = "Right align icon" width = "26">) in
+    the Tool Controls Bar to right-justify the attribution line.</p>
+      <figure>
+        <img src = "images/RightJustifyAttribution.gif" alt = "Right justify
+        attribution line" class = "img-fluid">
+        <figcaption>Right-justify the attribution line.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Text tool (<img src = "images/TextToolIcon.gif" alt =
+    "Text tool icon selected in the toolbox" width = "26">), select the
+    remaining paragraphs and change their font to Chapparal Pro, 13 points. The
+    text fills the remaining space in the containment box.</p>
+    </li>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool" width = "26">), click on the containment box border,
+    choose <u>O</u>bject &gt; <u>F</u>ill and Stroke, Stroke paint tab, and
+    click on the <b>No paint</b> icon (<img src = "images/NoPaintIcon.gif"
+    alt = "No paint icon" width = "26">). The containment box disappears
+    (actually, it is still there, just transparent).</p>
+    <p>The result is a finished poster.</p>
+      <img src = "images/FinishedPoster.gif" alt = "Finished poster" class =
+      "img-fluid">
+      <figcaption>Finished poster.</figcaption>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Saving Your File for Electronic Distribution</h2>
+  </header>
+  <p>Now you&rsquo;ll save a copy of the poster in Portable Document Format
+  (PDF) so you can distribute it electronically, or link it to your Web site.
+  When you save your artwork in PDF format, Inkscape creates an exact snapshot
+  of the page that lets you view it online without the fonts or software used
+  to create it.</p>
+  <ol>
+    <li><p>Choose <u>F</u>ile &gt; Save <u>A</u>s&hellip; In the <b>Select file
+    to save to</b> dialog box that appears, click on the down arrow at the
+    right end of the <b>Save as type:</b> text bar to bring up the file format
+    dropdown listing. Choose <b>Portable Document Format (*.pdf)</b>.</p>
+    <figure>
+      <img src = "images/ChoosePDF.gif" alt = "Choose " class = "img-fluid">
+      <figcaption>Choose the Portable Document Format option.</figcaption>
+    </figure>
+    </li>
+    <li><p>A PDF copy of the Inkscape artwork file is created with the
+    <b>.pdf</b> filename extension automatically appended, ready to be saved in
+    a convenient storage location.</p>
+    <figure>
+      <img src = "images/SaveAsPDF.gif" alt = "PDF file ready to be saved in
+      storage location" class = "img-fluid">
+      <figcaption>PDF file is ready to be saved in a storage
+      location.</figcaption>
+    </figure>
+    </li>
+    <li><p>Use the <b>Save in:</b> navigation bar to go to the storage location.
+    Click on the <u>S</u>ave button. A Portable Document Format appears so
+    you can fine-tune the portable document format parameters. In the <b>Text
+    output options:</b> section, choose <b>Convert text to paths</b> to make
+    the file font-independent, and adjust the <b>Resolution for rasterization
+    (dpi):</b> to <b>192</b> to reduce graininess of the imagery. Click on the
+    <u>O</u>K button.</p>
+      <figure>
+        <img src = "images/ConfigurePDFSpecifications.gif" alt = "Adjusting
+        parameters for the PDF file" alt = "img-fluid">
+        <figcaption>Adjusting parameters for the PDF file.</figcaption>
+      </figure>
+      <p><b>Note:</b> Inkscape&rsquo;s default value for Text output is
+      <b>Embed fonts</b>. This value means that any PDF viewer will have to
+      have all the fonts that the artwork uses available to view the file
+      correctly. If the fonts do not exist for that viewer, they will appear as
+      a default font that might not reflect the artwork accurately. It is wise
+      to choose the <b>Convert text to paths</b> options so the text is
+      font-independent and will render correctly every time.</p>
+      <p>Computers and Web browser technology has advanced over the years to
+      where high resolution imagery is the standard. Inkscape&rsquo;s default
+      raster resolution is 96 dots per inch. Doubling that value significantly
+      reduces the graininess seen in low-resolution images and improves their
+      appearance. High-quality printing might require even higher values,
+      depending upon the technology used. You have the option of increasing
+      resolution to any custom value just by changing the value of the raster
+      resolution. The value is automatically saved in the file.</p>
+    </li>
+    <li><p>Below is the final artwork as a Portable Document Format image,
+    viewed through Adobe Acrobat Reader&reg;.</p>
+      <figure>
+        <img src = "images/TaiChiPDF.gif" alt = "The final artwork, saved as a
+        PDF file and viewed through Adobe Acrobat Reader" class = "img-fluid">
+        <figcaption>The final artwork, saved as a PDF file and viewed through
+        Adobe Acrobat Reader.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <p>You have now finished this tutorial on typography. We have only touched
+  the surface of what you can do with text in graphic design &mdash; it is
+  such a broad topic. Explore whatever ideas arise, and play with the features
+  Inkscape offers you in putting those ideas on-screen. Explore the World-Wide
+  Web as a vast showcase of artwork that you can learn from, mimic, expand upon,
+  and redo with your own touch, to expand your own capabilities, skills, and
+  imagination.</p>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li><p>Describe three ways to enter text into the artwork.</p>
+    </li>
+    <li><p>Describe two ways to change the font and size of type.</p>
+    </li>
+    <li><p>How do you create type that follows the shape of a path or an
+    object?</p>
+    </li>
+    <li><p>What is a reason for converting type to paths?</p>
+    </li>
+    <li><p>How do you create a type mask?</p>
+    </li>
+    <li><p>How do you create a PDF version of an Inkscape document?</p>
+    </li>
+  </ol>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>To enter text in the artwork, do any of the following:</p>
+      <ul>
+        <li><p>Select the Type tool (<img src = "images/TextTool.gif" alt =
+        "Text tool" width = "26">) and start typing.</p>
+        </li>
+        <li><p>Copy text from an external file to the Clipboard, and then
+        paste into the artwork using <u>E</u>dit &gt; <u>P</u>aste or
+        &lt;Ctrl&gt;-V (hot key combination for pasting).</p>
+        </li>
+        <li><p>Click inside a shape that has text already placed inside through
+        the text flow feature with the Type tool (<img src =
+        "images/TextTool.gif" alt = "Text tool" width = "26">) and start
+        typing.</p>
+        </li>
+      </ul>
+    </li>
+    <li><p>To change the font and size of type, you can use the controls in
+    the Text and Font palette, or choose commands from the Font and Size
+    submenus in the Type Tool Commands Bar.</p>
+    </li>
+    <li><p>Convert type to paths when you want to transform (scale, reshape,
+    and so on) letters individually in the word or block of type. Paths are
+    also useful for filling type with a gradient fill. Paths also eliminate the
+    need to send the font along with the file when sharing with others.</p>
+    </li>
+    <li><p>Create the path you want the text to follow using a shape, or by
+    using the Pencil tool (<img src = "images/PencilToolIcon.gif" alt = "Pen
+    tool icon" width = "26">) or Pen tool (<img src = "images/PenToolIcon.gif"
+    alt = "Pen tool icon" width = "26">). Have the text available (already
+    typed or pasted in). Select both the text and the path, and choose
+    <u>T</u>ext &gt; <u>P</u>ut on Path.</p>
+    </li>
+    <li><p>One way to create a type mask is to select the type that you want to
+    be the mask, and select the object, bitmap image, or type that you want to
+    show through the mask. (The masking type must be in front of any other
+    objects.) Then choose <u>O</u>bject &gt; Clip &gt; <u>S</u>et to create the
+    type mask.</p>
+    </li>
+    <li><p>To create a PDF version of an Inkscape file, you choose <u>F</u>ile
+    &gt; Save <u>A</u>s&hellip;; then for type, you select Portable Document
+    Format.</p>
+    </li>
+  </ol>
+</section>
+  <!-- Creative Commons ShareAlike 4.0 International License information -->
+  <footer>
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+    <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+    alt = "Creative Commons ShareAlike License" class = "img-fluid">&nbsp;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+  </footer>
+  		</div>
+  	</div>
+  </div>
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+  </html>
