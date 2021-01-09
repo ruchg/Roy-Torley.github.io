@@ -1,0 +1,1222 @@
+<!doctype html>
+
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width,
+  initial-scale=1">
+  <title>Tutorial 10 &mdash; Working with Placement and Order of Objects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 10 &mdash; Working with Placement and Order of
+          Objects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-5 offset-md-1">
+        <figure class = "mt-1">
+          <img src = "images/FinishedArtwork.gif"
+          alt = "Finished practice image file for Tutorial 10"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6">
+<p class = "lead">Using custom and ruler guides can help you produce
+quality artwork, such as logos, from scanned art. Combine object
+arrangement or painting order with transparency and masking options to
+create dramatic results that vary based on which shapes are in front or
+behind.</p>
+      </div>
+    </div>
+<hr>
+
+<section>
+  <p>In this lesson, you&rsquo;ll learn how to do the following:</p>
+
+  <ul>
+    <li>Turn scanned artwork into a template.</li>
+    <li>Use and create guides.</li>
+    <li>Re-create a scanned logo and convert it into vector art.</li>
+    <li>Constrain objects.</li>
+    <li>Clone objects.</li>
+    <li>Rearrange object order.</li>
+    <li>Integrate transparency with placement of objects.</li>
+    <li>Create a clipping mask.</li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this lesson, you&rsquo;ll digitally re-create a logo that is
+  supplied to you as a low-resolution scan. This is a simple technique
+  that can be applied to a multitude of projects including creating
+  artwork from photographs, or update your company&rsquo;s logo into a
+  scalable vector form that can be used over and over again without
+  degradation.</p>
+
+  <p>Before you begin, download and install the font <a href = "wicked-mouse.zip">Wicked Mouse</a>.
+  You can also find the Wicked Mouse font on the Internet at
+  <a href = "https://www.dafontfree.io/wicked-mouse-font/">https://www.dafontfree.io/wicked-mouse-font/</a>.</p>
+  <p>You&rsquo;ll open a file containing the final version of the finished logo
+  to see what you are going to create.</p>
+<ol>
+  <li><p>Start Inkscape.</p>
+  </li>
+  <li><p>Download and <u>F</u>ile &gt; <u>I</u>mport&hellip; file
+  <a href = "images/10_logo_end.gif"><b>10_logo_end.gif</b></a></p>
+  <figure>
+    <img src = "images/10_logo_end.gif" alt = "Image of finished
+    logo" class = "img-fluid">
+    <figcaption>Finished logo.</figcaption>
+  </figure>
+  <p>You will recreate this logo digitally with the Pen tool.</p>
+  <p>If you like, choose <u>V</u>iew &gt; <u>Z</u>oom &gt; Zoom Out
+  to reduce the view of the finished artwork, adjust the window size,
+  and leave it on your screen as you work. (Use the Select tool
+  (<img src = "images/SelectionTool.gif" alt = "Selection tool" width
+  = "26">) to select and move the artwork where you want it in the
+  window.) If you don&rsquo;t want to leave the image open, choose
+  <u>F</u>ile &gt; <u>C</u>lose.</p>
+  </li>
+  <li><p>Download and  <u>F</u>ile &gt; <u>O</u>pen, and open file
+  <a href = "10_logo_start.svg"><b>10_logo_start.svg</b></a>.</p>
+    <figure>
+      <img src = "images/WVLogo.gif" alt = "Logo text with no artwork"
+      class = "img-fluid">
+      <figcaption>Starting logo text with no artwork.</figcaption>
+    </figure>
+  </li>
+  <p>Bitmapped files and files from other programs, such as Gimp and
+  Photoshop, can be imported into Inkscape and made into a template
+  that you can trace over, as if you were working with tracing paper over
+  a drawing. In this tutorial, you will import a Portable Document Format (PDF)
+  file containing logo and text imagery that you will redraw to create images
+  that you can manipulate using Inkscape&rsquo;s tools.</p>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Turning an Imported Scan into a Template</h2>
+  </header>
+<ol>
+  <li><p>To begin working, you&rsquo;ll import an existing art file of logo
+  artwork that was scanned in. Note that scanners are commonly able to save
+  scanned images in Portable Document Format (PDF).</p>
+  <p>Download file <a href = "10_Logo_Start.pdf"><b>10_Logo_Start.pdf</b></a>
+  and choose <u>F</u>ile &gt; <u>I</u>mport&hellip;. Locate and select
+  file <b>10_Logo_Start.pdf</b> and click on the <u>O</u>pen button.</p>
+  <p>A <b>PDF Import Settings</b> dialog box appears. Move the slider in the
+  <b>Precision of approximating gradient meshes</b> to the extreme left of the
+  bar to <b>1.0</b>. You do not need absolute precision in resolution of this
+  imagery.</p>
+    <figure>
+      <img src = "images/PDFImportSettingsDialogBox.gif" alt = "PDF Import
+      Settings dialog box" class = "img-fluid">
+      <figcaption>PDF Import Settings dialog box. Precision is set to
+      <b>1.0</b></figcaption>
+    </figure>
+  </li>
+  <li>
+  <p>Click the <u>O</u>K button. The PDF file is imported into the work area.
+  Note that it has a bounding box, so it is selected.</p>
+    <figure>
+      <img src = "images/ImportedPDF.gif" alt = "Imported PDF imagery" class =
+      "img-fluid">
+      <figcaption>Imported PDF file of logo and text.</figcaption>
+    </figure>
+  </li>
+  <li><p>Drag the image into the artboard with the Select tool (<img src =
+  "images/SelectionTool.gif" alt = "Selection tool" width = "26">). You
+  don&rsquo;t have to be exact in placing the image because you&rsquo;ll be
+  drawing over it and, once you&rsquo;re done, you will delete it.</p>
+    <figure>
+      <img src = "images/MovePDF.gif" alt = "Moving the PDF imagery" class =
+      "img-fluid">
+      <figcaption>Moving the PDF image into the artboard.</figcaption>
+    </figure>
+  </li>
+  <li><p>This start file contains locked bitmap text for a fish
+  supply chain, but not the artwork needed to complete the logo.
+  Many times a client provides the only working logo that he or she
+  has, and it&rsquo;s already printed &mdash; perhaps even on a
+  napkin! With no digital information, you can still recreate the
+  client&rsquo;s logo with the Pen tool (<img src = "images/PenToolIcon.gif"
+  alt = "Pen tool icon" width = "26">).</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; Save <u>A</u>s&hellip;, name the
+  file <b>WVLogo</b>, navigate to a convenient storage location,
+  click on the <b>Save</b> button. In the <b>Save as Type</b> option bar,
+  leave at the default <b>Inkscape SVG (*.svg)</b> and click
+  <u>S</u>ave (Inkscape automatically appends the extension <b>.svg</b>
+  to the filename).</p>
+  </li>
+  <li><p>The logo and text objects are not aligned. That is how they were
+  scanned in. You will make a template out of this imported image and draw new
+  workable images on top of it.</p>
+  <p>First, you will make the black images partially transparent so you can
+  easily distinguish between them and your drawings. With the imagery still
+  selected, choose <u>O</u>bject &gt; <u>F</u>ill and Stroke, and adjust the
+  transparency (with the <b>Opacity (%)</b> bar) to <b>50</b>. The imagery
+  turns a medium gray color.</p>
+    <figure>
+      <img src = "images/50PercentTransparency.gif" alt = "Imagery set to
+      50 percent transparency" class = "img-fluid">
+      <figcaption>Imagery set to 50 percent transparency.</figcaption>
+    </figure>
+  </li>
+  <li><p>Deselect the image and click on the Layers icon in the Tool Controls
+  Bar (<img src = "images/LayersIcon.gif" alt = "Layers icon" width =
+  "26">). The Layers palette appears.</p>
+    <figure>
+      <img src = "images/ClickOnLayersIcon.gif" alt = "Layers palette" class =
+      "img-fluid">
+      <figcaption>Layers palette.</figcaption>
+  </li>
+  <li><p>Double-click on the <b>Layer 1</b> bar. It highlights to a deep blue.
+  Change the layer name from <b>Layer 1</b> to <b>Template</b> and click on
+  the unlock icon (<img src = "images/UnlockedIcon.gif" alt = "Unlocked icon"
+  width = "26">) to change to locked (<img src = "images/LockedIcon.gif" alt =
+  "Locked icon" width = "26">), thus locking the layer. The imagery can&rsquo;t
+  be modified now.</p>
+  <figure>
+    <img src = "images/TemplateLayer.gif" alt = "Layers palette" class =
+    "img-fluid">
+    <figcaption>Rename <b>Layer 1</b> to <b>Template</b>.</figcaption>
+  </figure>
+  </li>
+  <li><p>Now you&rsquo;ll create a new layer that you will use to draw on. Click
+  on the <b>Plus sign</b> icon (<img src = "images/PlusSignIcon.gif" alt = "Plus
+  sign icon" width = "26">) in the <b>Layers</b> palette to add a new layer
+  to the workspace. Name the new layer <b>Tracing Paper</b>. Keep its position
+  to <b>Above current</b>.</p>
+  <figure style = "float: left;" class = "ml-4 mr-5">
+    <img src = "images/AddNewLayer.gif" alt = "Add a new layer to draw on"
+    class = "img-fluid">
+    <figcaption>Add a new layer to draw on.</figcaption>
+  </figure>
+  <img src = "images/TracingPaperLayer.gif" alt = "Add a new layer added to draw
+  on" class = "img-fluid">
+  <figcaption>The new layer is added, is unlocked, and is positioned above the
+  Template layer.</figcaption>
+  </figure>
+  </li>
+  <div style = "clear: left;"></div>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Creating Custom Guides</h2>
+  </header>
+  <p>You should be getting an idea of the direction that you are headed. Using
+  template layers is very much like the workflow you would use with artwork
+  placed underneath a piece of tracing paper.</p>
+  <p>Before you start any project that requires some level of accuracy, you
+  should set up guides. In this tutorial, you will use standard ruler guides,
+  as well as custom guides that you create yourself from pen paths.</p>
+  <aside><i><h4>Creating and Using Guidelines</h4>
+  <p>Inkscape has two kinds of guides that you can use:</p>
+  <ul>
+    <li>Standard ruler guides are non-printing straight lines that run
+    vertically or horizontally on the page.
+    </li>
+    <li>Guide objects are created by converting an object into a guide.
+    This can be helpful when aligning objects on a diagonal line, or if you
+    need a shape to be guide.
+    </li>
+  </ul>
+</i></aside>
+<ol>
+  <li><p>Click and hold on the horizontal ruler. Drag a ruler guide from the
+  ruler to the bottom (or baseline) of the placed artwork. Drag another
+  guideline to the top of the artwork.</p>
+  <figure style = "float: left;" class = "ml-2 mr-5">
+    <img src = "images/DragGuideline2Baseline.png" alt = "Drag horizontal
+    guideline to baseline of logo figure" width = "500" class = "img-fluid">
+    <figcaption>Drag a horizontal guideline to the baseline of the logo
+    figure.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/DragGuideline2Topline.png" alt = "Drag horizontal
+    guideline to topline of logo figure" width = "508" class = "img-fluid">
+    <figcaption>Drag a horizontal guideline to the top line of the logo
+    figure.</figcaption>
+  </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  <li><p>Click on the vertical ruler and drag out, creating ruler guides to
+  surround both sides of the logo.</p>
+    <figure style = "float: left;" class = "ml-4 mr-5">
+      <img src = "images/DragGuidelineFromLeft.png" alt = "Drag a vertical
+      guideline from the left" width = "442" class = "img-fluid">
+      <figcaption>Drag a vertical guideline from the left.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/DragGuideline2FarRight.png" alt = "Drag another
+      vertical guideline from the left" width = "485" class = "img-fluid">
+      <figcaption>Drag another vertical guideline from the left.</figcaption>
+    </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  <li><p>You&rsquo;ll now create pen paths that will be converted into custom
+  guides. This makes it easier to keep angles consistent throughout the artwork.
+  The paths that you are creating should overshoot the top and bottom so that
+  you can make adjustments to them with less difficulty.</p>
+  <p>Select the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen tool"
+  width = "26">) and click below the baseline of the first "V." Then click over
+  the top of the "v" following the angle. If you did not get it exactly along
+  the angle, switch to the Node tool (<img src = "images/NodeToolIcon.gif" alt
+  = "Node tool" width = "26">) and activate the end points individually to
+  adjust them.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/LeftLegOfFirstV.gif" alt = "Draw a line segment along
+      the left side of the first V" class = "img-fluid">
+      <figcaption>Follow the angle of the left side of the first V.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/FineAdjustWithNodeTool.gif" alt = "Fine-adjust with the
+      Node tool" class = "img-fluid">
+      <figcaption>Fine-adjust the line segment with the Node tool.</figcaption>
+    </figure>
+    <div style = "clear: left;"></div>
+  </li>
+  <li><p>Choose Edit &gt; D<u>e</u>select to deactivate the path and create
+  another path that follows the inside of the first &ldquo;V.&rdquo; Use the
+  Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node tool" width =
+  "26">) to adjust the endpoints individually.</p>
+  <figure>
+    <img src = "images/InsideLeftLegOfFirstV.gif" alt = "Draw a line segment
+    along the inside of the left side of the first V" class = "img-fluid">
+    <figcaption>Follow the angle of the inside of the left side of the first
+    V.</figcaption>
+  </figure>
+</li>
+<li><p>Choose the Select tool (<img src = "images/SelectionTool.gif" alt =
+"Selection tool" width = "26">), click on the first path created.
+&lt;Shift&gt;-click on the second path that you created to add it to the
+selection.</p>
+<p>Instead of creating the other side of the &ldquo;V&rdquo; with the Pen tool
+and to avoid risking inaccuracies, you will use the <b>Flip selected objects
+horizontally</b> tool (<img src = "images/FlipHorizontally.gif" alt = "Flip
+objects horizontally icon" width = "26">) in the Tool Controls Bar.</p>
+<p>Press &lt;Ctrl&gt;-D to duplicate the grouped line segments, then click on
+the <b>Flip selected objects horizontally</b> tool (<img src =
+"images/FlipHorizontally.gif" alt = "Flip objects horizontally icon" width =
+"26">) to create a mirror-image of the original two line segments.</p>
+<figure style = "float: left;" class = "ml-5 mr-5">
+  <img src = "images/SelectLineSegments.gif" alt = "Select the line segments"
+  class = "img-fluid">
+  <figcaption>Select line segments.</figcaption>
+</figure>
+<figure>
+  <img src = "images/ReflectLineSegments.gif" alt = "Horizontally reflect the
+  selected line segments" class = "img-fluid">
+  <figcaption>Duplicate and horizontally reflect the selected line
+  segments.</figcaption>
+</figure>
+<div style = "clear: both;"></div>
+  </li>
+  <li><p>Using the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), begin moving the reflected paths into
+  position over to the other side of the first "V." Hold down the &lt;Ctrl&gt;
+  key to constrain the paths to a horizontal movement as you drag them.</p>
+    <figure>
+      <img src = "images/MoveSelectedLineSegments.gif" alt = "Move the selected
+      line segments." class = "img-fluid">
+      <figcaption>Moving the selected line segments.</figcaption>
+    </figure>
+  </li>
+  <li><p>Deselect the line segments and then fine-adjust with the Node tool
+  (<img src = "images/NodeToolIcon.gif" alt = "Node tool" width = "26">).</p>
+  <figure>
+    <img src = "images/FineAdjustWithNodeTool2.gif" alt = "Fine-adjust with the
+    Node tool." class = "img-fluid">
+    <figcaption>Do fine-adjustment with the Node tool.</figcaption>
+  </figure>
+</li>
+<li><p>Instead of recreating paths for each &ldquo;V&rdquo; shape, you will
+clone them two times. Using the Select tool (<img src =
+"images/SelectionTool.gif" alt = "Selection tool" width = "26">), select all
+four paths, and choose <u>E</u>dit &gt; Clo<u>n</u>e &gt; Create
+Clo<u>n</u>e.</p>
+</li>
+<li><p>Hold down &lt;Ctrl&gt; and drag the cloned copy over to position it ontop
+of the next &ldquo;V&rdquo; shape in the artwork. If you hold
+ down the &lt;Ctrl&gt; key after you start dragging, the paths will be
+ constrained to moving in a straight horizontal or vertical path. You must
+ release the mouse before releasing the &lt;Ctrl&gt; key to have the cloning to
+ occur.</p>
+ <figure>
+   <img src = "images/MoveClone.gif" alt = "Move the clone to the right." class
+   = "img-fluid">
+   <figcaption>Move the cloned paths to the right.</figcaption>
+ </figure>
+</li>
+<li><p>Make a clone of the cloned &ldquo;V&rdquo; shape and move position it
+over the third &ldquo;V&rdquo;.</p>
+<figure>
+  <img src = "images/CloneTheClone.gif" alt = "Create and move a second clone"
+  class = "img-fluid">
+  <figcaption>Create and move a second clone.</figcaption>
+</figure>
+</li>
+<li><p>If necessary, fine-tune any paths with the Node tool (<img src =
+"images/NodeToolIcon.gif" alt = "Node tool" width = "26">). Then choose
+<u>E</u>dit &gt; Select Al<u>l</u> or &lt;Ctrl&gt;-A to select all the
+paths.</p>
+</li>
+<li><p>With the paths selected, choose <u>O</u>bjects > Objects to
+Gu<u>i</u>des. You have created custom guides. Leave them as guides for the
+rest of this lesson.</p>
+<figure>
+  <img src = "images/CustomGuidelinesDone.gif" alt = "Custom guidelines done"
+  class = "img-fluid">
+  <figcaption>A forest of finished custom guidelines.</figcaption>
+</figure>
+<aside><p><b>Tips for Editing Guidelines</b></p>
+  <p>Select the guideline you want to move, delete, or release, and do one of
+  the following:</p>
+  <ul>
+    <li>Move the guideline by dragging or copying.
+    </li>
+    <li>Delete the guideline by clicking on it and then pressing Backspace
+    or the Delete key.
+    </li>
+    <li>Delete all guidelines at once by choosing <u>E</u>dit &gt; Delete
+    All Guides.
+    </li>
+    <li>Lock all guides by choosing <u>E</u>dit &gt; Lock All Guides.
+    </li>
+    <li>Hide or show guides by choosing <u>V</u>iew &gt; G<u>u</u>ides.
+    </li>
+  </ul>
+</aside>
+</li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Creating the Vector Logo</h2>
+  </header>
+  <ol>
+    <li><p>Click on the Pen tool (<img src = "images/PenToolIcon.gif" alt =
+    "Pen tool icon" width = "26">).</p>
+  </li>
+  <li><p>Select a starting point and draw a line segment following a
+  guideline. Stop when you come to a corner (a tooltip will appear). Click on
+  that corner to set the line segment end there.</p>
+    <figure>
+      <img src = "images/StartDrawingOutline.gif" alt = "Start drawing the
+      logo outline." class = "img-fluid">
+      <figcaption>Start drawing the logo outline.</figcaption>
+    </figure>
+  </li>
+  <li><p>Right-click to deactivate the Pen tool.</p>
+  </li>
+  <li><p>Click on the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">) and select the line segment you just drew.<p>
+  </li>
+  <li><p>With the line segment selected, &lt;Shift&gt;-click on the black
+  swatch in the Color palette at the bottom of the work window so the line
+  segment will have a black stroke, and left-click (no &lt;Shift&gt;) on the
+  <b>none</b> or <b>No fill</b> swatch so the line segment will not have a fill.
+  Choose <u>O</u>bject &gt; <u>F</u>ill and Stroke &gt; Stroke st<u>y</u>le tab,
+  and set the <b><u>W</u>idth:</b> value to <b>1.000 pt</b>. Line segments that
+  you draw will now be more visible and easier to work with.</p>
+  </li>
+  <li><p>Click on the Pen tool (<img src = "images/PenToolIcon.gif" alt =
+  "Pen tool icon" width = "26">) again, and click on the endpoint of the line
+  segment you drew earlier to continue drawing the logo outline. When you click
+  on the endpoint, it turns red to indicate that it is now active as a node
+  from where you can now extend the outline.</p>
+  <figure>
+    <img src = "images/StartDrawingOutline2.gif" alt = "Restart drawing the
+    logo outline from where you left off." class = "img-fluid">
+    <figcaption>Restart drawing the logo outline from where you left
+    off.</figcaption>
+  </figure>
+</li>
+<li><p>Continue from corner to corner, click at every corner to create a corner
+node there.</p>
+<figure>
+  <img src = "images/StartDrawingOutline3.gif" alt = "Continue drawing the logo
+  outline, stopping and continuing at every corner." class = "img-fluid">
+  <figcaption>Continue drawing the logo outline, stopping and continuing at
+  every corner.</figcaption>
+</figure>
+</li>
+<li><p>When you come back to the starting point of your path, look for the
+close path symbol (a red square) to appear, then click.</p>
+<figure>
+  <img src = "images/FinishedOutline.gif" alt = "Finishing the outline."
+  class = "img-fluid">
+  <figcaption>Finishing the outline.</figcaption>
+</figure>
+</li>
+<li><p>Leave the path selected.</p>
+  <figure>
+    <img src = "images/FinishedOutline2.gif" alt = "The outline is finished."
+    class = "img-fluid">
+    <figcaption>The outline is finished. The path is still
+    selected.</figcaption>
+  </figure>
+  </li>
+  <li><p>Click on the black swatch in the Color palette. Then
+  &lt;Shift&gt;-click on the <b>none</b> or <b>No fill</b> swatch just to the
+  left of the black swatch. The logo outline is filled with black and it has no
+  stroke color.</p>
+  <figure>
+    <img src = "images/BlackFillNoStroke.gif" alt = "The outline has a black
+    fill with no stroke color." class = "img-fluid">
+    <figcaption>The outline has a black fill with no stroke color.</figcaption>
+  </figure>
+  </li>
+  <li><p>The guidelines are no longer needed. Choose <u>V</u>iew &gt;
+  G<u>u</u>ides. The guidelines disappear.</p>
+  <figure>
+    <img src = "images/HidingTheGuidelines.gif" alt = "Hiding the guidelines."
+    class = "img-fluid">
+    <figcaption>Hiding the guidelines.</figcaption>
+  </figure>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; D<u>e</u>select to eliminate the bounding
+  box.<p>
+  </li>
+  <li><p>You will now include and style the <b>Wendy Volker Fish Supplies</b>
+  text.</p>
+  <p>Using the Text tool (<img src = "images/TextToolIcon.gif" alt = "Text tool"
+  width = "26">) in the toolbox, click underneath the logo you just finished and
+  type <b>Wendy Volker Fish Supplies</b> using the default font and font
+  size (our default font is sans-serif, 6 pt).</p>
+  <p>Click inside the text and press &lt;Ctrl&gt;-A to select all the text in
+  the text box.</p>
+  </li>
+  <li><p>Locate and select the <b>Wicked Mouse</b> font in the <b>Select Font
+  Family</b> dropdown listing.</p>
+    <figure>
+      <img src = "images/SelectWickedMouseFont.gif" alt = "Select the Wicked
+      Mouse font." class = "img-fluid">
+      <figcaption>Select the Wicked Mouse font.</figcaption>
+    </figure>
+  </li>
+  <li><p>Select the <b>Wicked Mouse</b> font. The logo text appearance
+  immediately updates to the <b>Wicked Mouse</b> font.
+    <figure>
+      <img src = "images/WickedMouse1.gif" alt = "Wicked Mouse font
+      applied." class = "img-fluid">
+      <figcaption>Wicked Mouse font applied.</figcaption>
+    </figure>
+  </li>
+  <li><p>Using the <b>Font size</b> option in the Tool Controls Bar, increase
+  the size of the font to <b>20 pt</b>.
+    <figure>
+      <img src = "images/WickedMouse2.gif" alt = "Wicked Mouse font
+      20 points." class = "img-fluid">
+      <figcaption>Wicked Mouse font 20 points.</figcaption>
+    </figure>
+  </li>
+  <li><p>The spacing between lines is greater than what the scanned logo text
+  shows. We need to decrease the line spacing.</p>
+  <p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), move the font text so that it directly
+  overlays the font text in the template. Reduce the font leading to
+  <b>0.90</b> (leave the units of measurement box blank).</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/0.90Leading.gif" alt = "Wicked Mouse font
+    0.90 leading." class = "img-fluid">
+    <figcaption>Wicked Mouse font 0.90 leading.</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/WickedMouse3.gif" alt = "Wicked Mouse font
+    0.90 leading." class = "img-fluid">
+    <figcaption>Result.</figcaption>
+  </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  <li><p>Select all the text in the text bar using &lt;Ctrl&gt;-A. Click on the
+  Align center icon (<img src = "images/AlignCenterIcon.gif" alt = "Align center
+  icon" width = "26">) in the Text Tool Controls Bar. The logo text
+  automatically centers.</p>
+    <figure>
+      <img src = "images/WickedMouse4.gif" alt = "Wicked Mouse font
+      centered justification." class = "img-fluid">
+      <figcaption>Wicked Mouse font centered justification.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool" width = "26">), move the text to underneath the logo</p>
+    <figure>
+      <img src = "images/WickedMouse5.gif" alt = "Wicked Mouse font
+      moved to underneath logo." class = "img-fluid">
+      <figcaption>Wicked Mouse font moved to underneath logo.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose <u>O</u>bject &gt; <u>A</u>lign and Distribute&hellip; and
+  click on the <b>Center on vertical axis</b> icon in the <b>Align and
+  Distribute</b> panel that appears.</p>
+    <figure>
+      <img src = "images/WickedMouse6.gif" alt = "Wicked Mouse text
+      center-aligned with logo." class = "img-fluid">
+      <figcaption>Wicked Mouse center-aligned with logo.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click away from the selected image to deselect it. We are now done with
+  the <b>Template</b> layer, so click on the <b>Minus sign</b> icon
+  (<img src = "images/MinusSignIcon.gif" alt = "Minus sign icon" width = "26">)
+  in the Layers panel to deactivate the <b>Template</b> layer.</p>
+    <figure>
+      <img src = "images/TemplateTextFinished.gif" alt = "The template text
+      is finished." class = "img-fluid">
+      <figcaption>The template text is finished.</figcaption>
+    </figure>
+  </li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Applying the Bend Path Effect</h2>
+  </header>
+  <p>Now that you have recreated the main part of the logo, you can take
+  advantage of a path effect that Inkscape offers.</p>
+  <ol>
+  <li></p>First, select the Rectangle tool (<img src =
+  "images/RectangleToolIcon.gif" alt = "Rectangle tool" width = "26">) and
+  create a long thin rectangle that will serve as the first wave stripe across
+  the logo. Make one end narrower than the other using the Node tool (<img src
+  = "images/NodeToolIcon.gif" alt = "Node tool" width = "26">). We chose to
+  make the left end narrower than the right.</p>
+    <figure>
+      <img src = "images/FirstWaveBar.gif" alt = "First bar to make a wave
+      shape." width = "500" class = "img-fluid">
+      <figcaption>First bar to make a wave shape.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the bar still selected, choose <u>P</u>ath &gt;
+  Path Eff<u>e</u>cts. When the <b>Edit Paths</b> dialog box appears, click on
+  the <b>Edit on-canvas</b> icon. When the editing tool appears in the wave
+  bar, click-drag the bend line with the Node tool cursor into a curve that you
+  like. We chose for the line to curve upwards at the left and then down toward
+  the right. When done, press &lt;Esc&gt; to deselect the curve.</p>
+    <figure>
+      <img src = "images/FirstWaveBarBent.gif" alt = "Bending the first bar to
+      make a wave shape." class = "img-fluid">
+      <figcaption>Bending the first bar to make a wave shape.</figcaption>
+    </figure>
+  </li>
+  <li><p>Reselect the curve with the Select tool (<img src =
+  "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and press
+  &lt;Ctrl&gt;-D to duplicate the curve. While pressing the &lt;Ctrl&gt; key,
+  drag the duplicate of the wave straight down to just underneath the original
+  curve, then release the &lt;Ctrl&gt; key and mouse key. Continue until you
+  have about eight individual wavy curves.</p>
+    <figure>
+      <img src = "images/8WavyBars.gif" alt = "Group of eight wave bars."
+      width = "400" class = "img-fluid">
+      <figcaption>First bar to make a wave shape.</figcaption>
+    </figure>
+  </li>
+  <li><p>Select all eight wavy lines, move them as a group up to the logo
+  artwork, and resize them using the sizing handles on the bounding box.
+  Fine-adjust their position and resize as you see fit. Finally, click on the
+  <b>Raise selection to top</b> icon (<img src =
+  "images/RaiseSelectionToTopIcon.gif" alt = "Raise selection to top tool"
+  width = "26">) in the Tool Controls Bar to ensure that the wavy lines are
+  placed ontop of the logo. This stacking order is important for the upcoming
+  path effect feature to work.</p>
+    <figure>
+      <img src = "images/PlaceWavesOverWVAndResize.gif" alt = "Placing the waves
+      over the WV logo and resizing the waves." width = "400" class =
+      "img-fluid">
+      <figcaption>Positioning the waves over the WV logo and resizing
+      them.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the group of wavy curves still selected, choose <u>P</u>ath &gt;
+  E<u>x</u>clusion. The areas where the wavy curves overlap the logo underneath
+  are blocked out.</b> This is the path effect we want.</p>
+    <figure>
+      <img src = "images/PathExclusion.gif" alt = "Using path exclusion to
+      block out overlapping areas." class = "img-fluid">
+      <figcaption>Using path exclusion to block out overlapping
+      areas.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click anywhere off the image to deselect it and <u>F</u>ile &gt;
+  <u>S</u>ave.</p>
+    <figure>
+      <img src = "images/FinishedWaves.gif" alt = "Finished waves." class =
+      "img-fluid">
+      <figcaption>Finished waves.</figcaption>
+    </figure>
+  </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Arrangement and Stacking Order</h2>
+  </header>
+  <p>Inkscape stacks sucessively drawn objects, with the first object drawn on
+  the bottom, much like a stack of papers on your desk. As you add items to the
+  stack, they will cover the previously created objects underneath.</p>
+
+  <p>This arrangement, or stacking order is important not only because it
+  affects the way items look when they overlap, but also because the stacking
+  order plays a large part in the creation of masks and the way objects appea
+  when transparency is applied.</p>
+
+  <p>In this part of the tutorial, you will change object order to create an
+  illustration for a fish store.</p>
+  <ol>
+    <li></p>Download file <a href = "10_fish_end.svg"><b>10_fish_end.svg</b></a>
+    and <u>F</u>ile &gt; <u>O</u>pen.</p>
+    <figure>
+      <img src = "images/FinishedLogo.gif"
+      alt = "Finished practice image file for Tutorial 10"
+      class = "img-fluid">
+    </figure>
+    <p>If you like, choose <u>V</u>iew &gt; <u>Z</u>oom &gt; Zoom Out to reduce
+    the view of the finished artwork, adjust the window size, and leave it on
+    your screen as you work. (Use the Select tool
+    (<img src = "images/SelectionTool.gif" alt = "Selection tool" width = "26">)
+    to move the artwork where you want it in the window.) If you don&rsquo;t
+    want to leave the image open, choose <u>F</u>ile &gt; <u>C</u>lose.</p>
+    </li>
+    <li><p>To begin working, download and choose <u>F</u>ile &gt; <u>O</u>pen to
+    open file <a href = "10_fish_start.svg"><b>10_fish_start.svg</b></a>.</p>
+      <figure>
+        <img src = "images/10_fish_start.gif" alt = "Starting file to create
+        illustration" class = "img-fluid">
+        <figcaption>Starting file for illustration.</figcaption>
+      </figure>
+    </li>
+    <li><p>This start file contains the artwork needed to complete the
+    illustration; however, you will need to rearrange it and add some
+    objects.</p>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; Save <u>A</u>s&hellip;, name the file
+    <b>fishart.svg</b>, and save it in a convenient storage location.</p>
+    </li>
+    <li><p>Using the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool" width = "26">), select the plant in the lower left corner.
+    Clone (duplicate) the plant by &lt;Alt&gt;-D and dragging the plant next to
+    itself so that it is overlapping slightly. Continue cloning the plant until
+    you have six copies along the bottom of the yellow circle.</p>
+    <figure>
+      <img src = "images/DuplicatedPlant.gif" alt = "Duplicating the plant"
+      class = "img-fluid">
+      <figcaption>Duplicating the plant.</figcaption>
+    </figure>
+  </li>
+  <li><p>You will apply color blending to the plants. To start, click on the
+  Layers icon (<img src = "images/LayersIcon.gif" alt = "Layers icon" width =
+  "26">). When the <b>Layers</b> palette appears, double-click on the <b>Layer
+  1</b> bar, and change its label to <b>1st plant</b>. Add five more layers
+  using the Plus sign icon (<img src = "images/PlusSignIcon.gif" alt = "Plus
+  sign icon" width = "26">) and label them <b>2nd plant</b>, <b>3rd plant</b>,
+  and so on.</p>
+  <p>Each plant needs to be in its own layer in order for color blending to
+  work.</p>
+    <figure>
+      <img src = "images/6Layers.gif" alt = "Create five new layers." class =
+      "img-fluid">
+      <figcaption>Six layers.</figcaption>
+    </figure>
+  </li>
+  <li><p>Now you will move each plant in its own layer. They all reside in the
+  first layer right now.</p>
+  <p>Select the second plant and press &lt;Shift&gt;-&lt;PgUp&gt; to move it
+  into the <b>2nd plant</b> layer. Note the <b>2nd plant</b> layer label becomes
+  highlighted, indicating that it is now the active layer.</p>
+    <figure>
+      <img src = "images/SecondPlant2SecondLayer.gif" alt = "Moving the second
+      plant into the second layer." class = "img-fluid">
+      <figcaption>Moving the second plant into the second layer.</figcaption>
+    </figure>
+  </li>
+  <li><p>Move the remaining four plants into their respective layers by
+  selecting them and pressing &lt;Shift&gt;-&lt;PgUp&gt; to move them up using
+  the highlighting of the layers to guide you. Note that you did not have to
+  move the first plant &mdash; it is already in its own layer.</p>
+    <figure>
+      <img src = "images/AllPlantsInOwnLayers.gif" alt = "Moving the rest of the
+      plants into their own layers." class = "img-fluid">
+      <figcaption>All the plants are in their own layers.</figcaption>
+    </figure>
+  </li>
+  <li><p>Now, after all of this preparation, apply color blending.</p>
+  <p>Click on the second plant to select it.</p>
+  </li>
+  <li><p>In the <b>Layers</b> panel, select <b>Multiply</b> as the <b>Mode</b>
+  for the second layer (which contains only the second plant). Click on the
+  <u>A</u>pply button.</p>
+    <figure>
+      <img src = "images/SecondPlantMultiply.gif" alt = "Apply the Multiply
+      blend mode to the second plant." class = "img-fluid">
+      <figcaption>Apply the <b>Multiply</b> blend mode to the second
+      plant.</figcaption>
+    </figure>
+  </li>
+  <li><p>Individually select the fourth and sixth plants and apply
+  <b>Multiply</b> color blending. See how color-blended leaves are transparent
+  and yet produce a colorful see-through effect.</p>
+  <figure>
+    <img src = "images/BlendingApplied2RemainingPlants.gif" alt = "Apply the
+    Multiply blend mode to the remaining plants." class = "img-fluid">
+    <figcaption>Apply the <b>Multiply</b> blend mode to the fourth and sixth
+    plants.</figcaption>
+  </figure>
+  </li>
+  <li><p>You will now apply color blending and transparency to the bubbles.</p>
+  <p>Group-select all the bubbles using &lt;Shift&gt;-click</p>
+  <p>Choose Filter<u>s</u> &gt; Fill and Transparency &gt; Blend&hellip;. Select
+  <b>Image</b> for <b>Source</b>, <b>Screen</b> for <b>Mode</b>, and check the
+  the <b>Live preview</b> checkbox to preview the color blending before actually
+  applying it. Click on the <u>A</u>pply</b> button.</p>
+  <p>Choose <u>O</u>bject &gt; <u>F</u>ill and Stroke, and set <b>Opacity
+  (%)</b> to <b>50 %</b>.</p>
+  <figure>
+    <img src = "images/BubblesScreen50PercentTransparency.gif" alt = "Apply
+    screen color blending to the bubbles and set transparency to 50 percent"
+    class = "img-fluid">
+    <figcaption>Preview the color blending and transparency before setting the
+    application.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/BubbleBlendResult.gif" alt = "Result of applying color
+    blending and transparency" class = "img-fluid">
+    <figcaption>Result.</figcaption>
+  </figure>
+  </li>
+  <li><p>Create a new top layer and label it <b>Water</b>.<//>
+  This layer will contain a shape that will represent the water surrounding the
+  fish, plants, and bubbles.</p>
+    <figure>
+      <img src = "images/WaterLayer.gif" alt = "New layer to hold water image"
+      class = "img-fluid">
+      <figcaption>New layer created to contain the water image.</figcaption>
+    </figure>
+  </li>
+  <li><p>Create a rectangle that encompasses the fish and plant artwork. The
+  exact size is not important. This will serve as the water in the
+  illustration.</p>
+  <p>Choose to fill the rectangle with color <b>8c94c6</b>, a somewhat dark
+  blue color.</p>
+    <figure>
+      <img src = "images/SkyBlueRectangle.gif" alt = "Draw a sky-blue rectangle."
+      class = "img-fluid">
+      <figcaption>Drawing a sky-blue rectangle.</figcaption>
+    </figure>
+  </li>
+  <li>
+  <p>Click on the <b>Linear gradient</b> icon (<img src =
+  "images/LinearGradientIcon.gif" alt = "Linear gradient icon" width = "26">) in
+  the <b>Fill and Stroke</b> panel, click on the <b>Edit gradient</b> icon
+  (<img src = "images/EditGradientIcon.gif" alt = "Edit gradient icon" width =
+  "26">) and adjust the two gradient handles so that the blue color becomes more
+  transparent to the left.</p>
+    <figure>
+      <img src = "images/AdjustGradientHandles.gif" alt = "Adjust the gradient
+      handles." class = "img-fluid">
+      <figcaption>Adjusting the gradient handles.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the rectangle still selected, change the blending mode to
+  <b>Multiply</b> in the <b>Layers</b> panel. Set the <b>Opacity (%)</b> slider
+  to <b>50.0</b>. Press &lt;Enter&gt; or &lt;Return&gt; to set the opacity
+  value.</p>
+  </li>
+  <li>
+      <figure>
+        <img src = "images/WaterBlendedAndTransparencied.gif" alt = "Water is
+        color blended and transparency has been applied." class = "img-fluid">
+        <figcaption><b>Multiply</b> color blending and 50% transparency
+        applied to the water object.</figcaption>
+      </figure>
+    </li>
+    <li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Making Waves Using the Function Plotter</h2>
+  </header>
+  <p>Inkscape&rsquo;s <b>Function Plotter</b> comes in handy for creating curves
+  that are unavailable or difficult to draw using other tools. You will use the
+  <b>Function Plotter</b> to replace the top side of the blue water rectangle
+  with stylized waves, thus enhancing the effect of looking at water.</p>
+<ol>
+  <li>
+  <p>Make a duplicate of the rectangle by activating it with the Select tool
+  (<img src = "images/SelectionTool.gif" alt = "Selection tool" width = "26">)
+  and then pressing &lt;Ctrl&gt;-D. Move the duplicated rectangle off to a
+  side of the artboard.</p>
+    <figure>
+      <img src = "images/DuplicateMoveRectangle.gif" alt = "Duplicating and
+      moving the blue rectangle" class = "img-fluid">
+      <figcaption>Duplicating and moving the blue rectangle.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose Exte<u>n</u>sions &gt; Render &gt; Function Plotter&hellip;</p>
+  <p>The <b>Function Plotter</b> dialog box appears. Fill in the text boxes
+  with the values shown below. Check the <b>Live preview</b> checkbox at the
+  bottom of the dialog box. The wave curve is automatically drawn but not yet
+  set.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/FunctionPlotter.gif" alt = "Function Plotter dialog
+      box" class = "img-fluid">
+      <figcaption>Function Plotter dialog box with filled in
+      values.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/Waves1.gif" alt = "Waves over the rectangle's top side"
+      class = "img-fluid">
+      <figcaption>Waves drawn but not yet set.</figcaption>
+    </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  <li><p>Click on the <u>A</u>pply button, and then, the <u>C</u>lose
+  button. Delete the rectangle. If you accidentally delete the waves, click on
+  the <b>Undo last action</b> icon in the Command Toolbar (<img src =
+  "images/UndoLastActionIcon.gif" alt = "Undo last action icon" width = "26">),
+  select the rectangle (and not the waves) and delete it.</p>
+    <figure>
+      <img src = "images/Waves2.gif" alt = "Drawn waves" class = "img-fluid">
+      <figcaption>Source rectangle deleted.</figcaption>
+    </figure>
+  </li>
+  <li><p>Move the wave object to place it directly on top of the blue rectangle
+  and touching the rectangle&rsquo;s top side.</p>
+  <figure>
+    <img src = "images/Waves3.gif" alt = "Moving the waves so they sit directly
+    on top of the blue rectangle" class = "img-fluid">
+    <figcaption>Moving the wave object so it sits directly on top of the blue
+    rectangle.</figcaption>
+  </figure>
+  </li>
+  <li><p>With the wave object still selected, &lt;Shift&gt;-click on the blue
+  rectangle underneath. Choose <u>P</u>ath &gt; <u>U</u>nion to merge the paths
+  of the waves and rectangle into one object. You can see the result as an
+  outline by choosing <u>V</u>iew &gt; <u>D</u>isplay mode &gt;
+  <u>O</u>utline.</p>
+    <figure style = "float: left;" class = "mr-3">
+      <img src = "images/Waves4.gif" alt = "Merging the paths that make up the
+      waves and rectangle" class = "img-fluid">
+      <figcaption>Merging the paths that make up the waves and
+      rectangle.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/Waves5.gif" alt = "Viewing the merged waves and
+      rectangle in Outline mode" class = "img-fluid">
+      <figcaption>View in <b>Outline</b> mode.</figcaption>
+    </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  <li><p>Resize the rectangle so it fits more closely in with the yellow
+  background circle.</p>
+  <figure>
+    <img src = "images/Waves6.gif" alt = "Moving the waves so they sit directly
+    on top of the blue rectangle" class = "img-fluid">
+    <figcaption>Resizing the merged waves and rectangle.</figcaption>
+  </figure>
+</li>
+<li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+</li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Creating a Clipping Mask</h2>
+  </header>
+  <p>In this section, you will turn the yellow circle into a clipping mask.
+  When complete, the modified circle will act as a window showing through only
+  the artwork located within the boundaries of that shape.</p>
+  <ol>
+    <li><p>The yellow circle is located on the bottommost layer, labeled
+    <b>1st plant</b>. If the <b>Layers</b> panel isn&rsquo;t visible, click on
+    the Layers icon (<img src = "images/LayersIcon.gif" alt = "Layers icon"
+    width = "26">). If the <b>Layers</b> panel still doesn&rsquo; appear,
+    check whether the panel has been iconified to the side of the window. Click
+    on the icon to make the panel appear.</p>
+    </li>
+    <li><p>Click on the bottommost layer (<b>1st plant</b>) to make it active,
+    then choose <u>O</u>bject &gt; Unlock All.</p>
+    <figure>
+      <img src = "images/Make1stplantLayerActive.gif" alt = "Make the
+      bottommost layer active." class = "img-fluid">
+      <figcaption>Click on the bottommost layer bar to make it
+      active.</figcaption>
+    </figure>
+    </li>
+    <li><p>Make the circle active by selecting it with the Select tool (<img
+    src = "images/SelectionTool.gif" alt = "Selection tool" width = "26">).</p>
+      <figure>
+        <img src = "images/SelectYellowCircle.gif" alt = "Unlock and select
+        the yellow circle" class = "img-fluid">
+        <figcaption>Unlock and select the yellow circle.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make the yellow circle the topmost object in the layer
+    stack. Click on the topmost layer (<b>Water</b>) in the <b>Layers</b> panel
+    and then click on the Plus sign icon (<img src = "images/PlusSignIcon.gif"
+    alt = "Plus sign icon" width = "26">). Label the new layer <b>Mask</b>.</p>
+    <figure>
+      <img src = "images/NewLayerMask.gif" alt = "New layer labeled Mask"
+      class = "img-fluid">
+      <figcaption>Create a new layer and label it <b>Mask</b>.</figcaption>
+    </figure>
+  </li>
+  <li><p>The yellow circle needs to be the topmost object on top of all the stacked
+  images in order for it to act as the &ldquo;cookie cutter&rdquo; clipping tool
+  it is supposed to be.</p>
+  <p>Select the yellow circle with the Select tool (<img src =
+  "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and press
+  &lt;Shift&gt;-&lt;PgUp&gt; until the <b>Mask</b> layer is highlighted. The
+  yellow circle is now topmost in the stacking order.</p>
+    <figure>
+      <img src = "images/YellowCircleInMaskLayer.gif" alt = "Yellow circle is
+      now topmost in layer stacking order." class = "img-fluid">
+      <figcaption>The yellow circle is now topmost in the layer stacking
+      order.</figcaption>
+    </figure>
+  </li>
+  <li><p>Marquee-select the entire grouped stack of layers.</p>
+    <figure>
+      <img src = "images/GroupSelectEntireStack.gif" alt = "Group-select the
+      entire stack of layers." class = "img-fluid">
+      <figcaption>Group-select the entire stack of layers.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose <u>O</u>bject &gt; Clip &gt; <u>S</u>et. Everything outside of
+  the yellow circle is clipped off.</p>
+    <figure>
+      <img src = "images/ClippedStack.gif" alt = "The stack of layers has been
+      clipped." class = "img-fluid">
+      <figcaption>Clipping the entire stack of layers.</figcaption>
+    </figure>
+  </li>
+  <li><p>The yellow masking circle has served its purpose and is now longer
+  needed. With the <b>Mask</b> layer still selected, click on the Minus sign
+  icon (<img src = "images/MinusSignIcon.gif" alt = "Minus sign icon" width =
+  "26">)to delete the layer and the yellow circle it contains.</p>
+    <figure>
+      <img src = "images/DeleteMaskLayer.gif" alt = "Delete the mask layer."
+      class = "img-fluid">
+      <figcaption>Delete the <b>Mask</b> layer.</figcaption>
+    </figure>
+  </li>
+  <li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+  </li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Putting the Logo Together</h2>
+  </header>
+<ol>
+  <li><p>In the <b>Layers</b> panel, make sure that the topmost layer
+  <b>Water</b> is active. Click on the <b>Plus sign</b> icon (<img src =
+  "images/PlusSignIcon.gif" alt = "Plus sign icon" width = "26">) to add a new
+  layer to the stack. Label it <b>Logo</b> and select <b>Above current</b> to
+  place it topmost in the stack. The <b>Logo</b> layer is now the active
+  layer in the stack.</p>
+  </li>
+  <li><p>Lock the <b>Water</b> layer.</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; <u>O</u>pen, locate and open file
+  <b>WVLogo.svg</b> that you created earlier.</p>
+  </li>
+  <li><p>Choose <u>E</u>dit &gt; Select Al<u>l</u>, then <u>E</u>dit &gt;
+  <u>C</u>opy to copy the logo to the Clipboard. Return to the
+  <b>fishart.svg</b> file.</p>
+    <figure>
+      <img src = "images/LogoSelectAll.gif" alt = "All components of the logo
+      are selected." class = "img-fluid">
+      <figcaption>All components of the logo are selected.</figcaption>
+    </figure>
+  </li>
+  <li><p>Place the Select cursor where you want to position the logo
+  artwork. I recommend somewhere close to the fish art for easy access.</p>
+  <figure>
+    <img src = "images/LogoMoved.png" alt = "Logo moved closer to artboard"
+    class = "img-fluid">
+    <figcaption>The logo is moved closer to the artboard and the lower seven
+    layers have been locked.</figcaption>
+  </figure>
+  </li>
+  <li><p>Select the logo. If the <b>Logo</b> layer bar is not highlighted,
+  then move the logo into that layer using &lt;Shift&gt;-&lt;PgUp&gt;.</p>
+  <figure>
+    <img src = "images/LogoLayer.gif" alt = "Logo moved into its own layer"
+    class = "img-fluid">
+    <figcaption>The logo is moved into its own layer.</figcaption>
+  </figure>
+  </li>
+  <li><p>Lock the <b>Water</b> layer. Only the <b>Logo</b> layer should be
+  unlocked now.</p>
+  </li>
+  <li><p>Select the logo text. You might need to group logo items.
+  Move the logo onto the fish art and resize it so it fits closely to the
+  underlying artwork.</p>
+    <figure>
+      <img src = "images/LogoOntopOfFishart.gif" alt = "Logo moved ontop of
+      fishart" class = "img-fluid">
+      <figcaption>The logo is moved ontop of fish art.</figcaption>
+    </figure>
+  </li>
+  <li><p>Select the entire logo. Click on the white swatch in the Color palette
+  and &lt;Shift&gt;-click the <b>none</b> swatch (<img src =
+  "images/NoneSwatch.gif" alt = "No color swatch" width = "26">) to select no
+  fill.</p>
+    <figure>
+      <img src = "images/LogoWhiteFillNoStroke.gif" alt = "Logo with white fill
+      and no stroke" class = "img-fluid">
+      <figcaption>The logo now has a white fill and no stroke.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click off the artwork to deselect it.</p>
+    <figure>
+      <img src = "images/DeselectArtwork2.gif" alt = "Logo with white fill
+      and no stroke deselected" class = "img-fluid">
+      <figcaption>The logo now has a white fill and no stroke
+      deselected.</figcaption>
+    </figure>
+  </li>
+  <li><p>If the logo has been grouped, ungroup the two portions. Select only the
+  top portion of the logo. We&rsquo;ll work with the bottom portion of the logo
+  separately.</p>
+    <figure>
+      <img src = "images/SelectOnlyTopPortionOfLogo.gif" alt = "Selecting only
+      the top portion of the logo" class = "img-fluid">
+      <figcaption>Selecting only the top portion of the logo.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose Filter<u>s</u> &gt; Fill and Transparency &gt; Blend&hellip;.
+  Select <b>Image</b> for the <b>Source</b> and <b>Lighten</b> for the
+  <b>Mode</b>. Click on the <u>A</u>pply button.</p>
+  <p>To finish the blending, set the <b>Opacity (%)</b> bar in the <b>Layers</b>
+  panel to <b>50</b>. Here, the entire <b>Logo</b> layer is set to 50%
+  opacity.</p>
+    <figure>
+      <img src = "images/LogoLayerOpacity50Percent.gif" alt = "Logo layer set
+      to 50 percent opacity" class = "img-fluid">
+      <figcaption>Entire <b>Logo</b> layer is set to <b>50%</b>
+      opacity.</figcaption>
+    </figure>
+  </li>
+  <li><p>Note that the lower portion of the logo is also affected by the color
+  blending. We want to keep it solid white. To accomplish that, we make a new
+  topmost layer for the lower portion of the logo.</p>
+  <p>Select the <b>Logo</b> layer in the <b>Layers</b> panel and add a new
+  layer ontop of it. Label it <b>Wendy Volkers</b>.</p>
+  </li>
+  <li><p>Click on the Wendy Volkers logo text and move it to the <b>Wendy
+  Volkers</b> layer using &lt;Shift&gt;-&lt;PgUp&gt;.</p>
+  <figure>
+    <img src = "images/WendyVolkersMovedIntoOwnLayer.gif" alt = "Lower portion
+    of the logo has been moved into its own layer." class = "img-fluid">
+    <figcaption>The lower portion of the logo has been moved into its own
+    layer.</figcaption>
+  </figure>
+  <p>Note that the Wendy Volkers text is now solid white in color with no stroke
+  color. This is exactly what we want.</p>
+</li>
+<li><p>Click anywhere off the artwork to deselect it.</p>
+  <figure>
+    <img src = "images/FinishedArtwork.gif" alt = "Finished artwork." class =
+    "img-fluid">
+    <figcaption>Finished artwork.</figcaption>
+  </figure>
+</li>
+<li><p>You are now finished with the logo. Choose <u>F</u>ile &gt; <u>S</u>ave
+and <u>F</u>ile > <u>C</u>lose.
+</ol>
+</section>
+
+<section>
+  <header>
+    <h2>Exploring on Your Own</h2>
+  </header>
+  <p>Experiment with different shapes and various transparency settings.
+  Overlap the shapes, try out different blending modes, and rearrange the layer
+  stacking order using the <b>Layers</b> palette to create new colors and
+  effects.</p>
+</section>
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li><p>What makes a custom guide different from a ruler guide?</p>
+    </li>
+    <li><p>What steps do you take to make a scan into a template?</p>
+    </li>
+    <li><p>What is the difference between <b>Raise the current layer</b> and
+    <b>Raise the current layer to the top</b>?</p>
+    </li>
+    <li><p>Where must an object be in the painting in order to be used as a
+    clipping mask?</p>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>A custom guide is different from a ruler guide in that it can be
+    created from any path or shape. A ruler guide is only horizontal or
+    vertical and is created by dragging the guide from the rulers.</p>
+    </li>
+    <li><p>To make a scan into a template, it is best to scan it and save the
+    image as a bitmap image file. Then choose <u>F</u>ile &gt;
+    <u>I</u>mport&hellip;, place it on the artboard or where you want to
+    position it. Select the image, choose <u>O</u>bject &gt; <u>O</u>bject
+    Properties&hellip;, check the <b>L<u>o</u>ck</b> checkbox to prevent it from
+    being modified accidentally. Using guides and the Pen tool (<img src =
+    "images/PenToolIcon.gif" alt = "Pen tool" width = "26">), re-create the
+    placed scan. When you have finished redrawing the image, choose
+    <u>O</u>bject &gt; Unlock All. Delete the original scan image.</p>
+    </li>
+    <li><p><b>Raise the current layer</b> will only bring the selected layer
+    ahead of the layer created right beneath it in the layer stacking order.
+    This is not the same as <b>Raise the current layer to the top</b>, which
+    will immediately place the selected layer at the very top of the stacking
+    order.</p>
+    </li>
+    <li><p>When you are creating a clipping mask, the object acting as the mask
+    must be at the top of the object or layer stacking order. Always make sure
+    by selecting the object and choosing <u>O</u>bject &gt; Raise to <u>T</u>op,
+    or by clicking on the <b>Raise selection to top</b> icon in the Tool
+    Controls Bar, or by having the clipping mask object in its own layer and
+    having that layer be topmost in the layer stack.</p>
+    </li>
+  </ol>
+</section>
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+  <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+  alt = "Creative Commons ShareAlike License" class = "img-fluid">&nbsp;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
