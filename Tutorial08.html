@@ -1,0 +1,807 @@
+<!doctype html>
+
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 8 &ndash; Transparencies and Color Blending</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2 offset-md-1">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 8 &ndash; Transparencies and Color Blending</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-4">
+          <img src = "images/RadioWave.gif"
+          alt = "Finished practice image file for Tutorial 8"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6">
+<p class = "lead">Inkscape&rsquo;s Transparency feature gives you the
+opportunity of adding a new dimension to your artwork that can exceed your
+expectations and expand your imagination. You can create special effects using
+the transparency and color blending features, such as combining different
+blending modes and transparencies with clipping and masking tools.</p>
+      </div>
+    </div>
+<hr>
+
+<section>
+<header>
+<h4>In this tutorial, you&rsquo;ll learn how to do the following: </h4>
+  <ul>
+    <li>Use the Transparency feature.</li>
+    <li>Change the opacity of objects.</li>
+    <li>Use color blending modes.</li>
+    <li>Use group options for transparency.</li>
+    <li>Use color and opacity masking.</li>
+  </ul>
+</header>
+
+<section>
+<header>
+  <h2>Getting Started</h2>
+</header>
+<p>In this lesson, you&rsquo;ll add transparency to artwork in several ways.
+You can vary the degree of transparency of an object&rsquo;s fill or stroke (or
+both), a group of objects, or a layer from 100% opacity (completely solid) to
+0% opacity (completely transparent). When you decrease an object&rsquo;s
+opacity, the underlying artwork becomes visible through that object as if you
+were working with stained glass.</p>
+<p>Using transparency features, you can also create special effects, such as
+knocking out underlying colors or creating graduated transparencies or blends.
+Transparency can be applied to multiple objects, groups, and even to entire
+layers. In this lesson you will focus on the transparency and color blending
+features and their capabilities. Learn how to apply transparency to layers in
+Lesson 7, "Working with Layers."</p>
+<ol>
+  <li><p>Start Inkscape.</p>
+  </li>
+  <li><p>Download and <u>F</u>ile &gt; <u>O</u>pen file
+  <a href = "images/RadioWave.gif"><b>RadioWave.gif</b></a>.</p>
+    <figure>
+      <img src = "images/RadioWave.gif" alt = "Finished artwork"
+      class = "img-fluid">
+    </figure>
+  </li>
+  <li><p>If you like, use the Zoom tool (<img src = "images/ZoomInOut.gif" alt =
+  "Zoom In/Out tool" width = "26">) to reduce the view of the finished artwork,
+  adjust the window size, and leave it on your screen as you work. (Use the
+  mouse wheel with and without pressing the &lt;Shift&gt; key to move the
+  artwork where you want it in the window.) If you don&rsquo;t want to leave
+  the image open, choose <u>F</u>ile &gt; <u>C</u>lose.</p>
+  </li>
+  <li>
+  <p>To begin working, you&rsquo;ll open an existing file set up for
+  experimenting with Inkscape&rsquo;s transparency and color blending
+  features.</p>
+
+  <p>Download and <u>F</u>ile &gt; <u>O</u>pen file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial08/Tutorial08Start.svg"><b>Tutorial08Start.svg</b></a>.
+  </p>
+    <figure>
+      <img src = "images/Tutorial08Start.png"
+      alt = "Starting image for Tutorial 08" width = "500"
+      class = "img-fluid">
+      <figcaption>Starting artwork.</figcaption>
+    </figure>
+    <p>The artwork in this file contains four ungrouped pieces of artwork: a text
+    object and three individual wave images. You will apply different degrees of
+    transparency and color blending to each wave.</p>
+  </li>
+  <li><p>Choose <u>F</u>ile &gt; Save <u>A</u>s, name the file
+  <b>RadioBlend.svg</b>, store it in a convenient location, and click on the
+  <b>Save</b> button.</p>
+  </li>
+</ol>
+</section>
+
+<section>
+  <header>
+    <h2>Applying Transparencies to Objects</h2>
+  </header>
+  <ol>
+    <li>
+  <p>Using the Select tool (<img src = "images/SelectionTool.gif"
+  alt = "Selection tool" width = "26">), select the first wave on the left.</p>
+  <figure>
+    <img src = "images/FirstWaveSelected.png" alt = "First wave selected"
+    width = "500" class = "img-fluid">
+    <figcaption>First wave selected.</figcaption>
+  </figure>
+    </li>
+    <li><p>Choose <u>O</u>bject &gt; <u>F</u>ill and Stroke &gt; <u>F</u>ill
+    tab, and type <b>90</b> in the right end of the Opacity (%) sliding bar.</p>
+    <figure>
+      <img src = "images/FirstWave90percent.png" alt = "First wave set to 90
+      percent opacity" width = "500" class = "img-fluid">
+      <figcaption>First wave set to 90 percent opacity.</figcaption>
+    </figure>
+    <p>You can just see text through the first wave.</p>
+    </li>
+    <li><p>Select the middle wave with the Select tool (<img src =
+     "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and,
+    with the <b>Fill and Stroke</b> palette still open, move the Opacity (%)
+    sliding bar with the adjustment arrow (<img src =
+    "images/AdjustTransparencyArrow.gif" alt = "Transparency adjustment arrow"
+    width = "26">) to <b>80.0</b>. If you experience difficulty because of the
+    arrow&rsquo;s sensitivity to movement, you can type in <b>80</b>
+    &lt;Enter&gt;. The up and down arrows at the end of the bar also allow for
+    fine numerical adjustment.</p>
+    <figure>
+      <img src = "images/SecondWave80percent.png" alt = "Second wave set to 80
+      percent opacity" width = "700" class = "img-fluid">
+      <figcaption>Second wave set to 80 percent opacity.</figcaption>
+    </figure>
+    <p>Text is relatively more visible through the second wave.</p>
+    </li>
+    <li><p>Select the third wave with the Select tool (<img src =
+     "images/SelectionTool.gif" alt = "Selection tool" width = "26">) and,
+    with the <b>Fill and Stroke</b> palette still open, move the Opacity (%)
+    sliding bar with the adjustment arrow (<img src =
+    "images/AdjustTransparencyArrow.gif" alt = "Transparency adjustment arrow"
+    width = "26">) to <b>70.0</b> or by typing in <b>70</b> &lt;Enter&gt;.</p>
+    <figure>
+      <img src = "images/AllWavesTransparent.png" alt = "Waves at 70, 80, and
+      90 percent opacity" width = "800" class = "img-fluid">
+      <figcaption>Waves at 90, 80, and 70 percent opacity,
+      respectively.</figcaption>
+    </figure>
+    <p>With each wave, the underlying text becomes more visible.</p>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; <u>S</u>ave. Keep the file open if you plan
+    to continue on to the next exercise.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Basic color blending and blending modes</h2>
+  </header>
+  <p>Color blending works with layers to produce its visual effects. When an
+  object needs to have its own special see-through effect, it is best to have
+  that object in its own layer. Several objects that use the same blending mode
+  can be in the same layer for the sake of efficiency.</p>
+  <p>You will create a layer and move the leftmost wave to that layer to see how
+  blending modes work.</p>
+  <aside><p><b>Note:</b> If you did not practice Tutorial 6, Working with
+  Layers, I strongly recommend that you take time to become acquainted with
+  layer techniques now. The material is this tutorial will be easier to work
+  with.</p>
+  </aside>
+  <h3>Creating a Layer for Each Wave</h3>
+  <ol>
+    <li><p>Click on the Layers icon (<img src = "images/LayersIcon.gif"
+    alt = "Layers icon" width = "26">) in the Command menu bar.<p>
+    </li>
+    <li><p>Click on the <b>Add layer</b> plus sign icon (<img src =
+    "images/AddLayerPlusSign.gif" alt = "Add layer plus sign icon" width =
+    "26">) to create a new layer.</p>
+    </li>
+    <li><p>When the <b>Add Layer</b> dialog box appears, type <b>Right wave</b>
+    in the <b>Layer name</b> text box, keep the <b>Position</b> as <b>Above
+    current</b>.</p>
+      <figure>
+        <img src = "images/RightWaveLayer.gif" alt = "Layer created for the
+        rightmost wave" class = "img-fluid">
+        <figcaption>Layer created for the rightmost wave.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <u>A</u>dd button.</p>
+    </li>
+    <li><p>Type <b>Middle wave</b> in the <b>Layer name</b> text box and keep
+    the <b>Position</b> as <b>Above current</b>.</p>
+    </li>
+    <li><p>Repeat the last couple of steps to create a layer for the leftmost
+    wave and label it appropriately.</p>
+    <figure>
+      <img src = "images/WaveLayersCreated.gif" alt = "Layers created for all
+      three waves" class = "img-fluid">
+      <figcaption>Layers created for all three waves.</figcaption>
+    </figure>
+
+    <li><p>Type <b>Middle wave</b> in the <b>Layer name</b> text box and keep
+    </li>
+    <li><p>You will now move each wave into its own layer.</p>
+    <p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool" width = "26">), click on the rightmost wave. Note that it
+    is currently located in Layer 1.</p>
+    <p>Press &lt;Shift&gt;-&lt;PgUp&gt; to move the wave into the <b>Right
+    wave</b> layer.</p>
+      <figure>
+        <img src = "images/RightWaveInItsOwnLayer.gif" alt = "Right wave in its
+        own layer" class = "img-fluid">
+        <figcaption>The rightmost wave is now in its own layer.</figcaption>
+      </figure>
+      <p>See that the <b>Right wave</b> layer bar is now highlighted and the
+      selected wave has moved to the front. That won&rsquo;t last for long.</p>
+    </li>
+    <li><p>Click on the middle wave and then press &lt;Shift&gt;-&lt;PgUp&gt;
+    twice to highlight the <b>Middle wave</b> layer bar. The middle wave now
+    resides in its proper layer.</p>
+    </li>
+    <li><p>Repeat the last couple of steps for the leftmost wave, except press
+    &lt;Shift&gt;-&lt;PgUp&gt; three times to move it into the <b>Left wave</b>
+    layer.</p>
+    <figure>
+      <img src = "images/EachWaveInItsOwnLayer.gif" alt = "Each wave in its
+      own layer" class = "img-fluid">
+      <figcaption>Each wave is now in its own layer.</figcaption>
+    </figure>
+    <p>Note how the waves are now in their original stacking order.</p>
+    <p>With each wave in its own layer, we can explore color blending.</p>
+    </li>
+  </ol>
+  <h3>Exploring color blend modes</h3>
+  <h4>Multiply</h4>
+  <ol start = "8">
+    <li><p>Select the left wave if it isn&rsquo;t already selected. The <b>Left
+    wave</b> layer bar Layers panel should be highlighted. Click on the arrow
+    at the right end of the <b>Blend mode</b> options bar and select
+    <b>Multiply</b> from the dropdown option list.</p>
+    <figure>
+      <img src = "images/MultiplySelected.gif" alt = "Select the Multiply blend
+      mode from the Blend Mode dropdown list." class = "img-fluid">
+      <figcaption>Select <b>Multiply</b> from the Blend Mode dropdown
+      list.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/FirstWaveMultiplied.gif" alt = "Multiply color
+      blending applied to leftmost wave" width = "600" class = "img-fluid">
+      <figcaption>Result of applying the <b>Multiply</b> color blend mode to the
+      leftmost wave.</figcaption>
+    </figure>
+  <p><b>Multiply</b> multiplies the underlying color with the overlapping
+  object&rsquo;s color. The result is always a darker color. Multiplying any
+  color with black produces black. Multiplying any color with white leaves the
+  color unchanged. The effect is similar to drawing with multiple magic markers.
+  This blending mode is used often for drop shadows.</p>
+  </li>
+</ol>
+  <h4>Difference</h4>
+<ol start = "9">
+  <li><p>Select the middle (the <b>Middle wave</b> layer bar highlights),
+  select <b>Difference</b> from the dropdown option list.</p>
+  <figure>
+    <img src = "images/DifferenceSelected.gif" alt = "Select the Difference
+    blending mode" class = "img-fluid">
+    <figcaption>Select the <b>Difference</b> blending mode.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/MiddleWaveDifference.gif" alt = "Difference color
+    blending applied to middle wave" width = "600" class = "img-fluid">
+    <figcaption>Result of applying the <b>Difference</b> color blend mode to the
+    middle wave.</figcaption>
+  </figure>
+  <p><b>Difference</b> creates the effect of seeing underlying objects as a
+  color film negative. Using it subtracts either the overlaying color from the
+  underlying color or the underlying color from the overlaying color, depending
+  on which one has the greater brightness value. Blending with white inverts
+  the underlying color values; blending with black produces no change.</p>
+  </li>
+</ol>
+  <h4>Screen</h4>
+<ol start = "10">
+  <li><p>Select the left wave, then select <b>Screen</b> from the <b>Blend
+  mode</b> dropdown option list.</p>
+  <figure>
+    <img src = "images/ScreenSelected.gif" alt = "Select the Screen
+    blending mode" class = "img-fluid">
+    <figcaption>Select the <b>Screen</b> blending mode.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/RightWaveScreen.gif" alt = "Screen color
+    blending applied to rightmost wave" width = "600" class = "img-fluid">
+    <figcaption>Result of applying the <b>Screen</b> color blend mode to the
+    right wave.</figcaption>
+  </figure>
+  <p><b>Screen</b> multiplies the inverse of the overlying and underlying
+  colors. The resulting color is always a lighter color. Screening with black
+  leaves the color unchanged, and screening with white produces white. The
+  effect is similar to projecting multiple slide images on top of each
+  other.</p>
+  <p>As you can see, the portion of the right wave that overlies the white
+  background is invisible. Only the top portion that overlies the background
+  text shows.</p>
+  </li>
+  <li><p><u>F</u>ile &gt; <u>S</u>ave and <u>F</u>ile &gt; <u>C</u>lose.</p>
+  </li>
+  </ol>
+  <p>Experiment with the other blending modes available in the dropdown list.
+  If you want to undo a color blend, click on the object and then choose
+  <b>Normal</b> from the <b>Blend mode</b> dropdown list in the Layers palette.
+</section>
+
+<section>
+  <header>
+    <h2>Making an Opacity Mask</h2>
+  </header>
+  <p>In this section, you will make a copy of the logo at the beginning of this
+  tutorial. When you look at the logo closely, you will see that it is
+  composed of four layers: one containing small type, one containing the wave
+  shapes, one containing stripes, and one containing large type. You will start
+  by creating the layer that houses the small type.</p>
+  <ol>
+    <li><p><u>F</u>ile &gt; <u>O</u>pen file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial08/Tutorial08Start.svg"><b>Tutorial08Start.svg</b></a> again.</p>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; Save <u>A</u>s&hellip;, name the file
+    <b>RadioWave.svg</b>, find a convenient storage location, and click on the
+    Save button.</p>
+    </li>
+    <li><p>Choose <u>F</u>ile &gt; <u>I</u>mport&hellip;</p>
+    </li>
+    <li><p>Locate, select the PDF file <b>numbers.pdf</b>, and click on the
+    Open button. The PDF Import Setting dialog box appears.</p>
+    </li>
+    <li><p>Move the <b>Precision of approximating gradient meshes</b> slider to
+    the extreme left (<b>1.0</b>). We don&rsquo;t need extreme precision in this
+    graphic.</p>
+    <figure>
+      <img src = "images/PDFImportSettings.gif" alt = "PDF Import Settings
+      dialog box" class = "img-fluid">
+      <figcaption>PDF Import Settings dialog box. Mesh precision set to
+      1.0</figcaption>
+    </figure>
+    </li>
+    <li><p>Click on the <u>O</u>K button. The imported graphic is placed where
+    the cursor is located.</p>
+      <figure>
+        <img src = "images/PDFImported.gif" alt = "PDF imported" class =
+        "img-fluid">
+        <figcaption>PDF imported and placed where the cursor is
+        located.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the PDF import and resize it smaller so it&rsquo;s about the
+    same size as the logo artwork.</p>
+      <figure>
+        <img src = "images/MoveResizeImport.gif" alt = "Move and resize the PDF"
+        class = "img-fluid">
+        <figcaption>PDF moved and resized.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select (marquee-select or use &lt;Shift&gt;-click) the three
+    waves, duplicate them (&lt;Ctrl&gt;-D or choose <u>E</u>dit &gt;
+    Duplic<u>a</u>te), and move the copies down from their original
+    position.</p>
+      <figure>
+        <img src = "images/MoveDuplicateWaves.gif" alt = "Move the duplicate
+        waves" class = "img-fluid">
+        <figcaption>Move the duplicated waves.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the imported small text to behind the copied waves. If the
+    text lies ontop of the waves, there is no problem, as you will see in the
+    next step.</p>
+      <figure>
+        <img src = "images/MoveImport2BehindWaves.gif" alt = "Move the imported
+        small text image to behind the duplicated waves" class = "img-fluid">
+        <figcaption>Move the imported small text image to behind the duplicated
+        waves.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the small text image still selected, click on the <b>Raise
+    selection to top</b> icon (<img src = "images/RaiseSelection2TopIcon.gif"
+    alt = "Raise selection to top icon" width = "26">) in the Tool Controls
+    Bar. The text moves to the top of the wave-text stack, ready to be used as
+    a mask. The waves are positioned underneath. They are visible if you choose
+    <u>V</u>iew &gt; <u>D</u>isplay mode &gt; <u>O</u>utline.</p>
+      <figure>
+        <img src = "images/TextWavesInOutlineView.gif" alt = "Small text and
+        waves visible in Outline view" class = "img-fluid">
+        <figcaption>Small text and waves visible in Outline view.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you went to <b>Outline</b> view, go back to <b>Normal</b> view.
+    Group-select the text image and waves (you can&rsquo;t help but select
+    both) and choose <u>O</u>bject &gt; Mas<u>k</u> &gt; <u>S</u>et. After a
+    couple of seconds of image processing, the combined area of waves appear
+    with lettering taking on the color of the waves.</p>
+      <figure>
+        <img src = "images/MaskingResult.gif" alt = "Masking result" class =
+        "img-fluid">
+        <figcaption>Result.</figcaption>
+      </figure>
+    </li>
+    <li><p>In the <b>Layers</b> panel, add a new layer and label it <b>Small
+    text</b>. Then, select the masked text image and move it into the <b>Small
+    text</b> layer. Lock the <b>Small text</b> layer.</p>
+      <figure>
+        <img src = "images/SmallTextInOwnLayer.gif" alt = "Masking result moved
+        into own layer" class = "img-fluid">
+        <figcaption>Masked text moved into its own layer and the layer is
+        locked.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make another grouped duplicate of the three waves in the logo and
+    bring that grouped object down so it sits directly ontop of the small text
+    object. Placement does not have to be exact at this point.</p>
+      <figure>
+        <img src = "images/NewWaveDuplicateOntopOfSmallText.gif" alt = "New wave
+        duplicate moved to ontop of masked text object" class = "img-fluid">
+        <figcaption>New wave duplicate moved to ontop of masked text
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Create a new layer and label it <b>Transparent waves</b>.
+    Group-select the waves and move them into the <b>Transparent waves</b>
+    layer. Then, select <b>Multiply</b> for the <b>Blend mode</b>.</p>
+      <figure>
+        <img src = "images/NewWaveDuplicateMultiply.gif" alt = "New wave
+        duplicates moved into own layer and Multiply blend mode applied"
+        class = "img-fluid">
+        <figcaption>New wave duplicates moved into own layer and <b>Multiply</b>
+        blend mode applied to whole layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>Next, you&rsquo;ll apply different degrees of opacity to each
+    wave. Select the right-hand wave and set <b>Opacity (%)</b> to <b>20.0</b>
+    in the <b>Fill and Stroke</b> palette.</p>
+      <figure>
+        <img src = "images/RightWave20PercentTransparency.gif" alt = "Right
+        wave set to 20 percent transparency" class = "img-fluid">
+        <figcaption>Right wave set to 20 percent opacity.</figcaption>
+      </figure>
+    </li>
+    <li><p>Set the middle wave&rsquo;s opacity to <b>50</b> percent and the left
+    wave&rsquo;s opacity to <b>80</b> percent.</p>
+      <figure>
+        <img src = "images/MiddleWave50LeftWave80PercentTransparency.gif" alt =
+        "The middle wave is set to 50 percent opacity and the left wave is set
+        to 80 percent opacity." class = "img-fluid">
+        <figcaption>The middle wave is set to 50 percent opacity and the left
+        wave is set to 80 percent opacity.</figcaption>
+      </figure>
+    </li>
+    <li><p>Deselect the wave or waves and lock the <b>Transparent waves</b>
+    layer.</p>
+      <figure>
+        <img src = "images/TransparentWaveLayerLocked.gif" alt =
+        "Lock the Transparent wave layer." class = "img-fluid">
+        <figcaption>Lock the Transparent wave layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>Before the large logo text is put into place, you&rsquo;ll create and
+    add a decorative stripe pattern. First, choose <u>V</u>iew &gt; Page
+    <u>G</u>rid. The grid will help you measure out the design. Then, increase
+    the magnification of the area to the upper left of the left wave.</p>
+    </li>
+    <li><p>If the Snap Controls Bar isn&rsquo;t active, choose <u>V</u>iew &gt;
+    Sh<u>o</u>w/Hide &gt; Sn<u>a</u>p Controls Bar. Select the <b>Enable
+    Snapping (%)</b> icon (<img src = "images/EnableSnappingIcon.gif" alt = "
+    Enable Snapping icon" width = "26">), the <b>Snap nodes, paths, and
+    handles</b> icon (<img src = "images/SnapNodesIcon.gif" alt = "Snap node,
+    paths, and handles icon" width = "26">), and the <b>Snap to grids</b> icon
+    (<img src = "images/Snap2GridsIcon.gif" alt = "Snap to Grids icon" width =
+    "26">). Then, choose the Rectangle tool (<img src =
+    "images/RectangleToolIcon.gif" alt = "Rectangle tool icon" width =
+    "26">).</p>
+    </li>
+    <li><p>Draw a rectangle 12 squares long by 4 squares wide. Draw another
+    rectangle 12 squares long by 3 squares wide with a space of 2 squares
+    between the two. Then, draw a line segment with the Pen tool starting at
+    the top right corner of the top rectangle going down to 1 square below the
+    lower right corner of the lower rectangle. Using the Style st<u>y</u>le tab
+    in the Fill and Stroke palette, give the line a white stroke and a thickness
+    of <b>1.5</b> pixels. We choose a dark purple color with hexadecimal code
+    <b>0b0b28</b> to fill the rectangles.</p>
+      <figure>
+        <img src = "images/CreateCapriStripes1.gif" alt = "Creating a pattern
+        for Capri stripes" class = "img-fluid">
+        <figcaption>Creating a pattern template for decorative Capri
+        stripes.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the two rectangles and line segment.</p>
+      <figure>
+        <img src = "images/CreateCapriStripes2.gif" alt = "Group-selecting the
+        pattern template for conversion into an actual pattern" class =
+        "img-fluid">
+        <figcaption>Group-selecting the pattern template for conversion into an
+        actual pattern.</figcaption>
+      </figure>
+      <p>Note that the line segment creates a bottommost space of 1 square in
+      width, which is what we want.</p>
+    </li>
+    <li><p>Choose <u>O</u>bject &gt; Patter<u>n</u> &gt; Objects to
+    Patter<u>n</u> to convert the grouped items into a pattern. The pattern
+    you just created has been added to Inkscape&rsquo;s pattern library
+    for this particular file. Choose <u>V</u>iew &gt; Page <u>G</u>rid to turn
+    off the grid lines. Keep the pattern up, however. You will adjust the
+    thickness and angle of the stripes shortly and the pattern handles needed
+    to adjust pattern attributes will appear on the template.</p>
+    </li>
+    <li><p>Create a new top layer and label it <b>Capri stripes</b>.</p>
+    <p>With the Rectangle tool (<img src = "images/RectangleToolIcon.gif" alt =
+    "Rectangle tool icon" width = "26">), draw a rectangle around the three
+    wave image.</p>
+      <figure>
+        <img src = "images/DrawRectangleAroundWaves.gif" alt = "Draw a
+        rectangle around the waves." class = "img-fluid">
+        <figcaption>Draw a rectangle around the waves.<figcaption>
+      </figure>
+    </li>
+    <li><p>In the Fill and Stroke palette, <u>F</u>ill tab, click on the
+    <u>Pattern</u> icon. The pattern whose template you just created fills the
+    rectangle.</p>
+      <figure>
+        <img src = "images/FillRectangleWithStripes.gif" alt = "Filling the
+        rectangle with stripes." class = "img-fluid">
+        <figcaption>Filling the rectangle with the stripe pattern.<figcaption>
+      </figure>
+    </li>
+    <li><p>Press <b>5</b> to scale the artboard to the work window. Then, click
+    on the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/PatternHandles.gif" alt = "Artboard is reduced to
+        fit in the work area and pattern handles are visible on the template."
+        class = "img-fluid">
+        <figcaption>The artboard is reduced to size and pattern handles are
+        visible on the template.</figcaption>
+      </figure>
+    </li>
+    <li><p>The stripes need to be rescaled so they are thinner and angled at
+    45&deg;. You use the pattern handles to accomplish these two
+    adjustments.</p>
+    <figure>
+      <img src = "images/PatternHandles2.png" alt = "Pattern handles and
+      their descriptions" class = "img-fluid">
+      <figcaption>Pattern handles and their descriptions.</figcaption>
+    </figure>
+  </li>
+  <li><p>Rescale the stripe so they are thinner. With the Node tool (<img src =
+  "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">), drag the
+  <b>Translation handle</b> toward the center of the pattern template until
+  the stripes are of a satisfactory thinness. Release the mouse button to set
+  the scale. We set the stripe thickness at about the same thicknes of an
+  underlying line of text.</p>
+    <figure>
+      <img src = "images/RescaleStripes.png" alt = "Rescaling the stripes"
+      width = "700" class = "img-width">
+      <figcaption>Rescaling the stripes.</figcaption>
+    </figure>
+  </li>
+  <li><p>Rotate the stripes by 45&deg;. While pressing the &lt;Ctrl&gt; key,
+  drag the <b>Rotation handle</b> anticlockwise until the stripes are angled
+  at 45&deg;. By pressing the &lt;Ctrl&gt; key, you can rotate objects by
+  15&deg; increments, just like the rotation handles that appear when you click
+  twice on an object with the Select tool. The <b>Rotation handle</b> turns blue
+  to show that it is in use. It turns red when you release the mouse to
+  indicate that you can still manipulate it.</p>
+    <figure>
+      <img src = "images/RotateStripes.png" alt = "Rotating the stripes"
+      width = "700" class = "img-width">
+      <figcaption>Rotating the stripes.</figcaption>
+    </figure>
+  </li>
+  <li><p>In the Layers panel, set the <b>Opacity (%)</b> to <b>50</b> percent
+  and choose <b>Color Burn</b> for the <b>Blend mode</b>.</p>
+    <figure>
+      <img src = "images/ColorBurn.gif" alt = "Set the Opacity to 50 percent
+      and Blend mode to Color Burn." width = "700" class = "img-width">
+      <figcaption>Set the <b>Opacity</b> to <b>50</b> percent and <b>Blend
+      mode</b> to <b>Color Burn</b>.</figcaption >
+    </figure>
+    <aside><p><b>Color Burn</b> is a blending mode that gives you a darker
+    result than the <b>Multiply</b> mode. It increases contrast by darkening
+    the original colors of the image. This effect increases contrast with the
+    blend colors. The result is brighter, more highly saturated colors while
+    reducing highlights. Color Burn blending with white produces no change.</p>
+    <p>Practical uses in <b>Color Burn</b> blending include heightening
+    brilliant colors of photogenic food dishes on a dark cloth or table
+    background, sunset colors that contrast against a darkening landscape, or
+    for putting greater focus on flowers in a display or on a bush or tree.</p>
+    </aside>
+  </li>
+  <li><p>You will now clip the image. Create a new top layer and label it
+  <b>Mask</b>.</p>
+  </li>
+  <li><p>Click on the <b>Layer 1</b> layer bar. Group-select the three waves
+  and duplicate them (&lt;Ctrl&gt;-D). You can optionally group them
+  (&lt;Ctrl&gt;-G) and move them off to the side.</p>
+  </li>
+  <li><p>Press &lt;Shift&gt;-&lt;PgUp&gt; 4 times to move the waves into the
+  <b>Mask</b> layer.</p>
+    <figure>
+      <img src = "images/PutDuplicatedWavesIntoMaskLayer.gif" alt = "Move the
+      duplicated waves into the Mask layer." width = "700" class = "img-width">
+      <figcaption>Move the duplicated waves into the Mask layer. (They have also
+      been grouped.)</figcaption>
+    </figure>
+  </li>
+  <li><p>If the <b>Snap Controls Bar</b> isn&rsquo;t visible, choose <u>V</u>iew
+  &gt; Sh<u>o</u>w/Hide &gt; Sn<u>a</u>p Controls Bar. Select the <b>Enable
+  Snapping (%)</b> icon (<img src = "images/EnableSnappingIcon.gif" alt = "
+  Enable Snapping icon" width = "26">), the <b>Snap nodes, paths, and
+  handles</b> icon (<img src = "images/SnapNodesIcon.gif" alt = "Snap node,
+  paths, and handles icon" width = "26">), and the <b>Snap cusp nodes, incl.
+  rectangle corners</b> icon (<img src = "images/SnapCuspNodesIcon.gif" alt =
+  "Snap cusp nodes icon" width = "26">). The <b>Snap cusp nodes</b> tool (<img
+  src = "images/SnapCuspNodesIcon.gif" alt = "Snap cusp nodes icon" width =
+  "26">) allows you to snap corners and sharp angles of an object to points you
+  choose as anchor points for fine positioning.</p>
+  <p>Select and move the duplicated three waves (grouping them might be a wise
+  thing to do here) so they lie directly ontop and topmost of the wave-text
+  artwork.</p>
+    <figure>
+      <img src = "images/PuttingClippingMaskIntoPlace.gif" alt = "Putting the
+      clipping mask into place" class = "img-fluid">
+      <figcaption>Putting the clipping mask into place.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the mask in place, choose <u>O</u>bject &gt; Clip &gt;
+  <u>S</u>et. The clipping "cookie cutter" cuts through all the underlying
+  layers and gives us a cleanly cut &ldquo;cookie&rdquo;. Note and remember:
+  the clipping mask lies above the artwork that is to be clipped.</p>
+    <figure>
+      <img src = "images/ClippingDone.gif" alt = "Clipping done" class =
+      "img-fluid">
+      <figcaption>Clipping done.</figcaption>
+    </figure>
+  </li>
+  <li><p>Deselect the artwork and <u>F</u>ile &gt; <u>S</u>ave.</p>
+    <figure>
+      <img src = "images/ClippedArtwork.gif" alt = "Clipped artwork" class =
+      "img-fluid">
+      <figcaption>Clipped artwork.</figcaption>
+    </figure>
+  </li>
+  <li><p>You will now use the original three waves in the text-wave artwork to
+  position the clipped artwork you just created under the large logo text with
+  precision.</p>
+  <p>With the <b>Snap Controls Bar</b> and tools still active that you used
+  earlier (<b>Enable Snapping (%)</b> icon (<img src =
+  "images/EnableSnappingIcon.gif" alt = "Enable Snapping icon" width = "26">),
+  the <b>Snap nodes, paths, and handles</b> icon (<img src =
+  "images/SnapNodesIcon.gif" alt = "Snap node, paths, and handles icon" width =
+  "26">), and the <b>Snap cusp nodes, incl. rectangle corners</b> icon (<img
+  src = "images/SnapCuspNodesIcon.gif" alt = "Snap cusp nodes icon" width =
+  "26">)), group-select the clipped artwork and drag it up to cover the original
+  three waves. Let the snapping tools guide you as you make fine adjustments to
+  positioning.</p>
+    <figure>
+      <img src = "images/MoveArtwork.gif" alt = "Move the clipped artwork up
+      to cover the original three waves." class = "img-fluid">
+      <figcaption>Move the clipped artwork up to cover the original three
+      waves.</figcaption>
+    </figure>
+  </li>
+  <li><p>It is now time to delete the original three waves. Lock all the layers
+  except for <b>Layer 1</b> at the bottom of the stack where the original waves
+  are located. Marquee-select the three waves. Press the &lt;Delete&gt; or
+  &lt;Del&gt; key.</p>
+    <figure>
+      <img src = "images/DeleteOriginalWaves.gif" alt = "Delete the original
+      three waves." class = "img-fluid">
+      <figcaption>Delete the original three waves.</figcaption>
+    </figure>
+  </li>
+  <li><p>The only object left in <b>Layer 1</b> is the logo text. You will move
+  <b>Layer 1</b> to the top of the stack. Click on the <b>Raise current layer to
+  the top</b> icon (<img src = "images/RaiseCurrentLayer2Top.gif" alt = "Raise
+  the current layer to the top icon" width = "26">) to put <b>Layer 1</b> at the
+  top of the stack. The text has 100% opacity so it partially hides the clipped
+  artwork situated underneath it in the stacking order.</p>
+    <figure>
+      <img src = "images/LogoTextTopmostLayer.gif" alt = "The logo text layer is
+      topmost in the stacking order." class = "img-fluid">
+      <figcaption>The logo text layer <b>Layer 1</b> is topmost in the stacking
+      order.</figcaption>
+    </figure>
+  </li>
+  <li><p>The last touch-up task involves resizing the logo text and centering
+  it. As you can see, the two lines of text overlap. They need to be separate
+  for legibility&rsquo;s sake. The fix is easy to accomplish.</p>
+  <p>With <b>Layer 1</b> still selected (reselect it if it has been deselected),
+  click on the Text tool (<img src = "images/TextToolIcon.gif" alt = "Text tool
+  icon" width = "26">).</p>
+  <p>Select the logo text. The font is Bookman Old Style Semi-Bold, as you can
+  see in the Text Tool Control Bar (<img src = "images/BookmanOldStyle.gif"
+  alt = "Text Tool Control Bar showing font and font style" class =
+  "img-fluid">).</p>
+  <p>If the size is different from 89 pt, change it to 89. Change the leading
+  to 69% if it is different. 89 pt is a good size for the artwork and a 69%
+  leading separates the two lines of text from each other.</p>
+  <p>Click on the <b>Center align</b> icon (<img src =
+  "images/CenterAlignIcon.gif" alt = "Center align icon" width = "26">) in the
+  Text Tool Control Bar.</p>
+  </li>
+  <li><p><u>F</u>ile &gt; <u>S</u>ave and <u>F</u>ile &gt; <u>C</u>lose.</p>
+    <figure>
+      <img src = "images/RadioWave.gif" alt = "Finished artwork" class =
+      "img-fluid">
+      <figcaption>Finished artwork.</figcaption>
+    </figure>
+  </li>
+</ol>
+<p>You have just concluded a tutorial where you became more closely acquainted
+with transparency and color blending tools, and with their use in combination.
+You also learned that the clipping tool &ldquo;cookie-cuts&rdquo; through
+multiple layers to modify the borders of your artwork.</p>
+<p>Try out different fonts for the logo text and different blending modes.
+Rearrange the layers to get different results. A layer is the computer graphic
+equivalent of tracing paper. Just as you can change the order in which you can
+stack tracing paper as you create a piece of artwork, so can you change the
+stacking order of layers as you try out different ideas. They exist to help you
+develop and fine-hone your skills.</p>
+</section>
+
+<hr>
+
+<section>
+<header>
+  <h2>Review Questions</h2>
+</header>
+<ol>
+  <li><p>What is the difference between transparency and opacity?</p>
+  <li><p>What is a blending mode and how is it applied?</p></li>
+  <li><p>Can transparency and color blending be combined?</p></li>
+</ol>
+</section>
+
+<section>
+<header>
+  <h2>Review Answers</h2>
+</header>
+<ol>
+  <li><p>Transparency and opacity are opposites of each other. Transparency
+  has to do with how much you can see through an object (how transparent it is);
+  opacity has to do with how much you can&rsquo;t see through an object, or how
+  opaque it is.</p>
+  </li>
+  <li><p>Blending modes allow you to vary the way that colors in objects
+  interact or blend with the underlying objects. Modes can be selected from the
+  Blend mode dropdown menu in the Layers palette.</p>
+  </li>
+  <li><p>Yes, transparency and color blending can be combined to produce a
+  broad range of design effects, such as images produced with stained glass,
+  tracing paper, lighting effects, and more.</p>
+  </li>
+</ol>
+</section>
+
+<div class = "row mb-2">
+  <div class = "col-md-2">
+    <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+    class = "img-fluid"></a>
+  </div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+  <div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+  <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+  alt = "Creative Commons ShareAlike License"
+  class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+  Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
