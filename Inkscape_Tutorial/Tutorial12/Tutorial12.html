@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 12 - Working with the Spray, Extrude, and Envelope
+  Tools</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2 offset-md-1">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 12 &ndash; Working with the Spray, Extrude, and Envelope
+          Tools</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+  <figure class = "mt-3">
+    <img src = "images/FinishedArtwork.gif" alt = "Finished artwork for
+    Tutorial 12" class = "img-fluid">
+  </figure>
+      </div>
+      <div class = "col-md-6">
+  <p class = "lead">The Spray tool lets you apply multiple objects
+  by painting them onto the page. The Spray tool offers options that make
+  creating repetitive shapes, such as grass, or stars in the sky, easy and fun.
+  You can create 3-D objects using the Extrude tool and then map images that
+  contain sprayed objects with the Envelope tool.</p>
+      </div>
+    </div>
+
+<hr>
+
+<section>
+  <p>In this lesson, you&rsquo;ll learn how to do the following:
+  <ul>
+    <li>Create an object to copy, clone, or transform into a path
+    using the Spray tool.
+    </li>
+    <li>Apply object instances using the Spray tool.
+    </li>
+    <li>Modify and redefine an object instance.
+    </li>
+    <li>Use sprayed object instances for 3D mapping.
+    </li>
+    <li>Create a box shape using the Extrude tool.
+    </li>
+    <li>Attach grouped objects to a box shape using the Envelope tool.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this lesson, you&rsquo;ll finish artwork for a poster.</p>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download file <a href = "#"><b>Tutorial12end.svg</b></a>
+    and store it in a convenient location. Choose <u>F</u>ile &gt;
+    <u>O</u>pen and open file <b>Tutorial12end.svg</b>.</p>
+    </li>
+    <li><p>If you like, choose <u>V</u>iew &gt; <u>Zoom</u> &gt; Zoom Out to
+    make the finished artwork smaller, adjust the window size, and leave it on
+    your screen as you work. (Press &lt;Ctrl&gt;-A to group-select the artwork
+    and then move it with the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to where you want it in the
+    window.) If you don&rsquo;t want to leave the image open, choose
+    <u>F</u>ile &gt; <u>C</u>lose.</p>
+    </li>
+    <li><p>To begin working, you&rsquo;ll open an existing art file set up for
+      the artwork. Download file <a href = "Tutorial12start.svg"><b>Tutorial12start.svg</b></a>
+      and choose <u>F</u>ile &gt; <u>O</u>pen to open it.</p>
+      <figure>
+        <img src = "images/Tutorial12start.gif" alt = "Tutorial 12 starting
+        image" class = "img-fluid">
+        <figcaption>Starting image for Tutorial 12.</figcaption>
+      </figure>
+    </li>
+    <li></p>Choose <u>F</u>ile &gt; Save <u>A</u>s&hellip; and name the file
+    <b>ballgame.svg</b>.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Creating an Object to Use with the Spray Tool</h2>
+  </header>
+  <p>You create an object to be sprayed onto your artwork like any other object.
+  It acts, however, as the source for duplicates that you spray on as if you
+  were using an air brush that sprays on droplets of paint, but not just colors.
+  For example, if you create an object in the shape of a blade of grass, you
+  can then add instances of that grass multiple times to your artwork by
+  spraying it on using the Spray tool.</p>
+  <p>When you click on the Spray tool icon (<img src =
+  "images/SprayToolIcon.gif" alt = "Spray tool icon" width = "26">) in the
+  toolbox, the <b>Spray Tool Controls Bar</b> appears above or to the right of
+  the work window (depending on how you configured toolbar placement),
+  presenting options to modify how the tool operates.</p>
+    <figure>
+      <img src = "images/SprayToolControlsBar.gif" alt = "Spray tool controls
+      bar" class = "img-fluid">
+      <figcaption>Spray Tool Controls Bar.</figcaption>
+    </figure>
+    <figure>
+      <figcaption>Left portion of Spray Tool Controls Bar.</figcaption>
+      <img src = "images/SprayToolBarLeftSideWithLabels.png"
+      alt = "Left portion of Spray tool controls bar" class = "img-fluid">
+    </figure>
+    <figure>
+      <figcaption>Right portion of Spray Tool Controls Bar.</figcaption>
+      <img src = "images/SprayToolBarRightSideWithLabels.png"
+      alt = "Right portion of Spray tool controls bar" class = "img-fluid">
+    </figure>
+  <p>If you choose the <b>Spray <u>copies</u></b> option, you can spray on just
+  copies of the original object. Each copy is a stand-alone object that you can
+  edit or replace independently of all the other copies. If you later want to
+  modify selected instances, you can, using the Select tool (<img src =
+  "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+  and one or another technique of group-selection.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/CopyExample1.gif" alt = "Example of spraying objects
+      in copy mode" class = "img-fluid">
+      <figcaption>Example of spraying objects in Copy mode.<br>
+      Source object on the left, sprayed duplicates on the right.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/CopyExample2.gif" alt = "Example of spraying objects
+      in copy mode" class = "img-fluid">
+      <figcaption>In Copy mode, individual duplicated objects can be
+      modified.</figcaption>
+    </figure>
+  <div style = "clear: left;"></div>
+  <p>If you chose the <b>Spray <u>clones</u></b> option, then all clone
+  instances are linked to the original source object. This means that you can
+  alter <u>all</u> instances by selecting the original instance, and then
+  editing or replacing it &ndash; all instances of that object will be updated.
+  You can turn that grass from brown to green instantly! This tool can be a
+  great time-saver as you create your artwork.</p>
+  <figure>
+    <img src = "images/CloneExample.gif" alt = "Example of spraying objects
+    in clone mode" class = "img-fluid">
+    <figcaption>When Clone mode is used, duplicated objects are linked to their
+    source object.<br>When a source object is modified, all corresponding
+    sprayed objects are also modified.<br>Source object on the left, sprayed
+    duplicates on the right.</figcaption>
+  </figure>
+
+  <p>If you choose to work with the <b><u>single path</u></b> option, then all
+  duplicated objects become part of a single path. If any of the sprayed objects
+  overlap, the overlapping strokes are removed, creating the appearance that
+  the objects have been merged (into a path union).</p>
+  <figure>
+    <img src = "images/SinglePathExample.gif" alt = "Example of spraying objects
+    in single path mode" class = "img-fluid">
+    <figcaption>When Single path mode is used, duplicated objects are converted
+    into paths and<br>merged together into a path union (single path).<br>
+    Source object on the left, sprayed duplicates on the right.</figcaption>
+  </figure>
+
+  <p>Inkscape objects that can be used are: paths, compound paths, text,
+  raster images, mesh objects, and groups of objects. You can use active
+  objects, such as blends, effects, or other object instances that make up a
+  larger object.</p>
+
+  <p>You can find more information about the Spray Tool at <u>H</u>elp &gt;
+  Inkscape Manual &gt; 12. Spray Tool.</p>
+</section>
+<section>
+  <header>
+    <h2>Creating a Simple Source Object for Spraying</h2>
+  </header>
+  <p>You will first start by adding a crowd to the start file image.</p>
+  <p>To prevent accidentally moving the background as you add and modify
+  objects, click on the colored portion of the background to select the entire
+  rectangle. Note that the upper portion of the background has a white fill.</p>
+  <p>Choose <u>O</u>bject &gt; <u>O</u>bject Properties&hellip;, and click on
+  the L<u>o</u>ck checkbox to lock the background. You cannot edit it until you
+  unlock it.</p>
+  <ol>
+    <li><p>Select the Ellipse tool (<img src = "images/EllipseToolIcon.gif"
+    alt = "Ellipse tool icon" width = "26">) in the toolbox, and click and drag
+    to create the shape of a head.</p>
+      <figure>
+        <img src = "images/CreateHeadShape.gif" alt = "Creating the shape of a
+        head" class = "img-width">
+        <figcaption>Creating the shape of a head.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Applying a Spray Object Instance</h2>
+  </header>
+  <p>Now you&rsquo;ll use the Spray tool to apply the face to your
+  illustration.</p>
+  <ol start = "2">
+    <li><p>With the face object still selected, click on the Spray tool (<img
+    src = "images/SprayToolIcon.gif" alt = "Spray tool icon" width = "26">) in
+    the toolbox.</p>
+    </li>
+    <li><p>Use the <b>Copy</b> mode for spraying. Some good settings are:
+    <b>Width: 3</b>, <b>Amount: 3</b>, and <b>Scale: 0</b>. Click on the
+    <b>Apply over no transparent areas</b> icon
+    (<img src = "images/ApplyOverNoTransparentAreasIcon.gif" alt = "Apply over
+    no transparent areas icon" width = "26">) &mdash; any seemingly blank areas
+    have a white fill, thus are not transparent.</b>
+    </p>
+    <li><p>Click and drag using the Spray tool, much like an airbrush, or can
+    of paint, to create a crowd with your face object. Experiment dragging at
+    different speeds. You&rsquo;ll find that the number of copies that appear
+    changes with how fast you drag the mouse.</p>
+      <figure>
+        <img src = "images/SprayCopiedFaces.gif" alt = "Spray on copied faces"
+        class = "img-fluid">
+        <figcaption>Spraying on copied faces.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now you will apply colorization to the copied faces.</p>
+    <p>Group-select all the faces, source and copies. &lt;Shift&gt;-click
+    and &Shift&gt;-drag work in this situation where you have disjoint
+    batches of objects.</p>
+    <figure>
+      <img src = "images/GroupSelectFaces.gif" alt = "Group-select faces."
+      class = "img-fluid">
+      <figcaption>Group-select faces in preparation for mass
+      colorization.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Flat color</b> icon. The face objects fill with black.
+    Enter <b>dccabcff</b> in the <b>RGBA</b> text box and press &lt;Enter&gt;
+    or &lt;Return&gt; to set a pinkish color.</p>
+    <figure>
+      <img src = "images/PinkFillColor.gif" alt = "Changing the fill color
+      of the faces" class = "img-fluid">
+      <figcaption>Changing the color of the faces to pink.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Stroke paint</b> tab. Click on the <b>No paint</b>
+  icon to set the black stroke color to transparent.</p>
+      <figure>
+        <img src = "images/PinkFillColorNoStroke.gif" alt = "Eliminating the
+        stroke color of the faces" class = "img-fluid">
+        <figcaption>Eliminating the black stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click of the artwork to deselect the original face object.</p>
+    </li>
+    <li><p>Create a new batch of faces still using <b>Copy</b> mode.</p>
+    <p>Draw a source face, set its fill color to <b>fcde60ff</b> in the
+    <b>RGBA</b> text box, and its stroke to <b>No paint</b>.</p>
+    <p>Then, select the Spray tool (<img src = "images/SprayToolIcon.gif" alt =
+    "Spray tool icon" width = "26">), set <b>Scale</b> to <b>30</b> for a wide
+    range in size variation, and start spraying.</p>
+      <figure>
+        <img src = "images/SecondBatchOfFaces.gif" alt = "Spray new face
+        objects using the copy option" class = "img-fluid">
+        <figcaption>Spraying on new face objects using Copy mode.</figcaption>
+      </figure>
+    </li>
+    <li><p>Create one last face and set its color to the pink of the
+    &ldquo;front-most&rdquo; faces using the <b>Dropper</b> tool (<img src =
+    "images/DropperIcon.gif" alt = "Color fill dropper tool icon" width = "26">)
+    in the <b>Fill</b> panel. Set its stroke to <b>No paint</b>. Adjust the
+    placement and size of faces as you desire. Note that a couple of faces
+    have been added. The faces placed behind the head brush strokes were lowered
+    in the stacking order using the <b>Lower selection one step</b> tool (<img
+    src = "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection one
+    step icon" width = "26">) in the Tool Controls Bar twice so they stand
+    behind the strokes.</p>
+      <figure>
+        <img src = "images/LastFace.gif" alt = "Making final adjustments to
+        the faces" class = "img-fluid">
+        <figcaption>Making final adjustments to the faces.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Editing Spray Source Objects</h2>
+    </header>
+    <p>In the next steps, you will add an additional source object, then edit
+    and update it.</p>
+    <ol>
+      <li><p>While on the Select tool (<img src = "images/SelectionToolIcon.gif"
+      alt = "Selection tool icon" width = "26">), click anywhere off the
+      artwork to make sure that no objects are selected.</p>
+      </li>
+      <li><p>Using the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+      tool icon" width = "26">) in the toolbox, create several blades of grass.
+      Draw at least 8 line segments to make a tuft of grass. Don&rsquo;t be
+      worried if they&rsquo;re a different color than the color as shown
+      below. You&rsquo;ll change the color shortly.</p>
+        <figure>
+          <img src = "images/OneGrassTuft.gif" alt = "Making a tuft of grass"
+          class = "img-fluid">
+          <figcaption>Making a tuft of grass.</figcaption>
+        </figure>
+      </li>
+      <li></p>These line segments are individual objects. In preparation for
+      spraying whole tufts of grass, you&rsquo;ll need to group the line
+      segments.</p>
+      <p>Group-select the collection of line segments and then press
+      &lt;Ctrl&gt;-G to group them into one grass-tuft object.</p>
+      <figure>
+        <img src = "images/GroupedGrassTuft.gif" alt = "Grouping the source
+        tuft of grass" class = "img-fluid">
+        <figcaption>Grouping the individual blades of grass into a grouped
+        tuft of grass.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now change the tuft of grass to a green color. Choose
+    <u>O</u>bject &gt; <u>F</u>ill and Stroke&hellip; to bring up the <b>Fill
+    and Stroke</b> panel. Click on the <b>Fill</b> tab if it isn&rsquo;t
+    selected already. Make sure the <b>No paint</b> icon (<img src =
+    "images/HighlightedNoFillIcon.gif" alt = "Outlined no fill icon" width =
+    "26">)is selected. &lt;Shift&gt;-click on the Green swatch in the Color
+    palette at the bottom of the work window to set the grass tuft stroke color
+    to green. Keep the source tuft of grass selected.</p>
+    <figure>
+      <img src = "images/GreenGrassTuft.gif" alt = "Coloring the source
+      tuft of grass stroke to green and fill to none" class = "img-fluid">
+      <figcaption>Grouping the individual blades of grass into a grouped
+      tuft of grass.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the Spray tool (<img src = "images/SprayToolIcon.gif" alt =
+  "Spray tool icon" width = "26">), make sure the <b>Mode</b> to <b>Spray copies
+  of the initial selection</b>, <b>Width</b> to <b>6</b>, <b>Amount</b> to
+  <b>8</b>, and set <b>Apply over no transparent areas</b> (<img src =
+  "images/ApplyOverNoTransparentAreasIcon.gif" alt = "Apply over no transparent
+  areas icon" width = "26">). Then spray over the bottom panel of the background
+  to simulate tufts of grass growing on a baseball field.</p>
+  <p>If you don&rsquo;t like the result, then delete all the duplicate tufts of
+  grass and respray.</p>
+      <figure>
+        <img src = "images/CopiedGrassTufts.gif" alt = "Copying tufts of grass"
+        class = "img-fluid">
+        <figcaption>Copying the tuft of grass.</figcaption>
+      </figure>
+      <aside>
+      <p><b>Important Note</b></p>
+      <p>You are using the <b>Spray copies</b> mode because you will be
+      transfering the front face image to a box figure created by the
+      <b>Extrude</b> tool. Copied duplicates (forgive the redundancy in the
+      English language) will transfer with no problem. If you create duplicates
+      of the grass tuft using the <b>Spray clones</b> mode, only the original
+      image will transfer, the copies won&rsquo;t. The copies will remain in
+      place. When you plan to use the <b>Extrude</b>, <b>Envelope</b>, and
+      Spray tools in combination, remember this constraint: use the <b>Spray
+      copies</b> mode to duplicate objects.</p>
+      </aside>
+    </li>
+    <li><p><u>F</u>ile &gt; <u>S</u>ave.</p>
+      <figure>
+        <img src = "images/ResultSoFar.gif" alt = "Current image"
+        class = "img-fluid">
+        <figcaption>Current artwork.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Updating a Spray Source Object</h2>
+    </header>
+    <p>Perhaps 0.75 pt blades of grass are too thin. In this next section, you
+    will edit the blades of grass once and all instances will be updated.</p>
+    <ol>
+      <li><p>Group-select all the tufts of grass. Here is where having the
+      background panels locked offers you the convenience of working without
+      inadvertently moving, copying, or deleting the background. You&rsquo;ll
+      need to unlock it later when you apply it to a 3-D box model. If the
+      <b>Fill and Stroke</b> panel has been closed, reopen it and click on
+      the <b>Stroke</b> tab. Change the stroke width to <b>1 pt</b>. The blades
+      of grass all become thicker.</p>
+        <figure>
+          <img src = "images/1PtGrassBlades.gif" alt = "1 point grass blades"
+          class = "img-fluid">
+          <figcaption>Grass blade stroke thickness changed to 1
+          point.</figcaption>
+        </figure>
+      </li>
+      <li><p><u>F</u>ile &gt; <u>S</u>ave. <u>F</u>ile &gt; <u>C</u>lose this
+      file.</p>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Mapping an Object to 3D Artwork</h2>
+    </header>
+    <p>Objects can be mapped to 3D artwork to create labels and textures. In
+    this next section, you will create a cereal box with your baseball player
+    on the front panel and a text object on the top and side.</b>
+    <ol>
+      <li><p>Choose <u>F</u>ile &gt; <u>O</u>pen, and open the
+      <b>ballgame.svg</b> file you were working on earlier.</p>
+      </li>
+      <li><p>You are going to add a text label at the top of the image.</p>
+      <p>Select the Text tool (<img src = "images/TextToolIcon.gif" alt = "Text
+      tool icon" width = "26">) in the toolbox, click anywhere on the work
+      window to set the location of the text, and type SUPERSTAR. The text will
+      be the in the last font and in the last font size you used. In the figure
+      below, the font is sans-serif, normal, 12 pt.</p>
+        <figure>
+          <img src = "images/Superstar1.gif" alt "Typing box title text" class =
+          "img-fluid">
+          <figcaption>Typing the box title text.</figcaption>
+        </figure>
+      </li>
+      <li><p>With the Text tool (<img src = "images/TextToolIcon.gif" alt =
+      "Text tool icon" width = "26">) and text still selected, look for an
+      attractive font to use (we used Chapparal Pro, bold). Set the font size to
+      <b>45 pt</b>.</p>
+        <figure>
+          <img src = "images/Superstar2.gif" alt "Changing font and font size"
+          class = "img-fluid">
+          <figcaption>Superstar 2</figcaption>
+        </figure>
+      </li>
+      <li><p>You need to center the box title text horizontally in the image.
+      The problem is that you cannot see the side borders. You can by choosing
+      <u>V</u>iew &gt; <u>D</u>isplay mode &gt; <u>O</u>utline. The border is
+      now visible.</p>
+        <figure>
+          <img src = "images/Superstar3.gif" alt = "Changing the View to
+          Outline" class = "img-fluid">
+          <figcaption>Changing the View to Outline.</figcaption>
+        </figure>
+      </li>
+      <li><p>If the box title text is still selected, then group-select the box
+      border using &lt;Shift&gt;-click.</p>
+      </li>
+      <li><p>Choose <u>O</u>bject &gt; <u>A</u>lign and Distribute&hellip; In
+      the Align and Distribute panel, click on the <b>Center on vertical
+      axis</b> icon to horizontally center the text. The text is immediately
+      centered.</p>
+        <figure>
+          <img src = "images/Superstar4.gif" alt "" class = "img-fluid">
+          <figcaption>Centering the box title text.</figcaption>
+        </figure>
+      </li>
+      <li><p>Make a duplicate of the SUPERSTAR text using &lt;Ctrl&gt;-D or by
+      choosing <u>E</u>dit &gt; Duplic<u>a</u>te. Move the duplicate text above
+      the artwork. You&rsquo;ll work with it shortly to place it on the top of
+      a 3-D box that you will create.</p>
+      <p>Type CEREAL to the side of the artwork. Using the Text tool (<img src
+      = "images/TextToolIcon.gif" alt = "Text tool icon" width = "26">), set
+      the text&rsquo;s font to the font you used for the box title text (We used
+      Chaparral Pro, bold) and the font size to <b>45 pt</b>.</p>
+      <p>With the text still selected, click on the Select tool (<img src =
+      "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+      in the toolbox and then click on the <b>Rotate selection 90&deg;
+      counter-clockwise</b> icon (<img src = "images/Rotate90Degrees.gif" alt =
+      "Rotate 90 degrees counter-clockwise icon" width = "26">) in the Tool
+      Controls Bar to make the text vertically oriented. This text CEREAL will
+      be placed on the side of the eventual 3-D box.</p>
+        <figure>
+          <img src = "images/Superstar5.gif" alt = "Typing and rotating the
+          text that goes on the side of the 3-D box" class = "img-fluid">
+          <figcaption>Typing and rotating the text that goes on the side of
+          the 3-D box.</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Making a Three-dimensional Box Using the Extrude Tool</h2>
+    </header>
+    <p>You can make boxes, cylinders, and other objects that allow you to make
+    a prism out of a top and bottom geometric shape. I recommend that you use
+    it to create objects that have a sense of nearness to you, the observer. If
+    you want to create an object that gives the illusion of great size and
+    distance from near point to far point, then you might achieve more
+    desirable results using the Perspective Tool.</p>
+    <p>You will create a box where the observer&rsquo;s point of view is from
+    the top and to the front left side.</p>
+    <ol>
+      <li><p>Draw a rectangle with the Rectangle tool (<img src =
+      "images/RectangleToolIcon.gif" alt = "Rectangle tool icon" width = "26">).
+      Make it a little narrower in width than the box front image.</p>
+        <figure>
+          <img src = "images/Box1.gif" alt = "Drawing the starting rectangle
+          for the box" class = "img-fluid">
+          <figcaption>Drawing the starting rectangle for the box.</figcaption>
+        </figure>
+      </li>
+      <li><p>You will now skew the rectangle to simulate a view point from the
+      top left corner. If the rectangle is deselected, reselect it, and choose
+      <u>O</u>bject &gt; Transfor<u>m</u>&hellip; Click on the Ske<u>w</u> tab,
+      choose the degree sign (<img src = "images/DegreeSign.gif" alt = "Degree
+      sign" height = "26">), and type <b>15</b> in the <b><u>V</u>ertical</b>
+      text box. Click on the <u>A</u>pply button. The rectangle looks like it
+      is rotated through a small angle.</p>
+        <figure>
+          <img src = "images/Box2.gif" alt = "Skew transforming the rectangle
+          to simulate a change in view point" class = "img-fluid">
+          <figcaption>Skew transforming the rectangle to simulate a change
+          in view point.</figcaption>
+        </figure>
+      </li>
+      <li><p>Press &lt;Ctrl&gt;-D to duplicate the skewed rectangle and drag
+      the duplicate to the left and up a little from the original. You are
+      creating a 3-D box viewed from its upper left corner.</p>
+        <figure>
+          <img src = "images/Box3.gif" alt = "Duplicating the skewed rectangle"
+          class = "img-fluid">
+          <figcaption>Duplicating the skewed rectangle.</figcaption>
+        </figure>
+      </li>
+      <li><p>The duplicate quadrilateral (it does have four sides) lies topmost
+      in the image stack, above the original quadrilateral. Inkscape right now
+      &ldquo;thinks&rdquo; that it is the front side of the box. You need to
+      send it to underneath the original so Inkscape will interpret it as the
+      backside of the box.</p>
+      <p>Click on the <b>Lower selection to bottom</b> icon (<img src =
+      "images/LowerSelectionToBottom.gif" alt = "Lower selection to bottom
+      icon" width = "26">) in the Tools Control Bar. The duplicate figure is
+      now the back side of the box shape.</p>
+        <figure>
+          <img src = "images/Box4.gif" alt = "Moving the duplicate to
+          underneath the original figure in the image stack" class =
+          "img-fluid">
+          <figcaption>Moving the duplicate to underneath the original figure
+          in the image stack.</figcaption>
+        </figure>
+      </li>
+      <li><p>Both quadrilaterals are objects and Inkscape &ldquo;sees&rdquo;
+      them as such. You need to transform them into paths and merge the paths
+      into one item (one merged path) in order for the <b>Extrude</b> tool to
+      work.</p>
+      <p>&lt;Shift&gt;-click the duplicate quadrilateral to group-select it
+      with the original. Choose <u>P</u>ath &gt; <u>O</u>bject to Path to
+      convert both quadrilaterals from objects into paths.</p>
+      <p>Then, with both paths selected, click on the <b>Group selected
+      objects</b> icon (<img src = "images/GroupSelectedObjects.gif" alt =
+      "Group selected objects icon" width = "26">) in the Tool Controls Bar to
+      merge them into a single path item. You will see no change in the paths
+      or their bounding boxes, but Inkscape now recognizes them as a collection
+      of connected nodes and paths, something that the <b>Extrude</b> tool
+      can work with.</p>
+        <figure>
+          <img src = "images/Box5.gif" alt = "The two quadrilaterals are now
+          one merged path" class = "img-fluid">
+          <figcaption>The two quadrilaterals are now one merged
+          path.</figcaption>
+        </figure>
+      </li>
+      <li><p>You will now create the 3-D box. With the two quadrilaterals that
+      make up the front and back sides of the box selected, choose
+      Exte<u>n</u>sions &gt; Generate from Path &gt; Extrude&hellip; In the
+      <b>Extrude</b> dialog box, select <b>Polygons</b> for the <b>Mode</b>
+      and check the <b>Live preview</b> checkbox.</p>
+      <p>Click on the <u>A</u>pply button. After a few seconds of image
+      processing behind the scenes, the remaining four sides appear.</p>
+        <figure>
+          <img src = "images/Box6.gif" alt = "The Extrude tool has created
+          four new sides to make a 3-D box" class = "img-fluid">
+          <figcaption>The Extrude tool has created four new sides to make a
+          3-D box.</figcaption>
+        </figure>
+        <p>Click on the <u>C</u>lose button to dismiss the <b>Extrude</b>
+        dialog box.</p>
+      </li>
+      <li><p>Now that the box has been created, we need to prepare its sides
+      to receive images for the front, left, and top sides using the
+      <b>Envelope</b> tool.</p>
+      <p>Note that the front and back sides are still selected (they have their
+      bounding boxes). The new sides are four paths that are merged into one
+      group and are not selected.</p>
+        <figure>
+          <img src = "images/Box7.gif" alt = "Front and back sides are
+          selected, new sides are not" class = "img-fluid">
+          <figcaption>Front and back sides are selected, new sides are
+          not.</figcaption>
+        </figure>
+      </li>
+      <li><p>Ungroup the new sides by first marquee-selecting the whole box
+      shape with the Select tool (<img src = "images/SelectionToolIcon.gif"
+      alt = "Selection tool icon" width = "26">) and then by clicking on the
+      <b>Ungroup selected groups</b> icon (<img src =
+      "images/UngroupSelectedGroups.gif" alt = "Ungroup selected groups icon"
+      width = "26">) in the Tool Controls Bar.</p>
+        <figure>
+          <img src = "images/Box8.gif" alt = "Ungrouping all sides of the box
+          and the four short diagonal lines" class = "img-fluid">
+          <figcaption>Ungrouping all sides of the box and the four short
+          diagonal lines.</figcaption>
+        </figure>
+        <p>Note that all six sides of the box have bounding boxes. There are
+        also four short diagonal edge lines that have their own boxes. You will
+        delete them later.</p>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Emplacing an Image on the Box Front Side Using the Envelope Tool</h2>
+    </header>
+    <p>The 3-D box has been created. It is now time to dress up its sides.</p>
+    <ol>
+      <li><p>You will prepare the front side image of the box for use with the
+      <b>Envelope</b> tool. Like the <b>Extrude</b> tool, the <b>Envelope</b>
+      tool also works with paths. So, you&rsquo;ll convert all the objects that
+      make up the baseball player artwork from objects into paths.</p>
+      <p>Marquee-select the baseball player artwork to group-select all the
+      objects that make it up. Don&rsquo;t forget that the upper part of the
+      image is white and is part of the background. Changing to <b>Outline</b>
+      view might help. If you don&rsquo;t select everything at first, just
+      click off the artwork to deselect it and then marquee-select again.</p>
+        <figure>
+          <img src = "images/Box9.gif" alt = "Group-selecting the baseball
+          player artwork" class = "img-fluid">
+          <figcaption>Group-selecting the baseball player artwork.</figcaption>
+        </figure>
+      </li>
+      <li><p>With the baseball player artwork selected, choose <u>P</u>ath &gt;
+      <u>O</u>bject to Path. You might see a momentary flicker as Inkscape
+      performs the conversion. Then, with the artwork still group-selected,
+      click on the <b>Group selected objects</b> icon (<img src =
+      "images/GroupSelectedObjects.gif" alt = "Group selected objects icon"
+      width = "26">) in the Tool Controls Bar to group all the paths into one
+      grouped path.</b>
+      <figure>
+        <img src = "images/Box10.gif" alt = "Group-selecting the baseball
+        player artwork" class = "img-fluid">
+        <figcaption>Artwork converted to paths and regrouped.</figcaption>
+      </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box11.gif" alt = "Front side of box cannot be
+          properly selected." class = "img-fluid">
+          <figcaption>Front side of box cannot be properly selected.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box12.gif" alt = "Front side of box can now be
+          properly selected." class = "img-fluid">
+          <figcaption>Right side of box sent to bottom of image stack. Front
+          side of box can now be properly selected.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box13.gif" alt = "Front side of box properly
+          selected as recipient for front side image" class = "img-fluid">
+          <figcaption>Front side of box properly selected as recipient for
+          front side image.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box14.gif" alt = "Envelope function working"
+          class = "img-fluid">
+          <figcaption>Envelope function working.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box15.gif" alt = "Front side image properly
+          emplaced" class = "img-fluid">
+          <figcaption>Front side image properly emplaced.</figcaption>
+        </figure>
+        <p>Note that you can see the bottom side of the box through the front
+        side image. You&rsquo;ll resolve that detail shortly.</p>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Working with the Extrude Function and Envelope Function in
+      Combination</h2>
+    </header>
+    <p>In this section, you will prepare and emplace the text CEREAL onto the
+    left-hand side of the box. You will encounter an idiosyncracy of the
+    <b>Envelope</b> function during emplacement and learn how to work around
+    it.</p>
+    <ol>
+      <li><p>Move the text CEREAL to the left side of the box figure. Having
+      objects in near proximity makes it easier to visualize what you are doing
+      and access objects immediately.</p>
+        <figure>
+          <img src = "images/Box16.gif" alt = "Moving the text CEREAL next to
+          the box figure" class = "img-fluid">
+          <figcaption>Moving the text CEREAL next to the box
+          figure.</figcaption>
+        </figure>
+      </li>
+      <li><p>With the Rectangle tool (<img src = "images/RectangleToolIcon.gif"
+      alt = "Rectangle tool icon" width = "26">), draw a rectangle around the
+      CEREAL text that&rsquo;s about the same size as the left side of the box.
+      The size does not have to be exact because the <b>Envelope</b> function
+      will resize the rectangle to fit the geometry of the box left side.</p>
+      <p>Choose <u>O</u>bject &gt; <u>A</u>lign and Distribute&hellip; and
+      center the text CEREAL using the <b>Center on horizontal axis</b> and
+      <b>Center on vertical axis</b> options.</p>
+        <figure>
+          <img src = "images/Box17.gif" alt = "Drawing the rectangle image for
+          the left side of the box" class = "img-fluid">
+          <figcaption>Drawing the rectangle image for the left side of the
+          box.</figcaption>
+        </figure>
+        <p>Note that the text CEREAL is still selected and shows the baseline
+        marker at the bottom right of the C, indicating that CEREAL is a text
+        object. You will see it disappear shortly.</p>
+      </li>
+      <li><p>Give the rectangle a fill color. (We used a very light blue as
+      you can see in the <b>Fill and Stroke</b> panel). The rectangle is placed
+      above the text CEREAL, so the text is covered by the opaque light blue
+      fill. Also, set the stroke color to <b>none</b> by
+      &lt;Shift&gt;-clicking on the <b>none</b> swatch (<img src =
+      "images/NoPaintSwatch.gif" alt = "No paint swatch in the color palette"
+      width = "26">) in the Color palette at the bottom of the work window.</p>
+        <figure>
+          <img src = "images/Box18.gif" alt = "Color the rectangle with a
+          light blue fill." class = "img-fluid">
+          <figcaption>Color the rectangle with a light blue fill and set the
+          stroke to <b>none</b>.</figcaption>
+        </figure>
+      </li>
+      <li><p>Click on the <b>Lower selection to bottom</b> icon (<img src =
+      "images/LowerSelectionToBottom.gif" alt = "Lower selection to bottom
+      icon" width = "26">) in the Tools Control Bar to place the rectangle
+      underneath the CEREAL text in the image stacking order.</p>
+        <figure>
+          <img src = "images/Box19.gif" alt = "Moving the rectangle to the
+          bottom of the image stacking order" class = "img-fluid">
+          <figcaption>Moving the rectangle to the bottom of the image stacking
+          order.</figcaption>
+        </figure>
+      </li>
+      <li><p>With the rectangle still selected, &lt;Shift&gt;-click on the
+      CEREAL text to group-select it. With both objects selected, choose
+      <u>P</u>ath &gt; <u>O</u>bject to Path to convert both rectangle
+      and text into paths. Note the text no longer has the baseline marker at
+      the bottom right of the C, indicating that the text is no longer a text
+      object but a series of line and curve paths.</p>
+        <figure>
+          <img src = "images/Box20.gif" alt = "Converting the rectangle and text
+          into paths" class = "img-fluid">
+          <figcaption>Converting the rectangle and text into paths.</figcaption>
+        </figure>
+      </li>
+      <li><p>The left side of the box has a color fill that will remain after
+      the side image is emplaced. You will set the fill to <b>none</b>. Select
+      the box side and then click on the <b>none</b> swatch (<img src =
+      "images/NoPaintSwatch.gif" alt = "No paint swatch in the color palette"
+      width = "26">) in the Color palette to eliminate the coloration.</p>
+        <figure>
+          <img src = "images/Box21.gif" alt = "Setting the left of the box to
+          <b>none</b> color fill" class = "img-fluid">
+          <figcaption>Setting the left of the box to <b>none</b> color
+          fill.</figcaption>
+        </figure>
+      </li>
+      <li><p>You will now emplace the rectangle &plus; text image onto the left
+      side of the box.</p>
+      <p>Click on the image, then &lt;Shift&gt;-click on the <u>edge</u> of the
+      box&rsquo;s left side to group-select it.</p>
+      <p>Note: You cannot select the left side of the box by clicking inside it.
+      It has no fill color to click on. The Select tool requires a color to
+      click on in order for the Selection function to work. No color, no
+      selection.</p>
+        <figure>
+          <img src = "images/Box22.gif" alt = "Group-selecting rectangle and box
+          side in preparation to use the Envelope function" class = "img-fluid">
+          <figcaption>Group-selecting rectangle and box side in preparation to
+          use the Envelope function.</figcaption>
+        </figure>
+      </li>
+      <li><p>Choose Exte<u>n</u>sions &gt; Modify path &gt; Envelope.</p>
+      <p>The image is now emplaced and it is emplaced upside-down. You
+      don&rsquo;t want that.</p>
+      <p>To remedy this idiosyncracy, click on the <b>Undo last action</b> icon
+      (<img src = "images/UndoLastActionIcon.gif" alt = "Undo last action icon"
+      width = "26">) in the Tool Controls Bar to undo emplacing the image.</p>
+      <figure>
+          <img src = "images/Box23.gif" alt = "" class = "img-fluid">
+          <figcaption>Image emplaced upside-down.</figcaption>
+        </figure>
+      </li>
+      <li><p>With the rectangle &plus; text image off the box, rotate it
+      180&deg; by clicking <u>twice</u> on either the <b>Rotate selection
+      90&deg; counter-clockwise</b> icon (<img src =
+      "images/Rotate90DegCounterClockwise.gif" alt = "Rotate selection 90
+      degrees counter-clockwise" width = "26">) or the <b>Rotate selection
+      90&deg; clockwise</b> icon (<img src = "images/Rotate90DegClockwise.gif"
+      alt = "Rotate selection 90 degrees clockwise" width = "26">) (in the Tool
+      Controls Bar).</p>
+        <figure>
+          <img src = "images/Box24.gif" alt = "Rotate rectangle + text image
+          so it is upside down." class = "img-fluid">
+          <figcaption>Rotate rectangle + text image 180&deg;.</figcaption>
+        </figure>
+      </li>
+      <li><p>Group-select the rectangle + text image and left side of the box,
+      in that order.</p>
+        <figure>
+          <img src = "images/Box25.gif" alt = "Group-select the rectangle + text
+          image and left side of the box, in that order." class = "img-fluid">
+          <figcaption>Group-selecting the rectangle + text image and left side
+          of the box, in that order.</figcaption>
+        </figure>
+      </li>
+      <li><p>Now, choose Exte<u>n</u>sions &gt; Modify path &gt; Envelope.</p>
+      <p>The text, originally upside-down, is now right-side up. Problem
+      resolved!</p>
+        <figure>
+          <img src = "images/Box26.gif" alt = "" class = "img-fluid">
+          <figcaption>Image is now positioned right-side up.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src = "images/Box27.gif" alt = "Current result" class = "img-fluid">
+          <figcaption>Current result.</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Working with Idiosyncratic Extrude Tool &ndash; Envelope Tool
+      Interactions</h2>
+    </header>
+    <p>In this section, you will mold the image that goes onto the top side of
+    the box using the <b>Envelope</b> tool. By thinking a problem through and
+    experimenting with different options for orienting an image, you will find
+    ways to overcome what looks like an insurmountable problem and break it down
+    into a sequence of single and simple operations that allow you to obtain
+    what you want in your design.</p>
+    <ol>
+      <li><p>You will start this section by drawing a rectangle that has about
+      the same size as the top face of the box. Using the <b>Fill and Stroke</b>
+      panel, give the rectangle a slightly darker blue than the side face (we
+      used the blue color defined in the <b>Fill and Stroke</b> panel ). Give
+      it a stroke of <b>none</b> as was done earlier with the side face.</p>
+        <figure>
+          <img src = "images/TopSide1.gif" alt = "Drawing a blue rectangle for
+          the top side of the box" class = "img-width">
+          <figcaption>Drawing a blue rectangle for the top side of the
+          box.</figcaption>
+        </figure>
+        </li>
+      <li><p>Click on the <b>Lower selection to bottom</b> icon (<img src =
+      "images/LowerSelectionToBottom.gif" alt = "Lower selection to bottom
+      icon" width = "26">) to place the rectangle underneath the text SUPERSTAR
+      in the image stack.</p>
+        <figure>
+          <img src = "images/TopSide2.gif" alt = "Rectangle placed underneath
+          the text object" class = "img-width">
+          <figcaption>Rectangle placed underneath the text object.</figcaption>
+        </figure>
+      </li>
+      <li><p>Choose <u>O</u>bject &gt; <u>A</u>lign and Distribute&hellip; and
+      center the text SUPERSTAR both horizontally and vertically as you did
+      earlier with the side text CEREAL. Note that the text SUPERSTAR is a
+      text object by its baseline marker at the bottom left of the first S.</p>
+        <figure>
+          <img src = "images/TopSide3.gif" alt = "Centering the text both
+          horizontally and vertically" class = "img-width">
+          <figcaption>Centering the text both horizontally and
+          vertically.</figcaption>
+        </figure>
+      </li>
+      <li><p>With both the rectangle and text still selected, choose <u>P</u>ath
+      &gt; <u>O</u>bject to Path. Both rectangle and text are now just a
+      collection of line segments and curves. Note that the baseline marker
+      for the text has disappeared. You see the text, but Inkscape
+      &ldquo;sees&rdquo; just line segments and curves and not as objects
+      anymore &mdash; the <b>Envelope</b> function can work with this
+      arrangement.</p>
+        <figure>
+          <img src = "images/TopSide4.gif" alt = "Converting the rectangle and
+          text into paths" class = "img-width">
+          <figcaption>Converting the rectangle and text into paths.</figcaption>
+        </figure>
+      </li>
+      <li><p>Press &lt;Ctrl&gt;-G to group the rectangle and text into one
+      group of paths.</p>
+        <figure>
+          <img src = "images/TopSide5.gif" alt = "Grouping the rectangle and
+          text paths" class = "img-width">
+          <figcaption>Grouping the rectangle and text paths.</figcaption>
+        </figure>
+      </li>
+      <li><p>Change the fill color of the top side of the box to <b>none</b>
+      by clicking on the face to select it and then by clicking on the
+      <b>none</b> swatch (<img src = "images/NoPaintSwatch.gif" alt = "No paint
+      swatch in the color palette" width = "26">) in the Color palette.</p>
+        <figure>
+          <img src = "images/TopSide6.gif" alt = "Setting the fill color of the
+          top box face to none" class = "img-width">
+          <figcaption>Setting the fill color of the top box face to
+          none.</figcaption>
+        </figure>
+      </li>
+      <li><p>You will now emplace the rectangle &plus; text image onto the top
+      face of the box.</p>
+      <p>Choose Exte<u>n</u>sions &gt; Modify path &gt; Envelope. The result
+      below is not the result you want at all. It is oriented 90&deg; to how
+      it should be.</p>
+        <figure>
+          <img src = "images/TopSide7.gif" alt = "Image incorrectly emplaced by
+          90 degrees" class = "img-width">
+          <figcaption>Image incorrectly emplaced by 90&deg;.</figcaption>
+        </figure>
+        <p>You haven&rsquo;t met this situation before, and yet, there is a way
+        to fix it.</p>
+      </li>
+      <li><p>Press &lt;Ctrl&gt;-Z to undo the emplacement operation. Click on
+      the edge of the top face of the box and then choose <u>P</u>ath &gt;
+      <u>R</u>everse.</p>
+      <p>Reselect the rectangle &plus; text image and &lt;Shift&gt;-click to
+      group-select the top face of the box as you had done earlier.</p>
+      <p>Choose Exte<u>n</u>sions &gt; Modify path &gt; Envelope. The image
+      is now a mirror image, reflected horizontally from the original. Because
+      the result is a horizontal reflection of the original image, you might
+      have a good idea on how to make a correction.</p>
+        <figure>
+          <img src = "images/TopSide8.gif" alt = "Image emplaced as a horizontal
+          reflection of the original image" class = "img-width">
+          <figcaption>Image emplaced as a horizontal reflection of the original
+          image.</figcaption>
+        </figure>
+        <p>For more information on how to use the <b>Envelope</b> function, see
+        <u>H</u>elp &gt; Inkscape Manual &gt; 22. Extensions &gt; Modify Path
+        &gt; Envelope.</p>
+      </li>
+      <li><p><p>Press &lt;Ctrl&gt;-Z to undo the emplacement operation.</p>
+      <p>Select the rectangle &plus; text image and then click on the
+      <b>Flip selected objects horizontally</b> icon (<img src =
+      "images/FlipHorizontallyIcon.gif" alt = "Flip selected objects
+      horizontally icon" width = "26">) in the Tool Controls Bar. You should
+      obtain the result below.</p>
+        <figure>
+          <img src = "images/TopSide9.gif" alt = "" class = "img-width">
+          <figcaption>Rectangle &plus; text image flipped
+          horizontally.</figcaption>
+        </figure>
+      </li>
+      <li><p>Once again, select the Rectangle &plus; text image and
+      &lt;Shift&gt;-click on the edge of the top face of the box (all of this
+      should sound very familiar now) to group-select it.</p>
+      <p>And once again, choose Exte<u>n</u>sions &gt; Modify path &gt;
+      Envelope to achieve the result below.
+        <figure>
+          <img src = "images/TopSide10.gif" alt = "Correct emplacement of the
+          rectangle plus text image onto the top face of the box" class =
+          "img-width">
+          <figcaption>Correct emplacement of the rectangle &plus; text image
+          onto the top face of the box.</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Final Editing of the Artwork</h2>
+    </header>
+    <p>The <b>Extrude</b> function creates artefacts that need to be cleaned up
+    before declaring any artwork finished.</p>
+    <ol>
+      <li><p>Group-select the front, side, and top faces of the box. Drag the
+      collection off to the side of the artboard to reveal the box framework
+      that the <b>Envelope</b> process creates.</p>
+        <figure>
+          <img src = "images/TopSide11.gif" alt = "Moving the artwork to the
+          side of the artboard" class = "img-width">
+          <figcaption>Moving the artwork to the side of the
+          artboard.</figcaption>
+        </figure>
+      </li>
+      <li><p>Marquee-select the box framework and press the &lt;Delete&gt; or
+      &lt;Del&gt; key to delete it. Then, move the artwork onto the
+      artboard.</p>
+        <figure>
+          <img src = "images/TopSide12.gif" alt = "Deleting the Extrude box
+          framework and moving the artwork onto the artboard" class =
+          "img-width">
+          <figcaption>Moving the artwork onto the artboard.</figcaption>
+        </figure>
+        <p>Your artwork has a clean look to it. One last touch is to add a
+        border to the front face to give the upper portion better edge
+        definition.</p>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Final Edits</h2>
+    </header>
+    <p>The box artwork is almost complete. You will now add a finishing touch
+    by applying a border to the front face image of the box. Most of the work
+    involves ungrouping levels of groups until you can finally access the
+    bottommost image, which is the white rectangle that underlies the entire
+    image. Only then will you be able to apply a border that encompasses only
+    the very edge of the front face.</p>
+    <ol>
+      <li><p>Click on the front face with the Select tool (<img src =
+      "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">).
+      Then press &lt;Shift&gt;-&lt;Ctrl&gt;-G to ungroup the top level of
+      objects that make up the face image. Background faces, the baseball
+      player, the text SUPERSTAR, and tufts of grasses have bounding boxes to
+      indicate that they are now separate objects.</p>
+        <figure>
+          <img src = "images/FinalEdits1.gif" alt = "Ungrouping the top level
+          of grouped objects" class = "img-fluid">
+          <figcaption>Ungrouping the top level of grouped objects.</figcaption>
+        </figure>
+      </li>
+      <li><p>Click off the artwork to deselect it. Then, click on the white
+      upper portion of the background to select it. Note that the background is
+      comprised of four objects: three colored panels that make up the lower
+      half of the background and the white upper portion. Right now, they are
+      grouped.</p>
+      <p>Press &lt;Shift&gt;-&lt;Ctrl&gt;-G to ungroup these four objects.
+      They now have their own bounding boxes.</p>
+        <figure>
+          <img src = "images/FinalEdits2.gif" alt = "Ungrouping the four
+          background rectangles" class = "img-fluid">
+          <figcaption>Ungrouping the four background rectangles.</figcaption>
+        </figure>
+      </li>
+      <li><p>Click off the artwork to deselect it. Then, click again on the
+      white upper portion of the background to select it. Only the white
+      portion of the background has a bounding box. You are now in a position
+      to give it a colored border.</p>
+        <figure>
+          <img src = "images/FinalEdits3.gif" alt = "Only the white portion
+          of the background is selected." class = "img-fluid">
+          <figcaption>Only the white portion of the background is
+          selected.</figcaption>
+        </figure>
+      </li>
+      <li><p>Using the <b>Fill and Stroke</b> panel, click on the <b>Stroke
+      <u>p</u>aint</b> tab, the <b>Flat color</b> icon, and enter the numbers
+      below into the color value text boxes to produce a light blue color for
+      the white background panel. Press &lt;Tab&gt; after the first three values
+      to move the cursor to the next text box. Press &lt;Enter&gt; or
+      &lt;Return&gt; after you have entered the last value.</p>
+        <figure>
+          <img src = "images/FinalEdits4.gif" alt = "Giving the front face of
+          the box a blue edge" class = "img-fluid">
+          <figcaption>Giving the front face of the box a blue edge.</figcaption>
+        </figure>
+      </li>
+      <li><p>Click anywhere off the artwork to deselect it.</p>
+        <figure>
+          <img src = "images/FinalEdits5.gif" alt = "Finished artwork" class =
+          "img-fluid">
+          <figcaption>Finished artwork.</figcaption>
+        </figure>
+      </li>
+      <li><p><u>F</u>ile &gt; <u>S</u>ave. <u>F</u>ile &gt; <u>C</u>lose this
+      file.</p>
+      </li>
+    </ol>
+    <p>You have finished Tutorial 12. It is your introduction to
+    Inkscape&rsquo;s methodology for creating artwork that has a 3-D look to it.
+    Ways to enhance depth, the perspective of distance, and the change in
+    illumination with depth include using the Perspective function, gradient
+    tools, selective blurring of background objects, and color blending to
+    give texture to your third dimension.</p>
+    <p>Continue to explore what Inkscape has to offer you. Let your imagination
+    open up new scenes for you and your desire to explore propel you forward
+    and expand your personal frontier of what&rsquo;s possible.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <header>
+      <h2>Review Questions</h2>
+    </header>
+    <ol>
+      <li>What is the difference between the <b>Spray copies of the initial
+      selection</b> mode and the <b>Spray clones of the initial selection</b>
+      mode when using the Spray tool?
+      </li>
+      <li>Can you spray grouped objects? How?
+      </li>
+      <li>Does the <b>Extrude</b> tool work with objects, paths, or both?
+      </li>
+      <li>What can you do when an image is not emplaced properly on an extruded
+      object?</li>
+    </ol>
+  </section>
+  <section>
+    <header>
+      <h2>Review Answers</h2>
+    </header>
+    <ol>
+      <li><p><b>Spray copies of the initial selection</b> mode allows you to
+      make duplicates of the original source object or objects that are
+      individual, stand-alone copies. They can be treated as individual objects.
+      <b>Spray clones of the initial selection</b> mode allows you to make
+      duplicates of the source objects that are connected or linked to the
+      source objects. So, if you modify one source object, all the linked clones
+      are modified as well.</p>
+      </li>
+      <li><p>Yes, you can spray objects that have been grouped. First, select
+      the objects that you want to group, then press &lt;Ctrl&gt;-G to group
+      them or click on the <b>Group selected objects</b> icon (<img src =
+      "images/GroupSelectedObjects.gif" alt = "Group selected objects icon"
+      width = "26">) in the Tool Controls Bar.</p>
+      </li>
+      <li><p>The <b>Extrude</b> tool works only with paths. Convert an object
+      to which you plan to add a third dimension into a path by selecting it,
+      then choosing then <u>P</u>ath &gt; <u>O</u>bject to Path option. Then
+      use the <b>Extrude</b> tool.</p>
+      </li>
+      <li>There are four options available to you to resolve the emplacement
+      problem. Keep in mind that emplacement problems are problems of
+      orientation which can be resolved one step at a time. You might need to
+      use each option one after another if the situation requires it. Each time
+      that you use a step, you can see how the orientation improves and comes
+      closer to resolution.
+        <ol type = "a">
+          <li>If the transferred image is rotated by 90&deg;, undo the transfer
+          by pressing &lt;Ctrl&gt;-Z or clicking on the <b>Undo last action</b>
+          icon (<img src = "images/UndoLastActionIcon.gif" alt = "Undo last
+          action icon" width = "26">) in the Tool Controls Bar. Choose
+          <u>P</u>ath &gt; <u>R</u>everse. Then, reuse the <b>Envelope</b> tool.
+          </li>
+          <li>If the transferred imaged is rotated by 180&deg; either
+          horizontally or vertically, undo the transfer (&lt;Ctrl&gt;-Z or
+          <b>Undo last action</b> (<img src = "images/UndoLastActionIcon.gif"
+          alt = "Undo last action icon" width = "26">)), rotate the original
+          image 180&deg; horizontally or vertically as the situation requires,
+          and then reemplace the image with the <b>Envelope</b> tool.
+          </li>
+          <li>If the transferred image is a mirror image of the original where
+          it has been flipped horizontally or vertically, undo the transfer
+          (&lt;Ctrl&gt;-Z or <b>Undo last action</b> (<img src =
+          "images/UndoLastActionIcon.gif" alt = "Undo last action icon" width =
+          "26">)). Select the original image and then click on the <b>Flip
+          selected objects horizontally</b> icon (<img src =
+          "images/FlipHorizontallyIcon.gif" alt = "Flip selected objects
+          horizontally icon" width = "26">) or <b>Flip selected objects
+          vertically</b> icon (<img src = "images/FlipVerticallyIcon.gif" alt =
+          "Flip selected objects vertically icon" width = "26">) as the
+          situation requires. Then, reemplace the image with the <b>Envelope</b>
+          tool.
+          </li>
+          <li>The emplaced image might have undergone both rotation and
+          mirror-imaging. Undo the emplacement and then test one or another of
+          the options above until you see improvement in the image&rsquo;s
+          orientation. Once you see what you want, then you will have conquered
+          the beast. Congratulations!
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+
+  <div class = "row mb-2">
+  <div class = "col-md-2">
+    <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+    class = "img-fluid"></a>
+  </div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+  <div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+  <img src = "images/CreativeCommonsLicenseLogo88x31.png"
+  alt = "Creative Commons ShareAlike License"
+  class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+  Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
