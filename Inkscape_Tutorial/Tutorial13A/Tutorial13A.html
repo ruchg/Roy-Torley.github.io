@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 13, Part A - Creating Airbrush Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, mesh, color blending">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 13, Part A &ndash; Creating Airbrush Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedTutorialArtwork.gif" alt = "Finished
+          tutorial artwork" class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead mt-5">Converting shapes into mesh
+      objects lets you blend colors in multiple directions within the shapes
+      for an aquarelle or airbrush effect. It&rsquo;s easy to modify mesh
+      objects. You can add or remove colors from points on the mesh to adjust
+      the direction and amount of color blending.</p>
+      </div>
+    </div>
+
+<hr>
+
+<section>
+  <p>This particular tutorial comes in three-parts &ndash; there is so
+  much material on mesh gradients to cover. Much of what is presented here is
+  in pictures that take up a lot of space. Their purpose is take make the
+  learning process easier than if everything was just plain text. As you go
+  through this tutorial and the artwork develops as you scroll down, the
+  imagery that you create might look similar enough to what you see here.
+  Absolute precision is not important &mdash; learning the methods and getting
+  the feel of working and playing with them is.</p>
+  <p>Make the <b>Undo</b> function your friend. If at first you don&rsquo;t
+  succeed, undo and try, try again! If you feel that your brain is full, take a
+  break! I do. And, have fun!</p>
+
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul>
+    <li>Create a mesh grid.</li>
+    <li>Apply colors to a mesh.</li>
+    <li>Edit a mesh for a variety of effects.</li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this tutorial, you&rsquo;ll convert the shapes of two butterflies into
+  meshes, paint them, and manipulate the color blending. Before you begin, you
+  will open the finished art file for the tutorial to see what you&rsquo;ll
+  create.</p>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13A/Tutorial13Aend.svg"><b>Tutorial13Aend.svg</b></a> and store
+    it in a convenient location on your computer. Choose File &gt; Open, and
+    open the <b>Tutorial13_end.svg</b> file.</p>
+    </li>
+    <li><p>If you like, choose View &gt; Zoom &gt; Zoom Out to make the
+    finished artwork smaller, adjust the window size, and leave it on your
+    screen as you work. If you don&rsquo;t want to leave the image open,
+    choose File &gt; Close.</p>
+    </li>
+    <li><p>To begin working, you&rsquo;ll open an existing art file.</p>
+    </li>
+    <li><p>Download file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13A/Tutorial13Astart.svg"><b>Tutorial13Astart.svg</b></a> and store
+    it in a convenient location on your computer. Choose File &gt; Open to open
+    it.</p>
+      <figure>
+        <img src = "images/Tutorial13A_start.gif" alt = "Tutorial 13A start
+        file" class = "img-fluid">
+        <figcaption>Start file for Tutorial 13A.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As&hellip;, name the file <b>Butterfly.svg</b>,
+    and store it in a convenient location.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Introduction to the Mesh Tool</h2>
+  </header>
+  <p>Creating gradients using the Mesh tool is both a science and an art. The
+  science aspect involves creating a mesh grid with which you will define the
+  geometry of the gradient borders and where different colors are to be
+  positioned. The art aspect involves your sense and sensibility of
+  manipulating the mesh grid so the colors look the way you want them in terms
+  of how they blend amongst each other to match what your imagination has
+  produced. The art of mesh gradients comes with experimenting, undoing and
+  redoing mistakes, and just playing with the possibilities that appear on
+  your mental computer screen.</p>
+  <p>First, you&rsquo;ll paint a color on one of the tail wings on a butterfly.
+  You&rsquo;ll start out with a simple mesh to get a basic feel for the Mesh
+  tool, and then you&rsquo;ll paint the other tail wing with the same
+  colors.</p>
+  <ol>
+    <li><p>Make a duplicate of the top butterfly&rsquo;s lower left wing and
+    move it to a side of the artboard to work on.</p>
+      <figure>
+        <img src = "images/CopyLowerRightWing.gif" alt = "Making a copy of the
+        butterfly's lower left wing" class = "img-fluid">
+        <figcaption>Making a copy of the butterfly&rsquo;s lower left
+        wing.<figcaption>
+      </figure>
+    </li>
+    <li><p>Rotate the wind so that the tip of its tail is at the midpoint of
+    the top line segment of the bounding box. This orientation will make it a
+    little easier to work with the Mesh grid.</p>
+    <p>Doing a preliminary step like rotating an object so its main axes of
+    symmetry line up with the x-axis and y-axis of the work window is a wise
+    thing to do. It makes grid manipulation easier and can give you clearer
+    insight into how you want to work with your coloration.</p>
+      <figure>
+        <img src = "images/RotateLowerRightWing.gif" alt = "Rotating the
+        butterfly's lower left wing" class = "img-fluid">
+        <figcaption>Rotating the butterfly&rsquo;s lower left wing.<figcaption>
+      </figure>
+    </li>
+    <li><p>With the butterfly wing still selected (reselect if it isn&rsquo;t),
+    click on the <b>Create and edit meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">) in the toolbox. The Select tool cursor (<img src =
+    "images/SelectionToolCursor.gif" alt = "Selection tool cursor" width =
+    "26">) turns into the <b>Mesh tool</b> cursor (<img src =
+    "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">).</p>
+    </li>
+    <li><p>Double-click on the edge of the wing (<u>not</u> inside the wing)
+    with the Mesh tool cursor to create the mesh grid.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/MeshCursorOnEdgeOfObject.gif" alt = "Mesh toolbox
+        cursor placed on edge of wing" class = "img-fluid">
+        <figcaption>Placing Mesh tool cursor on edge of wing.<figcaption>
+      </figure>
+      <figure>
+        <img src = "images/ClickOnEdgeOfObject.gif" alt = "Double-clicking on
+        the edge of the wing" class = "img-fluid">
+        <figcaption>Double-clicking on the edge of the wing.<figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Notice that grid points in the selected object are either solid
+    diamonds or open circles. Also, the object has a mesh point at the
+    intersection of the two inside mesh lines, and two open circles between
+    each pair of mesh points. Mesh points define where the center of an area
+    of color is located.</p>
+    <p>The open circles are mesh handles that allow you to change the shape
+    of an area of color. By moving the circles, you move the boundaries
+    of an area of color to suit your preferences.</p>
+    <p>Each mesh point has at least two mesh handles associated with it. Mesh
+    points at the corners of the grid have two handles associated with them,
+    mesh points on the grid sides but not on the corners have three handles
+    associated with them, and mesh points inside the grid body have four mesh
+    handles.</p>
+      <figure>
+        <img src = "images/GridAnatomy.gif" alt = "Anatomy of a basic grid"
+        class = "img-fluid">
+        <figcaption>Anatomy of a basic grid.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Moving Mesh Points and Mesh Handles</h2>
+  </header>
+  <h4>Moving a Single Mesh Point</h4>
+  <p>When you move a mesh point, you move the center of an area of color
+  associated with that center. The mesh handles associated with that mesh point
+  also move with that mesh point, keeping the same distance and orientation. As
+  a result, you move an entire area of color while maintaining its original
+  shape, size and orientation.</p>
+  <ol>
+    <li><p>With the Mesh tool cursor (<img src = "images/MeshToolCursor.gif"
+    alt = "Mesh tool cursor" width = "26">) active, click on the middle mesh
+    point.</p>
+      <figure>
+        <img src = "images/ClickOnCenterMeshPoint.gif" alt = "Clicking on the
+        center mesh point" class = "img-fluid">
+        <figcaption>Clicking on the center mesh point.<figcaption>
+      </figure>
+      <p>The four mesh handles closest to the selected mesh point turn into
+      arrows, all pointing toward the mesh point. This feature is excellent
+      for indicating which mesh point they&rsquo;re associated with. The arrows
+      have a black stroke and white fill so they will always be visible, no
+      matter what the underlying color is. The center mesh point is colored
+      blue, indicating that it is selected.</p>
+    </li>
+    <li><p>Click-drag the center mesh point to the center of the wing. It does
+    not have to be moved to the exact center. See how the white area underneath
+    the mesh point moves with the mesh point. Also note how the four mesh
+    handles, now arrows, move with the mesh point, maintaining their original
+    distance and orientation. Lastly, the central grid lines are now curved,
+    especially the horizontal grid line, to maintain connection with the center
+    mesh point.</p>
+      <figure>
+        <img src = "images/MoveCenterMeshPoint.gif" alt = "Moving the center
+        mesh point" class = "img-fluid">
+        <figcaption>Moving the center mesh point.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <h4>Moving Multiple Mesh Points</h4>
+  <p>By &lt;Shift&gt;-clicking on two or more mesh points with Mesh tool cursor
+  (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width =
+  "26">), you can group-select them as if you were using the Select tool
+  (<img src = "images/SelectionToolIcon.gif" alt = "Selection tool icon"
+  width = "26">) and moving them as a group.</p>
+  <ol>
+    <li><p>Press &lt;Ctrl&gt;-Z to undo the move until you get to where you were
+    at Step 1 in the previous section with the middle mesh line straight across
+    (you might have to press &lt;Ctrl&gt;-Z more than once).</p>
+    </li>
+    <li><p>Now, &lt;Shift&gt;-click the three mesh points on the middle mesh
+    line to group-select them. All three mesh points turn blue to indicate that
+    they are selected.</p>
+      <figure>
+        <img src = "images/ShiftClickingMiddleGridLine.gif" alt =
+        "Shift-clicking the middle grid line mesh points" class = "img-fluid">
+        <figcaption>Shift-clicking the middle grid line mesh
+        points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on any of the three blue mesh points with Mesh tool cursor
+    (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width =
+    "26">) and drag the middle mesh line straight down until it is a quarter of
+    the way up from the bottommost mesh point.</p>
+    <figure>
+      <img src = "images/MoveMiddleGridLineDown.gif" alt =
+      "Moving the middle grid line down" class = "img-fluid">
+      <figcaption>Moving the middle grid line down.</figcaption>
+    </figure>
+    <p>Note that the three mesh handles associated with the rightmost mesh
+    point on the middle mesh line are arrows, indicating that the rightmost
+    mesh point was the last one selected and that it is still selected and
+    active.</p>
+    </li>
+    <li><p>Click on the center mesh point. It will stay selected (it remains
+    blue). However, the two side mesh points will deselect. Now, click-drag the
+    center mesh point right to the middle of the wing shape (you don&rsquo;t
+    have to be precise).</p>
+      <figure>
+        <img src = "images/SelectCenterPointDeselectSidePoints.gif" alt =
+        "Selecting the center mesh point and deselecting the side mesh points"
+        class = "img-fluid">
+        <figcaption>Selecting the center mesh point,<br>deselecting the side
+        mesh points,<br>and moving the center mesh point<br>to the middle of the
+        wing shape.</figcaption>
+      </figure>
+      <p>Note how the white patch and mesh handles follow the mesh point.</p>
+    </li>
+    <aside>
+      <p><b>Tip:</b> If you have a lot of mesh points that need to be moved,
+      you might find that repositioned mesh handles can produce a confusing
+      mess. One way to reduce the confusion and frustration that can ensue
+      involves moving the mesh handles for each mesh point closer in to the
+      point. So, when you move this and that point, the mesh handles stay in
+      close proximity to the mesh point, allowing you to keep track of them
+      more easily. Once the mesh points are in place, you can then pull the
+      handles away from their associated mesh point to restretch the color area
+      into its proper geometry. It&rsquo;s almost like working with Silly
+      Putty (if anybody remembers Silly Putty).</p>
+      <p>Below are three examples of how you can determine which mesh handles
+      go to which mesh points, using the bottommost mesh points and handles,
+      and the fact that the middle mesh line had been lowered.</p>
+        <figure style = "float: left;" class = "ml-5 mr-5">
+          <img src = "images/BottomLeftMeshPointSelected.gif" alt = "Bottom
+          left mesh point selected and associated mesh handles activated"
+          class = "img-fluid">
+          <figcaption>Bottom left mesh point selected and<br>associated mesh
+          handles activated.</figcaption>
+        </figure>
+        <figure style = "float: left;" class = "ml-5 mr-5">
+          <img src = "images/BottomCenterMeshPointSelected.gif" alt = "Bottom
+          center mesh point selected and associated mesh handles activated"
+          class = "img-fluid">
+          <figcaption>Bottom center mesh point selected and<br>associated mesh
+          handles activated.</figcaption>
+        </figure>
+        <figure>
+          <img src = "images/BottomRightMeshPointSelected.gif" alt = "Bottom
+          right mesh point selected and associated mesh handles activated"
+          class = "img-fluid">
+          <figcaption>Bottom right mesh point selected and<br>associated mesh
+          handles activated.</figcaption>
+        </figure>
+    </aside>
+    <div style = "clear: left;"></div>
+    <li><p>The wind needs to have a black border and a deep purple center.
+    Making the black border is more challenging than making the purple center.
+    Also, by keeping the wing&rsquo; center white, it will be easy to shape
+    the black border by virtue of stronger color contrast, compared to working
+    with a deep or dark purple center and, thus, less contrast between
+    colors.</p>
+    </li>
+    <li><p>Start on the black border by moving the mesh handles associated with
+    the three bottom mesh points closer to their respective points.</p>
+    <p>Click on the bottom center mesh point. Its associated mesh handles turn
+    into arrows. Note that the bottom mesh points have their upper mesh
+    handles located above the mesh handles associated with the mesh points on
+    the middle mesh line. You can verify this upside-down orientation by
+    clicking on a mesh point on the middle mesh line and then clicking on a
+    bottom mesh point. This orientation happened when you moved the middle mesh
+    line down from its original central position in Step 3 above. The mesh
+    handles maintained their original relationship to their mesh points.</p>
+    <p>Move the mesh handles closer in for each mesh point on the bottom line.
+    Note that an arrow fill turns red when the mesh tool cursor hovers over
+    it.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/MeshHandlesCloserToMeshPoint.gif" alt = "Mesh handles
+      moved closer in to mesh point."
+      class = "img-fluid">
+      <figcaption>Mesh handles moved closer in to mesh point.</figcaption>
+    </figure>
+    <figure style = "float: left;">
+      <img src = "images/BottomLineMeshPointsCloseHandles.gif" alt = "Bottom
+      line mesh points now have handles close in."
+      class = "img-fluid">
+      <figcaption>Bottom line mesh points now have handles moved in
+      closer.</figcaption>
+    </figure>
+    <div style = "clear: left;"></div>
+    <p>The right-hand mesh handle is the last one moved in the first figure.
+    Its color fill is red because the mesh tool cursor is still hovering over
+    it.</p>
+    <p>The grey color in the lower right corner of the figure has become
+    subtley darker. The two mesh handles that belong to the bottom right mesh
+    point have been moved away from their original area of influence where
+    they help define a patch of white color. That white color patch still exists
+    but it is now more restricted to the very near neighborhood of its mesh
+    point, which is off the wing shape.</p>
+    </li>
+    <li><p>Move the bottom mesh points individually up to the wing figure so
+    that they bring the whole bottom mesh line up to closely approximate the
+    geometry of the that part of the wing. Note how the coloration changes in
+    response to the new placement of the mesh points with their close-in mesh
+    handles. Also, when a segment of the mesh line moves to inside the figure,
+    it creates a white-filled patch defined by the outer border of the figure
+    itself and the inner mesh line. You will correct this discrepancy in
+    painting shortly.</p>
+      <figure>
+        <img src = "images/MoveBottomLineMeshPoints.gif" alt = "Moving the
+        bottom line mesh points" class = "img-fluid">
+        <figcaption>Moving the bottom line mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now paint the bottom edge of the wing black.</p>
+    <p>With the Mesh tool cursor (<img src = "images/MeshToolCursor.gif" alt =
+    "Mesh tool cursor" width = "26">) still active, click on the bottom left
+    mesh point to select it. Then, click on the black swatch in the Color
+    palette at the bottom of the work window. Select and paint the center and
+    right bottom mesh points black, also.</p>
+      <figure style = "float: left;" class = "ml-3 mr-3">
+        <img src = "images/BlackLeftBottomMeshPoint.gif" alt = "Left bottom mesh
+        point painted black" class = "img-fluid">
+        <figcaption>Left bottom mesh point painted black.</figcaption>
+      </figure>
+      <figure style = "float: left;" class = "mr-3">
+        <img src = "images/BlackCenterBottomMeshPoint.gif" alt = "Center bottom
+        mesh point painted black" class = "img-fluid">
+        <figcaption>Center bottom mesh point painted black.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/BlackRightBottomMeshPoint.gif" alt = "Right bottom
+        mesh point painted black" class = "img-fluid">
+        <figcaption>Right bottom mesh point painted black.</figcaption>
+      </figure>
+      <div style = "clear: left;"></div>
+    </li>
+    <p>The bottom center mesh point was already painted black, but it
+    doesn&rsquo;t hurt to make sure.</p>
+    <li>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/PullDownRightMeshHandle1.gif" alt = "Pulling down
+        right bottom mesh handle" class = "img-fluid">
+        <figcaption>Pulling down right bottom mesh handle.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/PullDownRightMeshHandle2.gif" alt = "Fine-adjusting
+        right bottom mesh handle" class = "img-fluid">
+        <figcaption>Fine-adjusting right bottom mesh handle.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Select the center bottom mesh point with the Mesh tool cursor (<img
+    src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">).
+    Click drag the right-hand mesh handle to verify that the curvature of the
+    curve segment between the center and right-hand points aligns with the curve
+    of the wing shape. It is alright if the grid curve is outside of the wing a
+    little bit. See how the handle arrow points along the curve, causing the
+    curve of the mesh grid to follow the curve of the wing at the point. You
+    will notice if the grid curve is inside the wing  &ndash; because of the odd
+    area of white.</p>
+    <p>With the bottom center mesh point still selected, pull down the left-hand
+    handle to see the grid curve to the left. There is no difference in the grid
+    curvature when you pull the handle down, so release the mouse key and press
+    &lt;Shift&gt;-Z to undo the move and bring the mesh handle to its original
+    position.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/PullDownCenterMeshHandle1.gif" alt = "Fine-adjusting
+        center bottom mesh handle" class = "img-fluid">
+        <figcaption>Fine-adjusting center bottom mesh handle.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/PullDownCenterMeshHandle2.gif" alt = "Pulling down
+        center bottom mesh handle" class = "img-fluid">
+        <figcaption>Pulling down center bottom mesh handle.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Now click on the left bottom mesh point to select it and activate its
+    handles. Click-drag the right-hand handle down. See how you eliminate a
+    little bit of grid overlap over the wing boundary. Move the handle so that
+    it is in line with the curvature of the wing.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/PullDownLeftMeshHandle1.gif" alt = "Pulling down
+        left bottom mesh handle" class = "img-fluid">
+        <figcaption>Pulling down left bottom mesh handle.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/PullDownLeftMeshHandle2.gif" alt = "Fine-adjusting
+        left bottom mesh handle" class = "img-fluid">
+        <figcaption>Fine-adjusting left bottom mesh handle.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>You will now paint black edging on the middle portion of the
+    wing. Select the center mesh point on the right-hand mesh line with the
+    Mesh tool cursor (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool
+    cursor" width = "26">) and then click on the black swatch in the Color
+    palette. Note how the black edging extends upwards to the mesh point.</p>
+    <p>Click-drag the lower mesh handle of the mesh point you just colored down
+    and to the right a little bit to extend the mesh line&rsquo;s curvature out
+    from the boundary of the wing shape. Note how the handle&rsquo;s direction
+    remains focused on its associated mesh point.<p>
+      <figure>
+        <img src = "images/FineAdjustLowerRightSideGridLine1.gif" alt =
+        "Coarse-adjusting the lower right-side grid line" class = "img-fluid">
+        <figcaption>Coarse-adjusting the lower right-side grid
+        line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Fine-adjust the mesh line at its lower end so it hugs the curve of
+    the wing shape.</p>
+      <figure>
+        <img src = "images/FineAdjustLowerRightSideGridLine2.gif" alt =
+        "Fine-adjusting the lower right-side grid line" class = "img-fluid">
+        <figcaption>Fine-adjusting the lower right-side grid line.</figcaption>
+      </figure>
+    </li>
+    <aside><p>You might need to magnify the area where you are doing fine
+    adjustment. Do so and continue to fine-adjust until you are satisfied with
+    the result. You might need to zoom in and zoom out multiple times as you
+    work. You want to achieve the degree of precision that satisfies your sense
+    of precise placement.</p>
+    </aside>
+    <li><p>Magnify and adjust the area of work as you see fit.</p>
+      <figure>
+        <img src = "images/FineAdjustLowerRightSideGridLine3.gif" alt =
+        "Fine-adjusting the lower right-side grid line" class = "img-fluid">
+        <figcaption>Fine-adjusting the lower right-side grid line.</figcaption>
+      </figure>
+    </li>
+    <li><p>You&rsquo;ll now fine-tune the center mesh point on the left-hand
+    mesh line. Pull out the mesh line from the center mesh point using the
+    left-hand mesh handle to gauge what you&rsquo;re going to do next.<p>
+      <figure>
+        <img src = "images/PullOutLowerLeftSideGridLine.gif" alt =
+        "Fine-adjusting the lower left-side grid line" class = "img-fluid">
+        <figcaption>Pulling out the lower left-side grid line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the mesh handle in and down until the mesh line lies directly
+    on top of the wing shape curve.</p>
+      <figure>
+        <img src = "images/FineAdjustLowerLeftSideGridLine1.gif" alt =
+        "Fine-adjusting the lower left-side grid line" class = "img-fluid">
+        <figcaption>Fine-adjusting the lower left-side grid line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Use the upper mesh handle of the bottom left mesh point to make very
+    fine adjustments to the left at its lower end.</p>
+      <figure>
+        <img src = "images/FineAdjustLowerLeftSideGridLine2.gif" alt =
+        "Fine-adjusting the lower left-side grid line" class = "img-fluid">
+        <figcaption>Fine-adjusting the lower left-side grid line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat Steps 15 to 17 for the center mesh point on the right-hand
+    mesh line.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/FineAdjustLowerRightSideGridLine1.gif" alt =
+        "Fine-adjusting the lower right-side grid line" class = "img-fluid">
+        <figcaption>Coarse-adjusting the lower right-side grid
+        line.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/FineAdjustLowerRightSideGridLine2.gif" alt =
+        "Fine-adjusting the lower right-side grid line" class = "img-fluid">
+        <figcaption>Fine-adjusting the lower right-side grid line.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>You will now paint the wing tail.</p>
+    <p>Magnify the area at the top of the mesh grid to see the mesh layout
+    better.</p>
+      <figure>
+        <img src = "images/WingTail1.gif" alt = "Wing tail" class = "img-fluid">
+        <figcaption>Magnified view of the wing tail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the left-hand mesh point and then click on the black swatch
+    in the Color palette to set the point&rsquo;s color to black. The mesh
+    point is far enough away from the wing tail that its contribution to the
+    black edging is not noticeable. You&rsquo;ll change that situation
+    shortly.</p>
+      <figure>
+        <img src = "images/WingTailBlack1.gif" alt = "Wing tail" class =
+        "img-fluid">
+        <figcaption>Painting the left side of the wing tail black.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the center mesh point and then on the black swatch to set
+    this point&rsquo;s color to black. Again, no discernible change.</p>
+      <figure>
+        <img src = "images/WingTailBlack2.gif" alt = "Wing tail" class =
+        "img-fluid">
+        <figcaption>Painting the center (tip) of the wing tail
+        black.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat the previous step on the right-hand mesh point. Now you see
+    discernible progress!</p>
+      <figure>
+        <img src = "images/WingTailBlack3.gif" alt = "Wing tail" class =
+        "img-fluid">
+        <figcaption>Painting the right side of the wing tail black.</figcaption>
+      </figure>
+    </li>
+    <li><p>The image below is what you have created so far.</p>
+      <figure>
+        <img src = "images/WingTailBlack4.gif" alt = "Wing tail" class =
+        "img-fluid">
+        <figcaption>The whole lower right wing<br>as it is painted
+        now.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now you&rsquo;ll change the curvature of the left, center, and right
+    mesh lines so that they&rsquo;ll conform to the geometry of the wing tail.
+    By creating a color fill to the tail this way, you will have better control
+    over how colors blend from one to another inside the mesh grid, and thus,
+    inside the wing.</p>
+    <p>First, magnify the top area of the mesh grid so you&rsquo; see better
+    what you&rsquo;ll be doing.</p>
+    <p>Then, move all the mesh handles inward toward their respective mesh
+    points. You&rsquo;ll be moving mesh points, so you&rsquo;ll need to keep
+    mesh handles together in distinct and recognizable groups to keep them
+    manageable.</p>
+      <figure>
+        <img src = "images/ShapeTailMeshLines1.gif" alt = "Shaping the wing
+        tail mesh lines" class = "img-fluid">
+        <figcaption>Magnifying the wing tail to move mesh handles close to
+        their mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the left and right mesh points in toward the center mesh point
+    to start moving the left and right mesh lines in toward the wing tail.
+    Note that the right mesh line cuts into the wing tail, slicing off part of
+    its length. You&rsquo;ll take care of that shortly.</p>
+      <figure>
+        <img src = "images/ShapeTailMeshLines2.gif" alt = "Moving wing tail mesh
+        lines in so they converge near the tail tip" class = "img-fluid">
+        <figcaption>Moving wing tail mesh lines in so they converge near the
+        tail tip.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now do some coarse-adjusting of the right-hand mesh line.
+    Click-drag the lower mesh handle of the right mesh point down and to the
+    right a little to get a feel for how that handle affects the placement of the
+    mesh line. Also, see how the mesh line differentially slices off the right
+    side of the wing tail as you move the handle.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry1.gif" alt = "Current right-hand
+        mesh line cutting off part of wing tail" class = "img-fluid">
+        <figcaption>Current right-hand mesh line cutting off part of wing
+          tail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the mesh handle up, noting how the curvature of the mesh line
+    changes as you approach the upper mesh point. Once you see that the mesh
+    line has moved away from the wing tail so the tip appears in its entirety,
+    you can stop moving the mesh handle. The mesh line now conforms much better
+    to the geometry of the tail tip, and the tip is all black.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry2.gif" alt = "Moving the
+        right-hand mesh line out of the wing shape and manipulating its
+        curvature to match that of the wing" class = "img-fluid">
+        <figcaption>Moving the right-hand mesh line out of the wing shape and<br>
+        manipulating its curvature to match that of the wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Fine-adjust the right mesh line by adjusting the upper mesh handle
+    that belongs to the center right-side mesh point.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry3.gif" alt = "Fine-adjusting the
+        curvature of the lower part of the right-hand mesh line" class =
+        "img-fluid">
+        <figcaption>Fine-adjusting the curvature of the lower part of<br>the
+        right-hand mesh line.</figcaption>
+      </figure>
+    </li>
+    <li><p>A good next step is to change the orientation of the central ray of
+    white color fill that comes out and up from the central mesh point. You
+    want the direction of the ray to follow the general inclined upward trend
+    of the wing shape.</p>
+    <p>To start, move the mesh handles of the central mesh point in close.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry4.gif" alt = "Bringing mesh
+        handles in to near proximity of the central mesh point prior to moving"
+        class = "img-fluid">
+        <figcaption>Bringing mesh handles in to near proximity of the<br>central
+        mesh point prior to moving.</figcaption>
+      </figure>
+    </li>
+    <li><p>Magnify the top of the mesh grid so you can see the top center mesh
+    point and its handles clearly. Click-drag the lower mesh handle of the top
+    center mesh point down, following the curve of the wing tail. Again, note
+    how the mesh handle, now a red active arrow, stays pointed toward its
+    associated mesh point.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry5.gif" alt = "Magnifying the wing
+        tail tip to help move the center vertical mesh line" class =
+        "img-fluid">
+        <figcaption>Magnifying the wing tail tip to help move the center
+        vertical mesh line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the mesh handle down to the base of the wing tail.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry6.gif" alt = "Bringing the mesh
+        handle down to extend the black fill of the wing tail" class =
+        "img-fluid">
+        <figcaption>Bringing the mesh handle down to extend the black fill<br>of
+        the wing tail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now, click-drag the upper mesh handle of the central mesh point up
+    towards the mesh handle at the base of the wing tail. Note how the white
+    fill ray follows the mesh handle as you bring the handle up to the base of
+    the tail.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry8.gif" alt = "Bringing the mesh
+        handle down to extend the black fill of the wing tail" class =
+        "img-fluid">
+        <figcaption>Bringing the &ldquo;north&rdquo; central mesh handle up to
+        reorient the upward-pointing ray of white fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>The upper part of the central mesh line lies outside the wing tail.
+    To bring it inside and more in line with the tail geometry, click-drag the
+    mesh handle belonging to the upper center mesh point to the right. Fine-tune
+    using the mesh handle belonging to the central mesh point. You might find
+    yourself alternately moving both mesh handles until you get a good-trending
+    center vertical mesh line. The figure below provides a good idea of what
+    you&rsquo;re striving for.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry9.gif" alt = "Pulling the central
+        mesh line to the right to conform with the wing tail curvature" class =
+        "img-fluid">
+        <figcaption>Pulling the central mesh line to the right to
+        conform<br>with the wing tail curvature.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now do the left mesh line. Click drag the upper mesh handle of the
+    left center mesh point up and to the right to bring the mesh line (now a
+    curve) closer to the wing tail.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry10.gif" alt = "Pulling the
+        left-hand vertical mesh line to the right to define the left extent
+        of the mesh grid" class = "img-fluid">
+        <figcaption>Pulling the left-hand vertical mesh line to the right to<br>
+        define the left extent of the mesh grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>You just did coarse adjustment of the left mesh line. Do fine
+    adjustment now using the lower mesh handle belonging to the left upper
+    mesh point. You&rsquo;ll get very close to following the wing tail&rsquo;s
+    left boundary but not exactly &ndash; and that is just fine.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry11.gif" alt = "Fine-adjusting the
+        curvature of the left-hand mesh line" class = "img-fluid">
+        <figcaption>Fine-adjusting the curvature of the left-hand mesh
+        line.</figcaption>
+      </figure>
+    </li>
+    <li><p>The upper part of the ray of light looks good. Let&rsquo;s turn our
+    attention to the ray below the central mesh point.</p>
+    <p>Move the bottom center mesh point to the left a little bit along the
+    curvature of the wing bottom until you see continuity of curvature of the
+    ray <u>through</u> the central mesh point. Adjust the mesh handles as you
+    see fit.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry12.gif" alt = "Moving and
+        fine-adjusting the bottom center mesh point and handles to smoothen
+        the path of the central ray of white fill" class = "img-fluid">
+        <figcaption>Moving and fine-adjusting the bottom center
+        mesh<br>point and handles to smoothen the path of the<br>central ray of
+        white fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the artwork to deselect it so you can see and appreciate
+    your artwork up to this point.</p>
+      <figure>
+        <img src = "images/AlteredTailGeometry13.gif" alt = "Wing tail with and
+        without mesh details visible" class = "img-fluid">
+        <figcaption>Wing tail with and without mesh details
+        visible.</figcaption>
+      </figure>
+    </li>
+    <li><p>It&rsquo;s time now to color the center of the wind a dark
+    purple.</p>
+    <p>Click on the central mesh point with the Mesh tool cursor (<img src
+    = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">).
+    If the Fill and Stroke panel isn&rsquo;t up, choose Object &gt; Fill and
+    Stroke&hellip;, click on the <b>Fill</b> tab, and type <b>0482bcff</b> into
+    the <b>RGBA</b> text box in the <b>Fill</b> panel. Press &lt;Enter&gt; when
+    you&rsquo;ve typed it all in.</p>
+      <figure>
+        <img src = "images/PurpleCenter1.gif" alt = "Wing tail with and
+        without mesh details visible" class = "img-fluid">
+        <figcaption>Selecting the central mesh point<br>and giving it a deep
+        purple fill color.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the artwork to deselect it so you can view the change in
+    coloration without the distraction of the mesh details.</p>
+      <figure>
+        <img src = "images/PurpleCenter2.gif" alt = "Wing tail with and
+        without mesh details visible" class = "img-fluid">
+        <figcaption>Wing tail without mesh details visible.</figcaption>
+      </figure>
+    </li>
+    <li><p>The area of purple needs to be expanded. Click on the wing with the
+    Mesh tool cursor (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool
+    cursor" width = "26">), and click-drag each mesh handle away from their
+    central mesh point until the purple fills the available space up to but not
+    including the black edging, so that, of course, there is still black
+    edging.</p>
+      <figure>
+        <img src = "images/PurpleCenter3.gif" alt = "Extending down the purple
+        color patch by moving the left, bottom, and right mesh handles down and
+        out from the central mesh point" class = "img-fluid">
+        <figcaption>Extending down the purple color patch by moving the left,
+        bottom, and right mesh handles down and out from the central mesh
+        point.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the side mesh points and their handles to fine-adjust the
+    geometry of the purple patch as your taste suggests.</p>
+      <figure>
+        <img src = "images/PurpleCenter4.gif" alt = "Fine-adjusting the purple
+        color fill using mesh handles to both the left and right side mesh
+        points" class = "img-fluid">
+        <figcaption>Fine-adjusting the purple color fill<br>using mesh handles
+        of both the left<br>and right side mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Esc&gt; to deselect your artwork and view it without the
+    clutter of the mesh details.</p>
+      <figure>
+        <img src = "images/PurpleCenter5.gif" alt = "Current wing tail artwork"
+        class = "img-fluid">
+        <figcaption>Result.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Adding a Mesh Line to the Mesh Grid</h2>
+  </header>
+  <p>On many an occasion, you will want or need to add a new color to the mesh
+  grid because the artwork requires it. You will learn how to add a horizontal
+  mesh line in this section.</p>
+  <ol>
+    <li><p>Click on the <b>Create and edit meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">) in the toolbox. Do not click on the <b>Create and edit
+    gradients</b> icon (<img src = "images/CreateAndEditGradientsIcon.gif"
+    alt = "Create and edit gradients icon" width = "26">). If you do, undo what
+    you did using &lt;Ctrl&gt;-Z or by clicking on the <b>Undo</b> tool (<img
+    src = "images/UndoIcon.gif" alt = "Undo icon" width = "26">).</p>
+    </p>Double-click halfway up the central <u>vertical</u> mesh line to create
+    a new <u>horizontal</u> mesh line.</p>
+    With the new mesh point still selected, choose Object &gt; Fill and
+    Stroke&hellip;, click on the <b>Fill</b> tab, type <b>0c429cff</b> into
+    the <b>RGBA</b> text box, and press &lt;Enter&gt; to set the new color, an
+    even darker purple near the base of wing tail.</p>
+      <figure>
+        <img src = "images/TwoToned0.gif" alt = "Adding a mesh point
+        and coloring it" class = "img-fluid">
+        <figcaption>Adding a mesh point and coloring it.<figcaption>
+      </figure>
+    </li>
+    <li><p>Adjust mesh points and mesh handles as you see fit to create the
+    areas of color that you want to see in your artwork.</p>
+      <figure>
+        <img src = "images/TwoToned1.gif" alt = "" class = "img-fluid">
+        <figcaption>Adjusting mesh points and mesh handles.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Esc&gt; to deselect the artwork.</p>
+      <figure>
+        <img src = "images/TwoToned2.gif" alt = "" class = "img-fluid">
+        <figcaption>Result.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make a duplicate lower right wing and make a
+    mirror-image of it.</p>
+    <p>Select the wing with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">).
+    Click on the <b>Flip selected objects horizontally</b> icon (<img src =
+    "images/FlipSelectedObjectsHorizontally.gif" alt = "Flip selected objects
+    horizontally icon" width = "26">) in the Tool Controls Bar to create the
+    mirror image of the wing.</p>
+      <figure>
+        <img src = "images/DuplicateWings.gif" alt = "Mirror-image wings"
+        class = "img-fluid">
+        <figcaption>Mirror-image wings.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the mirror-image duplicate wing to near the original black
+    wing.</p>
+      <figure>
+        <img src = "images/MoveLowerRightWing1.gif" alt = "Moving the duplicate
+        wing" class = "img-fluid">
+        <figcaption>Moving the duplicate lower right wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move and rotate the wing until you completely superimpose it on
+    the black original. Use all means that you have learned up to this point to
+    place and orient it to satisfaction.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/MoveLowerRightWing2.gif" alt = "Moving the duplicate
+        wing" class = "img-fluid">
+        <figcaption>Moving the duplicate lower right wing.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/MoveLowerRightWing4.gif" alt = "Moving the duplicate
+        wing" class = "img-fluid">
+        <figcaption>Rotating the duplicate lower right wing.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Press the &lt;PgDn&gt; key once or twice to lower the wing so it
+    will lie underneath the black original. Then, press &lt;Delete&gt; to delete
+    the black wing and make the colored wing visible. If the colored wing lies
+    on top of the right forward wing, then select it, if it isn&rsquo;t already
+    selected, and press the &lt;PgDn&gt; key once or twice so it will lie
+    underneath the forward wing.</p>
+      <figure>
+        <img src = "images/MoveLowerRightWing5.gif" alt = "Moving the duplicate
+        wing" class = "img-fluid">
+        <figcaption>Moving the duplicate lower right wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat Steps 5, 6, and 7 for the left bottom wing.</p>
+      <figure>
+        <img src = "images/MoveLowerRightWing6.gif" alt = "Moving the duplicate
+        wing" class = "img-fluid">
+        <figcaption>Moving the duplicate lower right wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Your artwork might not look exactly like the figure below. That is
+    just fine. It is important that you have a feeling for how to create and
+    edit grid meshes using mesh points and mesh handles.</p>
+      <figure>
+        <img src = "images/FinishedTutorialArtwork.gif" alt = "Finished tutorial
+        artwork" class = "img-fluid">
+        <figcaption>Finished tutorial artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save. File &gt; Close. Exit Inkscape if your desire.</p>
+  </ol>
+  <p>You will use your artwork in the next tutorial, where you will learn other
+  gradient mesh techniques that further enhance your ability to create imagery
+  that falls pleasantly on the eyes.</p>
+  <p>Explore using different gradient colors, moving mesh points and handles
+  around to alter the shapes of color patches. If you don&rsquo;t like what you
+  just did, use &lt;Ctrl&gt;-Z or the Undo tool (<img src =
+  "images/UndoIcon.gif" alt = "Undo icon" width = "26">) to undo your mistake
+  so you can start over.</p>
+</section>
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li><p>Which icon do you click on to create a new gradient mesh?</p>
+    </li>
+    <li><p>What is the function of a gradient mesh point? What is the function
+    of a mesh handle?</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>You click on the <b>Create and edit meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">) in the toolbox.</p>
+    </li>
+    <li><p>A gradient mesh point acts a center point for the creation of a
+    patch of color. A gradient mesh handle allows you to stretch, contract, and
+    change the direction into which a color patch extends.</p>
+    </li>
+  </ol>
+</section>
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
