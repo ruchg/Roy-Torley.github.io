@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 13, Part B - Creating Airbrush Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, mesh gradients, creating mesh grids,
+  editing mesh grids, mesh handles, mesh lines, mesh points, color blending">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 13, Part B &ndash; Creating Airbrush Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedTutorialArtwork.gif" alt = "Finished
+          tutorial artwork" class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead mt-5">Blending colors using
+      gradient meshes allows you to add subtle details to your artwork. with
+      meshes, you can create interesting details that suggest changes in
+      illumination, shadowing, or texturing on an otherwise smooth surface.</p>
+      </div>
+    </div>
+
+<hr>
+
+<section>
+  <p>This particular tutorial is the second of a three-part chapter. As with
+  the previous tutorial, Tutorial 13A, there are a lot of pictures. Let them
+  guide you as you learn the finer aspects of mesh gradient manipulation.</p>
+  <p>Be comfortable using the <b>Undo</b> function. It makes it very easy to
+  retrace your steps if something doesn&rsquo;t look the way it should. Do take
+  breaks! Working with this kind of cyber-magic can make time pass unbelievably
+  quickly.</p>
+
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul>
+    <li>Edit a mesh grid.</li>
+    <li>Apply colors to a mesh.</li>
+    <li>Move a group of mesh points to relocate a patch of color.</li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this tutorial, you&rsquo;ll continue working the art file that you began
+  in the previous tutorial.</p>
+  <ol>
+    <li><p>Start Inkscape if you exited it.</p>
+    </li>
+    <li><p>Download file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13B/Tutorial13B_end.svg"><b>Tutorial13B_end.svg</b></a> and store
+    it in a convenient location on your computer. Note that the file image might
+    look like one wing is missing when viewing it in its Internet source
+    location. There is a wing section &mdash; you might just be experiencing an
+    incompatibility between the viewing software in your browser and the flavor
+    of <b>svg</b> (scalable vector graphics) that Inkscape uses. Choose File
+    &gt; Open, and open the <b>Tutorial13B_end.svg</b> file. The missing wing
+    should appear (along with everything else in the file).</p>
+    </li>
+    <li><p>If you like, choose View &gt; Zoom &gt; Zoom Out to make the
+    finished artwork smaller, adjust the window size, and leave it on your
+    screen as you work. If you don&rsquo;t want to leave the image open,
+    choose File &gt; Close.</p>
+    </li>
+    <li><p>To begin working, File &gt; Open file <b>Butterfly.svg</b>, which
+    you worked on in Tutorial 13A. If, however, you did not create
+    <b>Butterfly.svg</b>, then download file <a href =
+     "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13B/Tutorial13B_start.svg"><b>Tutorial13B_start.svg</b></a> and store
+    it in a convenient location on your computer. Choose File &gt; Open to open
+    it.</p>
+      <figure>
+        <img src = "images/Tutorial13B_start.gif" alt = "Tutorial 13B start
+        file" class = "img-fluid">
+        <figcaption>Start file for Tutorial 13B.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As&hellip;, name the file <b>Butterfly.svg</b>,
+    and store it in a convenient location.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Specifying the Number of Mesh Lines in a Mesh Grid</h2>
+  </header>
+  <p>When you use the Mesh tool to create a new gradient mesh, two intersecting
+  mesh lines are created for every mesh point you create. Before creating a mesh
+  grid, you&rsquo;ll specify its number of mesh lines using the <b>Create and
+  edit meshes</b> tool (<img src = "images/CreateMeshToolIcon.gif" alt =
+  "Create and edit meshes tool icon" width = "26">).</p>
+  <ol>
+    <li><p>Select the Select tool (<img src = "images/SelectionToolIcon.gif"
+    alt = "Selection tool icon" width = "26">) in the toolbox, and click the
+    black right forewing on the top butterfly to select it.</p>
+      <figure>
+        <img src = "images/BlackForewingSelected.gif" alt = "Selecting the
+        black right forewing" class = "img-fluid">
+        <figcaption>Selecting the black right forewing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Create and edit meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">). The <b>Mesh Tool Controls Bar</b> appears.</p>
+    <p>Set the number of rows to <b>3</b> and the number of columns to
+    <b>4</b>.</p>
+    <p>Choose Objects &gt; Fill and Stroke&hellip; and click the <b>Fill</b>
+    tab, and click on the <b>Mesh gradient</b> icon (<img src =
+    "images/MeshGradientIcon.gif" alt = "Mesh gradient icon" width = "26">).
+    The default gradient mesh appears in the selected forewing. Default meshes
+    typically appear as a black-and-white checkerboard pattern that you color
+    and modify through the mesh points and mesh handles.</p>
+      <figure>
+        <img src = "images/3x4Grid.gif" alt = "Creating a three row by four
+        column gradient grid" class = "img-fluid">
+        <figcaption>Creating a three row by four column gradient
+        grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now apply a purple color to four left-hand mesh points.</p>
+    <p>You can colorize groups of mesh points easily by group-selecting them
+    with the <b>Create meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">). With the <b>Create meshes</b> tool still active,
+    &lt;Shift&gt;-drag the <b>Mesh tool</b> cursor (<img src =
+    "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">) over
+    the four mesh points as if you were using the <b>Node</b> tool.</p>
+    <figure>
+      <img src = "images/GroupSelectingMeshPoints.gif" alt =
+      "Group-selecting four mesh points" class = "img-fluid">
+      <figcaption>Group-selecting four mesh points.</figcaption>
+    </figure>
+    </li>
+    <li><p>Release the mouse button. Note that the selected mesh points are now
+    blue in color, indicating that they have been selected, and that their
+    associated mesh handles are now arrows pointing in toward their respective
+    mesh points.</p>
+    <p>Choose Objects &gt; Fill and Stroke&hellip;, click on the <b>Fill</b>
+    tab, and type <b>0482bcff</b> into the <b>RGBA</b> text box. Press
+    &lt;Enter&gt; to apply a purple color to the selected mesh points.</p>
+      <figure>
+        <img src = "images/PurplePath1.gif" alt = "Coloring the group-selected
+        mesh points" class = "img-fluid">
+        <figcaption>Coloring the group-selected mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now group-select the two mesh points immediately below the purple
+    patch using &lt;Shift&gt;-drag with the <b>Mesh tool</b> cursor (<img src
+    = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">).</p>
+      <figure>
+        <img src = "images/GroupSelecting2LowerMeshPoints.gif" alt =
+        "Group-selecting two lower mesh points" class = "img-fluid">
+        <figcaption>Group-selecting two lower mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Type <b>0c429cff</b> into the <b>RGBA</b> text box. Press
+    &lt;Enter&gt; to apply a deeper shade of purple to the selected mesh
+    points.</p>
+      <figure>
+        <img src = "images/Coloring2LowerMeshPoints.gif" alt =
+        "Group-selecting two lower mesh points" class = "img-fluid">
+        <figcaption>Coloring the two lower mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the two mesh points to the right of the earlier patch
+    of purple using &lt;Shift&gt;-drag with the <b>Mesh tool</b> cursor (<img
+    src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width =
+    "26">). Color them with another shade of purple using <b>RGBA</b> =
+    <b>14027cff</b>.</p>
+      <figure>
+        <img src = "images/Coloring2RightHandMeshPoints.gif" alt =
+        "Group-selecting two lower mesh points" class = "img-fluid">
+        <figcaption>Coloring two right-hand mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now start creating black edging to the forewing.</p>
+    <p>With the <b>Mesh tool</b> cursor (<img src = "images/MeshToolCursor.gif"
+    alt = "Mesh tool cursor" width = "26">) still active, &lt;Shift&gt;-drag
+    around the edge of the mesh grid to select only the outer mesh points.
+    Note that now only the outer mesh points are colored blue and that their
+    mesh handles are now arrows. The internal mesh points are not highlighted
+    and their mesh handles are circles.</p>
+      <figure>
+        <img src = "images/GroupSelectOuterMeshPoints.gif" alt =
+        "Group-selecting the outer mesh points" class = "img-fluid">
+        <figcaption>Group-selecting the outer mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the black swatch in the Color palette at the bottom of the
+    work window to set all outer mesh points to black.</p>
+      <figure>
+        <img src = "images/BlackEdgingOnForewing.gif" alt =
+        "Putting black edging on the forewing" class = "img-fluid">
+        <figcaption>Putting black edging on the forewing.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will be moving mesh points around to have the grid conform to
+    the shape of the wing. To prepare, move all mesh handles in close to their
+    associated mesh points for easier visual management.</p>
+      <figure>
+        <img src = "images/MovingMeshHandlesIn.gif" alt = "Moving mesh handles
+        in prior to moving" class = "img-fluid">
+        <figcaption>Moving mesh handles in prior to moving.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the outer mesh points in until they just touch the edge of the
+    wing or lie just outside the shape.</p>
+    <p>Move the inner mesh points to create mesh lines that roughly align with
+    the shape of the wing. Move mesh handles out as you see fit to bring color
+    to the edges of the wing but not totally removing the black edging. How you
+    do this is up to you and how you feel or think the different patches of
+    color should look.</p>
+      <figure>
+        <img src = "images/RightForewingEditedGrid.gif" alt =
+        "Editing the forewing gradient grid" class = "img-fluid">
+        <figcaption>Editing the forewing gradient grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Highlighting Using a Mesh</h2>
+  </header>
+  <p>To give an object a three-dimensional appearance, you can create a gradient
+  mesh that highlights the center or the edge of an object. Now you&rsquo;ll
+  create a 3 &mult; 3 mesh with highlighting.</p>
+  <ol>
+    <li><p>Scroll down the artboard to bring the second butterfly to the center
+    of the work window.</p>
+    </li>
+    <li><p>With the Select tool (<img src = "images/SelectionToolIcon.gif" alt =
+    "Selection tool icon" width = "26">), click the top forewing on the pink
+    butterfly to select it.</p>
+      <figure>
+        <img src = "images/HighlightForewing1.gif" alt = "Selecting the
+        forewing" class = "img-fluid">
+        <figcaption>Selecting the forewing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Create meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">).</p>
+    </li>
+    <li><p>In the <b>Mesh Tool Controls Bar</b> that appears, leave <b>3</b>
+    entered in the <b>Rows</b> text box. Type <b>3</b> in the Columns text
+    box.</p>
+    </li>
+    <li><p>Choose Objects &gt; Fill and Stroke&hellip;, click on the <b>Fill</b>
+    tab, click on the <b>Mesh gradient</b> icon (<img src =
+    "images/MeshGradientIcon.gif" alt = "Mesh gradient icon" width = "26">). A
+    mesh grid encloses the wing.</p>
+      <figure>
+        <img src = "images/HighlightForewing2.gif" alt = "Creating the forewing
+        mesh grid" class = "img-fluid">
+        <figcaption>Creating the forewing mesh grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will shortly move the edge mesh points so they conform with the
+    shape of the forewing. Before you move them, group the mesh handles in so
+    they are in close proximity to their respective mesh points.</p>
+      <figure>
+        <img src = "images/HighlightForewing3.gif" alt = "Grouping mesh points
+        and mesh handles together prior to moving" class = "img-fluid">
+        <figcaption>Grouping mesh points and mesh handles<br>together prior to
+        moving.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the edge mesh points to the edges of the wing. Make sure they
+    don&rsquo;t enter into the wing itself, otherwise portions of the edge might
+    be cut off. Adjust points and handles so you achieve curves that mimic the
+    external geometry of the wing. There will be times when it helps to magnify
+    the area you are working on to separate points and handles more easily, or
+    place points and handles with the precision you want.</p>
+      <figure>
+        <img src = "images/HighlightForewing4.gif" alt = "Moving mesh points
+        and mesh handle groups to conform to the wing geometry" class =
+        "img-fluid">
+        <figcaption>Moving mesh points and mesh handle<br>groups to conform to
+        the wing geometry.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you want to work on an area that lies underneath another object,
+    switching to <b>Outline View</b> is a great feature to can help you
+    visualize mesh lines and figure outlines more easily. Go back to <b>Normal
+    View</b> when you are done.</p>
+      <figure style = "float: left;" class = "mr-4">
+        <img src = "images/HighlightForewing6.gif" alt = "Moving mesh points
+        and mesh handle groups to conform to the wing geometry" class =
+        "img-fluid" width = "500">
+        <figcaption>Moving the lower hidden mesh points and mesh
+        handle<br>groups using <b>Outline View</b> to conform to the wing
+        geometry.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/HighlightForewing5.gif" alt = "Result in Normal View"
+        class = "img-fluid" width = "500">
+        <figcaption>Result in <b>Normal View</b>.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>You will now put an edging color on the wing. &lt;Shift&gt;-drag to
+    select only those mesh points situated along the wing edge. If you encounter
+    instances when points don&rsquo;t select, then &lt;Shift&gt;-click points
+    individually to add them to the group you&rsquo;re creating. Blue point
+    highlighting and mesh handles turning from circles into arrows are the
+    indicators that inform you on how you&rsquo;re doing.</p>
+      <figure>
+        <img src = "images/HighlightForewing7.gif" alt = "Group-selecting edge
+        mesh points prior to group-coloring" class = "img-fluid">
+        <figcaption>Group-selecting edge mesh points prior to<br>
+        group-coloring.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the edge mesh points selected, choose Objects &gt; Fill and
+    Stroke&hellip;, the <b>Fill</b> tab, and click on the <b>Mesh gradient</b>
+    icon (<img src = "images/MeshGradientIcon.gif" alt = "Mesh gradient icon"
+    width = "26">), and type <b>14027cff</b> into the <b>RGBA</b> text box.
+    Press &lt;Enter&gt; to apply a deep purple color to the selected mesh
+    points.</p>
+    <p>Now move the four inner mesh points out individually to expand the
+    central color patch, group-select them using &lt;Shift&gt;-drag, and, if
+    the <b>Fill and Stroke</b> panel is still open, click on the <b>HSL</b> icon
+    (<b><u>Hue</u></b>, <b><u>Saturation</u></b>, <b><u>Lightness</u></b>) in
+    the <b>Fill</b> panel.</p>
+    <p>To make the central wing area highlighted, you will lighten its overall
+    color. Set <b>H = 315</b>, <b>S = 46</b>, <b>L = 90</b>, and <b>A = 100</b>.
+    The central color patch lightens up.</p>
+      <figure>
+        <img src = "images/HighlightForewing8.gif" alt = "Group-selecting edge
+        mesh points prior to group-coloring" class = "img-fluid">
+        <figcaption>Setting the color on the edge mesh points<br>and moving
+        inner mesh points toward the edges<br>to make the border color
+        narrow.</figcaption>
+      </figure>
+    </li>
+    <li><p>You&rsquo;ll now give the wing tip a deeper purple color.
+    Group-select the four consecutive edge mesh points from the left side up to
+    the tip. Type <b>14027cff</b> into the <b>RGBA</b> text box in the
+    <b>Fill</b> panel.
+      <figure>
+        <img src = "images/HighlightForewing9.gif" alt = "Setting the color on
+        the four top edge mesh points and setting the color to a deeper shade
+        of purple" class = "img-fluid">
+        <figcaption>Setting the color on the four top edge mesh points to a
+        deeper shade of purple.</figcaption>
+      </figure>
+    </li>
+    <li><p>The wing tip should have more deep purple. Move the inside handles of
+    the three uppermost edge points to give the deep purple color path more
+    width. Let your own taste determine how far you want to move mesh
+    handles.</p>
+      <figure>
+        <img src = "images/HighlightForewing10.gif" alt = "Adjusting the spread
+        of the deeper purple mesh patch" class = "img-fluid">
+        <figcaption>Adjusting the spread of the deeper purple mesh
+        patch.</figcaption>
+      </figure>
+    </li><p>Adjust mesh points and handles further to blend colors to your
+    satisfaction.</p>
+      <figure>
+        <img src = "images/HighlightForewing11.gif" alt = "Adjusting the spread
+        of the deeper purple mesh patch" class = "img-fluid">
+        <figcaption>Adjusting the spread of the inner<br>highlight mesh
+        patch.</figcaption>
+      </figure>
+    </li>
+    <li><p>There are two smoothing algorithms available for you to experiment
+    with. There is the <b>Coons</b> algorithm and the <b>Bicubic</b> algorithm.
+    The Coons algorithm can produce abrupt changes in color between color patch
+    borders. The bicubic algorithm spreads color changes out over greater
+    distances, significantly reducing the rate of color change and color
+    banding. The decision of which algorithm to use depends upon your taste in
+    coloration. They are available in the <b>Mesh Tool Controls Bar</b>.</p>
+    <p>The two figures below use the same gradient grid but different
+    algorithms.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/HighlightForewing14.gif" alt = "Adjusting the spread
+        of the deeper purple mesh patch" class = "img-fluid">
+        <figcaption>Coons smoothing algorithm.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/HighlightForewing15.gif" alt = "Adjusting the spread
+        of the deeper purple mesh patch" class = "img-fluid">
+        <figcaption>Bicubic smoothing algorithm.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+      <p>You have now given the center of the wing highlighting.</p>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Editing Mesh Points</h2>
+  </header>
+  <p>You can use the Mesh tool to select and add mesh points to change the way
+  colors blend in a gradient mesh. Every mesh point has a set of direction
+  handles that let you adjust the distance and direction that a color blends
+  with neighboring colors in the mesh grid.</p>
+  <p>In this section, you&rsquo;ll use the Mesh tool to create a mesh point in
+  the tail wing on the butterfly and then change the direction in which the
+  color of the mesh point blends from the corner.</p>
+  <ol>
+    <li><p>Click on the <b>Create meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">) in the toolbox. Give the mesh <b>2</b> rows and <b>2</b>
+    columns. Then, double-click in the left tail wing of the butterfly. A 2
+    &times; 2 grid appears encompassing the wing.</p>
+      <figure>
+        <img src = "images/Tailwing1.gif" alt = "" class = "img-fluid">
+        <figcaption>Creating a 2 &times; 2 gradient mesh.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move all the mesh handles in toward their respective mesh points.</p>
+      <figure>
+        <img src = "images/Tailwing2.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving all the mesh handles in toward their respective<br>
+        mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select all the mesh points on the wing using
+    &lt;Shift&gt;-drag with the <b>Mesh tool</b> cursor (<img src =
+    "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width = "26">) (as if
+    you were using the Select tool to group-select). All mesh points turn blue
+    and all mesh handles change from circles into arrows.</p>
+    <p>Color all mesh points pink by typing <b>c462acff</b> into the <b>RGBA</b>
+    text box in the <b>Fill</b> subpanel of the <b>Fill and Stroke</b>
+    panel. The entire wing turns pink.</p>
+      <figure>
+        <img src = "images/Tailwing3.gif" alt = "" class = "img-fluid">
+        <figcaption>Group-selecting all mesh points and handles.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the central mesh point to keep it selected while deselecting
+    all other mesh points.</p>
+    <p>Type <b>a4a6d4ff</b> into the <b>RGBA</b> text box to give the wing a
+    central highlight. Press &lt;Enter&gt; to set the color.</p>
+      <figure>
+        <img src = "images/Tailwing4.gif" alt = "" class = "img-fluid">
+        <figcaption>Selecting the central mesh point and giving it a color
+        highlight.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will paint the wing tip deep purple. Group-select the two
+    farthest left mesh points on the wing tip with the <b>Mesh tool</b> cursor
+    (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor" width =
+    "26">). The mesh points and handles change appropriately to show
+    they&rsquo;re selected.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Tailwing5.gif" alt = "" class = "img-fluid">
+        <figcaption>Group-selecting the two farthest left mesh
+        points.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/Tailwing6.gif" alt = "" class = "img-fluid">
+        <figcaption>Selected mesh points and handles.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Type <b>14027cff</b> into the <b>RGBA</b> text box. Press
+    &lt;Enter&gt; to set the color.</p>
+      <figure>
+        <img src = "images/Tailwing7.gif" alt = "" class = "img-fluid">
+        <figcaption>Tailwing 7.</figcaption>
+      </figure>
+    </li>
+    <li><p>Drag the left mesh handle of the central halfway out to the left
+    wing edge. Drag the right mesh handle halfway out to the right wing
+    edge.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Tailwing8.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving the left mesh handle.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/Tailwing9.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving the right mesh handle.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>You will now give the central mesh point a swirl effect.</p>
+    <p>Drag the right mesh handle up so it makes an upward curve out
+    of the right line segment. Drag the left mesh handle down so it makes a
+    downward curve out of the left line segment.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Tailwing10.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragging the right mesh handle up.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/Tailwing11.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragging the left mesh handle down.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Click off the artwork to deselect the wing. Then, &lt;Shift&gt;-click
+    the forewing and tailwing to group-select them. Pres &lt;Ctrl&gt;-D to
+    duplicate them.</p>
+      <figure>
+        <img src = "images/Tailwing12.gif" alt = "" class = "img-fluid">
+        <figcaption>Group-selecting and duplicating the forewing and
+        tailwing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the duplicate pair of wings to near the right side of the
+    butterfly and click on the <b>Flip selected objects horizontally</b> icon
+    (<img src = "images/FlipSelectedObjectsHorizontally.gif" alt = "Flip
+    selected objects horizontally icon" width = "26">) in the <b>Tool Controls
+    Bar</b> to make a mirror image of the pair of wings.</p>
+      <figure>
+        <img src = "images/Tailwing13.gif" alt = "" class = "img-fluid">
+        <figcaption>Making a mirror image of the pair of wings.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move and rotate the grouped pair of wings into place. If the original
+    outline is still visible, select it with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+    and press &lt;Delete&gt; to delete it.</p>
+      <figure>
+        <img src = "images/Tailwing14.gif" alt = "" class = "img-fluid">
+        <figcaption>Finished tailwing.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Modifying Mesh Lines</h2>
+  </header>
+  <p>You&rsquo;ll use the Mesh tool to reshape mesh lines by moving mesh points
+  on the mesh in the forewing of the first butterfly.</p>
+  <ol>
+    <li><p>Move the butterfly at the top of the artwork down to the center of
+    your work window.</p>
+    </li>
+    <li><p>Select the <b>Create meshes</b> tool (<img src =
+    "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool icon"
+    width = "26">), and click the left forewing to bring up the gradient mesh.
+    Select the left mesh point on the top horizontal line (don&rsquo;t release
+    the mouse button) and then drag the mesh point to the left.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine1.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragging the mesh point to the left.</figcaption>
+      </figure>
+    </li>
+    <li><p>Notice how the mesh line left of the point arches out beyond the
+    edge of the wing. This happened because the left anchor point moved in
+    relation to the mesh point as you moved it.</p>
+    <p>To remedy this situation, drag the left mesh handle straight in so it
+    is situated immediately next to its mesh point. Note how the curvature of
+    the mesh line is reduced and disappears when the handle is right up against
+    its associated mesh point. Also note how the edging color returns to the
+    wing tip.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine2.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragging the left mesh handle to its mesh
+        point.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now move the lower internal mesh point on the second line from the
+    right down, following the direction of the original mesh line. Note how the
+    purple color patch moves down with the point and overpowers the edging
+    color. The mesh line segment also curves outside the boundary of the
+    forewing.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine3.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving the right lower mesh point down.</figcaption>
+      </figure>
+    </li>
+    <li><p>Bring back the dark edging color by moving the bottom mesh handle
+    straight up to touch its mesh point. The mesh line segment straightens
+    out.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine4.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving the bottom mesh handle up.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now add a vertical mesh line to the grid. Position the
+    <b>Mesh tool</b> cursor (<img src = "images/MeshToolCursor.gif" alt =
+    "Mesh tool cursor" width = "26">) on the bottom edge of the forewing
+    midway between the right-hand and middle vertical mesh lines.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine5.gif" alt = "" class = "img-fluid">
+        <figcaption>Positioning the <b>Mesh tool</b> cursor on the bottom edge
+        mesh line of<br>the forewing between the right and middle vertical mesh
+        lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Double-click on the bottom edge mesh line. A new vertical mesh line
+    is created. Note that it loosely conforms to the overall geometry of the
+    forewing.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine6.gif" alt = "" class = "img-fluid">
+        <figcaption>Adding a new vertical mesh line.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now change the color of the upper mesh point on the
+    mesh line you just added. Start by moving the left mesh handle of the
+    mesh point located on the same horizontal line right of the one on the new
+    line halfway to the left. Do the same with the lower mesh handle. Doing
+    this will help in extending the deep purple path of color on the right side
+    of the forewing.</p>
+    <p>Color the upper mesh point <b>14027cff</b>.</p>
+      <figure style = "float: left;" class = "ml-4 mr-4">
+        <img src = "images/ModifyMeshLine9.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving mesh handles to halfway locations on mesh
+        lines.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/ModifyMeshLine9b.gif" alt = "Coloring the mesh point"
+        class = "img-fluid">
+        <figcaption>Coloring the mesh point.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Select the forewing with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+    and press &lt;Ctrl&gt;-D to duplicate it. Move the duplicated forewing to
+    the right side of the butterfly.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/ModifyMeshLine10.gif" alt = "" class = "img-fluid">
+        <figcaption>Marquee-selecting two inner mesh points.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/ModifyMeshLine11.gif" alt = "" class = "img-fluid">
+        <figcaption>Two inner mesh points selected.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>With the forewing still selected, click on the <b>Flip selected
+    objects vertically</b> icon (<img src =
+    "images/FlipSelectedObjectsVertically.gif" alt = "Flip objects
+    vertically icon" width = "26">) to make a mirror image of the
+    forewing.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine12.gif" alt = "" class = "img-fluid">
+        <figcaption>Flipping the forewing vertically to create a mirror
+        image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move and rotate the forewing until it fits exactly over the wing
+    outline.</p>
+    <p>Using <b>Snap</b> tools can make positioning easier. Activate
+    <b>Enable snapping (%)</b>, <b>Snap nodes, paths, and handles</b>, and
+    <b>Snap to cusp nodes, incl. rectangle corners</b>.</p>
+      <figure>
+        <img src = "images/ModifyMeshLine13.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving and rotating the pair of wings into
+        position.</figcaption>
+      </figure>
+    </li>
+    <li><p>If the original wing outlines are still visible, select them with
+    the Select tool (<img src = "images/SelectionToolIcon.gif" alt =
+    "Selection tool icon" width = "26">) and press &lt;Delete&gt; to delete
+    them.</p>
+      <figure>
+        <img src = "images/FinishedTutorialArtwork.gif" alt = "" class =
+        "img-fluid">
+        <figcaption>Finished Artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>Describe two methods for creating a mesh.
+    </li>
+    <li>How do you change the color on a mesh?
+    </li>
+    <li>How do you add a mesh point to a mesh?
+    </li>
+    <li>Describe how to move a mesh point without affecting the intersecting
+    line.
+    </li>
+    <li>How do you create a warp effect?
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li>
+      <ol type = "a">
+        <li><p>To create a mesh grid, select the object that you want to attach the
+    grid to with the Select tool (<img src = "images/SelectionToolIcon.gif" alt
+    = "Selection tool icon" width = "26">). Then, select the <b>Create and
+    edit meshes</b> tool (<img src = "images/CreateMeshToolIcon.gif" alt =
+    "Create and edit meshes tool icon" width = "26">) in the toolbox. Set the
+    number of rows and columns that you want in the grid in the <b>Mesh Tool
+    Controls Bar</b> and select whether you want <b>Coons</b> smoothing or
+    <b>bicubic</b> smoothing. Choose Objects &gt; Fill and Stroke&hellip;,
+    <b>Fill</b> tab, Mesh gradient (<img src = "images/MeshGradientIcon.gif"
+    alt = "Mesh gradient icon" width = "26">).</p>
+        </li>
+        <li><p>select the <b>Create and edit meshes</b> tool (<img src =
+        "images/CreateMeshToolIcon.gif" alt = "Create and edit meshes tool
+        icon" width = "26">) in the toolbox. Set the number of rows and columns
+        that you want in the grid in the <b>Mesh Tool Controls Bar</b> and
+        select whether you want <b>Coons</b> smoothing or
+        <b>bicubic</b> smoothing. Double-click on the object you want to attach
+        a gradient mesh to.</p>
+        </li>
+      </ol>
+    </li>
+    <li><p>To change a color on the mesh, use the <b>Mesh</b> tool to select
+    the mesh point for the color, and then select a different color.</p>
+    </li>
+    <li><p>To add a mesh point to a grid, double-click on a mesh line segment
+    with the <b>Mesh tool</b> cursor (<img src = "images/MeshToolCursor.gif"
+    alt = "Mesh tool cursor" width = "26">).</p>
+    </li>
+    <li><p>To move a mesh point without affecting the intersecting line, use
+    the <b>Mesh</b> tool to select the point, and without releasing the mouse
+    button, drag the mesh point along the line that runs in the direction you
+    want.</p>
+    </li>
+    <li><p>To add a warp effect, drag at least one mesh handle in the direction
+    in which you want the warp. If necessary, drag the opposite mesh handle in
+    the opposite direction.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
