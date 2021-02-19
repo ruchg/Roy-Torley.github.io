@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 13, Part C - Creating Airbrush Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, mesh gradients, creating mesh grids,
+  editing mesh grids, mesh handles, mesh lines, mesh points, color blending,
+  opacity, transparency">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 13, Part C &ndash; Creating Airbrush Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/AllDone.gif" alt = "Finished tutorial artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead mt-4">Adding transparency to a
+      gradient mesh creates attractive see-through effects, such as having a
+      background object viewed through stained glass, a membrane, or a
+      dragonfly wing. The possibilities are endless when you combine
+      transparency and mesh color blending in ways that excite a viewer&rsquo;s
+      imagination and stimulate yours.</p>
+      </div>
+    </div>
+
+<hr>
+
+<section>
+  <p>This particular tutorial is the third of a three-part chapter. Yes, the end
+  is in sight!</p>
+  <p>Be comfortable using the <b>Undo</b> function and the <b>Zoom</b> function.
+  The <b>Undo</b> function makes it very easy to retrace your steps if something
+  doesn&rsquo;t look the way it should. The <b>Zoom</b> function allows for
+  deep, up-close viewing of fine-detail work &ndash; it&rsquo;s a great
+  magnifying glass when needed, and a great telescope when also needed.</p>
+  <p>Do take breaks! Time passes with amazing speed when you get into the
+  flow.</p>
+
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul>
+    <li>Apply transparency to a gradient mesh.</li>
+    <li>Copy artwork from one Inkscape file to another.
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this tutorial, you&rsquo;ll continue working the art file that you began
+  in the previous tutorial.</p>
+  <ol>
+    <li><p>Start Inkscape if you exited it.</p>
+    </li>
+    <li><p>Download file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13C/Tutorial13C_end.svg"><b>Tutorial13C_end.svg</b></a> and store
+    it in a convenient location on your computer. Note that the file image might
+    look like there are wing parts missing when viewing it in its Internet
+    source location. There are wing parts &mdash; you might just be
+    experiencing an incompatibility between the viewing software in your
+    browser and the flavor of <b>svg</b> (scalable vector graphics) that
+    Inkscape uses. Choose File &gt; Open, and open the
+    <b>Tutorial13C_end.svg</b> file. The missing wing parts should appear
+    (along with everything else in the file).</p>
+      <figure>
+        <img src = "images/AllDone.gif" alt = "Finished tutorial artwork"
+        class = "img-fluid">
+        <figcaption>Finished tutorial art file.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you like, choose View &gt; Zoom &gt; Zoom Out to make the
+    finished artwork smaller, adjust the window size, and leave it on your
+    screen as you work. If you don&rsquo;t want to leave the image open,
+    choose File &gt; Close.</p>
+    </li>
+    <li><p>To begin working, File &gt; Open file <b>Butterfly.svg</b>, which
+    you worked on in Tutorial 13A and 13B. If, however, you did not create
+    <b>Butterfly.svg</b>, then download file <a href =
+     "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial13C/Tutorial13C_start.svg"><b>Tutorial13C_start.svg</b></a> and store
+    it in a convenient location on your computer. Choose File &gt; Open to open
+    it.</p>
+      <figure>
+        <img src = "images/Tutorial13C_start.gif" alt = "Tutorial 13C start
+        file" class = "img-fluid">
+        <figcaption>Start file for Tutorial 13C.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As&hellip;, name the file <b>Butterfly.svg</b>,
+    and store it in a convenient location.</p>
+    </li>
+    <li><p>Download and File &gt; Open art file <a href =
+    "#"><b>Dragonfly.svg</b></a>.</p>
+      <figure>
+        <img src = "images/DragonflyAndLeaves.gif" alt = "Dragonfly and leaves
+        art file" class = "img-fluid">
+        <figcaption>Dragonfly and leaves art file.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Adding Transparency to a Gradient Mesh</h2>
+  </header>
+  <p>Adding transparency to a gradient mesh is very easy to do. In this section,
+  you will simulate the tinted see-through quality of a dragonfly&rsquo;s
+  membrane wing.</p>
+  <ol>
+    <li><p>To start, magnify the dragonfly. Select a wing with the Select tool (
+    <img src = "images/SelectionToolIcon.gif" alt = "Selection tool icon" width
+    = "26">) (we selected the lower left wing) and duplicate it using
+    &lt;Ctrl&gt;-D.</p>
+      <figure>
+        <img src = "images/Dragonfly1.gif" alt = "" class = "img-fluid">
+        <figcaption>Magnifying the dragonfly and selecting a wing and
+        duplicating it.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the duplicated wing to the left and rotate it so it is oriented
+    horizontally in preparation for makiing a gradient mesh.</p>
+      <figure>
+        <img src = "images/Dragonfly2.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving and rotating the duplicated wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the wing still selected, click on the <b>Create and edit
+    meshes</b> icon in the toolbox (<img src = "images/CreateMeshToolIcon.gif"
+    alt = "Create and edit mesh tool icon" width = "26">). In the <b>Mesh Tool
+    Controls Bar</b> that appears, set <b>Rows = 3</b>, <b>Columns =
+    2</b>, and <b>Smoothing = Bicubic</b>.</p>
+    <p>Choose Objects &gt; Fill and Stroke&hellip;, click on the <b>Fill</b>
+    tab, and click on the <b>Mesh gradient</b> icon (<img src =
+    "images/MeshGradientIcon.gif" alt = "Mesh gradient icon" width = "26">).
+    The dragonfly wing is now enclosed by a 3 row &times; 2 column gradient
+    mesh.</p>
+      <figure>
+        <img src = "images/Dragonfly3.gif" alt = "" class = "img-fluid">
+        <figcaption>3 &times; 2 gradient mesh.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will shortly move mesh points so they conform more to the overall
+    shape of the wing.</p>
+    <p>Move all the mesh handles in toward their respective mesh points.<p>
+      <figure>
+        <img src = "images/Dragonfly4.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving mesh handles in toward their respective mesh
+        points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now move all the edge mesh points in so they just touch or lie just
+    outside the shape of the wing. Adjust mesh handles so external mesh lines
+    follow the curvature of the dragonfly wing outline without entering the
+    shape &ndash; you&rsquo;ll cut off part of the wing, otherwise.</p>
+      <figure>
+        <img src = "images/Dragonfly5.gif" alt = "" class = "img-fluid">
+        <figcaption>Moving mesh points and adjusting mesh handles so the mesh
+        conforms to the shape of the wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select or singly select all mesh points in preparation for
+    coloring the wing.</p>
+      <figure>
+        <img src = "images/Dragonfly6.gif" alt = "" class = "img-fluid">
+        <figcaption>Selecting mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Color all the mesh points with the original deep purple of the wing.
+    Use the Dropper tool (<img src = "images/DropperToolIcon.gif" alt = "Dropper
+    tool icon" width = "26">) to sample the color of the original wing.</p>
+      <figure>
+        <img src = "images/Dragonfly7.gif" alt = "" class = "img-fluid">
+        <figcaption>Coloring all mesh points deep purple.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now add a highlight to the middle of the dragonfly wing.
+    Group-select the two inner mesh points with the <b>Mesh tool</b>
+    cursor (<img src = "images/MeshToolCursor.gif" alt = "Mesh tool cursor"
+    width = "26">).</p>
+      <figure>
+        <img src = "images/Dragonfly8.gif" alt = "" class = "img-fluid">
+        <figcaption>Selecting the inner two mesh points.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>HSL</b> button in the <b>Fill</b> panel and set the
+    lightness value <b>L = 100</b>.
+      <figure>
+        <img src = "images/Dragonfly9.gif" alt = "" class = "img-fluid">
+        <figcaption>Creating a highlight.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make the wing transparent. Set the opacity of the wing
+    to <b>29</b> percent.</p>
+    <p>Remember that opacity is just the opposite of tranparency. If an object
+    is less opaque, then it is more transparent.</b>
+      <figure>
+        <img src = "images/Dragonfly10.gif" alt = "" class = "img-fluid">
+        <figcaption>Setting the wing opacity to 29%.</figcaption>
+      </figure>
+    </li>
+    <li>Here is a neat technique for replacing the original dragonfly wing with
+    the new transparent version.</p>
+    <p>Select the original wing. Set its border to black to by
+    &lt;Shift&gt;-clicking on the black swatch in the Color palette at the
+    bottom of the work window.</p>
+    <p>Make the fill absolutely transparent by clicking on the <b>none</b>
+    swatch next to the black swatch.</p>
+    <p>Move the tranparent wing closer to the original wing and rotate it so
+    it has roughly the same orientation as the original.</p>
+      <figure>
+        <img src = "images/Dragonfly11.gif" alt = "" class = "img-fluid">
+        <figcaption>Original wing with no color fill and black outline.
+        The tranparent wing is moved close for easy orientation.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move and fine-rotate the new wing so it fits precisely into the
+    black outline.</p>
+      <figure>
+        <img src = "images/Dragonfly12.gif" alt = "" class = "img-fluid">
+        <figcaption>Precision emplacement of the new wing.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the new wing object still selected, click on the <b>Lower
+    selection one step</b> icon (<img src = "images/LowerSelectionOneStepIcon.gif"
+    alt = "Lower selection one step icon" width = "26">) once or twice to place
+    it underneath the black outline.</p>
+    <p>Press the &lt;Esc&gt; key to deselect the wing. Then, select the black
+    edge of the wing and press the &lt;Del&gt; or &lt;Delete&gt; key to delete
+    it. If you accidentally delete the transparent wing instead, then press
+    &lt;Ctrl&gt;-Z to undo the mistake and press the <b>Lower selection one
+    step</b> icon again.</p>
+    <p>Click off the artwork to deselect the wing. Select the black edge of
+    the wing again. Press the &lt;Del&gt; or &lt;Delete&gt; key again. If the
+    black outline disappears, then good. Otherwise, repeat the previous few
+    steps until you successfully delete the black outline.</p>
+    </li>
+    <li><p>Select the lower right wing with the Select tool (
+    <img src = "images/SelectionToolIcon.gif" alt = "Selection tool icon" width
+    = "26">).</p>
+      <figure>
+        <img src = "images/Dragonfly13.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragonfly 13.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the wing selected, set its border stroke to black and its color
+    to <b>none</b>.</p>
+    </li>
+    <li><p>Duplicate the lower left wing with &lt;Ctrl&gt;-D and make a
+    mirror-image of it using the <b>FlipSelectedObjectsHorizontally</b> tool
+    (<img src = "images/FlipSelectedObjectsHorizontallyIcon.gif" alt = "Flip
+    selected objects horizontally icon" width = "26">).</p>
+    </li>
+    <li><p>Move and rotate the duplicate transparent wing into place.</p>
+      <img src = "images/Dragonfly14.gif" alt = "Moving and rotating the
+      duplicate transparent wing into place" class = "img-fluid">
+      <figcaption>Moving and rotating the duplicate transparent wing into
+      place.</figcaption>
+    </li>
+    <li><p>The original wing with the black border and transparent fill lies
+    underneath the colored wing in the image stack. With the colored wing
+    selected (reselect it if you deselected it), click on the <b>Lower
+    selection one step</b> icon (<img src =
+    "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection one step
+    icon" width = "26">) once or twice to put the colored wing underneath the
+    black border. Click off the artwork to deselect the wing, then click on the
+    black border and press the &lt;Del&gt; or &lt;Delete&gt; key. If you
+    accidentally delete the colored wing, then undo the mistake with
+    &lt;Ctrl&gt;-Z and repeat the previous couple of steps until you
+    successfully delete the black border.</p>
+      <figure>
+        <img src = "images/Dragonfly15.gif" alt = "" class = "img-fluid">
+        <figcaption>Lower right wing emplaced, no border.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now repeat all the previous steps to create transparent
+    upper wings.</p>
+    <p>Duplicate and move both upper wings to the left of the dragonfly. Make
+    3 &times; 2 gradient meshes for both wings, color them with the original
+    deep purple color, and give them the central highlight, just as you had
+    done with the lower pair of wings.</p>
+      <figure>
+        <img src = "images/Dragonfly16.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragonfly 16.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the two wings with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+    and set their opacity to <b>Opacity (%) = 29</b>, just as you had done
+    earlier.</p>
+      <figure>
+        <img src = "images/Dragonfly17.gif" alt = "" class = "img-fluid">
+        <figcaption>Dragonfly 17.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select both original upper wings using &lt;Shift&gt;-click,
+    set their borders to black by clicking on the black swatch in the Color
+    palette, and set their color fill to <b>none</b>.</p>
+      <figure>
+        <img src = "images/Dragonfly18.gif" alt = "" class = "img-fluid">
+        <figcaption>Preparing the original wings for replacement.</figcaption>
+      </figure>
+    </li>
+    <li><p>Position the wings and delete the black borders as you had done
+    earlier.</p>
+      <figure>
+        <img src = "images/Dragonfly19.gif" alt = "" class = "img-fluid">
+        <figcaption>Emplacing the two upper wings and deleting the black
+        borders.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will emplace the two butterflies you had created earlier onto the
+    dragonfly-and-leaves image.</p>
+    <p>Go to the <b>Butterfly.svg</b> file that you opened at the beginning of
+    this tutorial. Choose Edit &gt; Select All to select both butterflies.</p>
+    <p>Choose Edit &gt; Copy to copy the two butterfly images to your
+    computer&rsquo;s clipboard.</p>
+      <figure>
+        <img src = "images/SelectBothButterflies.gif" alt = "Selecting both
+        butterflies" class = "img-fluid">
+        <figcaption>Selecting both butterflies.</figcaption>
+      </figure>
+    </li>
+    <li><p>Switch to the <b>Dragonfly.svg</b> Inkscape window. Position the
+    cursor to the right of the artboard and press &lt;Ctrl&gt;-V to paste the
+    butterflies on that side.</p>
+      <figure>
+        <img src = "images/Paste.gif" alt = "Pasting the butterflies next to the
+        dragonfly artboard" class = "img-fluid">
+        <figcaption>Pasting the butterflies next to the dragonfly artboard.<br>
+        The image is pasted where the cursor is located (now in the middle of
+        the butterfly image).</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the butterflies and move them onto the
+    dragonfly-and-leaves artwork. It would be wise to make each butterfly its
+    own group before moving. They are now ungrouped body parts, wings, and
+    legs that can easily and accidentally separate upon being moved and
+    rescaled.</p>
+      <figure>
+        <img src = "images/MovedButterflies.gif" alt = "Group-moving the
+        butterfies over the dragonfly and leaves artwork" class = "img-fluid">
+        <figcaption>Group-moving the butterfies over the dragonfly-and-leaves
+        artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>The lower butterfly is partially covering the dragonfly.
+    &lt;Ctrl&gt;-drag a sizing handle to resize the two butterflies while
+    maintaining the aspect ratio. Move them until they are positioned where you
+    would like them.</p>
+      <figure>
+        <img src = "images/MoveAndRescaleButterflies.gif" alt = "Moving and
+        rescaling the butterfies" class = "img-fluid">
+        <figcaption>Moving and rescaling the butterfies.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Deselect to deselect the artwork.</p>
+      <figure>
+        <img src = "images/AllDone.gif" alt = "Finished artwork" class =
+        "img-fluid">
+        <figcaption>Finished artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save. File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+  <p>You have now learned how to create and modify mesh gradients, and finally,
+  how to add transparency to objects that have mesh gradients attached to
+  them.</p>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>How do you add transparency to a mesh gradient?
+    </li>
+    <li>Can you add transparency to multiple objects?
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>You add transparency to an mesh gradient object just like adding
+    transparency to any other object. Choose Objects &gt; Fill and
+    Stroke&hellip;, click on the <b>Fill</b> tab, click on the <b>Mesh
+    gradient</b> icon (<img src = "images/MeshGradientIcon.gif" alt = "Mesh
+    gradient icon" width = "26">), and adjust the <b>Opacity (%)</b> bar to the
+    percent opacity that you want.</p>
+    </li>
+    <li><p>Yes, you can group-select multiple objects using the marquee-select
+    technique or by &lt;Shift&gt;-click on disparate objects. You then set the
+    transparency for all the selected objects. They will all have the same
+    degree of transparency.</p>
+  </ol>
+</section>
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
