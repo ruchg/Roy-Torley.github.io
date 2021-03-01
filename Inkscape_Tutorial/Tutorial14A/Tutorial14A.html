@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 14, Part A - Working with Brush Styling</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, brushes, scribbles">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 14, Part A &ndash; Working with Brush Styling</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/PartiallyFinishedArtwork.gif" alt = "Partially
+          finished artwork" class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead">Inkscape has painting
+      features that simulate strokes done with a charcoal pencil, paint brush,
+      marker, and more. Line tapering options of the Pen and Pencil tools
+      allow for controlled thickening and thinning of middles and ends of line
+      segments, adding flourish and a touch of elegance to the overall design
+      of the artwork.</p>
+      </div>
+    </div>
+<section>
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul type = "disc">
+    <li>How to work with the Pencil tool&rsquo;s Triangle in and Triangle out
+    features to create a tapering path.
+    </li>
+    <li>How to create a custom charcoal pencil filter.
+    </li>
+    <li>How to add a charcoal pencil effect to a path.
+    </li>
+    <li>How to scatter objects along a path.
+    </li>
+    <li>How to simulate drawing with an edged marker pen.
+    </li>
+    <li>How to fill a blank area enclosed fully or partially by a curved line
+    segment.
+    </li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this tutorial, you will apply different styles of paint brush and
+  drawing pencil to a template file that contains the paths that you will
+  trace over and apply brush effects to.</p>
+  <p>This tutorial is the first to two parts that explore the use of painting
+  and drawing with the aim of stylizing what you draw. Take your time exploring
+  the different techniques and tools, become familiar with their capabilites and
+  limitations, and include them in your toolbox of means to enhancing your
+  skills as a graphic artist.</p>
+  <ol>
+    <li><p>Download file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial14A/Tutorial4A_end.svg"><b>Tutorial14A_end.svg</b></a>
+    and store it in a convenient location on your computer. Choose File &gt;
+    Open, and open the <b>Tutorial14A_end.svg</b> file.</p>
+    <figure>
+      <img src = "images/PartiallyFinishedPoster.gif" alt = "Partially finished
+      tutorial artwork" class = "img-fluid">
+      <figcaption>Partially finished poster.</figcaption>
+    </figure>
+  </li>
+  <li><p>If you like, choose View &gt; Zoom &gt; Zoom Out to make the
+  finished artwork smaller, adjust the window size, and leave it on your
+  screen as you work. If you don&rsquo;t want to leave the image open,
+  choose File &gt; Close.</p>
+  </li>
+  <li><p>To begin working, download file <a href =
+   "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial14A/Tutorial14A_start.svg"><b>Tutorial14A_start.svg</b></a>
+   and store it in a convenient location on your computer. Choose File &gt;
+   Open to open it.</p>
+      <figure>
+        <img src = "images/Tutorial14A_start.gif" alt = "Tutorial 14, Part A
+        start file" class = "img-fluid">
+        <figcaption>Start file for Tutorial 14, Part A.</figcaption>
+       </figure>
+    </li>
+    <li><p>Choose File &gt; Save As, name the file <b>Brushes.svg</b>, and
+    store it where you deem best.</p>
+    </li>
+    <li><p>You will be using layers to create your artwork.</p>
+    <p>Click on the <b>View Layers</b> icon (<img src =
+    "images/ViewLayersIcon.gif" alt = "View Layers icon" width = "26">) in the
+    <b>Tool Controls Bar</b> and rename the current (and only) layer
+    <b>Guides</b>.</p>
+    </li>
+    <li><p>Add a new layer on top of the <b>Guides</b> layer and label it
+    <b>Tree and Leaves</b>. It is highlighted, indicating that it is the active
+    layer. This is the layer you will start drawing on.</p>
+    </li>
+    <li><p>Minimize the <b>Layers</b> dialog box by clicking the <b>Iconify
+    this dock</b> (<img src = "images/IconifyIcon.gif" alt = "Iconify this dock
+    icon" width = "26">) icon. You&rsquo;ll be using the <b>Layers</b> dialog
+    box later.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Using Art Brush Tools</h2>
+  </header>
+  <p>Art brushes stretch artwork evenly along a path. They include strokes
+  resembling various graphic media, such as the Chalk and Sponge, and Marker
+  brushes. Brush tools don&rsqou;t exist as a distinct central palette of tools
+  in Inkscape. Instead, they are distributed throughout Inkscape&rsqou;s
+  organization of features. In this section, you&rsquo;ll create and apply a
+  custom charcoal brush to draw the trunk and limbs of a tree in a way that
+  imitates using a charcoal pencil.</p>
+  <p>The start file has been created with guides that you can use to create
+  and align your artwork for this tutorial. They are locked and cannot be
+  selected, moved, modified, or printed (unless they are unlocked). The guides
+  in the illustration above are very light (that is how they are in the
+  original file). They will be darkened a bit in the rest of this tutorial so
+  you can see them more easily.</p>
+  <h4>Applying a Tapered Stroke Effect to a Path</h4>
+  <p>You&rsquo;ll start by drawing the trunk of the tree in a two-step process.
+  The first step involves tracing over the two trunk guides using the Pencil
+  tool (<img src = "images/PencilToolIcon.gif" alt = "Pencil tool icon" width =
+  "26">).</p>
+  <ol>
+    <li><p>Select the Pencil tool (<img src = "images/PencilToolIcon.gif" alt =
+    "Pencil tool icon" width = "26">). In the <b>Pencil Tool Control Bar</b>,
+    set <b>Smoothing</b> to <b>20</b> and <b>Shape</b> to <b>Triangle
+    in</b>.</p>
+      <figure>
+        <img src = "images/SelectTriangleIn.gif" alt = "Selecting Triangle in"
+        class = "img-fluid">
+        <figcaption>Setting <b>Smoothing</b> to <b>20</b> and <b>Shape</b> to
+        <b>Triangle in</b>.</figcaption>
+      </figure>
+      <p>The <b>Smoothing</b> function acts to reduce the small-scale bumps and
+      irregularities that commonly appear in a line or curve that you draw
+      using the Pencil tool. The <b>Smoothing</b> function allows you to make
+      a line or curve smooth by adjusting the smoothing factor from 1 to 100.
+      A smoothing factor of 1 keeps all the small bumps and jitters that the
+      hand produces. As you increase the smoothing factor, small-scale
+      deviations are reduced in size until you achieve an essentially straight
+      line, no matter how jiggly the line is.</p>
+      <p>A few examples below demonstrate how the smoothing function works:</p>
+        <figure>
+          <img src = "images/SmoothingExamples.gif" alt = "Examples of
+          smoothing" class = "img-fluid">
+          <figcaption>Examples of smoothing.</figcaption>
+        </figure>
+    </li>
+    <li><p>Drag the Pencil tool cursor up for the left side of the trunk and
+    down for the right side. Your line might look different in color and width
+    than the line in the figure below. You&rsquo;ll take care of that
+    shortly.</p>
+      <figure>
+        <img src = "images/TreeTrunk1.gif" alt = "Drawing the left side of the
+        tree trunk" class = "img-fluid">
+        <figcaption>Drawing the left trunk line.</figcaption>
+      </figure>
+      <p>Note how the line tapers from a somewhat wide start to a thin end.</p>
+    </li>
+    <li><p>Draw the right line for the tree trunk.<p>
+    <p>Choose <b>Triangle out</b> for <b>Shape</b> and draw up from the rope
+    knot at the bottom right of the trunk to the upstairs intersection with a
+    branch.</p>
+      <figure>
+        <img src = "images/TreeTrunk2.gif" alt = "Drawing the right side of them
+        tree trunk" class = "img-fluid">
+        <figcaption>Drawing the right trunk line.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will widen the starting point of the left line.</p>
+    <p>Magnify the starting point of the line and click the Node tool (<img src
+    = "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) in the
+    toolbox. Three nodes appear on the line, two of which are at the starting
+    point. One of the latter two nodes terminates the main trace or spine of the
+    line. The other is a width handle that allows you to change how wide the
+    line is at the starting point.</p>
+      <figure>
+        <img src = "images/TreeTrunk3.gif" alt = "Drawing the right side of them
+        tree trunk" class = "img-fluid">
+        <figcaption>Starting point of the left line magnified. The Node tool
+        icon points to the width handle.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the width handle to the right to widen the line&rsquo;s
+    starting point.</p>
+      <figure>
+        <img src = "images/TreeTrunk4.gif" alt = "Widening the start of the
+        left line" class = "img-fluid">
+        <figcaption>Widening the start of the left line.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat the last two steps for the right line. The width handle is
+    located at the wide top of the line.</p>
+      <figure>
+        <img src = "images/TreeTrunk5.gif" alt = "Widening the top of the
+        right line" class = "img-fluid">
+        <figcaption>Widening the top of the right line.</figcaption>
+      </figure>
+    </li>
+    <li><p>You now have the basic geometry of tree trunks that you will add an
+    appearance filter to in order to create a stylized charcoal pencil
+    effect.</p>
+      <figure>
+        <img src = "images/TreeTrunk6.gif" alt = "Widening the top of the
+        right line" class = "img-fluid">
+        <figcaption>Result.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <h4>Creating a Custom Filter with the Filter Editor</h4>
+  <aside>
+    <p><b>What Is a Filter?</b></p>
+    <p>A <b>filter</b> or <b>filter effect</b> is one or more mathematical
+    operations that a graphics program, such as Inkscape, applies to something
+    that you have drawn &mdash; a star, a tree, a dragonfly wing, etc. &mdash; and
+    produces a modified result &mdash; a star with a halo, a tree drawn with a
+    charcoal pencil, a transparent wing that shows what lies underneath, etc.
+    All the math is done behind the scenes. What&rsquo;s important is the visual
+    result on your screen, the print-out on good stationery, or added to a
+    video scene.</p>
+    <p>The filtering process starts out with a <i>source graphic</i>, your
+    original drawing. The filter program first analyzes the color fills,
+    strokes, paths, and other attributes that contribute to the drawing and then
+    transforms at least one of the attributes according to how the filter is put
+    together. Below are a few examples of source graphics that have a filter
+    applied to them.</p>
+      <figure>
+        <img src = "images/FilterExamples.gif" alt = "Filter examples" class =
+        "img-fluid">
+        <figcaption>Source graphics and filtered results.</figcaption>
+      </figure>
+  </aside>
+  <p>Inkscape does not have a filter that mimics drawing with a charcoal
+  pencil. So, you will create a charcoal filter using Inkscape&rsquo;s
+  Filter Editor.</p>
+  <ol>
+    <li><p>Select the left tree trunk line.</p>
+    </li>
+    <li><p>Choose Filters &gt; Filter Editor&hellip;. The Filter Editor dialog
+    panel appears. Resize the inner panels to make work easier.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/FilterEditorDialogBox.gif" alt = "Filter editor
+        dialog box" class = "img-fluid">
+        <figcaption>Filter editor dialog box.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/ResizeFilterEditorDialogPanel.gif" alt = "Resizing
+        the Filter editor dialog panel" class = "img-fluid">
+        <figcaption>Resizing the Filter editor dialog panel.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>You will create a new filter. Click on the <b>New</b> button.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/CursorOnNew.gif" alt = "Position the cursor on the
+        New button" class = "img-fluid">
+        <figcaption>Position the cursor on the New button.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/AddNewFilter.gif" alt = "Adding a new filter"
+        class = "img-fluid">
+        <figcaption>Adding a new filter.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>The new filter is given a default name, here <b>filter0</b>.</p>
+    <p>Click on the filter name to select it and type in <b>Charcoal</b>.
+    Press &lt;Enter&gt; to set the name.</p>
+      <figure>
+        <img src = "images/RenameNewFilter.gif" alt = "Renaming the new filter"
+        class = "img-fluid">
+        <figcaption>Renaming the new filter.</figcaption>
+      </figure>
+    </li>
+    <li><p>Activate the new filter by checking the checkbox next to the
+    filter&rsquo;s name. The left tree trunk line disappears. If you uncheck
+    the checkbox, the line reappears. Keep the checkbox checked so you can see
+    your progress as you go through the filter creation process.</p>
+    <figure>
+      <img src = "images/ActivateNewFilter.gif" alt = "Activating the new
+      filter" class = "img-fluid">
+      <figcaption>Activating the new filter.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the down arrow in the type box to the right of the <b>Add
+  Effect:</b> button. A list of filter primitives comes up.</p>
+  <p>Select <b>Turbulence</b> at the bottom of the list. <b>Turbulence</b> is
+  inserted into the selection box.</p>
+    <figure style = "float: left;" class = "mr-5">
+      <img src = "images/AddEffect1.gif" alt = "Adding a new effect to the new
+      filter" width = "500" class = "img-fluid">
+      <figcaption>Adding a new effect to the new filter.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/AddEffect2.gif" alt "Selecting the Turbulence
+      primitive" width = "500" class = "img-fluid">
+      <figcaption>Selecting the <b>Turbulence</b> primitive.</figcaption>
+    </figure>
+    <div style = "clear: left;"></div>
+    <aside>
+      <p><b>What Is a Filter Primitive?</b></p>
+      <p>When a filter is created that does several things to its associated
+      source graphic, it is commonly convenient to take very simple filter
+      components and link them together so that the graphic output from one
+      serves as the input for the next. These components are called <b>filter
+      primitives</b>. They commonly do just one simple thing, such as creating
+      a blur, moving (displacing) pixels to a new location, tile multiple copies
+      of the original source image (source graphic), and introducing different
+      types of visual noise.</p>
+      <p>Inkscape allows you to construct new filters using its Filter editor.
+      You can modify original images you make that are otherwise difficult or
+      inconvenient to construct using tools in the toolbox. Once the new filter
+      has been constructed, all you need to do is select the source graphic,
+      make a couple of selections, and the result appears immediately.</p>
+    </aside>
+  </li>
+  <li><p>Click on the <b>Add Effect:</b> button. The bounding box is now filled
+  with a random pattern.</p>
+    <figure>
+      <img src = "images/AddEffect3.gif" alt = "Adding the Turbulence primitive
+      to the Effect panel" class = "img-fluid">
+      <figcaption>Adding the Turbulence primitive to the Effect
+      panel.</figcaption>
+    </figure>
+    <p>Although the explanatory text is partially cut off, it reads, in its
+    entirety:</p>
+    <p class = "ml-5 mr-5"><b>The <i>feTurbulence</i> filter
+    primitive renders Perlin noise. This kind of noise is useful in simulating
+    several nature phenomena like clouds, fire and smoke and in generating
+    complex textures like marble or granite.</b></p>
+    <p>Below are examples of Perlin noise:</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/perlin_raw1.jpg" alt = "Example 1 of Perlin noise"
+        class = "img-fluid" width = "200">
+      </figure>
+      <figure style = "float: left;" class = "mr-5">
+        <img src = "images/perlin_raw2.jpg" alt = "Example 2 of Perlin noise"
+        class = "img-fluid" width = "200">
+      </figure>
+      <figure style = "float: left;" class = "mr-5">
+        <img src = "images/perlin_raw4.jpg" alt = "Example 3 of Perlin noise"
+        class = "img-fluid" width = "200">
+      </figure>
+      <figure>
+        <img src = "images/Perlin6KrOP.jpg" alt = "Example 4 of Perlin noise"
+        class = "img-fluid" width = "200">
+      </figure>
+      <div style = "clear: left;"></div>
+    <p>This is the sort of filter component that we need in the <b>Charcoal</b>
+    filter &mdash; the random and rough edge texture that a charcoal pencil
+    commonly produces when drawing. (The <b>fe</b> prefix stands for
+    <b>f</b>ilter <b>e</b>ffect)</p>
+    <li><p>Click on the down arrow in the type box to the right of the <b>Add
+    Effect:</b> button again and scroll down to <b>Displacement Map</b>.</p>
+      <figure>
+        <img src = "images/AddEffect4.gif" alt = "" class = "img-fluid">
+        <figcaption>Scrolling down to <b>Displacement Map</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on <b>Displacement Map</b>.</p>
+    <p><b>Displacement Map</b> is inserted into the <b>Add Effect:</b> text
+    box.</p>
+      <figure>
+        <img src = "images/AddEffect5.gif" alt = "Selecting the Displacement
+        Map filter primitive" class = "img-fluid">
+        <figcaption>Selecting the <b>Displacement Map</b> filter
+        primitive.</figcaption>
+      </figure>
+    </li>
+    <li>Click on the <b>Add Effect:</b> button. The <b>Displacement Map</b>
+    filter primitive is added to the list of filter components that build
+    toward the <b>Charcoal</b> filter. Note that the <b>Displacement Map</b>
+    has two arrowheads, instead of one.</p>
+      <figure>
+        <img src = "images/AddEffect6.gif" alt = "Displacement Map filter
+        primitive added to list of filter components" class = "img-fluid">
+        <figcaption><b>Displacement Map</b> filter primitive added to list of
+        filter components.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the top arrowhead in the <b>Displacement Map</b> bar. The
+    arrowhead turns red, indicating that it is selected.</p>
+      <figure>
+        <img src = "images/AddEffect7.gif" alt = "Clicking on the top arrow in
+        the Displacement Map bar" class = "img-fluid">
+        <figcaption>Clicking on the top arrow in the Displacement Map
+        bar.</figcaption>
+      </figure>
+    </li>
+    <li><p>Drag the top arrowhead to the leftmost vertical bar labeled
+    <b>Source graphic</b> and release the mouse button.</p>
+      <figure>
+        <img src = "images/AddEffect8.gif" alt = "Dragging the top arrowhead
+        to the Source graphic bar" class = "img-fluid">
+        <figcaption>Dragging the top arrowhead to the Source graphic
+        bar.</figcaption>
+      </figure>
+    </li>
+    <li><p>In the <b>Effect parameters</b> panel at the bottom of the dialog
+    box, set <b>Scale = 2.0</b>. A <b>Scale</b> setting of <b>2.0</b> produces
+    a good charcoal-like effect on an edge.</p>
+    <p>Our <b>X displacement</b> and <b>Y displacement</b> settings were
+    originally set to <b>Alpha</b>. We kept them that way.</p>
+      <figure>
+        <img src = "images/AddEffect9.gif" alt = "" class = "img-fluid">
+        <figcaption>Setting the <b>Scale Effect parameter</b> to
+        <b>2.0</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the right side line of the tree trunk with the Select tool
+    (<img src = "images/SelectionToolIcon.gif" alt = "Selection tool icon"
+    width = "26">).</p>
+      <figure>
+        <img src = "images/AddEffect10.gif" alt = "Selecting the right side line
+        of the tree trunk" class = "img-fluid">
+        <figcaption>Selecting the right side line of the tree
+        trunk.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Charcoal</b> filter checkbox to apply the filter.</p>
+      <figure>
+        <img src = "images/AddEffect11.gif" alt = "" class = "img-fluid">
+        <figcaption>Applying the <b>Charcoal</b> filter to the right side of
+        the tree trunk.</figcaption>
+      </figure>
+    </li>
+    <li><p>You might need to make fine adjustments to the placement, degree of
+    taper (thickness), and orientation of a line. You can click on a line that
+    has a filter already applied with the Node tool (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) and still
+    make your adjustments. The filter does not affect how the Node tool
+    works.</p>
+      <figure>
+        <img src = "images/AddEffect12.gif" alt = "Making fine adjustments with
+        the Node tool" class = "img-fluid">
+        <figcaption>Making fine adjustments with the Node tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Pencil tool (<img src = "images/PencilToolIcon.gif" alt =
+    "Pencil tool icon" width = "26">). Choose either the <b>Triangle in</b> or
+    <b>Triangle out</b> option and draw in the tree branches.</p>
+      <figure>
+        <img src = "images/AddEffect13.gif" alt = "Drawing the tree branches"
+        class = "img-fluid">
+        <figcaption>Drawing the tree branches.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the branches with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+    to group-select them.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/AddEffect14.gif" alt = "Marquee-selecting the
+        branches to group-select them" class = "img-fluid">
+        <figcaption>Marquee-selecting branches.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/AddEffect15.gif" alt = "Branches are group-selected"
+        class = "img-fluid">
+        <figcaption>Branches are group-selected.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Check the <b>Charcoal</b> filter checkbox to apply the filter. All
+    selected branches now look like charcoal pencil strokes.</p>
+      <figure>
+        <img src = "images/AddEffect16.gif" alt = "Applying the Charcoal filter"
+        class = "img-fluid">
+        <figcaption>Applying the Charcoal filter.</figcaption>
+      </figure>
+    </li>
+    <li><p>Some of the branches might not be aligned closely over their
+    respective guides. Using the Node tool (<img src = "images/NodeToolIcon.gif"
+    alt = "Node tool icon" width = "26">), make fine adjustments to the
+    curvature, beginning width, and length of line segments until you achieve
+    what you&rsquo;re looking for. Note that you can do fine adjustments with
+    a filter already applied &mdash; it will have no effect on the Node
+    tool.</p>
+      <figure>
+        <img src = "images/AddEffect17.gif" alt = "Fine-adjusting branch
+        placement, width, and length" class = "img-fluid">
+        <figcaption>Fine-adjusting branch placement, width, and
+        length.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Deselect to deselect the branches. The
+    <b>Charcoal</b> filter checkbox unchecks, signifying that nothing is
+    currently selected for stylizing.</p>
+      <figure>
+        <img src = "images/AddEffect18.gif" alt = "Deselecting the artwork"
+        class = "img-fluid">
+        <figcaption>Deselecting the artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Exit</b> button (<img src = "images/ExitButton.gif"
+    alt = "Filter Editor exit button" width = "26">) in the upper right corner
+    of the Filter Editor to dismiss it.</p>
+    </li>
+    <li><p>Below is the tree with its trunk and branches stylized as charcoal
+    pencil strokes.</p>
+      <figure>
+        <img src = "images/AddEffect19.gif" alt = "" class = "img-fluid">
+        <figcaption>Finished tree trunk and branches.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <h4>Using the Spray Tool As a Brush</h4>
+  <p>When you spray art objects along a guide or path, you are using the Spray
+  tool as if it were a paint brush. Objects can be sprayed directly onto a path
+  or splashed on so that the result is a scattering of objects, yet still
+  centered along the path, like leaves swept into rows or sand grains aligned
+  in ripples.</p>
+  <p>In this section, you will paint leaves along the tree branches in a very
+  loose manner using the Spray tool.</p>
+  <ol>
+    <li><p>Click on the right arrow at the bottom of the toolbox to expand
+    the <b>Hidden Tools</b> menu. Click on <b>Spray</b>.
+      <figure>
+        <img src = "images/SprayTool.gif" alt = "Selecting the Spray tool"
+        class = "img-fluid">
+        <figcaption>Selecting the Spray tool</figcaption>
+      </figure>
+    </li>
+    <li><p>In the <b>Spray Tool Controls Bar</b>, set <b>Width = 20</b>,
+    <b>Amount = 5</b>, <b>Rotation = 100</b>, <b>Scale = 0</b>, <b>Scatter =
+    100</b>, and <b>Focus = 1</b>. Also, activate <b>Apply over no transparent
+    areas</b> (<img src = "images/ApplyOverNoTransparentAreasIcon.gif" alt =
+    "Apply over no transparent areas icon" width = "26">) and <b>Apply over
+    transparent areas</b>  (<img src = "images/ApplyOverTransparentAreasIcon.gif"
+    alt = "Apply over transparent areas icon" width = "26">).</p>
+      <figure>
+        <img src = "images/SprayToolControlsBar.gif" alt = "Spray Tool Controls
+        Bar" class = "img-fluid">
+        <figcaption>Spray Tool Controls Bar</figcaption>
+      </figure>
+    </li>
+    <li><p>With the <b>Spray</b> tool active, click and trace over the guides
+    located at the top of the tree and spray paint on leaves until the tree
+    is &ldquo;well-leafed&rdquo; to your taste.</p>
+      <figure>
+        <img src = "images/SprayLeaves.gif" alt = "Spraying on leaf objects"
+        class = "img-fluids">
+        <figcaption>Spraying leaves onto the tree branches.</figcaption>
+      </figure>
+    </li>
+    <li><p>Your result will look different from the example below. The important
+    thing is that the tree should look well-endowed with leaves.</p>
+    <figure style = "float: left;" class = "ml-5 mr-5">
+      <img src = "images/TreeLeaves1.gif" alt = "A well-leafed tree"
+      class = "img-fluids">
+      <figcaption>Tree with leaves.</figcaption>
+    </figure>
+    <figure>
+      <img src = "images/TreeLeaves2.gif" alt = "A well-leafed tree with no
+      guides in the background"
+      class = "img-fluids">
+      <figcaption>Tree with leaves, no background guides.</figcaption>
+    </figure>
+  </li>
+  <div style = "clear: left;"></div>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Collecting Tapered Pencil Strokes to Simulate a Single Paintbrush
+    Stroke</h2>
+  </header>
+  <p>One way to imitate brush strokes involves drawing individual lines made
+  by the camel hairs of the brush tip and collecting them together into one
+  tip of any width. You can also use this technique to create tufts of grass,
+  which is the task of this section.</p>
+  <ol>
+    <li><p>You will start this section by adding a new layer ontop of the
+    <b>Tree and Leaves</b> layer.</p>
+    <p>Expand the iconified <b>Layers</b> dialog
+    box, add a new layer, and label it <b>Grass</b>. Also, lock the
+    <b>Tree and Leaves</b> layer so you won&rsquo;t accidentally modify your
+    earlier work. The guidelines in the <b>Guides</b> layer are already locked,
+    so it is not necessary to lock that layer.</p>
+      <figure>
+        <img src = "images/CurrentLayerDialogBox1.gif" alt = "Current Layers
+        dialog box" class = "img-fluid">
+        <figcaption>Current <b>Layers</b> dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Pencil tool (<img src = "images/PencilToolIcon.gif" alt =
+    "Pencil tool icon" width = "26">), choose <b>Shape = Triangle out</b> in
+    the <b>Pencil Tool Controls Bar</b>, and draw 5 or 6 line segments. Your
+    line segments might have different widths than those shown below. Give a
+    few of them a little bend or angle.</p>
+      <figure>
+        <img src = "images/Grass1.gif" alt = "Drawing individual grass leaf
+        starter shapes"
+        class = "img-fluid">
+        <figcaption>Drawing individual grass leaf starter shapes.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) and narrow the width of each line so that
+    they have the appearance of stylized brush hairs.</p>
+      <figure>
+        <img src = "images/Grass2.gif" alt = "Reducing grass leaf widths"
+        class = "img-fluid">
+        <figcaption>Reducing grass leaf widths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Bring down a guideline for aligning the bottoms of the line
+    segments.</p>
+      <figure>
+        <img src = "images/Grass3.gif" alt = "Lowering a guideline to align
+        grass blade bottoms" class = "img-fluid">
+        <figcaption>Lowering a guideline to align grass blade
+        bottoms.</figcaption>
+      </figure>
+    </li>
+    <li><p>Using the Select tool (<img src = "images/SelectionToolIcon.gif" alt
+    = "Selection tool icon" width = "26">), move the line segments together so
+    that they form a clump. Have them overlap each other so they appear more
+    organic in appearance.</p>
+      <figure>
+        <img src = "images/Grass4.gif" alt = "Moving individual grass blades
+        into a coherent tuft of grass" class = "img-fluid">
+        <figcaption>Moving individual grass blades into a coherent tuft of
+        grass.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make the clump of grass blades one path object for
+    easy path transformation.</p>
+    <p>Marquee-select the line segments and choose Path &gt; Object to
+    Path. Then choose Path &gt; Union to make the clump one path.</p>
+      <figure>
+        <img src = "images/Grass5.gif" alt = "Group-converting the grass blades
+        into paths" class = "img-fluid">
+        <figcaption>Group-converting the grass blades into paths and making a
+        union of them into one path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Give the tuft of grass a green color fill by selecting the green
+    swatch in the Color palette at the bottom of the working window.</b>
+      <figure>
+        <img src = "images/Grass6.gif" alt = "Giving the grass tuft a bright
+        green color fill" class = "img-fluid">
+        <figcaption>Giving the grass tuft a green color fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>The green color is too dark for the tuft of grass. This tuft is to
+    be duplicated and transformed against a background of grass. Give the tuft
+    a bright green color so it will stand out when the rest of the background
+    is drawn.</p>
+    <p>Choose Object &gt; Stroke and Fill&hellip;, click the <b>Fill</b> tab,
+    and enter <b>66ff00ff</b> into the <b>RGBA</b> text box. Press &lt;Enter&gt;
+    to set the color value.</p>
+      <figure>
+        <img src = "images/Grass7.gif" alt = "Giving the grass tuft a bright
+        green color fill" class = "img-fluid">
+        <figcaption>Changing the green color fill to bright green.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make duplicates of the tuft of grass using &lt;Ctrl&gt;-D and move
+    each duplicate to a grass tuft guide.</p>
+      <figure>
+        <img src = "images/Grass8.gif" alt = "Making and positioning duplicates
+        of the original tuft of grass" class = "img-fluid">
+        <figcaption>Making and positioning duplicates of the original tuft of
+        grass.</figcaption>
+      </figure>
+    </li>
+    <li><p>Transform each tuft of grass by rotating it and/or using the
+    <b>Envelope Deformation</b> path effect (choose Path &gt;
+    Path Effects&hellip; &gt; Envelope Deformation).</p>
+    <p>The <b>Envelope Deformation</b> path effect works only on paths, so it
+    was necessary to convert the original tuft of grass from a collection of
+    objects to a collection of paths, and then make one path out of them by
+    performing the <b>Union</b> operation.</b>
+    <p>When you select the <b>Envelope Deformation</b> path effect, a bounding
+    box encloses the object you want to transform. You can adjust each side of
+    the box, which is a <i>bend path</i> by selecting the appropriate icon in
+    the <b>Path Effects</b> dialog box, and then changing the bend of the side
+    and/or moving the nodes that define the ends of the line segment. Note
+    that the cursor turns into the Node tool cursor when you select one of the
+    four <b>bend path</b> icons. When you are done performing the
+    transformation, select the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">)
+    to dismiss the <b>Envelope Deformation</b> function.</p>
+      <figure>
+        <img src = "images/Grass9.gif" alt = "Applying the Envelope Deformation
+        Path Effect to bend a tuft of grass" class = "img-fluid">
+        <figcaption>Applying the Envelope Deformation Path Effect to bend a
+        tuft of grass.</figcaption>
+      </figure>
+    </li>
+    <li><p>This method of creating tufts of grass and paintbrush tips is just
+    one of many that you can explore and invent for yourself as you develop
+    your own style of painting.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Grass10.gif" alt = "Applying the Envelope Deformation
+        Path Effect to bend a tuft of grass" class = "img-fluid">
+        <figcaption>Tree with leaves surrounded by tufts of grass.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/Grass11.gif" alt = "Applying the Envelope Deformation
+        Path Effect to bend a tuft of grass" class = "img-fluid">
+        <figcaption>Tree with leaves surrounded by tufts of grass,<br>
+        no guidelines.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Click on the <b>Lock</b> icon (<img src = "images/UnlockedIcon.gif"
+    alt = "Unlocked layer icon" width = "26">) to the <b>Grass</b> layer to lock
+    it down (<img src = "images/LockedIcon.gif"
+    alt = "Locked layer icon" width = "26">).</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+  <h2>Drawing with the Pencil Tool&rsquo;s Ellipse Shape and the Bucket Fill
+  Tool</h2>
+  </header>
+  <p>You will learn how to work with the Pen tool&rsquo;s ellipse shape option
+  to draw the outline of the boat. Then, you will learn how to use the Bucket
+  Fill tool in color fill in the space within an unclosed curve.</p>
+  <ol>
+    <li><p>First, create a new layer ontop of the <b>Grass</b> layer you just
+    created earlier. Label it <b>Boat and Rope</b>.</p>
+    </li>
+    <li><p>Select the Pencil tool (<img src = "images/PencilToolIcon.gif" alt =
+    "Pencil tool icon" width = "26">). In the <b>Pencil Tool Control Bar</b>,
+    set <b>Smoothing</b> to <b>20</b> and <b>Shape</b> to <b>Ellipse</b>.</p>
+    <p>Using the guides, click-drag the Pencil tool along the nearer edge of
+    the top of the boat, and keeping the left mouse key depressed, continue
+    drawing along the bottom of the boat back to the starting point. Note that
+    there is a very thin line showing where you had drawn.</p>
+    <p>While you draw, you will note irregularities in the curvature of the
+    line trace because of your hand jiggling a little bit or the cat running
+    interference against your arm and hand. The <b>Smoothing</b> function will
+    eliminate many of the irregularities because you set its level to <b>20</b>.
+    You&rsquo;ll smooth the remaining irregularities out shortly.</p>
+    <p>If you&rsquo;re not satisfied with the result, you can always undo the
+    last with &lt;Ctrl&gt;-Z or by choosing Edit &gt; Undo and start over.</p>
+      <figure>
+        <img src = "images/Boat1.gif" alt = "" class = "img-fluid">
+        <figcaption>Tracing along the edge of the boat.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will see only the bounding box of the drawing area at first.
+    Click on the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">). The curve and its nodes appear.</p>
+    <p>There is an open circle at the starting point of the curve. This circle
+    is the <b>Thickness handle</b> for the ellipse shape option.</p>
+      <figure>
+        <img src = "images/Boat2.gif" alt = "" class = "img-fluid">
+        <figcaption>Viewing the drawn curve and nodes while the Node tool is
+        active.</figcaption>
+      </figure>
+    </li>
+    <li><p> With the Node tool active, click-drag the circle away from the
+    central line of the curve (its spine) a little bit to widen it. The circle
+    turns red when you activate it.</p>
+      <figure>
+        <img src = "images/Boat3.gif" alt = "" class = "img-fluid">
+        <figcaption>Widening the curve preliminarily using the <b>Thickness
+        handle</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Release the left mouse key and select the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">).
+    The curve is filled with the last color you used with the Pencil tool
+    (bright green).</p>
+      <figure>
+        <img src = "images/Boat4.gif" alt = "" class = "img-fluid">
+        <figcaption>The curve has been widened too much.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) again to make the curve line, nodes, and
+    the Thickness handle visible. Click-drag the Thickness handle in toward the
+    starting node to which it is attached to make the curve thinner. The
+    Thickness handle can be very sensitive to movement, so it might be helpful
+    to magnify the artwork so you can control the handle&rsquo;s movement more
+    easily.</p>
+      <figure>
+        <img src = "images/Boat5.gif" alt = "" class = "img-fluid">
+        <figcaption>Adjusting the width of the curve so it is
+        thinner.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the curve thinner, it is easier to see the remaining
+    irregularities in the curve. You will now make it partially transparent so
+    that you can see the underlying guide and adjust the spine of the curve to
+    match its path.</p>
+    <p>With the curve still selected, change its opacity from <b>100</b> to
+    <b>50</b> percent using the <b>O</b>pacity box next to the <b>Fill</b> and
+    <b>Stroke</b> indicators in the lower left corner of the work window.</p>
+      <figure>
+        <img src = "images/Opacity50Percent.gif" alt = "Changing the opacity
+        of the curve from 100 to 50 percent" class = "img-fluid">
+        <figcaption>Changing the opacity of the curve from 100 to 50
+        percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now make the adjustments you feel are needed to bring the drawn
+    curve into conformity with the guide curve underneath.</p>
+    <p>You might need to move nodes, adjust node handles, delete nodes, and
+    add others at locations along the curve to help you achieve the look you
+    want. Go for simplicity in the number of nodes needed to modify the curve.
+    Consider the figure below &mdash; it needs only six nodes placed at the ends
+    and at places where the curvature changes in sharpness. They are all that
+    are needed in this case.<p>
+      <figure>
+        <img src = "images/Boat7.gif" alt = "" class = "img-fluid">
+        <figcaption>Adjusting node and node handle placement.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are finished making fine adjustments, bring the
+    curve&rsquo;s opacity up to <b>100</b>.</p>
+      <figure>
+        <img src = "images/Boat8.gif" alt = "" class = "img-fluid">
+        <figcaption>Curve opacity now at 100 percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the color fill of the curve to a dark orange.</p>
+    <p>In the <b>Stroke and Fill</b> dialog box, <b>Fill</b> panel, type
+    the hexadecimal code <b>339933ff</b> into the <b>RGBA</b> text box and
+    press &lt;Enter&gt; to set it.</p>
+      <figure>
+        <img src = "images/Boat9.gif" alt = "" class = "img-fluid">
+        <figcaption>Changing the curve fill color to a dark orange.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now draw the upper rim of the boat with the Pencil tool (<img src =
+    "images/PencilToolIcon.gif" alt = "Pencil tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/Boat10.gif" alt = "" class = "img-fluid">
+        <figcaption>Drawing the upper edge of the boat with the Pencil
+        tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) to view the curve you just drew with its
+    nodes and Thickness handle.</p>
+      <figure>
+        <img src = "images/Boat11.gif" alt = "" class = "img-fluid">
+        <figcaption>Boat 11.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Dropper tool (<img src = "images/DropperToolIcon.gif"
+    alt = "Dropper tool icon" width = "26">) in the toolbox to select the color
+    of the curve you drew earlier.</p>
+    <p>Click in the dark orange curve with the Dropper tool to sample its
+    color. The newly drawn curve fills with dark orange.</p>
+      <figure>
+        <img src = "images/Boat12.gif" alt = "" class = "img-fluid">
+        <figcaption>Giving the upper curve a dark orange color
+        fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>Set the curve&rsquo;s opacity to <b>50</b> percent as you did in Step
+    7.</p>
+      <figure>
+        <img src = "images/Boat13.gif" alt = "" class = "img-fluid">
+        <figcaption>Setting the upper curve&rsquo;s opacity to <b>50</b>
+        percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make fine adjustments to the curve&rsquo;s shape. Note that only
+    two nodes are needed at the ends. The node handles take care of the
+    rest.</p>
+      <figure>
+        <img src = "images/Boat14.gif" alt = "" class = "img-fluid">
+        <figcaption>Fine-adjusting the shape of the upper curve.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure><p>When you&rsquo;re done making adjustments to the curve&rsquo;s
+      shape, bring its opacity up to <b>100</b> percent.</p>
+        <img src = "images/Boat15.gif" alt = "" class = "img-fluid">
+        <figcaption>Bringing the curve&rsquo;s opacity up to <b>100</b>
+        percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now draw in the sitting benches in the boat. Select <b>Shape =
+    None</b> in the <b>Pencil Tool Controls Bar</b> and trace over the guides
+    that represent the two benches.</p>
+      <figure>
+        <img src = "images/Boat16.gif" alt = "" class = "img-fluid">
+        <figcaption>Drawing the benches.</figcaption>
+      </figure>
+    </li>
+    <li><p>Using the <b>Stroke style</b> panel in the <b>Fill and Stroke</b>
+    dialog box, set the <b>Width</b> to <b>8 px</b>.</p>
+      <figure>
+        <img src = "images/Boat17.gif" alt = "" class = "img-fluid">
+        <figcaption>Setting the bench widths to 8 pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now paint the area inside the lower curve.</p>
+    <p>Select the <b>Paint Bucket</b> tool (<img src =
+    "images/PaintBucketToolIcon.gif" alt = "Paint Bucket tool icon" alt = "26">)
+    in the toolbox.</p>
+    <p> Position the <b>Paint Bucket</b> cursor (<img src =
+    "images/PaintBucketCursor.gif" alt = "Paint Bucket cursor" alt = "26">)
+    over the blank area inside the (almost completely closed) curve.</p>
+      <figure>
+        <img src = "images/Boat18.gif" alt = "" class = "img-fluid">
+        <figcaption>Positioning the Paint Bucket cursor inside the lower
+        curve.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click inside the curve. The blank area is now filled with the same
+    dark orange as the boat&rsquo; edge curves.</p>
+      <figure>
+        <img src = "images/Boat19.gif" alt = "" class = "img-fluid">
+        <figcaption>Filling the empty area inside the lower edge
+        curve.</figcaption>
+      </figure>
+    </li>
+    <li><p>Note that the fill stops at the right end where the guide is located.
+    The Paint Bucket tool interprets the line as a stopping point when it fills
+    the blank area.</p>
+    The color fill also stops at the left end where there is a small opening
+    between the starting and ending points of the curve.</p>
+      <figure>
+        <img src = "images/Boat20.gif" alt = "" class = "img-fluid">
+        <figcaption>Creating a color fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the color fill area still selected, change the color of the fill
+    to a brighter orange.</p>
+    <p>In the <b>Stroke and Fill</b> dialog box, <b>Fill</b> panel, type
+    the hexadecimal code <b>99cc33ff</b> into the <b>RGBA</b> text box and
+    press &lt;Enter&gt; to set it. You can see the two areas that are not filled
+    more easily.</p>
+      <figure>
+        <img src = "images/Boat21.gif" alt = "" class = "img-fluid">
+        <figcaption>Changing the fill color to a bright orange.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>Paint Bucket</b> tool is sensitive to the magnification of
+    the area you want to fill. By increasing the magnification of the fill area,
+    you can undo what you just did in filling the area, and refill it using a
+    higher magnification.</p>
+    <p>Increase the magnification of the fill area, making sure that none of it
+    goes outside the window area &mdash; any part outside the window is
+    considered a boundary by the <b>Paint Bucket</b> tool and filling will stop
+    at that limit.</p>
+    <p>Go to the <b>Layer</b> dialog box and click on the <b>Eye</b> icon for
+    the bottommost <b>Guides</b> layer to turn off visibility. The guides are
+    still there, just not rendered.</p>
+    <p>Undo, then redo color-filling the blank area with the Paint Bucket tool
+    (<img src = "images/PaintBucketToolIcon.gif" alt = "Paint Bucket tool icon"
+    alt = "26">). With the right end guide hidden, the color fill extends
+    further to the right inside the curve.</p>
+      <figure>
+        <img src = "images/Boat22.gif" alt = "" class = "img-fluid">
+        <figcaption>Redoing filling the blank area with the right-end
+        guide not visible.</figcaption>
+      </figure>
+    </li>
+    <li><p>Magnify the left end of the curve. Select the Node tool (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) to see
+    the nodes, node handles, and line of the color fill area.</p>
+    <p>The color fill area is placed above its bounding curve in the image
+    stack. You can now reshape the fill area by adjusting its nodes and node
+    handles so that it overlaps the curve slightly, eliminating any spurious
+    opening spaces between fill area and bounding curve.</p>
+    <p>Adjust any nodes and node handles to create a slight overlap. At the left
+    end of the fill area, pull the area to the left a little to fill the gap
+    between the starting point and the ending point better.</p>
+      <figure>
+        <img src = "images/Boat23.gif" alt = "" class = "img-fluid">
+        <figcaption>Extending the left end of the fill area.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Select tool (<img src = "images/SelectionToolIcon.gif"
+    alt = "Selection tool icon" width = "26">) and then click on the <b>Lower
+    selection one step</b> icon (<img src = "images/LowerSelectionOneStepIcon.gif"
+    alt = "Lower selection one step icon" width = "26">), perhaps up to six
+    times, to lower the fill area underneath the curve.</p>
+      <figure>
+        <img src = "images/Boat24.gif" alt = "" class = "img-fluid">
+        <figcaption>Lowering the fill area so its boundaries lie underneath
+        the bounding curve.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Deselect to deselect the artwork.</p>
+      <figure>
+        <img src = "images/Boat25.gif" alt = "Finished boat" class =
+        "img-fluid">
+        <figcaption>Finished boat (with the guide layer hidden).</figcaption>
+      </figure>
+    </li>
+    <li><p>Your current artwork should appear similar to the image below, with
+    the <b>Guides</b> layer visible. It might not be exact, but that is not the
+    point. The important thing is that you are now familiar with the techniques
+    that brought you to this point of excellence.</p>
+      <figure>
+        <img src = "images/PartiallyFinishedArtwork.gif" alt = "Partially
+        finished artwork" class = "img-fluid">
+        <figcaption>Partially finished artwork, ready for the next
+        tutorial.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Final Word Before Chapter 14, Part B</h2>
+  </header>
+  <p>Using brush techniques to texture how strokes, line segments, and curves
+  look is a broad subject that is way beyond the scope of this tutorial. The
+  techniques that you have learned up to this point can already serve you very
+  well in creating artwork that invites the visitor to look more closely, and
+  enjoy both the small details and how they weave themselves into the larger
+  picture. The next tutorial, Tutorial 14B, explores how to fill a space with
+  Inkscape pen and pencil scribble techniques, and how to apply them to texture
+  the appearance of text, to where it is no longer a string of letters, but
+  text stylized to capture and hold your viewer&rsquo;s attention through your
+  inventiveness.</p>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>What are tools that can be used as pencils or brushes?
+    </li>
+    <li>What is the difference between a filter and a filter primitive?
+    </li>
+    <li>What is the function of the Spray tool?
+    </li>
+    <li>How do you make ellipse shapes visible when using the Pencil tool?
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>Inkscape has available the Pencil tool (<img src =
+    "images/PencilToolIcon.gif" alt = "Pencil tool icon" width = "26">),
+    the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen tool icon"
+    width = "26">), the Spray tool, the Calligraphy tool (<img src =
+    "images/CalligraphyToolIcon.gif" alt = "Calligraphy tool icon" width =
+    "26">), and the Paint Bucket tool (<img src =
+    "images/PaintBucketToolIcon.gif" alt = "Paint Bucket tool icon" width =
+    "26">).</p>
+    <p>The Pencil tool (<img src = "images/PencilToolIcon.gif" alt = "Pencil
+    tool icon" width = "26">) allows you to draw or trace along a guide as if
+    you were using an actual pencil. You can stylize what you draw using the
+    Triangle in, Triangle out, and Ellipse options, among others.</p>
+    <p>The Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen tool icon"
+    width = "26">) allows you to draw simple or stylized curves in addition to
+    lines and edit them as you draw using nodes and node handles.</p>
+    <p>The Paint Bucket tool (<img src = "images/PaintBucketToolIcon.gif" alt =
+    "Paint Bucket tool icon" width = "26">) lets you fill in spaces according
+    to criteria that you specify in the Paint Bucket Tool Control Bar.</p>
+    </li>
+    <li><p>A filter is an operation or process that alters an image that already
+    has been drawn or painted, that is, an <u>original</u> or <u>source</u>
+    graphic image. The filter adds something extra to the image, such as giving
+    it a blur, a shadow, a glow, or a change in shape.</p>
+    <p>A filter primitive is a filter that performs commonly just one operation.
+    It can be considered a simple piece that can be added or linked together
+    with other simple "filter pieces" or components using a filter editor to
+    create a graphic operation that can perform complex actions on a source
+    graphic.</p>
+    </li>
+    <li><p>The Spray tool can be thought of as a type of brush that brushes
+    objects (or copies of an object) onto the workspace, much like dipping a
+    paint brush into some glue, and then into a collection of objects, such as
+    leaves, confetti, or raindrop shapes, and then brushing them onto a canvas.
+    The number of objects sprayed on, the spray area around the Spray tool
+    cursor, and other attributes are adjustable in the <b>Spray Tool Controls
+    Bar</b>.</p>
+    </li>
+    <li><p>After you have drawn your shape with the Pencil or Pen tool, select
+    the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node tool icon"
+    width = "26">). The curve (or curve spine), nodes, node handles, and the
+    Thickness handle appear, allowing adjustment of curve position and
+    thickness.</p>
+    <p>When color filling the curve, use the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">) to
+    view the color fill. When making fine adjustments to the curve, you might
+    find yourself switching between the views furnished by the Select tool and
+    Node tool &mdash; the Select tool (<img src = "images/SelectionToolIcon.gif"
+    alt = "Selection tool icon" width = "26">) allowing you to see coloration,
+    and the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node tool
+    icon" width = "26">) allowing you to see structural controls for the
+    curve.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
