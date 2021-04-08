@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 15, Part A - Working with Brush Styling</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, cylinders, drop shadows, 3D effect">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 15, Part A &ndash; Cylinders, Spheres, and Other 3D
+          Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead">Inkscape&rsquo;s drawing
+      and painting tools allow you to create the effect of depth with drop
+      shadow and color gradient capabilities. Cylindrical containers, spheres,
+      and vases become solid when they cast a shadow on a background or reflect
+      a source of illumination, enhancing the effect of a three-dimensional
+      environment.</p>
+      </div>
+    </div>
+<section>
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul type = "disc">
+    <li>Bend text.
+    </li>
+    <li>Style text outlines.
+    </li>
+    <li>Create a 3-D cylinder out a rectangle and ellipses.
+    </li>
+    <li>Add gradient coloring to create illumination on a curved surface.
+    </li>
+    <li>Use a Pattern Along Path technique to create and place a decorative band
+    around the middle of a cylinder.
+    </li>
+  </ul>
+  <p>This tutorial is the first of two parts in which you will create a series
+  of 3-D objects for a poster. Each object is made using separate sets of
+  drawing techniques to create the illusion of depth.</p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>In this tutorial, you&rsquo;ll create a cylindrical object using the
+  ellipse, path union, and gradient tools.</p>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15A/Tutorial15A_end.svg"><b>Tutorial15A_end.svg</b></a> and
+    store it in a convenient location.</p>
+    </li>
+    <li><p>File &gt; Open file <b>Tutorial15A_end.svg</b>. This file displays a
+    completed illustration of a soap can, soap balls, and a vase.</p>
+    <p>If you like, choose View &gt; Zoom &gt; Zoom Out to reduce the view of
+    the finished artwork, adjust the window size, and leave it on your screen
+    as you work. (Use the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to select and move the artwork
+    where you want it in the window.) If you don&rsquo;t want to leave the
+    image open, choose File &gt; Close.</p>
+    </li>
+  </ol>
+  <p><b>Resource:</b> For an illustration of the finished artwork in this
+  tutorial, see the top of this page.</p>
+</section>
+<section>
+  <header>
+    <h2>Drawing the Canister Lid</h2>
+  </header>
+  <p>To begin working, you&rsquo;ll open an existing art file to which you will
+  add objects that require a 3-D look.</p>
+  <ol start = "4">
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15A/Tutorial15A_start.svg"><b>Tutorial15A_start.svg</b></a> and
+    store it in a convenient location.</p>
+    <p>File &gt; Open file <b>Tutorial15A_start.svg</b>.</p>
+      <figure>
+        <img src = "images/Tutorial15A_start.gif" alt = "Starting art file for
+        Tutorial 15A" class = "img-fluid">
+        <figcaption>Starting art file for Tutorial 15A.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save As&hellip; and name the copy of the file
+    <b>Lemon.svg</b>.</p>
+    </li>
+    <li><p>You will stylize the logo. With the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">),
+    select the logo text.</p>
+    <p>From here on, we will call logo text <b>logotype</b>. In graphic design,
+    a logotype is a single piece of text that prints a logo or emblem, or is a
+    logo if the figure is centered around a company name or initials.</p>
+      <figure>
+        <img src = "images/SelectLogo.gif" alt = "Selecting the logo" class =
+        "img-fluid">
+        <figcaption>Selecting the logotype.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the logotype off to the side of the artwork. This way, you can
+    modify it without being distracted by artwork details underneath.</p>
+      <figure>
+        <img src = "images/Text01.gif" alt = "Moving the logotype off the
+        artwork" class = "img-fluid">
+        <figcaption>Moving the logotype off the artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Object &gt; Fill and Stroke&hellip;, click on the <b>Stroke
+    style</b> tab.</p>
+    <p>Give the lettering a yellow stroke by &lt;Shift&gt;-clicking on the
+    yellow swatch in the Color palette at the bottom of the work window.</p>
+    <p>Give the stroke a <b>Width</b> of <b>1.500 px</b>.</p>
+      <figure>
+        <img src = "images/Text02.gif" alt = "Giving the logotype a 1.5-pixel
+        thick yellow stroke" class = "img-fluid">
+        <figcaption>Giving the logotype a 1.5-pixel thick yellow
+        stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make a second stroke that borders the first yellow
+    stroke.</p>
+    <p>The second stroke will actually be path copies of the original text
+    characters that you will resize and color using the <b>Linked Offset</b>
+    tool.</p>
+    </li>
+    <li><p>Choose Path &gt; Linked Offset. The logotype is enclosed in a
+    bounding box, an offset handle appears, and the Node tool is activated
+    (<img src = "images/NodeToolIcon.gif" alt = "Node tool icon" width =
+    "26">).</p>
+      <figure>
+        <img src = "images/Text03.gif" alt = "Linked Offset tool activated,
+        offset handle visible, and the Select tool cursor becomes the Node tool
+        cursor" class = "img-fluid">
+        <figcaption>Linked Offset tool activated, offset handle visible, and
+        the Select tool cursor becomes the Node tool cursor.</figcaption>
+      </figure>
+    </li>
+    <li><p>Slowly drag the offset handle to the left or up. You will see a
+    second yellow-stroke and black-filled text-figure start to appear from
+    behind the original text. Stop when you see the black fill appear.</p>
+      <figure>
+        <img src = "images/Text04.gif" alt = "Dragging the offset handle off to
+        a side to expand the copied path" class = "img-fluid">
+        <figcaption>Dragging the offset handle off to a side to expand the
+        copied path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Delete the outer yellow stroke by &lt;Shift&gt;-clicking on the
+    <b>none</b> color swatch (<img src = "images/NoneSwatch.gif" alt = "None
+    color swatch" width = "26">) at the left end of the Color palette. The
+    underlying black color fill appears.</p>
+      <figure>
+        <img src = "images/Text05.gif" alt = "Deleting the outer yellow stroke"
+        class = "img-fluid">
+        <figcaption>Deleting the outer yellow stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">) still active, drag the offset handle inwards into
+    the figure to shrink the width of the black outer stroke. Stop at what you
+    feel is a reasonable thinness.</p>
+      <figure>
+        <img src = "images/Text06.gif" alt = "Making the black second stroke
+        thinner" class = "img-fluid">
+        <figcaption>Making the black second stroke thinner.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make a drop shadow. Choose Filters &gt; Shadows and Glows &gt; Drop
+    Shadow&hellip;.</p>
+    </li>
+    <li><p>In the <b>Drop Shadow</b> dialog box, click on the <b>Blur color</b>
+    tab to bring up the <b>Blur color</b> palette. Type <b>8bbe1bff</b> into the
+    <b>RGBA</b> text box to give the shadow a dark lemon-lime color and press
+    &lt;Enter&gt; to set the hexadecimal color value.</p>
+    </li>
+    <li><p>Click on the <b>Options</b> tab to bring up the <b>Options</b>
+    settings dialog box. Set the <b>Blur radius (px)</b> to <b>0.5</b>, the
+    <b>Horizontal offset (px)</b> to <b>0.7</b>, and the <b>Vertical offset</b>
+    to <b>0.7</b>. The <b>Shadow type</b> should show a default setting of
+    <b>Outer</b>. Change the value to <b>Outer</b> if the setting is something
+    else.</p>
+    </li>
+    <li><p>Click on the <b>Live preview</b> checkbox to see the resulting drop
+    shadow before you actually apply the shadow effect. If you like what you
+    see, click on the <b>Apply</b> button, then <b>Close</b>.</p>
+    </thead>
+    <p>
+      <figure>
+        <img src = "images/Text07.gif" alt = "Applying the drop shadow filter
+        effect" class = "img-fluid">
+        <figcaption>Applying the drop shadow filter effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now bend the logotype. With the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">)
+    active, choose Path &gt; Path Effects&hellip; &gt; Bend. The <b>Bend
+    path</b> tool appears.</p>
+    <p>Click on the <b>Edit on-canvas</b> button in the <b>Path Effects</b>
+    dialog box to activate the <b>Bend</b> path editing tool.</p>
+      <figure>
+        <img src = "images/BendPath.gif" alt = "Bend path tool" class =
+        "img-fluid">
+        <figcaption>Bend path tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the left end node on the <b>Bend</b> tool bar down about
+    the height of a letter. The whole line of text tilts.</p>
+      <figure>
+        <img src = "images/Text08.gif" alt = "Tilting the logotype down on the
+        left end" class = "img-fluid">
+        <figcaption>Tilting the logotype down on the left end.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the <b>Bend</b> path editing tool still active, click on the
+    middle of the <b>Bend</b> tool bar and drag it down so the left-hand
+    direction handle is parallel with the bottom (and top) side of the bounding
+    box.</p>
+      <figure>
+        <img src = "images/BentPath1.gif" alt = "Bending the left half of the
+        logotype path" class = "img-fluid">
+        <figcaption>Bending the left half of the logotype path.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the <b>Bend</b> path editing tool still active, click on the
+    node at the end of the right-hand direction handle and bring it up until
+    the handle is parallel to the top (and bottom) side of the bounding box.
+    Move both direction handle nodes until they are at the center line of the
+    bounding box, producing a symmetrical bend in the logotype.</p>
+      <figure>
+        <img src = "images/BentPath2.gif" alt = "Bending the right half of the
+        logotype path" class = "img-fluid">
+        <figcaption>Bending the right half of the logotype path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Select tool (<img src = "images/SelectionTool.gif" alt
+    = "Selection tool icon" width = "26">), marquee-select the logotype (you
+    will also be selecting any paths located lower in the image stack), group it
+    with &lt;Ctrl&gt;-G, and move the it onto the artwork. Position it until
+    you like what you see.</p>
+      <figure>
+        <img src = "images/Text09.gif" alt = "Moving the logotype" class =
+        "img-fluid">
+        <figcaption>Moving the logotype.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reposition and resize the logotype as you see fit. Once done, click
+    away from the artwork to deselect it.</p>
+      <figure>
+        <img src = "images/Text10.gif" alt = "Finished lid artwork" class =
+        "img-fluid">
+        <figcaption>Finished lid artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt;Save the artwork.</p>
+    </li>
+  </ol>
+  <aside><p><b>Note:</b> Inkscape has an idiosyncracy that involves the order
+  in which a drop shadow and path bend are applied. In the artwork above, the
+  drop shadow filter was applied before applying the path bend effect. The
+  result below shows an even casting of the drop shadow.</p>
+  <p>If, however, the path bend effect is applied <u>before</u> the drop shadow,
+  a portion of the drop shadow is clipped off, producing a visually unpleasant
+  result.</p>
+    <figure>
+      <img src = "images/ShadowClipping.gif" alt = "Applying the drop
+      shadow filter <u>before</u> the bend path effect and <u>after</u>
+      the bend path effect" class = "img-fluid">
+      <figcaption>Applying the drop shadow filter <u>before</u> the bend path
+      effect and <u>after</u> the bend path effect. Note the clipped shadows
+      in the second example.</figcaption>
+    </figure>
+    <p>If you want or need to combine drop shadow and bend path effects,
+    consider using the <b>Bend</b> path effect last. The <b>Bend</b> path effect
+    works on whatever paths you select, including their attributes, such a drop
+    shadow. A drop shadow filter extends out from what is easily visible, and
+    yet is still part of the shadow region. The <b>Bend</b> tool
+    &ldquo;sees&rdquo; that invisible region, considers it as part of the
+    shadow, and thus includes it as part of the whole construct that is to be
+    warped.</p>
+    <p>If, however, the object is bent <u>before</u> applying the drop shadow
+    filter, the <b>Bend</b> tool &ldquo;sees&rdquo; only the object to be
+    warped, but there is no shadow to include as part of the object. The object
+    is warped, and then, when the drop shadow filter is applied, the boundary
+    created by the <b>Bend</b> tool inadvertently clips the shadow up to the
+    limit set by the bounding box of the original object.</p>
+    <p>Should something look not right, consider changing the order with which
+    filters and effects are applied as you create your artwork.</p>
+  </aside>
+</section>
+<section>
+  <header>
+    <h2>Drawing a Cylinder</h2>
+  </header>
+  <p>In this section, you will draw the cylindrical body of the soap
+  canister.</p>
+  <ol>
+    <li><p>You will start by grouping all the components that make up the lid
+    design to make it easy to manipulate the entire object. You will then
+    rotate the canister lid design by 15 degrees anticlockwise to suggest that
+    you are viewing it from a casual, off-angle perspective.</p>
+    </li>
+    <li><p>Marquee-select the canister lid artwork with the Select tool (<img
+    src = "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">)
+    and &lt;Ctrl&gt;-G to group all the image components of the lid.</p>
+      <figure>
+        <img src = "images/GroupingLidComponents.gif" alt = "Grouping the lid
+        components" class = "img-fluid">
+        <figcaption>Grouping the lid components.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the lid figure still selected, choose Object &gt;
+    Transform&hellip; and click on the <b>Rotate</b> tab. Set the <b>Angle</b>
+    to <b>15</b>, make sure the unit of measurement is degrees (<b>&deg;</b>),
+    select the <b>Anticlockwise direction</b> icon (<img src =
+    "images/AnticlockwiseDirectionIcon.gif" alt = "Anticlockwise direction
+    icon">), and then click on the <b>Apply</b> button.</p>
+      <figure>
+        <img src = "images/RotateLid15Degrees.gif" alt = "Rotate the lid 15
+        degrees anticlockwise" class = "img-fluid">
+        <figcaption>Rotate the lid 15 degrees anticlockwise.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will use guidelines to make sure that the canister body has the
+    same width as the lid.</p>
+    <p>Drag a guideline from the left ruler to the right side of the lid and
+    drag another guideline to the left side of the lid.</p>
+    <figure>
+      <img src = "images/Guidelines.gif" alt = "Dragging guidelines to the left
+      and right sides of the lid figure" class = "img-fluid">
+      <figcaption>Dragging guidelines to the left and right sides of the lid
+      figure.</figcaption>
+    </figure>
+  </li>
+  <li><p>You will now bring your point of view down so it does not seem as if
+  you are looking straight down from the top center of the lid but somewhere
+  closer to the plane of the table that the canister is sitting on. (You will
+  draw the table top later.)</p>
+  <p>Select the lid artwork (reselect it if it has been deselected), and choose
+  Object &gt; Transform&hellip; and click on the <b>Scale</b> tab. Set the
+  <b>Height</b> to <b>30</b> and make sure that the unit of measurement box
+  to the right of the <b>Width</b> textbox is set to percent (<b>%</b>).</p>
+  <p>Click on the <b>Apply</b> button.</p>
+    <figure>
+      <img src = "images/ScaleHeight30Percent.gif" alt = "Scaling the lid height
+      down to 30 percent" class = "img-fluid">
+      <figcaption>Scaling the lid height down to 30 percent.</figcaption>
+    </figure>
+  </li>
+  <li><p>The lid figure has expanded in size a little bit as an artifact from
+  the rescaling process. &lt;Ctrl&gt;-drag or &lt;Ctrl&gt;-&lt;Shift&gt;-drag a
+  sizing handle to resize the lid so it fits exactly inside the left and right
+  guidelines. (&lt;Ctrl&gt;-&lt;Shift&gt;-drag resizes an object from its
+  center.)</p>
+    <figure>
+      <img src = "images/ResizeLid.gif" alt = "Resizing the lid so it fits
+      exactly within the two guidelines" class = "img-fluid">
+      <figcaption>Resizing the lid so it fits exactly within the two
+      guidelines.</figcaption>
+    </figure>
+    <p>The canister lid is now ready to have a cylindrical body fitted to
+    it.</p>
+  </li>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing a Cylinder</h2>
+  </header>
+  <p>In this section, you draw a rectangle that will become the body of the
+  cylinder, reshape a circle into an ellipse to make the bottom of the cylinder,
+  and join them together. You will then add the lid figure you just drew ontop
+  to make the complete canister.</p>
+  <ol>
+    <li><p>Select the Rectangle tool (<img src = "images/RectangleToolIcon.gif"
+    alt = "Rectangle tool icon" width = "26">).</p>
+    </li>
+    <li><p>If the <b>Snap Controls Bar</b> isn&rsquo;t visible, choose View &gt;
+    Show/Hide, and check the <b>Snap Controls Bar</b> checkbox. Select <b>Enable
+    snapping (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable
+    snapping icon" width = "26">), <b>Snap bounding boxes</b> (<img src =
+    "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width =
+    "26">), <b>Snap bounding box corners</b> (<img src =
+    "images/SnapBoundingBoxCornersIcon.gif" alt = "Snap bounding box corners
+    icon" width = "26">), and <b>Snap guides</b> (<img src =
+    "images/SnapGuidesIcon.gif" alt = "Snap guides icon" width = "26">).</p>
+    </li>
+    <li><p>Draw a rectangle of moderate height (your choice) and width enough to
+    fit between the guidelines. Guideline indicator messages will let you know
+    when rectangle bounding box corners have snapped to the guidelines.</p>
+    </li>
+    <li><p>With the rectangle still selected, click on the <b>50% Gray</b> color
+    swatch in the Color palette at the bottom of the work window, then
+    &lt;Shift&gt;-click on the <b>none</b> color swatch (<img src =
+    "images/NoneSwatch.gif" alt = "None color swatch" width = "26">) at the
+    left end of the Color palette so the rectangle will not have a border.</p>
+      <figure>
+        <img src = "images/MakeRectangle.gif" alt = "Making a rectangle" class =
+        "img-fluid">
+        <figcaption>Making the rectangle for the cylinder body.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Ellipse tool (<img src = "images/EllipseToolIcon.gif"
+    alt = "Ellipse tool icon" width = "26">).</p>
+    </li>
+    <li><p>In the <b>Snap Controls Bar</b>, keeping <b>Enable snapping (%)</b>
+    (<img src = "images/EnableSnappingIcon.gif" alt = "Enable snapping icon"
+    width = "26">) active, turn off <b>Snap bounding boxes</b> (<img src =
+    "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width =
+    "26">), turn on <b>Snap nodes, paths, and handles</b> (<img src =
+    "images/SnapNodesPathsHandlesIcon.gif" alt = "Snap nodes, paths, and handles
+    icon" width = "26">), and turn on <b>Snap smooth nodes, incl. quadrant points
+    of ellipses</b> (<img src = "images/SnapSmoothNodesIcon.gif" alt = "Snap
+    smooth nodes, including quadrant point of ellipses icon" width = "26">).
+    Keep <b>Snap guides</b> (<img src = "images/SnapGuidesIcon.gif" alt = "Snap
+    guides icon" width = "26">) turned on.</p>
+    </li>
+    <li><p>You will now draw the bottom rim of the canister.</p>
+    <p>Below the rectangle you just drew, draw a circle, using
+    &lt;Ctrl&gt;-drag, that fits inside the two guidelines. If you don&rsquo;t
+    get the diameter right, switch to the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">) and
+    &lt;Ctrl&gt;-drag a sizing handle until you get a circle that fits exactly
+    between the two guidelines. Guideline indicator messages will let you know
+    when the circle touches a guideline.</p>
+    </li>
+    <li><p>With the circle still selected, give it a <b>50% Gray</b> color fill
+    and a stroke of <b>none</b> as you had done for the rectangle in Step 4.</p>
+    </li>
+    <li><p>You will now transform the circle into an ellipse having the same
+    curvature as the canister lid. Remember that the original lid design was a
+    circle that you transformed into an ellipse with a height of 30 percent of
+    its original diameter. You will do the same for the gray circle you just
+    drew.</p>
+    <p>With the circle still selected, choose Object &gt; Transform&hellip;,
+    click on the <b>Scale</b> tab, and change the <b>Height</b> from <b>100</b>
+    to <b>30</b> percent. (Make sure that the unit of measurement is percent
+    (<b>%</b>)) Click on the <b>Apply</b> button.</p>
+      <figure>
+        <img src = "images/MakeCanisterBottom.gif" alt = "Making the bottom of
+        the cylinder" class = "img-fluid">
+        <figcaption>Making the bottom of the cylinder.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make a duplicate of the ellipse with &lt;Ctrl&gt;-D and move it
+    further down from the first ellipse. You will use the duplicate shortly to
+    make a decorative band around the middle of the cylinder.</p>
+    </li>
+    <li><p>Select the first ellipse and move it up until its major diameter
+    coincides with the bottom side of the rectangle. (In geometrical terms,
+    this diameter of an ellipse is called its major axis; the shorter diameter
+    is called the minor axis.)</p>
+    <p>The rectangle and ellipse below are partially transparent to show their
+    placement.</p>
+      <figure>
+        <img src = "images/PositioningBottomEllipse.gif" alt = "Positioning the
+        ellipse to make the bottom of the cylinder" class = "img-fluid">
+        <figcaption>Positioning the ellipse to make the bottom of the
+        cylinder.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will turn both objects into one by creating a path union.</p>
+    <p>Group-select the rectangle and ellipse by &lt;Shift&gt;-clicking
+    them.</p>
+      <figure>
+        <img src = "images/Prep4Union.gif" alt = "Group-selecting the
+        rectangle and ellipse to make paths and then a path union out of them"
+        class = "img-fluid">
+        <figcaption>Group-selecting the rectangle and ellipse to make paths and
+        then a path union out of them.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Union. Both rectangle and ellipse objects are
+    converted into paths. Both paths are then joined into one path. Note that
+    there is only one bounding box where there were two.</p>
+      <figure>
+        <img src = "images/Union.gif" alt = "Rectangle and ellipse made into a
+        path union" class = "img-fluid">
+        <figcaption>Rectangle and ellipse made into a path union.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the canister lid artwork down until its major axis (it is an
+    ellipse) coincides with the top side of the canister body object.</p>
+      <figure>
+        <img src = "images/PlacingLid.gif" alt = "Placing the lid on top of
+        the cylinder body" class =
+        "img-fluid">
+        <figcaption>Placing the lid on top of the cylinder body.</figcaption>
+      </figure>
+      <p>Note how the left and right guidelines help you to maintain a constant
+      width of the canister lid top, body, and bottom. The artwork now looks
+      like a well put-together canister.</p>
+    </li>
+    <li><p>To enhance the 3-D effect, you will give the canister body a
+    gradient, suggesting lighting from the side reflecting off a cylindrical
+    shape.</p>
+    <p>If the <b>Fill and Stroke&hellip;</b> dialog box isn&rsquo;t active, then
+    choose Object &gt; Fill and Stroke&hellip;, click on the <b>Linear
+    gradient</b> icon. The cylinder component is given a default color
+    gradient.</p>
+      <figure>
+        <img src = "images/Gradient1.gif" alt = "Selecting the Linear gradient
+        color fill" class = "img-fluid">
+        <figcaption>Selecting the Linear gradient color fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the <b>Create and edit gradients</b> tool (<img src =
+    "images/EditGradientsIcon.gif" alt = "Create and edit gradients tool icon"
+    width = "26">) in the toolbox. The <b>Edit gradient</b> tool line appears
+    across the cylinder body.</p>
+      <figure>
+        <img src = "images/Gradient2.gif" alt = "Selecting the Linear gradient
+        tool" class = "img-fluid">
+        <figcaption>Selecting the Linear gradient tool.</figcaption>
+      </figure>
+    </li>
+    <li>You will now add a gradient stop to the middle of the <b>Edit
+    gradient</b> tool line. Double-click on the middle of the line with the
+    <b>Gradient</b> tool cursor. A diamond appears where you double-clicked.
+    You can change the color at this stop to add extra coloration to the
+    gradient.</p>
+      <figure>
+        <img src = "images/Gradient3a.gif" alt = "Adding a gradient stop to the
+        middle of the gradient tool bar" class = "img-fluid">
+        <figcaption>Adding a gradient stop to the middle of the gradient tool
+        bar.</figcaption>
+      </figure>
+    </li>
+    <li><p>The gradient will be created deliberately off-center to simulate a
+    source of lighting that is somewhere to the right side of the artwork.</p>
+    To start, click on the right-hand gradient stop to make it active.</p>
+      <figure>
+        <img src = "images/Gradient3b.gif" alt = "Clicking on the right-hand
+        gradient stop to select it" class = "img-fluid">
+        <figcaption>Clicking on the right-hand gradient stop to select
+        it.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Dropper</b> tool icon (<img src =
+    "images/DropperToolIcon.gif" alt = "Dropper tool icon" width = "26">) in
+    the toolbox and then click on the <b>50% Gray</b> color swatch in the Color
+    palette. The cylinder is now a medium gray color all the way across its
+    width.</p>
+    </li>
+    <li><p>Click on the middle gradient stop, then click on the <b>Dropper</b>
+    tool icon (<img src = "images/DropperToolIcon.gif" alt = "Dropper tool icon"
+    width = "26">). Click on the <b>20% Gray</b> color swatch in the Color
+    palette. The body now has a central area of light gray, suggesting
+    illumination from a light source in front of the artwork (perhaps,
+    even you!).</p>
+      <figure>
+        <img src = "images/Gradient4.gif" alt = "Choosing 20 percent grey for
+        the middle gradient stop" class = "img-fluid">
+        <figcaption>Choosing 20 percent grey for the middle gradient
+        stop.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now spread out the light gray area to suggest a more distant, diffuse
+    source of light.</p>
+    <p>Create a second gradient stop to the right of the middle stop.</p>
+      <figure>
+        <img src = "images/Gradient5.gif" alt = "Adding a second gradient stop
+        to the gradient tool bar" class = "img-fluid">
+        <figcaption>Adding a second gradient stop to the gradient tool
+        bar.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the new stop still selected, click on the <b>Dropper</b> tool
+    icon (<img src = "images/DropperToolIcon.gif" alt = "Dropper tool icon"
+    width = "26">), and then on the <b>20% Gray</b> color swatch in the Color
+    palette.</p>
+      <figure>
+        <img src = "images/Gradient7.gif" alt = "Giving the second internal stop
+        a 20 percent light gray color" class = "img-fluid">
+        <figcaption>Giving the second internal stop a 20 percent light gray
+        color.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag both middle gradient stops to the right to move the
+    whole light gray area to the right. Let your sense of how the illuminated
+    area should look in guiding how you move the stops.</p>
+    <p><b>Note:</b> if you prefer to work with just one stop in the middle of
+    the gradient, click on the stop you want to delete, and then click on the
+    <b>Delete stop</b> icon (<img src = "images/DeleteStopIcon.gif" alt =
+    "Delete stop icon" width = "26">) in the <b>Gradient Tool Controls
+    Bar</b>.</p>
+      <figure>
+        <img src = "images/Gradient8.gif" alt = "Moving both internal gradient
+        stops to the right" class = "img-fluid">
+        <figcaption>Moving both internal gradient stops to the
+        right.</figcaption>
+      </figure>
+    </li>
+    <li><p>The logotype is a little large for the size of the canister lid. It
+    should be reduced in size for a better fit.</p>
+    <p>Select the canister lid artwork, ungroup the logotype and the rest of
+    the artwork by clicking on the <b>Ungroup selected groups</b> icon (<img
+    src = "images/UngroupSelectedGroupsIcon.gif" alt = "Ungroup selected groups
+    icon" alt = "Ungroup selected groups icon" width = "26">). Select
+    the logotype and adjust its size, maintaining its height-width aspect ratio
+    by &lt;Ctrl&gt;-dragging sizing handles until you are satisfied with the
+    adjustment.</p>
+      <figure>
+        <img src = "images/ResizingLogotype.gif" alt = "Resizing the logotype"
+        class = "img-fluid">
+        <figcaption>Resizing the logotype.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are satisfied with your results, choose Edit &gt; Deselect
+    to deselect the artwork. Keep the guidelines because you&rsquo;ll need them
+    in the next section.</p>
+      <figure>
+        <img src = "images/Gradient9.gif" alt = "Finished canister" class =
+        "img-fluid">
+        <figcaption>Finished cylinder.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing a 3-D Decorative Band for the Cylinder</h2>
+  </header>
+  <p>The body of the canister looks three-dimensional courtesy of the gradient
+  coloration attached to it. It also looks monolithic and uninspiring. A
+  well-drawn decorative band placed around its middle gives it appeal and adds
+  to the 3-D effect the artwork should have.</p>
+  <ol>
+    <li><p>Download the art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15A/Leaf.svg"><b>Leaf.svg</b></a> and store it in
+    a convenient location.</p>
+    </li>
+    <li><p>File &gt Open file <b>Leaf.svg</b>, choose Edit &gt; Select All, and
+    then choose Edit &gt; Copy to copy the artwork to the clipboard.</p>
+    <p>The artwork in this file consists of a stylized leaf made of a leaf
+    body and a central vein, both of which are ungrouped objects. The artwork
+    appears large because the artboard was resized to fit the leaf and Inkscape
+    automatically resizes the artboard to fit the work window.</p>
+    </li>
+    <li><p>Choose Edit &gt; Select All to group-select the leaf body and vein
+    objects, then choose Edit &gt; Copy to copy them to the clipboard.</p>
+      <figure>
+        <img src = "images/Leaf01.gif" alt = "Leaf image" class = "img-fluid">
+        <figcaption>Leaf motif.</figcaption>
+      </figure>
+    </li>
+    <li><p>If the Inkscape window from the previous section is still active,
+    make it visible by pressing &lt;Alt&gt;-&lt;Tab&gt; however many times you
+    need to bring it up using the Windows screen-switching function.</p>
+    <p>Position the Select tool cursor (<img src =
+    "images/SelectionToolCursor.gif" alt = "Selection tool cursor"
+    width = "26">) to a side of the canister artwork and press &lt;Ctrl&gt;-V
+    to paste the leaf image at that location. Note that it appears much smaller
+    than it did in its source file. Inkscape automatically rescaled it to the
+    dimensions of the current work window.</p>
+      <figure>
+        <img src = "images/Leaf02.gif" alt = "Leaf image pasted next to canister
+        artwork" class = "img-fluid">
+        <figcaption>Leaf image pasted next to canister artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the duplicate ellipse that was made in the last section.</p>
+      <figure>
+        <img src = "images/Leaf03.gif" alt = "Selecting the duplicate ellipse"
+        class = "img-fluid">
+        <figcaption>Selecting the duplicate ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the duplicate ellipse selected, choose Path &gt; Object to Path
+    to convert it from an (ellipse) object to a path in preparation for
+    deleting portions of the circumference to make it a &ldquo;half-path&rdquo;,
+    if you will.</p>
+      <figure>
+        <img src = "images/Leaf04.gif" alt = "Converting the ellipse into a
+        path" class = "img-fluid">
+        <figcaption>Converting the ellipse into a path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) and position it over the upper left
+    quadrant of the ellipse. It&rsquo;s in a good position when the hand icon
+    appears next to the arrowhead.</p>
+    </li>
+    <li><p>Click on the curve to select it. The two nodes that begin and end
+    the curve turn blue, signaling that the curve has been selected.</p>
+      <figure>
+        <img src = "images/Leaf05.gif" alt = "Positioning the Node tool cursor"
+        class = "img-fluid">
+        <figcaption>Positioning the Node tool cursor on and selecting the
+        curve.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Delete segment between two non-endpoint nodes</b>
+    icon (<img src = "images/DeleteSegmentIcon.gif" alt = "Delete segment
+    between two non-endpoint nodes icon" width = "26">) in the <b>Node Tool
+    Controls Bar</b> to delete that particular portion of the ellipse&rsquo;s
+    circumference.</p>
+      <figure>
+        <img src = "images/Leaf06.gif" alt = "Deleting the upper left quadrant
+        of the ellipse path" class = "img-fluid">
+        <figcaption>Deleting the upper left quadrant of the ellipse
+        path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat Steps 8 and 9 for the upper right quadrant of the ellipse
+    path.</p>
+      <figure>
+        <img src = "images/Leaf07.gif" alt = "Selecting the upper right quadrant
+        of the ellipse" class = "img-fluid">
+        <figcaption>Selecting the upper right quadrant of the
+        ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>You now have half an ellipse path left. This half-path will define
+    route that the stylized leaves will take as they take their promenade along
+    the mid-section of the canister body.</p>
+      <figure>
+        <img src = "images/Leaf08.gif" alt = "Half an ellipse in view"
+        class = "img-fluid">
+        <figcaption>Half an ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Select tool (<img src = "images/SelectionTool.gif" alt
+    = "Selection tool icon" width = "26">), and then click on the <b>none</b>
+    color swatch (<img src = "images/NoneSwatch.gif" alt = "None color swatch"
+    width = "26">) at the left end of the Color palette. The ellipse disappears,
+    and yet, there is still a bounding box and nodes &mdash; the half-path
+    still exists.</p>
+      <figure>
+        <img src = "images/Leaf09.gif" alt = "Hidden half-path" class =
+        "img-fluid">
+        <figcaption>Hidden half-path.</figcaption>
+      </figure>
+    </li>
+    <li><p>&lt;Shift&gt;-click on the black color swatch next to the <b>none</b>
+    color swatch to make the half-path (not the fill color) visible. In the
+    figure below, it has a stroke thickness of 1.500 pixels.</p>
+    <p>Make a duplicate of the half-path with &lt;Ctrl&gt;-D. You will use one
+    half-path to apply the leaf body to and the other one to apply the leaf vein
+    to, and then merge the two half-paths to create the band.</p>
+      <figure>
+        <img src = "images/Leaf10.gif" alt = "Giving the half-path a black
+        stroke" class = "img-fluid">
+        <figcaption>Giving the half-path a black stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt
+    = "Selection tool icon" width = "26">), click on the leaf body (not the
+    vein) to select it.</p>
+    <p>Press &lt;Ctrl&gt;-C to copy it to the clipboard in preparation for
+    applying the <b>Pattern Along Path</b> effect.</p>
+      <figure>
+        <img src = "images/Leaf11.gif" alt = "Selecting and copying the leaf
+        body to the clipboard" class = "img-fluid">
+        <figcaption>Selecting and copying the leaf body to the
+        clipboard.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Path Effects&hellip; to bring up the <b>Live Path
+    Effects Selector</b> menu. Click on the <b>Pattern Along Path</b> icon.</p>
+    <p>In the <b>Pattern Along Path</b> dialog box, select <b>Repeated</b> for
+    <b>Pattern copies</b>, and then click on the <b>Link to path in
+    clipboard</b> icon (<img src = "images/Link2PathInClipboardIcon.gif" alt =
+    "Link to Path in Clipboard icon" width = "26">). The leaf stroke appears in
+    black as a repeated pattern along the ellipse half-path. The leaves have no
+    fill. You will take care of that shortly.</p>
+      <figure>
+        <img src = "images/Leaf12.gif" alt = "" class = "img-fluid">
+        <figcaption>Apply the <b>Pattern Along Path</b> function with just the
+        leaf body.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now fill the procession of leaves with a gradient.</p>
+    <p>Choose Object &gt; Stroke and Fill&hellip;, click on the <b>Gradient</b>
+    tab in the <b>Stroke and Fill</b> dialog box, and then click on the
+    <b>Create and edit gradients</b> tool (<img src =
+    "images/EditGradientsIcon.gif" alt = "Create and edit gradients tool icon"
+    width = "26">) in the toolbox. The default gradient (black to white) might
+    appear across the leaves. If your result is different, don&rsquo;t worry,
+    it is not a concern at all. You will take care of it in the next few
+    steps.</p>
+      <figure>
+        <img src = "images/Leaf13.gif" alt = "Default gradient across all leaf
+        motifs" class = "img-fluid">
+        <figcaption>Default gradient across all leaf motifs.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the right end gradient stop with the <b>Edit gradient</b>
+    tool to select it. The gradient stop node turns blue to show that it has
+    been selected.</p>
+    <p>Click on the yellow color swatch in the Color palette to give the leaves
+    a yellow fill color.</p>
+      <figure>
+        <img src = "images/Leaf14.gif" alt = "Right end of gradient starts with
+        yellow" class = "img-fluid">
+        <figcaption>Right end of gradient starts with yellow.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the left end gradient stop with the <b>Edit gradient</b>
+    tool to select it.</p>
+    <p>Type <b>8bbe1bff</b> into the <b>RGBA</b> text box in the <b>Fill</b>
+    dialog box to give the left end of the gradient a dark lemon yellow
+    color.</p>
+      <figure>
+        <img src = "images/Leaf15a.gif" alt = "Left end of gradient starts with
+        dark lemon yellow" class = "img-fluid">
+        <figcaption>Left end of gradient starts with dark lemon
+        yellow.</figcaption>
+      </figure>
+    </li>
+    <li><p>&lt;Shift&gt;-click on the <b>none</b> color swatch (<img src =
+    "images/NoneSwatch.gif" alt = "None color swatch" width = "26">) at the
+    left end of the Color palette to hide the leaves&rsquo; black stroke.</p>
+      <figure>
+        <img src = "images/Leaf15b.gif" alt = "Hiding the leaves' black stroke"
+        class = "img-fluid">
+        <figcaption>Hiding the leaves&rsquo; black stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now add the green leaf vein to the caravan of marching
+    leaves.</p>
+    <aside><p>The <b>Pattern Along Path</b> path effect works <u>only</u> with one
+    ungrouped object that is the pattern and <u>only</u> one path that guides
+    the pattern succession. In order to construct a pattern that is made of
+    more than one object, such as the leaf motif in this exercise, each object
+    needs to be applied to a duplicate of the original path and then moved
+    ontop or below the base pattern.</p>
+    <p><b>Note:</b> It is important that all components that make up a composite
+    pattern along a path like the leaf body and vein pattern have exactly the
+    same length. If lengths are different, one component will not line up with
+    another as individually different lengths add up to create an increasing
+    mismatch and misalignment as the pattern is traversed from one end to the
+    other. It is wise to make sure that 1) individual motifs have the same
+    length and 2) that they are applied to paths having the exact same size
+    (length) and curvature so the resulting patterns will fit together
+    seamlessly.</p>
+    </aside>
+      <figure>
+        <img src = "images/CompositePattern.gif" alt = "Blown up diagram of a
+        composite pattern" class = "img-fluid">
+        <figcaption>Blown up diagram of a composite pattern.</figcaption>
+      </figure>
+    <p>Select the green leaf vein and press &lt;Ctrl&gt;-C to copy it to the
+    clipboard. You will apply that object to the duplicate curved path you
+    created earlier. Make sure that <b>Pattern copies</b> is set to
+    <b>Repeated</b> in the <b>Pattern Along Path</b> dialog box.</p>
+      <figure>
+        <img src = "images/Leaf16.gif" alt = "Selecting the green leaf vein
+        to place on the duplicate path" class = "img-fluid">
+        <figcaption>Selecting the green leaf vein to place on the duplicate
+        path.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>Pattern Along Path</b> function copies and positions the
+    leaf motif on the curved path. It does not copy the green fill color. It
+    does, however, use the black stroke color of the curve for the
+    leaves&rsquo; stroke color.</p>
+      <figure>
+        <img src = "images/Leaf17.gif" alt = "Applying the Pattern Along Path
+        path effect to the curve" class = "img-fluid">
+        <figcaption>Applying the Pattern Along Path path effect to the
+        curve.</figcaption>
+      </figure>
+    </li>
+    <li>With the leaf vein parade still selected, click on the green color
+    swatch in the Color palette to give the veins a green color fill, then
+    click on the <b>none</b> color swatch (<img src = "images/NoneSwatch.gif"
+    alt = "None color swatch" width = "26">) to hide the black stroke.</p>
+      <figure>
+        <img src = "images/Leaf18.gif" alt = "Leaf veins now have a green color
+        fill and no stroke" class = "img-fluid">
+        <figcaption>Leaf veins now have a green color fill and no
+        stroke.</figcaption>
+      </figure>
+    </li>
+    <li>With the leaf vein pattern still selected (reselect it if it has been
+    deselected), move it up between the two guidelines until it rests ontop of
+    the leaf body pattern. Magnify any part of the artwork to help you in
+    increasing the precision of placement.</p>
+    </p>
+      <figure>
+        <img src = "images/Leaf19.gif" alt = "Positioning the leaf vein pattern
+        ontop of the leaf body pattern" class = "img-fluid">
+        <figcaption>Positioning the leaf vein pattern ontop of the leaf body
+        pattern.</figcaption>
+      </figure>
+    </li>
+    <li><p>The leaf pattern looks good enough as a tip-to-toe sequence. It might
+    look a little better with some spacing between leaves. Spacing will be
+    applied to both the leaf body pattern and the leaf vein pattern separately
+    &mdash; they are separate objects.<p>
+    <p>Click on an individual leaf body to select it. The whole sequence of
+    leaves becomes selected.</p>
+    </p>In the <b>Pattern Along Path</b> dialog box, change the <b>Spacing</b>
+    from its default of <b>0.00</b> to <b>1.00</b>. The leaf bodies separate
+    by a small amount of space in between. The leaf veins remain in their
+    original positions &mdash; the leaf vein sequence is an object separate
+    from the leaf body object and so is not affected by the change in
+    spacing.</p>
+      <figure>
+        <img src = "images/Leaf20.gif" alt = "Leaf bodies given spacing, leaf
+        veins no spacing" class = "img-fluid">
+        <figcaption>Leaf bodies given spacing, leaf veins no
+        spacing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now select a leaf vein. The whole sequence of leaf veins becomes
+    selected.</p>
+    <p>As you did in the previous step, change the <b>Spacing</b> from its
+    default of <b>0.00</b> to <b>1.00</b>. Now the leaf veins move to coincide
+    exactly with their corresponding leaf bodies.</p>
+      <figure>
+        <img src = "images/Leaf21.gif" alt = "Leaf veins given same amount of
+        spacing as the leaf bodies so they will coincide" class = "img-fluid">
+        <figcaption>Leaf veins given same amount of spacing as the leaf bodies
+        so they will coincide.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the leaf body and leaf vein patterns and group them
+    by clicking on the <b>Group selected objects</b> icon (<img src =
+    "images/GroupSelectedObjectsIcon.gif" alt = "Group selected objects icon"
+    width = "26">) in the <b>Tool Controls Bar</b>.</p>
+    <p>Move the artwork to the canister and position it so that it is situated
+    at the middle of the canister body.</p>
+      <figure>
+        <img src = "images/Leaf22.gif" alt = "Moving the decorative band
+        artwork to the middle of the canister body" class = "img-fluid">
+        <figcaption>Moving the decorative band artwork to the middle of the
+        canister body.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now change the color of the leaf veins to white so the
+    coloration of the decorative band is more in line with the artwork of the
+    canister lid.</p>
+    </li>
+    <li><p>Select the decorative band. (If the band has been deselected,
+    reselect it.)</p>
+    <p>Click on the <b>Ungroup selected groups</b> icon (<img src =
+    "images/UngroupSelectedGroupsIcon.gif" alt = "Ungroup selected groups
+    icon" width = "26">) in the <b>Tool Controls Bar</b>
+    </li>
+    <li><p>Select a leaf vein. Then, click on the white color swatch in the
+    Color palette. All the leaf veins turn white.</p>
+      <figure>
+        <img src = "images/Leaf23.gif" alt = "Giving the leaf veins a white
+        color fill" class = "img-fluid">
+        <figcaption>Giving the leaf veins a white color fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>The right-most leaf extends beyond the edge of the canister body. It
+    needs to be clipped off. You will use the <b>Clip</b> function to
+    accomplish that task.</p>
+    <p>Select the <b>Rectangle</b> tool (<img src =
+    "images/RectangleToolIcon.gif" alt = "Rectangle tool icon" width = "26">)
+    and draw a rectangle. Give it a color fill of <b>none</b> and a thin black
+    stroke. The rectangle below has a thickness of <b>1.500</b> pixels.</p>
+    <p>Bring up the <b>Snap Controls Bar</b> and select the <b>Enable
+    snapping (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable
+    snapping icon" width = "26">), <b>Snap bounding boxes</b> (<img src =
+    "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width =
+    "26">), <b>Snap bounding box corners</b> (<img src =
+    "images/SnapBoundingBoxCornersIcon.gif" alt = "Snap bounding box corners
+    icon" width = "26">), and <b>Snap guide</b> (<img src =
+    "images/SnapGuidesIcon.gif" alt = "Snap guides icon" width = "26">)icons.
+    The last option allows the rectangle to be snapped precisely to the side of
+    the canister where the one leaf is sticking out, waiting to be clipped.</p>
+    <p>Move the rectangle to the right guideline where the right-most leaf
+    extends beyond the edge of the canister. The rectangle will snap into place
+    precisely at the guideline.</p>
+      <figure>
+        <img src = "images/Leaf24.gif" alt = "Drawing the clipping rectangle"
+        class = "img-fluid">
+        <figcaption>Drawing the clipping rectangle.</figcaption>
+      </figure>
+    </li>
+    <li><p>In order for the clipping rectangle to act like a cookie cutter,
+    it needs to be placed above the cookie to be cut. Click on the <b>Raise
+    selection to top</b> icon (<img src = "images/RaiseSelection2TopIcon.gif"
+    alt = "Raise selection to top icon" width = "26">) in the <b>Tool Controls
+    Bar</b> to put the rectangle at the top of the rectangle-leaf image
+    stack.</p>
+    <p>Click on a leaf body to select it (and all other leaf bodies as the
+    bounding box indicates), and then click on the <b>Lower selection to
+    bottom</b> icon (<img src = "images/LowerSelection2BottomIcon.gif" alt =
+    "Lower selection to bottom icon" width = "26">) to put it underneath the
+    rectangle in the image stack.</p>
+      <figure>
+        <img src = "images/Leaf25.gif" alt = "Rectangle at top of image stack,
+        leaf at bottom of image stack" class = "img-fluid">
+        <figcaption>Rectangle at top of image stack, leaf at bottom of image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Object &gt; Clip &gt; Set Inverse (LPE). The extended portion
+    of the leaf is clipped off and rendered invisible right at the guideline.<p>
+      <figure>
+        <img src = "images/Leaf26.gif" alt = "Clipping the right-most leaf"
+        class = "img-fluid">
+        <figcaption>Clipping the right-most leaf.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Esc&gt; to deselect the decorative band.</p>
+      <figure>
+        <img src = "images/Leaf27.gif" alt = "Deselecting the decorative band"
+        class = "img-fluid">
+        <figcaption>Deselecting the decorative band.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the two guidelines off to the right or left of the work
+    window &mdash; they are no longer needed.</p>
+      <figure>
+        <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+        class = "img-fluid">
+        <figcaption>Finished canister artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save, File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>When creating a cylinder, what needs to be done about the angle of the
+    top surface and the bottom surface?
+    </li>
+    <li>What are good tools to use to ensure that the top, bottom, and sides of
+    of cylinder all have matching diameters and widths?
+    </li>
+    <li>How are gradients helpful in creating a 3-D effect?
+    </li>
+    <li>What is necessary to have a composite pattern along a path merge
+    properly?
+    </li>
+    <li>What can you do if a portion of a pattern along a path extends beyond
+    where you want it to stop?
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>Both the top and bottom surfaces of a cylinder need to be shortened
+    (transformed) by the same angle to produce a consistent shape.</p>
+    </li>
+    <li><p>Guidelines are good tools for constraining top and bottom circles or
+    ellipses to have matching diameters or axes that also match the width of a
+    cylinder body rectangle.</p>
+    </li>
+    <li><p>Gradients give the impression of light reflecting off a surface in
+    ways that suggest that the surface has depth, is curved, or is at angle to
+    the eye of the viewer.</p>
+    </li>
+    <li><p>Component parts of all motifs must have exactly the same length and
+    each path for each motif must have exactly the same length and the same
+    curvature.</p>
+    </li>
+    <li><p>You can clip the projecting part of the pattern by 1) drawing a
+    rectangle or other shape that you can use as a graphical cookie cutter, 2)
+    placing it over the part of the pattern to clip off, 3) making sure that
+    the cookie cutter object lies above the object to clip in the image stack,
+    4) selecting both the cookie cutter object and the object to be clipped,
+    and 5) choosing Object &gt; Clip &gt; Set Inverse (LPE).</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
