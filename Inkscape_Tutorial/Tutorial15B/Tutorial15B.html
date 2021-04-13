@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 15, Part B &ndash; Cylinders, Spheres, and Other 3-D Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, cylinders, drop shadows, gradients,
+  radial gradients, globes, spheres, vase, 3D effects">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 15, Part B &ndash; Cylinders, Spheres, and Other 3-D
+          Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6"><p class = "lead">Inkscape&rsquo;s radial gradient
+      tool helps you in highlighting the curvature of rounded objects, such as
+      globes and vases, in ways that create the sense of a single directed
+      light source. The Swirl tool helps in creating a texture on a curved
+      surface, further enhancing a 3-D effect.</p>
+      </div>
+    </div>
+<section>
+  <p>In this tutorial, you&rsquo;ll learn how to do the following:</p>
+  <ul type = "disc">
+    <li>Unevenly swirl a two-dimensional texture.
+    </li>
+    <li>Clip a background texture to create an illusion of a textured spherical
+    surface.
+    </li>
+    <li>Add a radial gradient to a background image to produce a curved
+    reflection of a distant light source.
+    </li>
+  </ul>
+  <p>This tutorial is the second of two parts in which you create 3-D objects
+  for a poster. You have already created a short cylindrical canister with a
+  lid, linear gradient on the side, and a decorative band that follows the
+  middle line of the cylindrical body.</p>
+  <p>In this part, you will draw lemon soap globes that will have surface
+  texturing and radial gradients that suggest a diffuse reflection of light
+  from a nearby source of illumination. You will also draw a vase that is
+  made up of separate objects, merge them into one object, and then add
+  gradients to the result to produce lighting, shadowing, and three-dimensional
+  solidity.</p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15B/Tutorial15B_end.svg"><b>Tutorial15B_end.svg</b></a>
+    and store it in a convenient location.</p>
+    </li>
+    <li><p>File &gt; Open file <b>Tutorial15B_end.svg</b>. This file displays a
+    completed illustration of a soap can, soap globes, and a vase.</p>
+    <p>If you like, choose View &gt; Zoom &gt; Zoom Out to reduce the view of
+    the finished artwork, adjust the window size, and leave it on your screen
+    as you work. (Use the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to select and move the artwork
+    where you want it in the window.) If you don&rsquo;t want to leave the
+    image open, choose File &gt; Close.</p>
+    </li>
+    <li><p>If you worked through the previous tutorial, then File &gt; Open
+    file <b>Lemon.svg</b>. You will continue working on this artwork.</p>
+    <p>If you haven&rsquo;t done the previous tutorial, then download art file
+    <a href =
+    "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15B/Tutorial15B_start.svg"><b>Tutorial15B_start.svg</b></a>
+    and store it in a convenient location. File &gt; Open file
+    <b>Tutorial15B_start.svg</b>, and then File &gt; Save As&hellip; it as
+    <b>Lemon.svg</b>.</p>
+    </li>
+  </ol>
+  <p><b>Resource:</b> For an illustration of the finished artwork in this
+  tutorial, see the top of this page.</p>
+</section>
+<section>
+  <header>
+    <h2>Drawing the Lemon Soap Globes</h2>
+  </header>
+  <ol start = "5">
+    <li><p>Download the art file <a href =
+    "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial15B/StylizedLemonSkin.gif"><b>StylizedLemonSkin.gif</b></a>
+    and store it in a convenient location.</p>
+      <figure>
+        <img src = "images/StylizedLemonSkin.gif" alt = "Stylized lemon skin"
+        class = "img-fluid">
+        <figcaption>Stylized lemon skin.</figcaption>
+      </figure>
+    </li>
+    <li><p>Import the lemon skin image into your <b>Lemon.svg</b> work file by
+    choosing File &gt; Open, selecting file <b>StylizedLemonSkin.svg</b>, and
+    opening it.</p>
+    <li><p>Select the image of the lemon skin and choose Edit &gt; Copy to copy
+    it to the clipboard.</p>
+    </li>
+    <li><p>Switch to the <b>Lemon.svg</b> Inkscape window, place the cursor
+    to a side of the canister artwork and press &lt;Ctrl&gt;-V to paste the
+    lemon skin image at that location.</p>
+    </li>
+    <li><p>You will create a swirl effect with the lemon skin image. The
+    swirling motion will contribute to the three-dimensionality of the soap
+    globes, enhanced further by applying a radial gradient.</p>
+    <p>With the lemon skin image, choose Extensions &gt; Raster &gt;
+    Swirl&hellip;. When the <b>Swirl</b> dialog box appears, set the
+    <b>Degrees</b> value to <b>100</b>. Check the <b>Live preview</b> checkbox
+    so you will see the result before you actually apply the value.</p>
+    <p>Click on the <b>Apply</b> button to apply the swirl value, then click on
+    the <b>Close</b> button to dismiss the dialog box.</p>
+    <p>If you would like more swirl, then press &lt;Ctrl&gt;-Z to undo the swirl
+    action, choose Extensions &gt; Raster &gt; Swirl&hellip; again, and enter
+    another value into the <b>Degrees</b> text box.</p>
+      <figure>
+        <img src = "images/Swirl100.gif" alt = "Swirling the lemon skin"
+        class = "img-fluid">
+        <figcaption>Swirling the lemon skin.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now &ldquo;squash&rdquo; the lemon skin image.</p>
+    <p>Choose Object &gt; Transform&hellip;, and click on the <b>Scale</b>
+    tab. Set the <b>Height</b> to <b>50.000 %</b>. Keep the <b>Width</b> at
+    <b>100.000 %</b>.</p>
+    <p>The swirl effect appears to be angled, which is what you want.
+    It&rsquo;s as if you are looking at it from an angle, instead of from
+    straight up from the swirl center.</p>
+      <figure>
+        <img src = "images/Height50Percent.gif" alt = "Rescaling the lemon skin
+        image to 50 percent height" class = "img-fluid">
+        <figcaption>Rescaling the lemon skin image to 50 percent
+        height.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now create a clipping mask for a soap globe.</p>
+    <p>Select the <b>Ellipse</b> tool (<img src = "images/EllipseToolIcon.gif"
+    alt = "Ellipse tool icon" width = "26">) in the toolbox and draw an ellipse
+    over the swirl. Set the ellipse&rsquo;s stroke to black, stroke thickness
+    to 1 pixel, and fill color to <b>none</b>. With a thin black stroke and no
+    color fill, you can easily position the ellipse clipping mask where you
+    need it with precision.</p>
+    <p>Place the ellipse on the swirl so that the center of the swirl occupies
+    the top right portion of the ellipse. The effect of a slightly off-center
+    swirl heightens the sense of the globe being a three-dimensional object.</p>
+      <figure>
+        <img src = "images/EllipseClippingMask.gif" alt = "Drawing the ellipse
+        clipping mask" class = "img-fluid">
+        <figcaption>Drawing the ellipse clipping mask.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the ellipse by clicking on its border. (You can&rsquo;t select
+    it by clicking inside &mdash; there is no color fill and thus nothing to
+    select.). &lt;Shift&gt;-click on the background swirl to group-select it.
+    Choose Object &gt; Clip &gt; Set. The swirl outside the ellipse is hidden;
+    the portion inside the ellipse remains. Note how the squashed swirl imparts
+    a 3-D feel to the artwork, even a sense of motion, which is nice and catches
+    the eye.</p>
+      <figure>
+        <img src = "images/Clipped.gif" alt = "Clipping the lemon skin image"
+        class = "img-fluid">
+        <figcaption>Clipping the lemon skin image.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the globe given a good surface texture and properly clipped,
+    it is now time to apply a gradient to simulate lighting and shadowing to
+    simulate depth. The lighting and shadow effect will be in the form of an
+    overlay.</p>
+    <p>With the <b>Ellipse</b> tool (<img src = "images/EllipseToolIcon.gif"
+    alt = "Ellipse tool icon" width = "26">), draw another ellipse with a thin
+    black stroke and no fill, just like the last one you drew the coincides
+    exactly with the elliptical soap globe. This second ellipse will be the
+    overlay.</p>
+      <figure>
+        <img src = "images/RadialGradient1.gif" alt = "Drawing a duplicate
+        ellipse with no fill and a thin black stroke" class = "img-fluid">
+        <figcaption>Drawing a duplicate ellipse with no fill and a thin black
+        stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>Start making the radial gradient by choosing Object &gt; Fill and
+    Stroke&hellip;, and selecting the <b>Radial Gradient</b> tab in the <b>Fill
+    and Stroke</b> dialog box. A black-to-white default radial gradient now
+    fills the ellipse. (The gradient swatches below the default swatch are
+    from previous experiments of my own.)</p>
+      <figure>
+        <img src = "images/RadialGradient2.gif" alt = "Applying a default radial
+        gradient" class = "img-fluid">
+        <figcaption>Applying a default radial gradient.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the <b>Create and edit gradients</b> tool (<img src =
+    "images/EditGradientsIcon.gif" alt = "Create and edit gradients tool icon"
+    width = "26">) in the toolbox. The <b>Edit gradient</b> tool appears
+    across the ellipse body as two perpendicular lines with stop nodes at the
+    common center and at the ends.</p>
+      <figure>
+        <img src = "images/RadialGradient3.gif" alt = ""
+        class = "img-fluid">
+        <figcaption>Radial gradient tool activated.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the central stop node with the <b>Edit gradient</b>
+    cursor (<img src = "images/EditGradientCursor.gif" alt = "Edit gradient
+    cursor" width = "26">) to select it. The node turns blue.</p>
+      <figure>
+        <img src = "images/RadialGradient4.gif" alt = "Selecting the central
+        radial gradient node" class = "img-fluid">
+        <figcaption>Selecting the central radial gradient node.</figcaption>
+      </figure>
+    </li>
+    <li>With the central radial gradient node selected, click on the yellow
+    color swatch in the Color palette. The area around the central node turns
+    yellow.</p>
+      <figure>
+        <img src = "images/RadialGradient5.gif" alt = "Select yellow for the
+        color at the central gradient node" class = "img-fluid">
+        <figcaption>Select yellow for the color at the central gradient
+        node.</figcaption>
+      </figure>
+    </li>
+    <li>With the central radial gradient node still selected, click-drag the
+    node to the upper right portion of the ellipse so it is more-or-less
+    coincident with the center of the background swirl. Note how the two
+    perpendicular lines and their end nodes maintain their position relative to
+    the center node as you move them.</p>
+      <figure>
+        <img src = "images/RadialGradient6.gif" alt = "Moving the radial
+        gradient tool to the upper right portion of the ellipse" class =
+        "img-fluid">
+        <figcaption>Moving the radial gradient tool to the upper right portion
+        of the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>The two end nodes on the each gradient direction line control the
+    outer color that the central color grades to. They will control the shadow
+    in the lower section of the ellipse.</p>
+    <p>Click-drag one of the end nodes around until they are both situated
+    in the lower part of the ellipse. Their placement doesn&rsquo;t have to be
+    exact. One, the other, or both nodes can even be extended out beyond the
+    edge of the ellipse. You will see the dark part of the radial gradient
+    change as you adjust the direction and length of the gradient lines.
+    Adjust as you see fit.</p>
+      <figure>
+        <img src = "images/RadialGradient7.gif" alt = "Rotating and adjusting
+        the radial gradient direction lines and nodes" class = "img-fluid">
+        <figcaption>Rotating and adjusting the radial gradient direction lines
+        and nodes.</figcaption>
+      </figure>
+    </li>
+    <li><p>The shadow effect isn&rsquo;t strong. Adding a gradient stop in
+    the middle of the gradient lines can help you in controlling the darkness
+    and placement of the shadow with finer control.</p>
+    <p>Double-click in the middle of one of the gradient lines with the <b>Edit
+    gradient</b> cursor (<img src = "images/EditGradientCursor.gif" alt =
+    "Edit gradient cursor" width = "26">). An extra gradient stop appears on
+    both lines as a blue diamond, meaning that they are active and waiting to
+    receive a new color and/or to be moved.</p>
+      <figure>
+        <img src = "images/RadialGradient8.gif" alt = "Adding an extra gradient
+        stop to the radial gradient direction lines" class = "img-fluid">
+        <figcaption>Adding an extra gradient stop to the radial gradient
+        direction lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Resize the gradient direction lines, rotate them, and click on one
+    or the other end node to change its color to a lighter or darker shadow
+    color. Also adjust the transparency of the shadow. Try a 50 percent opacity,
+    less, or more, until you are satisfied with what you see.</p>
+      <figure>
+        <img src = "images/RadialGradient9.gif" alt = "Fine adjusting the
+        shadow effect" class = "img-fluid">
+        <figcaption>Fine adjusting the shadow effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reduce the opacity of the central gradient tool node to about
+    50 percent so the underlying swirl becomes more visible.</p>
+      <figure>
+        <img src = "images/RadialGradient10.gif" alt = "Reducing the opacity of
+        the central radial gradient node to 50 percent" class = "img-fluid">
+        <figcaption>Reducing the opacity of the central radial gradient node to
+        50 percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you have finished making fine adjustments to the radial
+    gradient, select the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to finalize the
+    gradient overlay.</p>
+      <figure>
+        <img src = "images/RadialGradient11.gif" alt = "Finalizing the radial
+        gradient overlay" class = "img-fluid">
+        <figcaption>Finalizing the radial gradient overlay.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you separate the soap globe and the lighting-shadow overlay,
+    you can see how the upper right region of the overlay can give the
+    impression that a light is shining upon it from an angle, while underneath,
+    the shadow suggests that the object is solid and opaque, not permitting
+    light to reach the bottom. For round objects, this technique is effective
+    at producing the illusion of a three-dimensional round object.</p>
+    <p>A simple real-world example is to take an egg, put it on a table, and
+    see how light interacts with it. Look at it from different angles, place
+    the egg at different distances from any source of illumination, and see how
+    the interplay of light and shadow change in complementary ways to maintain
+    the sense of three-dimensionality. It is your job to learn how to replicate
+    what you observe and use it in your own sense of design.</p>
+      <figure>
+        <img src = "images/OriginalAndShadow.gif" alt = "Original lemon soap
+        and gradient overlay" class = "img-fluid">
+        <figcaption>Original lemon soap globe and gradient overlay.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make two duplicates of the lemon globe using &lt;Ctrl&gt;-D and
+    place all three globes so they are situated in the front right of the
+    soap canister. You will make a surface for them to sit on later in this
+    tutorial.</p>
+      <figure>
+        <img src = "images/DuplicateLemons.gif" alt = "Duplicating and
+        positioning lemons" class = "img-fluid">
+        <figcaption>Duplicating and positioning lemon soap globes.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Using the Path Union Function and Radial Gradients to Create a Vase</h2>
+  </header>
+  <p>Vases are objects of revolution. The concept comes from geometry where you
+  take a line or curve and rotate it around an axis of rotation. Cylinders,
+  spheres, bowls, cones, and vases are example of lines or curves and rotated
+  around an axis. You have already learned how to make a cylinder and globes,
+  and give them a three-dimensional appearance.</p>
+  <p>The vase in this tutorial is a composite shape, made of a circle that is
+  flattened at one end, a neck made of two joined curves, and an open top
+  created from an ellipse.</p>
+  <p>Although the vase is simple in geometry, you will give it the close
+  attention that a skilled ceramicist would give in creating in piece of fine
+  porcelain by hand.</p>
+  <ol>
+    <li><p>Select the <b>Ellipse</b> tool (<img src =
+    "images/EllipseToolIcon.gif" alt = "Ellipse tool icon" width = "26">) in
+    the toolbox.</p>
+    </li>
+    <li><p>Draw a circle using &lt;Ctrl&gt;-drag. Give it a thin black stroke
+    and no (<b>none</b>) color fill.</p>
+      <figure>
+        <img src = "images/Vase01.gif" alt = "Drawing a circle with a thin black
+        stoke and no color fill" class = "img-fluid">
+        <figcaption>Drawing a circle with a thin black stoke and no color
+        fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will flatten the bottom of the circle to impart the look that it
+    is the bottom of the vase that sits on a flat surface.</p>
+    <p>Start by choosing Path &gt; Object to Path. You will have great freedom
+    to deforming one small part of the circle while leaving the rest of the
+    circumference unaffected. Four nodes appear on the four quadrants of the
+    circle.</p>
+      <figure>
+        <img src = "images/Vase02.gif" alt = "Converting the circle into a
+        path" class = "img-fluid">
+        <figcaption>Converting the circle into a path.</figcaption>
+      </figure>
+    </li>
+    <li>With the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">) still active, click on the lower left-hand curve
+    of the circle. The left and bottom nodes become highlighted, signaling that
+    the curve segment between them can be manipulated.</p>
+      <figure>
+        <img src = "images/Vase03.gif" alt = "Selecting the lower left-hand
+        curve segment of the circle" class = "img-fluid">
+        <figcaption>Selecting the lower left-hand curve segment of the
+        circle.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Insert new nodes into selected segments</b> icon
+    (<img src = "images/InsertNewNodesIcon.gif" alt = "Insert new nodes into
+    selected segments icon" width = "26">) in the <b>Node Tool Control Bar</b>
+    to add a new node exactly between the two highlighted nodes.</p>
+      <figure>
+        <img src = "images/Vase04.gif" alt = "Insert a new node into the lower
+        left curve of the circle's circumference" class = "img-fluid">
+        <figcaption>Insert a new node into the lower left curve of the
+        circle&rsquo;s<br>circumference.</figcaption>
+      </figure>
+    </li>
+    <li><p>Repeat Steps 4 and 5 for the lower left-hand curve segment of the
+    circle.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Vase05.gif" alt = "Selecting lower right curve of the
+        circle's circumference" class = "img-fluid">
+        <figcaption>Selecting the lower right curve of the circle&rsquo;s<br>
+        circumference.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/Vase06.gif" alt = "Insert a new node into the lower
+        right curve of the circle's circumference" class = "img-fluid">
+        <figcaption>Insert a new node into the lower right curve<br>of the
+        circle&rsquo;s circumference.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Select the bottom node with the Node tool (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">).
+      <figure>
+        <img src = "images/Vase07.gif" alt = "Selecting the bottom node with the
+        Node tool" class = "img-fluid">
+        <figcaption>Selecting the bottom node with the Node tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the bottom node upwards a little distance to create a
+    minor indentation in the curvature of the circle at that point. This
+    indentation creates the subtle impression that it is the bottom of the
+    circle (much like a glass paper weight) that is to rest on a flat
+    surface.</p>
+      <figure>
+        <img src = "images/Vase09.gif" alt = "Raising the bottom node of the
+        circle" class = "img-fluid">
+        <figcaption>Raising the bottom node of the circle.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now draw the circle that will become the open top of the
+    vase.</p>
+    <p>Select the <b>Ellipse</b> tool (<img src = "images/EllipseToolIcon.gif"
+    alt = "Ellipse tool icon" width = "26">) and &lt;Ctrl&gt;-drag to create a
+    circle whose diameter is between &frac13; and &frac12; the diameter of the
+    vase body.</p>
+      <figure>
+        <img src = "images/Vase10.gif" alt = "Drawing the circle that will
+        become the open top of the vase" class = "img-fluid">
+        <figcaption>Drawing the circle that will become the open top of the
+        vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>The soap canister that you created in Tutorial 15A has its lid
+    rescaled using the <b>Transform</b> tool so that its height is now 30
+    percent of its original height of 100 percent. The 30 percent value sets
+    the amount of deformation throughout the artwork is a way that also sets
+    the virtual angle at which a viewer looks at your artwork.</p>
+    <p>By maintaining a consistent value of 30 percent in any graphic design
+    function that manipulates height reduction, you are able to maintain the
+    consistent illusion of a real-world point of view from an angle, upwards or
+    downwards, of your artwork, not from straight down or straight from a side.
+    You train the viewer&rsquo;s eye and mind that they are looking at something
+    simulating a real-world three-dimensional universe.</p>
+    <p>Transform the newly-drawn, and selected, circle by choosing Object &gt;
+    Transform&hellip; Scale, and set its <b>Height</b> to <b>30</b> percent.
+    Make sure that <b>%</b> is selected as the unit of measurement.</p>
+    <p>Click on the <b>Apply</b> button and then on the <b>Close</b> button to
+    dismiss the <b>Transform</b> dialog box.</p>
+      <figure>
+        <img src = "images/Vase11.gif" alt = "Reducing the new circle's diameter
+        to 30 percent its original value" class = "img-fluid">
+        <figcaption>Reducing the new circle&rsquo;s diameter to 30 percent its
+        original value.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the newly created ellipse still selected, &lt;Shift&gt;-click
+    the stroke of the vase body to group-select it, choose Object &gt; Align
+    and Distribute&hellip;, select <b>First selected</b> in the <b>Relative
+    to</b> drop-down list of selections, and then click on the <b>Center on
+    vertical axis</b> icon (<img src = "images/CenterOnVerticalAxisIcon.gif"
+    alt = "Center on vertical axis icon" width = "26">).</p>
+    <p>The ellipse and vase body are now centered one over the other. You are
+    building precision into your design.</p>
+      <figure>
+        <img src = "images/Vase12.gif" alt = "Vertically centering the ellipse
+        and the vase body" class = "img-fluid">
+        <figcaption>Vertically centering the ellipse and the vase
+        body.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now draw the vase&rsquo;s neck.</p>
+    <p>&ldquo;Grab&rdquo; a vertical guideline from the left-hand ruler and
+    drag it so that it just touches the left edge of the ellipse. The small
+    circle is that line&rsquo;s <u>anchor</u> about which you can rotate the
+    guideline. Click-drag the anchor so it is situated where the guideline
+    touches the ellipse. It will be the point about which you will rotate the
+    guideline so it just touches both the ellipse and the body of the vase.</p>
+    <p>This guideline will be used to constrain the curve that will become the
+    left side of the neck. You will not need to drag a second line to the right
+    side of the ellipse, as you will see shortly.</p>
+      <figure>
+        <img src = "images/Vase13.gif" alt = "Dragging a guideline to the left
+        side of the ellipse and moving the anchor to the point of contact"
+        class = "img-fluid">
+        <figcaption>Dragging a guideline to the left side of the ellipse and
+        moving the anchor to the point of contact.</figcaption>
+      </figure>
+    </li>
+    <li><p>Put the Select cursor (<img src = "images/SelectionToolCursor.gif"
+    alt = "Selection tool cursor" width = "26">) on the guideline and press
+    &lt;Shift&gt;. The cursor turns into a hand cursor and a double-circular
+    arrow appears on the guideline, indicating that you can now rotate the line
+    about its anchor. Rotate the line so that it just touches the body of the
+    vase.</p>
+      <figure>
+        <img src = "images/Vase14.gif" alt = "Rotating the guideline so that it
+        just contacts the body of the vase" class = "img-fluid">
+        <figcaption>Rotating the guideline so that it just contacts the body of
+        the vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>Bring up the <b>Snap Controls Bar</b> if it isn&rsquo;t up already
+    (choose View &gt; Show/Hide &gt; Snap Controls Bar) and click on <b>Enable
+    snapping (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable
+    snapping icon" width = "26">), <b>Snap nodes, paths, and handles</b> (<img
+    src = "images/SnapNodesPathsHandlesIcon.gif" alt = "Snap nodes, paths, and
+    handles icon" width = "26">), and <b>Snap guides</b> (<img src =
+    "images/SnapGuidesIcon.gif" alt = "Snap guides icon" width = "26">).</p>
+    <p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen tool
+    icon" width = "26">), draw a line segment from where the guideline contacts
+    the body of the vase up to where the segment touches the ellipse.</p>
+      <figure>
+        <img src = "images/Vase15.gif" alt = "Drawing the line segment between
+        the body of the vase and the ellipse" class = "img-fluid">
+        <figcaption>Drawing the line segment between the body of the vase and
+        the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li>Click on the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">), then click on the line segment to select it.
+    Then, click-drag the segment inwards to create a gentle asymmetrical curve
+    that looks appropriate for the left side of a vase neck. Make fine
+    adjustments with the direction handles and nodes until you like what you
+    see. You will make micro-adjustments shortly.</p>
+      <figure>
+        <img src = "images/Vase16.gif" alt = "Converting the neck line segment
+        into a curve" class = "img-fluid">
+        <figcaption>Converting the neck line segment into a curve.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Select tool (<img src = "images/SelectionToolIcon.gif"
+    alt = "Selection tool icon" width = "26">), keep the curve selected, and
+    choose Edit &gt; Duplicate to duplicate it.</p>
+    </li>
+    <li><p>Click on the <b>Flip selected objects horizontally</b> icon (<img
+    src = "images/FlipSelectedObjectsHorizontallyIcon.gif" alt = "Flip selected
+    objects horizontally icon" width = "26">) to make the duplicate a mirror
+    image of the original.</p>
+      <figure>
+        <img src = "images/Vase17.gif" alt = "Turning the duplicated curve into
+        an exact mirror image" class = "img-fluid">
+        <figcaption>Turning the duplicated curve into an exact mirror
+        image.</figcaption>
+      </figure>
+    </li>
+    <li><p>&lt;Ctrl&gt;-drag the duplicate curve to the right side of the
+    vase-ellipse image and position it so that it connects the two shapes.
+    Remember that moving an object with the &lt;Ctrl&gt; key pressed constrains
+    movement to either the horizontal direction or the vertical direction.</p>
+      <figure>
+        <img src = "images/Vase18.gif" alt = "Moving the mirror-image duplicate
+        curve to the right side of the vase and ellipse" class = "img-fluid">
+        <figcaption>Moving the mirror-image duplicate curve to the right side
+        of the vase and ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the ellipse and, with the &lt;Ctrl&gt; key pressed, move it
+    directly upwards a little bit so it will be out of the way when you
+    fine-adjust both curves.</p>
+      <figure>
+        <img src = "images/Vase19.gif" alt = "Moving the ellipse straight up
+        a short distance" class = "img-fluid">
+        <figcaption>Moving the ellipse straight up a short
+        distance.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) and &lt;Shift&gt;-click on both curves to
+    group-select them. Instead of appearing inside a single bounding box with
+    directional handles as you would see with the Select tool (<img src =
+    "images/SelectionToolIcon.gif" alt = "Selection tool icon" width = "26">),
+    each curve appears in its own bounding box and ends with its own nodes.</p>
+      <figure>
+        <img src = "images/Vase20.gif" alt = "Group-selecting the two curves
+        with the Node tool" class = "img-fluid">
+        <figcaption>Group-selecting the two curves with the Node
+        tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now join the two top curve nodes with a line segment.</p>
+    <p>With the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) active, draw a marquee around both nodes to
+    group-select them (and not the lower two nodes).</p>
+      <figure>
+        <img src = "images/Vase21.gif" alt = "Marquee-selecting the two top
+        nodes of both curves" class = "img-fluid">
+        <figcaption>Marquee-selecting the two top nodes of both
+        curves.</figcaption>
+      </figure>
+    </li>
+    <li><p>Both top nodes are highlighted and ready for manipulation. The bottom
+    two nodes are unaffected.</p>
+      <figure>
+        <img src = "images/Vase22.gif" alt = "The two top nodes are highlighted,
+        the bottom two nodes are unaffected" class = "img-fluid">
+        <figcaption>The two top nodes are highlighted, the bottom two nodes are
+        unaffected.</figcaption>
+      </figure>
+    </li>
+    <li>With the two top nodes highlighted, click on the <b>Join selected
+    endnodes with a new segment</b> icon (<img src =
+    "images/JoinSelectedEndnodesIcon.gif" alt = "Join selected endnodes with a
+    new segment icon" width = "26">) in the <b>Node Tool Controls Bar</b>. A
+    straight line segment now connects the two nodes.</p>
+      <figure>
+        <img src = "images/Vase23.gif" alt = "Connecting the two top curve
+        nodes" class = "img-fluid">
+        <figcaption>Connecting the two top curve nodes.</figcaption>
+      </figure>
+    </li>
+    <li><p>It&rsquo;s likely that the two neck curves aren&rsquo;t in contact
+    with the body of the vase. There might be a pixel or fraction of a pixel
+    space between the vase and the curves. Here is when you do
+    micro-adjustment.</p>
+    <p>Choose View &gt; Display Mode &gt; Outline. With only paths visible,
+    you can see discrepancies more easily. In the figure below, both curves are
+    not in contact with the vase body. You will move each curve inward until
+    they touch seamlessly, without any break.</p>
+      <figure>
+        <img src = "images/Vase24.gif" alt = "Top portion of the vase in
+        Outline view" class = "img-fluid">
+        <figcaption>Top portion of the vase in Outline view.</figcaption>
+      </figure>
+    </li>
+    <li><p>An easy way to bring the left curve in so that it touches the body
+    of the vase properly is to click-drag the left-hand direction handle on the
+    bounding box inwards until the curve touches the vase body. Outline view
+    makes this technique very easy. Remember that you can also magnify your
+    area of focus with the <b>Zoom</b> tool to get the
+    &ldquo;micro&rdquo;-feeling in micro-adjustment.</p>
+    <p>Do the same thing with the right side curve.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Vase25.gif" alt = "Bringing the left curve in for
+        proper contact with the vase body" class = "img-fluid">
+        <figcaption>Bringing the left curve in for proper contact<br>with the
+        vase body.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/Vase26.gif" alt = "Bringing the right curve in for
+        proper contact with the vase body" class = "img-fluid">
+        <figcaption>Bringing the right curve in for proper contact<br>with the
+        vase body.</figcaption>
+      </figure>
+    </li>
+    <div style = "clear: left;"></div>
+    <li><p>Now combine both the upper neck portion of the vase with the vase
+    body into one path in preparation for color work over the whole body.</p>
+    <p>Marquee-select both neck and body objects to group-select them.</p>
+      <figure>
+        <img src = "images/Vase27.gif" alt = "Group-selecting the vase neck and
+        body" class = "img-fluid">
+        <figcaption>Group-selecting the vase neck and body.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Union. There is now only one bounding box enclosing
+    the entire vase construct as a single object.</p>
+      <figure>
+        <img src = "images/Vase28.gif" alt = "Combining vase neck and body with
+        the Path union function" class = "img-fluid">
+        <figcaption>Combining vase neck and body with the Path union
+        function.</figcaption>
+      </figure>
+    </li>
+    <li><p>The next step is to color the vase. Click on the yellow color swatch
+    in the Color palette to give the vase a yellow fill. Then
+    &lt;Shift&gt;-click on the <b>none</b> swatch (<img src =
+    "images/NoneSwatch.gif" alt = "None swatch" width = "26">) to eliminate the
+    stroke.</p>
+      <figure>
+        <img src = "images/Vase29.gif" alt = "Giving the vase a yellow fill and
+        no stroke" class = "img-fluid">
+        <figcaption>Giving the vase a yellow fill and no stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Radial gradient</b> icon (<img src =
+    "images/RadialGradientIcon.gif" alt = "Radial gradient icon" width = "26">)
+    in the <b>Fill</b> dialog box. The vase now has a gradient that changes
+    from an opaque yellow at the center to 100 percent transparency at the
+    edges.</p>
+    <p>Click on the <b>Gradient Tool</b> (<img src = "images/GradientTool.gif"
+    alt = "Gradient tool" width = "26">) in the toolbox. The <b>Gradient
+    Tool</b> directional handles and nodes appear.</p>
+      <figure>
+        <img src = "images/Vase30.gif" alt = "Applying a gradient to the vase"
+        class = "img-fluid">
+        <figcaption>Applying a gradient to the vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>Drag the square node to the upper right portion of the vase. The
+    yellow Will-o&rsquo;-the-wisp follows it. The yellow area will represent
+    the area of greatest illumination from a nearby light source.</p>
+    </li>
+    <li><p>Click-drag one of the circular end nodes around about half a
+    turn.</p>
+    </li>
+    <li><p>With that one end node still active (blue-colored), click on the
+    <b>HSL</b> tab (<b>H</b>ue, <b>S</b>aturation, <b>L</b>ightness) in the
+    <b>Fill</b> dialog box, and move the slider in the <b>L</b> color bar to
+    the left until the lightness value equals <b>30</b>. By reducing the
+    lightness value, you are giving the outside region of the gradient a dark
+    yellow color. This darker color will represent shadowing on the back and
+    bottom side of the vase.</p>
+    <p>Adjust the position of the square node and the two circular end nodes to
+    achieve the kind of shadowing that you would like to see.</p>
+    <p>Note that, because the neck and body of the vase are now one object,
+    courtesy of having performed the path union, the gradient affects the entire
+    vase, instead of affecting just the neck or just the body. You are producing
+    the effect of depth of one solid three-dimensional body.</p>
+      <figure>
+        <img src = "images/Vase31.gif" alt = "Creating shadowing on the vase"
+        class = "img-fluid">
+        <figcaption>Creating shadowing on the vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are satisfied with what you see, click away from the vase
+    to deselect it.</p>
+      <figure>
+        <img src = "images/Vase32.gif" alt = "Deselecting the vase" class =
+        "img-fluid">
+        <figcaption>Deselecting the vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now select the ellipse that will become the vase top and lower it
+    straight down (&lt;Ctrl&gt;-drag) so that the two neck curves touch it at
+    both ends of its major axis (its long diameter, if you will). Keep the
+    black stroke on the ellipse so you can see where one object ends and the
+    other starts.</p>
+      <figure>
+        <img src = "images/Vase33.gif" alt = "Lowering the ellipse" class =
+        "img-fluid">
+        <figcaption>Lowering the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>Zoom in on the ellipse with the <b>Zoom</b> tool.</p>
+      <figure>
+        <img src = "images/Vase34.gif" alt = "Zooming in on the ellipse" class
+        = "img-fluid">
+        <figcaption>Zooming in on the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>When the top of a vase or cup is illuminated from the side and up
+    a little bit, the light falls on one of the inside walls as a crescent arc.
+    The rest of the inside wall down from the illuminated arc is dark, so you
+    know that you are looking deeper into the vase than the light can reach.
+    You will now imitate that light-and-shadow effect using a radial
+    gradient.</p>
+    <p>As you can see in the figure below, the curve that marks the boundary
+    between bright yellow and dark yellow looks like it is part of an ellipse.
+    You will use that insight to advantage by creating a radial gradient, part
+    of which will color the inside of the ellipse and look solid. The rest of
+    the gradient outside the ellipse will be hidden.</p>
+      <figure>
+        <img src = "images/Vase35.gif" alt = "Anatomy of an arc of illumination"
+        class = "img-fluid">
+        <figcaption>Anatomy of an arc of illumination.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the edge of the ellipse to select it. In the <b>Fill</b>
+    dialog box (bring it back up if you dismissed it), click on the <b>Radial
+    gradient</b> icon (<img src = "images/RadialGradientIcon.gif" alt = "Radial
+    gradient icon" width = "26">) in the <b>Fill</b> dialog box. The ellipse is
+    now filled with a gradient starting with dark yellow at the center and
+    grading to bright yellow at the edges. This gradient setting is what you
+    used on the vase body. Inkscape keeps the settings from the last time you
+    used a tool in the same work session.</p>
+      <figure>
+        <img src = "images/Vase36.gif" alt = "Creating the gradient inside the
+        ellipse" class = "img-fluid">
+        <figcaption>Creating the gradient inside the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>Drag the square node down to the lower left-hand portion of the
+    ellipse. The dark yellow coloration follows the node. This area will
+    represent the darker interior of the vase neck.</p>
+    </li>
+    <li><p>Click on a circular end node and rotate the radial gradient tool
+    around until one line segment points to the left and down a little bit, and
+    the other line points down and a little to the left.</p>
+    The left-hand line will represent the dark yellow portion just down
+    from the yellow illuminated portion of the inside of the neck and help you
+    define its extent to the left as you refine the structure of the
+    inside shadow. The downward line represents that part of the inside shadow
+    that grows darker as you go further down into the vase interior.</p>
+      <figure>
+        <img src = "images/Vase37.gif" alt = "Rotating the radial gradient tool
+        to start defining the shape of the interior shadow" class = "img-fluid">
+        <figcaption>Rotating the radial gradient tool to start defining the
+        shape of the interior shadow.</figcaption>
+      </figure>
+    </li>
+    <li><p>Double-click in the middle of one or the other gradient directional
+    handle to add a new gradient stop to both lines. You will use this new stop
+    to do fine adjustment of the structure of the shadow.</p>
+      <figure>
+        <img src = "images/Vase38.gif" alt = "Adding a new gradient stop to
+        the radial gradient structure" class = "img-fluid">
+        <figcaption>Adding a new gradient stop to the radial gradient
+        structure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Drag the new stop on the lower directional handle line down to
+    extend the extent of the shadow in that direction. It doesn&rsquo;t have
+    to be moved much because the gradient tool is very sensitive to movement.
+    The important point is that the shadow area needs to become darker is it
+    gets closer to the rim of the lip you are creating, creating the illusion
+    of consistently deepening darkness into the interior of the vase.</p>
+      <figure>
+        <img src = "images/Vase39.gif" alt = "Extending the dark yellow area
+        down toward the lower part of the rim of the vase opening" class =
+        "img-fluid">
+        <figcaption>Extending the dark yellow area down toward the lower part
+        of the rim of the vase opening.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Select tool (<img src = "images/SelectionToolIcon.gif"
+    alt = "Selection tool icon" width = "26">), click on or in the ellipse, and
+    &lt;Shift&gt;-click on the <b>none</b> swatch (<img src =
+    "images/NoneSwatch.gif" alt = "None swatch" width = "26">) to eliminate the
+    black lining on the rim.</p>
+      <figure>
+        <img src = "images/Vase40.gif" alt = "Eliminating the black rim on the
+        ellipse" class = "img-fluid">
+        <figcaption>Eliminating the black rim on the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>The edge rim now looks razor sharp. This is supposed to be a vase,
+    not a safety hazard! You will now give the lip thickness, including a
+    gradient. A thick rim also lends the look of solidness, which is what you
+    want in a ceramic 3-D object.</p>
+    <p>With the ellipse still selected (reselect if it has been deselected),
+    bring up the <b>Fill and Stroke</b> dialog box if it has been deselected or
+    iconified, choose the <b>Stroke style</b> tab, and set the stroke
+    <b>Width</b> to <b>8.000</b> pixels. The edge broadens into a thick rim
+    with a (radial) gradient already applied and its own <b>Radial gradient</b>
+    tool active for immediate use. The radial gradient was applied automatically
+    because the color fill had just been given a radial gradient.</p>
+      <figure>
+        <img src = "images/Vase41.gif" alt = "Eight-pixel thick rim with
+        gradient applied" class = "img-fluid">
+        <figcaption>Eight-pixel thick rim with gradient applied.</figcaption>
+      </figure>
+    </li>
+    <li><p>The rim coloration looks good. The rim thickness lends the impression
+    that the vase has material strength, further enhancing its 3-D feel. Choose
+    Edit &gt; Deselect to deselect the open-top artwork for the vase.</p>
+    <p>Marquee-select the vase top and the vase body to group-select them. Press
+    &lt;Ctrl&gt;-G to group them into one grouped unit. Click anywhere off the
+    artwork to deselect it.</p>
+      <figure>
+        <img src = "images/Vase42.gif" alt = "Finished vase" class =
+        "img-fluid">
+        <figcaption>Finished vase.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), move the vase to a position of your
+    choice over the canister-and-soap globe artwork.</p>
+      <figure>
+        <img src = "images/Vase43.gif" alt = "Moving the vase over the
+        canister-and-soap globe artwork" class = "img-fluid">
+        <figcaption>Moving the vase over the canister-and-soap globe
+        artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the vase still selected, click on the <b>Lower selection to
+    bottom</b> icon (<img src = "images/LowerSelection2Bottom.gif" alt = "Lower
+    selection to bottom icon" width = "26">) to put the vase behind the canister
+    and soap globes. Reposition and resize it as you see fit.</p>
+      <figure>
+        <img src = "images/Vase44.gif" alt = "Lowering the vase to the bottom
+        of the artwork image stack" class = "img-fluid">
+        <figcaption>Lowering the vase to the bottom of the artwork image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click anywhere off the artwork to deselect it.</p>
+      <figure>
+        <img src = "images/Vase45.gif" alt = "Partially finished artwork" class
+        = "img-fluid">
+        <figcaption>Partially finished artwork.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Making a Placemat Using a Pattern Fill</h2>
+  </header>
+  <p>The last item to draw is a placemat. You will draw a trapezoid to represent
+  a square mat that recedes into the distance and fill it with lines that also
+  recede within the sides.</p>
+  <ol>
+    <li><p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    tool icon" width = "26">), draw a trapezoid. Note: drawing the horizontal
+    sides is easy when you draw pressing the &lt;Ctrl&gt; key &mdash; the
+    &lt;Ctrl&gt; key maintains the intended horizontal direction even if the
+    cursor wanders off the line.</p>
+      <figure>
+        <img src = "images/Placemat01.gif" alt = "Drawing the trapezoid"
+        class = "img-fluid">
+        <figcaption>Drawing the trapezoid.</figcaption>
+      </figure>
+    </li>
+    <li>With the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">), adjust the placement of any nodes so that your
+    placemat enjoys a symmetrical geometry.</p>
+      <figure>
+        <img src = "images/Placemat02.gif" alt = "Fine-adjusting corner nodes
+        of the placemat" class = "img-fluid">
+        <figcaption>Fine-adjusting corner nodes of the placemat.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">) in preparation for filling the
+    trapezoid with a pattern. The nodes disappear and the bounding box now has
+    direction handles.</p>
+      <figure>
+        <img src = "images/Placemat03.gif" alt = "Selecting the Selection tool"
+        class = "img-fluid">
+        <figcaption>Selecting the Selection tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the trapezoid still selected, choose Object &gt; Fill and
+    Stroke&hellip;, <b>Fill</b> tab, the Pattern button (<img src = "
+    images/PatternButton.gif" alt = "Pattern button" width = "26">).</p>
+    <p>If the <b>Pattern fill</b> does not default to <b>Stripes 1:1</b>, then
+    select <b>Stripes 1:1</b> from the dropdown list of patterns. The trapezoid
+    is now filled with alternating black and transparent vertical bars.</p>
+      <figure>
+        <img src = "images/Placemat04.gif" alt = "Alternating vertical black
+        and transparent bar fill pattern" class = "img-fluid">
+        <figcaption>Alternating vertical black and transparent bar fill
+        pattern.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the trapezoid still selected, click on the Node tool (<img src
+    = "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">). Nodes
+    appear on the corners of the trapezoid and the <b>Pattern</b> tool appears
+    at the upper left corner of the artboard (in the orange ellipse).</p>
+      <figure>
+        <img src = "images/Placemat05.gif" alt = "Node tool activated, nodes
+        appearing at corners of the trapezoid, and the Pattern tool appears at
+        the upper left corner of the artboard" class = "img-fluid">
+        <figcaption>Node tool activated, nodes appearing at corners of the
+        trapezoid, and the <b>Pattern</b> tool appears at the upper left corner
+        of the artboard.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the <b>&times;</b> symbol in the <b>Pattern</b> tool to
+    move all three <b>Pattern</b> tool components to below the placemat
+    object.</p>
+    </li>
+    <li><p>Click on the circle tool component <b>&cir;</b> and, while pressing
+    the &lt;Ctrl&gt; key, rotate the circle (now red because it is active)
+    around the <b>&times;</b> symbol until it is directly below the
+    <b>&times;</b>. Note that pressing the &lt;Ctrl&gt; key causes the circle
+    symbol &cir; to rotate in 15 degree increments. As you rotate the circle
+    symbol &cir;, the vertical bars change their orientation until they are
+    horizontal.</p>
+      <figure>
+        <img src = "images/Placemat06.gif" alt = "Rotating the circle symbol
+        so the pattern bars are horizontally oriented" class = "img-fluid">
+        <figcaption>Rotating the circle symbol so the pattern bars are
+        horizontally oriented.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reduce the thickness of the now horizontal bars by dragging the
+    square symbol <b>&square;</b> upwards until you achieve a bar thickness
+    that you like. The square turns red as you drag it, indicating that it is
+    active. The circle symbol <b>&cir;</b> moves with the square, yet keeping
+    its orientation to the <b>&times;</b> symbol. The closer the circle is to
+    the <b>&times;</b> symbol, the thinner the bars become.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/PatternTool1.gif" alt = "Pattern tool in standard
+        position" class = "img-fluid">
+        <figcaption>Pattern tool in<br>standard position.</figcaption>
+      </figure>
+      <figure style = "float: left;" class = "mr-5">
+        <img src = "images/PatternTool2.gif" alt = "Pattern tool with circle
+        rotated down" class = "img-fluid">
+        <figcaption>Pattern tool with circle<br>rotated down.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/PatternTool3.gif" alt = "Pattern tool with square
+        moved upwards" class = "img-fluid">
+        <figcaption>Pattern tool with square moved upwards.<br>
+        The circle moves with the square.</figcaption>
+      </figure>
+      <div style = "clear: left;"></div>
+    <p>Also, note that the square symbol <b>&square;</b> is sensitive to
+    placement. Magnifying your work area might help in giving you finer control
+    over its &ldquo;electronic hyper-activity.&rdquo;</p>
+      <figure>
+        <img src = "images/Placemat07.gif" alt = "Reducing the thickness of the
+        horizontal bars" class = "img-fluid">
+        <figcaption>Reducing the thickness of the horizontal bars.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">) in preparation for lowering the
+    placemat to the bottom of the image stack.</p>
+      <figure>
+        <img src = "images/Placemat08.gif" alt = "Activating the Selection tool"
+        class = "img-fluid">
+        <figcaption>Activating the Selection tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the placemat still selected, click on the <b>Lower selection to
+    bottom</b> icon (<img src = "images/LowerSelection2Bottom.gif" alt = "Lower
+    selection to bottom icon" width = "26">) to put the placemat bottommost in
+    the image stack.</p>
+      <figure>
+        <img src = "images/Placemat09.gif" alt = "Lowering the placement to the
+        bottom of the image stack" class = "img-fluid">
+        <figcaption>Lowering the placemat to the bottom of the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Esc&gt; to deselect the artwork.</p>
+      <figure>
+        <img src = "images/FinishedArtwork.gif" alt = "Finished artwork" class
+        = "img-fluid">
+        <figcaption>Finished artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save. File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+</section>
+
+<p>You have now completed the Inkscape tutorial that focuses on creating the
+appearance of three-dimensionality in your artwork. Gradients can be an
+essential feature in simulating depth, distance, and the sense that some objects
+sit before, after, or next to others.</p>
+<p>Experiment with different lighting and shadowing colors, different degrees
+of contrast, and consider adding other sources of illumination placed in
+different directions. Base your experiments on what you see in reality, and
+then let your imagination take over. Let Inkscape be your playground of the
+imagination!</p>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>How can you determine whether a linear gradient or radial gradient is
+    better for creating creating lighting and shadowing on an object?
+    </li>
+    <li>How can you make a rim of a bowl, cup, or vase look solid and
+    three-dimensional?
+    </li>
+    <li>When an object is made up of several parts that touch, what can you
+    do to create smooth lighting and shadowing across the entire object? What
+    can you do if parts do not touch?
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>A basic rule-of-thumb is to take a real-world object similar to what
+    you want to paint and place it under the type of illumination you intend to
+    duplicate. Critically observe how light is distributed across the surface
+    or surfaces, and where and how shadowing appears. Then, make your
+    determination.</p>
+    </li>
+    <li><p>To give the appearance of solidity to a rim of anything having a
+    top or opening, select the object that defines the rim and increase the
+    width of the stroke using the <b>Width</b> feature in the <b>Stroke
+    style</b> dialog box. Adding a linear or radial gradient to the stroke via
+    the <b>Stroke paint</b> dialog box allows you to be creative with the
+    lighting of the rim to enhance the 3-D effect.</p>
+    </li>
+    <li><p>If the object you want to paint consists of parts that can be joined
+    smoothly, like a vase, cup, or bowl, join them by first group-selecting
+    them and then by choosing Path &gt; Union to unite them into one path.
+    Inkscape&rsquo;s gradient functions will see that path as one entity that
+    they can fill as you see fit.</p>
+    <p>If parts do not touch, then treat each separate part individually by
+    giving them their own gradients. If they are illuminated by the same light
+    source, make sure that the direction of illumination and shadowing are
+    similar on all the objects to maintain consistency in the play of light.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
