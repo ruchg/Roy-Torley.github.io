@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 16, Part B &ndash; Live Path Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education,, drawing hair, live path effects,
+  stroke subpaths, subpath interpolation, stitch subpaths, envelope deformation,
+  lattice deformation 2, path effect editor, color blending, transparency,
+  opacity">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 16, Part B &ndash; Drawing Hair Using Live Path
+          Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6 mt-5"><p class = "lead">Inkscape&rsquo;s Live Path
+      Effects offer the graphic designer a way to draw hair, fur, and other
+      objects that need to appear as a series of wavy curves. By combining
+      sub-path stitching, envelope deformation, lattice deformation, and
+      sub-path interpolation, the artist can draw areas where the filament look
+      of hair, fur, and textiles adds texture, depth, and attractive detail to
+      the composition of a piece of artwork.</p>
+      </div>
+    </div>
+<section>
+  <p>This tutorial is the second part of a two-part tutorial series. In this
+  part, Tutorial 16, Part B, we will focus on the <b>Interpolate Sub-Paths</b>
+  Live Path Effect to draw hair. We will also use the <b>Envelope
+  Deformation</b> and <b>Lattice Deformation</b> Live Path Effects to refine the
+  overall shapes of areas of hair and create the smooth flow of hair that is
+  trained into a ponytail.</p>
+  <p>You&rsquo;ll learn how to do the following techniques:</p>
+  <ul type = "disc">
+    <li>draw curves that fill the space between two parallel or sub-parallel
+    boundary curves.
+    </li>
+    <li>refine the shape of a multi-curve object using envelope deformation
+    and lattice deformation tools.
+    </li>
+    <li>Use transparency and color blending to create a sense of hair depth.
+    </li>
+  </ul>
+  <p>In this tutorial, you will continue learning how to draw hair. You will be
+  working with three <b>Live Path Effects</b>. <b>Interpolate Sub-paths</b> is
+  a live-path function with which you draw two starting lines or curves, called
+  <i>sub-paths</i> that define the sides of a space that you intend to fill with
+  lines the run parallel to one side sub-path and, as they cross the intervening
+  space, they morph in curvature until they mimic the sub-path on the other side
+  of the fill space.</p>
+  <p>For more information about <b>Live Path Effects</b>, go to Help &gt;
+  Inkscape Manual &gt; 8. Live Path Effects (LPEs), and click on <b>Stitch
+  Sub-Paths</b> or <b>Interpolate Sub-Paths</b>.
+  </p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial16B/Tutorial16B_end.svg"><b>Tutorial16B_end.svg</b></a>
+    and store it in a convenient location.</p>
+    </li>
+    <li><p>File &gt; Open file <b>Tutorial16B_end.svg</b>. This file displays a
+    completed illustration of a young woman with a ponytail, facing away from
+    the viewer.</p>
+    <p>If you like, choose View &gt; Zoom &gt; Zoom Out to reduce the view of
+    the finished artwork, adjust the window size, and leave it on your screen
+    as you work. (Use the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to select and move the artwork
+    where you want it in the window.) If you don&rsquo;t want to leave the
+    image open, choose File &gt; Close.</p>
+    </li>
+
+  <p><b>Resource:</b> For an illustration of the finished artwork in this
+  tutorial, see the top of this page.</p>
+  </li>
+  <li><p>If you have worked on Tutorial 16, Part A, then File &gt; Open file
+  <b>Ponytail.svg</b>.</p>
+  </li>
+  <li><p>If, however, you have not worked on Tutorial 16, Part A, then download
+  the art file <a href =
+  "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial16B/Tutorial16B_start.svg"><b>Tutorial16B_start.svg</b></a>
+  and store it in a convenient location.</p>
+    <figure>
+      <img src = "images/Tutorial16B_start.gif" alt = "Young woman"
+      class = "img-fluid">
+      <figcaption>Young woman &ndash; Tutorial 16, Part B starting
+      artwork.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose File &gt; Save As&hellip; and save the file as
+  <b>Ponytail.svg</b> in a convenient location. This file will be your
+  work file.</p>
+  </li>
+</ol>
+  <p>The art file contains the image of a young woman facing away from the
+  camera. The image is on two layers: the bottom layer, which is locked,
+  contains the woman as a mannequin figure; the second layer contains hair
+  and right ear.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/Mannequin.gif" alt = "Image of the head of a mannequin"
+    class = "img-fluid">
+    <figcaption>Image of the head of a mannequin &ndash; bottom layer.</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/HairAndEar.gif" alt = "Image of the plan of the
+    mannequin's hair and ear" class = "img-fluid">
+    <figcaption>Image of the plan of the mannequin&rsquo;s hair and ear &ndash;
+    upper layer.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  <p>The hair is divided into separate areas. Each area contains hair whose flow
+  has its own starting and ending points, degree of curvature, color and
+  gradient shading. Each area has its own place in the overall image stack
+  to create a sense of hair design as might be done in a salon.</p>
+  <figure>
+    <img src = "images/HairAreas.gif" alt = "Exploded view of the different
+    areas of hair" class = "img-fluid">
+    <figcaption>Exploded view of the different areas of hair.</figcaption>
+  </figure>
+  <p>The woman&rsquo;s ear is its own grouped object so that it can be placed
+  between two bodies of hair to enhance the sense of a 3-D presentation.</p>
+  <figure>
+    <img src = "images/Ear.gif" alt = "Image of the mannequin's right ear"
+    class = "img-fluid">
+    <figcaption>Image of the mannequin&rsquo;s right ear.</figcaption>
+  </figure>
+  <p>The task of this tutorial is to create overlays that you will place
+  ontop of the areas of hair to create the look of strands of trained hair
+  that follow the curvature of each area. The coloration of underlying areas
+  and overlying hair filaments will be different to give the appearance of
+  darker hair underneath that is not reached by the light, and lighter-colored,
+  variegated hair that is reflecting light. The combination colors and styles of
+  coloration produce subtle depth.</p>
+</section>
+<section>
+  <header>
+    <h2>Review of <i>Stitch Sub-Paths</i> and <i>Envelope Deformation</i> Live
+    Path Effects in Drawing Hair on the Nape of the Neck</h2>
+  </header>
+  <p>If you have been taking a break away from Inkscape for a while, it might
+  be worthwhile to refresh your memory on the Live Path Effects that you have
+  learned in the previous half of this tutorial (Tutorial 16, Part A). In this
+  section, you will draw the hair that runs down the back of the model&rsquo;s
+  neck in a triangular shape using the <b>Stitch Sub-Paths</b> Live Path Effect.
+  In subsequent sections, we will focus on learning and using the <b>Sub-Path
+  Interpolation</b> Live Path Effect.</p>
+  <ol>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), select the reddisn-brown triangular
+    shape that represents hair on the nape of the model&rsquo;s neck.</p>
+      <figure>
+        <img src = "images/Nape01.gif" alt = "Selecting the neck hair line"
+        class = "img-fluid">
+        <figcaption>Selecting the neck hair line.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the area of hair selected, choose Edit &gt; Duplicate to
+    duplicate the object and move it to one side of the artwork.</p>
+      <figure>
+        <img src = "images/Nape02.gif" alt = "Duplicating and moving the neck
+        hair line" class = "img-fluid">
+        <figcaption>Duplicating and moving the neck hair line.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    tool icon" width = "26">), draw two sub-paths that will define the left
+    and right sides of a stitch-path live path effect object. Draw them in
+    the same direction, that is, from down to up or vice versa. If you draw
+    them in opposite directions, the stitch paths will criss-cross, producing
+    an effect that you do not want.</p>
+      <figure>
+        <img src = "images/Nape03.gif" alt = "Drawing the left and right
+        sub-paths that will define the stitch paths" class = "img-fluid">
+        <figcaption>Drawing the left and right sub-paths that will define the
+        stitch paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the sub-paths using &lt;Shift&gt;-click.</p>
+      <figure>
+        <img src = "images/Nape04.gif" alt = "Group-selecting the sub-paths"
+        class = "img-fluid">
+        <figcaption>Group-selecting the sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine to merge the two sub-paths into one
+    compound sub-path that the <b>Stitch Sub-Paths</b> Live Path Effect can
+    use.</p>
+      <figure>
+        <img src = "images/Nape05.gif" alt = "Combining the two sub-paths into
+        one compound sub-path" class = "img-fluid">
+        <figcaption>Combining the two sub-paths into one compound
+        sub-path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Path Effects&hellip;.</p>
+    </li>
+    <li><p>When the <b>Path Effects</b> dialog box appears, click on the <b>Add
+    path effects</b> plus sign icon (<img src = "images/AddPathEffectIcon.gif"
+    alt = "Add Path Effect icon" width = "26">). The <b>Live Path Effects
+    Selector</b> appears.</p>
+    <figure>
+      <img src = "images/LivePathEffectsSelector1.gif" alt = "Live Path Effect
+      Selector with the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+      <figcaption>Live Path Effects Selector with the <b>Stitch Sub-Paths</b>
+      icon highlighted.</figcaption>
+    </li>
+    <li><p>Scroll to the bottom of the <b>Live Path Effects Selector</b> until the
+    <b>Stitch Sub-Paths</b> Live Path Effect appears.</p>
+    </li>
+    <li><p>Click on the <b>Stitch Sub-Paths</b> icon. The figure below shows
+    five stitch paths that are four pixels wide. Five is the default number of
+    paths when you apply <b>Stitch Sub-Paths</b> for the first time to a
+    combined path object. Your lines might have a different width and color.</p>
+    <p>We gave the lines a yellow stroke so that they can be seen easily because
+    of the strong color contrast.</p>
+      <figure>
+        <img src = "images/Nape06.gif" alt = "Activating the Stitch Sub-Paths
+        Live Path Effect with five stitch paths showing" class = "img-fluid">
+        <figcaption>Activating the Stitch Sub-Paths Live Path Effect with five
+        stitch paths showing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the <b>Number of paths</b> to <b>80</b>. There are so many
+    lines that, at 4 pixels width, they merge and create a yellow swath.</p>
+      <figure>
+        <img src = "images/Nape07.gif" alt = "The number of stitch lines
+        changed to 80" class = "img-fluid">
+        <figcaption>The number of stitch lines changed to 80.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke</b> dialog box active and click on the
+    <b>Stroke style</b> tab. Change the stroke <b>Width</b> to <b>1.500 px</b>.
+    Individual stitch lines are now visible.</p>
+      <figure>
+        <img src = "images/Nape08.gif" alt = "Changing the stroke width of the
+        stitch lines to 1.5 pixels" class = "img-fluid">
+        <figcaption>Changing the stroke width of the stitch lines to 1.5
+        pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>The bottom of the triangular shape is somewhat wide. You will make
+    it narrower.</p>
+    <p>Click on the <b>Stitch path</b> tool (<img src =
+    "images/StitchPathToolIcon.gif" alt = "Node tool cursor">). The Select tool
+    cursor turns into a Node tool cursor (<img src = "images/NodeToolCursor.gif"
+    alt = "Node tool cursor">).</p>
+    <p>Click inside the triangle. Nodes appear representing the endpoint of
+    the original sub-paths. Move the two bottom nodes closer together to tighten
+    the bottom of the triangle and adjust the directional handles as you see
+    fit.</p>
+      <figure>
+        <img src = "images/Nape09.gif" alt = "Adjusting the bottom of the
+        triangular shape and directional handles" class = "img-fluid">
+        <figcaption>Adjusting the bottom of the triangular shape and directional
+        handles.</figcaption>
+      </figure>
+    </li>
+    <li><p>The stitch lines are all spaced at regular intervals. Introduce
+    some unevenness in distribution by entering the values into the <b>Start
+    spacing variance</b> and <b>End spacing variance</b> text boxes below.</p>
+    <p>Click either or both associated <b>Random number generator icons</b>
+    (<img src = "images/RandomNumberGeneratorIcon.gif" alt = "Random number
+    generator icon" width = "26">) and continue clicking until you get a
+    spacing style that you like.</p>
+      <figure>
+        <img src = "images/Nape10.gif" alt = "Introducing unevenness into the
+        placement of the stitch lines" class = "img-fluid">
+        <figcaption>Introducing unevenness into the placement of the stitch
+        lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke</b> dialog box active. Click on the
+    <b>Stroke paint</b> tab and then click on the <b>Dropper</b> tool icon
+    (<img src = "images/DropperToolIcon.gif" alt = "Pick colors from image icon"
+    width = "26">) &frac23; of the way down the dialog box.</p>
+    <p>Click on the reddish-brown triangle to sample its color and give the
+    hair lines the same reddish-brown color.</p>
+    </li>
+    <li><p>Make the <b>Path Effects</b> dialog box active, change the <b>Number
+    of paths</b> to <b>100</b> and type in the <b>Start edge variance</b> and
+    <b>End edge variance</b> values shown in the figure below.</p>
+    <p>The start edge and end edge variance allow you to give the edges of
+    the triangle shape a little bit of unevenness, giving it a more organic
+    look compared to a triangle seen in a geometry textbook, as you can see
+    in the figure below.</p>
+      <figure>
+        <img src = "images/Nape11.gif" alt = "Making the edges of the triangular
+        shape a little uneven" class = "img-fluid">
+        <figcaption>Making the edges of the triangular shape a little
+        uneven.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the triangular shape. Make sure you see two
+    bounding boxes, one encompassing the background shape and the other
+    encompassing the stitch-line object.</p>
+    <p>Press &lt;Ctrl&gt;-G to group the two objects.</p>
+    </li>
+    <li><p>Move the grouped hair object onto the artwork over the original
+    triangle.</p>
+      <figure>
+        <img src = "images/Nape12.gif" alt = "Grouping and moving the triangular
+        hair object" class = "img-fluid">
+        <figcaption>Grouping and moving the triangular hair object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Lower selection one step</b> icon (<img src =
+    "images/LowerSelection1StepIcon.gif" alt = "Lower selection one step icon"
+    width = "26">) in the <b>Tool Controls Bar</b> three times to lower it
+    below 1) the knot above the ponytail, 2) the right side hair object you
+    worked on in Tutorial 16, Part A, and 3) the original triangular body of
+    hair (without the stitch lines).</p>
+    <p>Deselect the object you just moved and then click in the middle of it
+    to select the original triangle.</p>
+    <p>Move the triangle off the artwork to make sure that you actually selected
+    it (sometimes I miss) and delete it.</p>
+      <figure>
+        <img src = "images/Nape13.gif" alt = "Triangle with the underlying
+        original shape removed" class = "img-fluid">
+        <figcaption>Triangle with the underlying original shape
+        removed.</figcaption>
+      </figure>
+    </li>
+    <li><p>Demagnify the artwork and make any fine adjustments you deem
+    necessary.</p>
+      <figure>
+        <img src = "images/Nape14.gif" alt = "Current artwork" class =
+        "img-fluid">
+        <figcaption>Current artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save your artwork.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing the Right Side-Bang and Back Bang Using the <i>Sub-Path
+    Interpolation</i> Live Path Effect</h2>
+  </header>
+  <p>Drawing using the <b>Sub-Path Interpolation</b> Live Path Effect is
+  similar to drawing with the <b>Stitching Sub-Path</b> function. The steps
+  you take to draw are exactly the same as those for stitching sub-paths. The
+  two differences are that lines are drawn parallel or sub-parallel to the two
+  edge sub-paths and that there is no randomizing option to introduce
+  unevenness in line spacing and length.</p>
+  <p>In this section, you will draw the right side-bang and back bang (my
+  terminology) for the model using <b>Sub-Path Interpolation</b>.</p>
+  <ol>
+    <li><p>Preparing the two sub-paths for the <b>Sub-Path Interpolation</b>
+    Live Path Effect is done in exactly the same way as for
+    <b>Stitch Sub-Paths</b>.</p>
+    <p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen tool
+    icon" width = "26">), draw two sub-paths (here, yellow is a great color to
+    use because of its contrast to the background coloration) that will be the
+    top and bottom limits of the space that the hairs will occupy. They
+    don&rsquo;t need to be exact; they just need to provide a starting point
+    for the eventual geometry of the sidebang. Note that the upper sub-path
+    is drawn so that it lies ontop of the hair object you drew in Tutorial 16,
+    Part A. The reason for this placement is that the sidebang will look like
+    it comes out from underneath the larger hair object when you are finished.
+    Right now, you just need to see the starting layout.</p>
+    <p>The lines here are 4 pixels wide so you can see them easily. They will
+    remain as boundary lines when you apply <b>Interpolate Sub-Paths</b>.</p>
+      <figure>
+        <img src = "images/Sidebang01.gif" alt = "Rough drawing of the top and
+        bottom limits of the sidebang shape" class = "img-width">
+        <figcaption>Rough drawing of the top and bottom limits of the sidebang
+        shape.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will create a bend in the left side of the lower sub-path to
+    simulate hair that is pulled back behind the top of the ear.</p>
+    <p>Make the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">) active and double-click on the bottom of the lower
+    sub-path to add a new node there.</p>
+      <figure>
+        <img src = "images/Sidebang02.gif" alt = "Adding a node to the lower
+        sub-path" class = "img-width">
+        <figcaption>Adding a node to the lower sub-path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the left end-node of the lower sub-path to activate it.
+    When its directional handle appears, move it directly to the right to
+    create a bend in the sub-path that conforms to the curvature of the upper
+    part of the ear. Adjust the directional handles of the node that you just
+    added to micro-adjust the curvature if you desire.</p>
+      <figure>
+        <img src = "images/Sidebang03.gif" alt = "Adjusting the curvature of
+        the lower path" class = "img-width">
+        <figcaption>Adjusting the curvature of the lower path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now that the sub-paths have been drawn to satisfaction, you need to
+    prepare them for sub-path interpolation.</p>
+    <p>&lt;Shift&gt;-click both sub-paths to group-select them. You&rsquo;ll
+    see that each one has its own bounding box.</p>
+      <figure>
+        <img src = "images/Sidebang04.gif" alt = "Group-selecting the sub-paths"
+        class = "img-width">
+        <figcaption>Group-selecting the sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine to merge the two sub-paths into one
+    compound sub-path that <b>Interpolate Sub-Paths</b> can work with.</p>
+      <figure>
+        <img src = "images/Sidebang05.gif" alt = "Combining sub-paths" class =
+        "img-width">
+        <figcaption>Combining sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Path Effects&hellip;.</p>
+    </li>
+    <li><p>When the <b>Path Effects</b> dialog box appears, click on the <b>Add
+    path effects</b> plus sign icon (<img src = "images/AddPathEffectIcon.gif"
+    alt = "Add Path Effect icon" width = "26">) to make the <b>Live Path Effects
+    Selector</b> appear.</p>
+      <figure>
+        <img src = "images/Sidebang06.gif" alt = "The Live Path Effects dialog
+        box" class = "img-width">
+        <figcaption>The Live Path Effects dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Interpolate Sub-Paths</b> icon.</p>
+    <figure>
+      <img src = "images/LivePathEffectsSelector2.gif" alt = "Live Path Effect
+      Selector with the Interpolate Sub-Paths icon highlighted" class =
+      "img-fluid">
+      <figcaption>Live Path Effect Selector with the Interpolate Sub-Paths icon
+      highlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>The space between the two sub-paths is filled with three sub-parallel
+    lines. The default number of paths when you first apply <b>Interpolate
+    Sub-Paths</b> is <b>5</b>. You will change that number shortly.</b>
+      <figure>
+        <img src = "images/Sidebang07.gif" alt = "Applying Interpolate
+        Sub-Paths" class = "img-width">
+        <figcaption>Applying the <b>Interpolate Sub-Paths</b> Live Path
+        Effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke</b> dialog box active and click on the
+    <b>Stroke style</b> tab.</p>
+    <p>Change the stroke <b>Width</b> to <b>1.000 px</b>. This is a preparatory
+    step to increasing the number of lines in a way that you can see what
+    you&rsquo;re doing more easily.</p>
+      <figure>
+        <img src = "images/Sidebang08.gif" alt = "Setting the line stroke
+        width to 1 pixel" class = "img-width">
+        <figcaption>Setting the line stroke width to 1 pixel.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Path Effects</b> dialog box active. Set the <b>Number
+    of paths</b> to <b>30</b>. The increased number of lines encased inside
+    the two original sub-paths give you a clearer idea of the layout of the
+    sidebang.</p>
+      <figure>
+        <img src = "images/Sidebang09.gif" alt = "Increasing the number of
+        paths to 30" class = "img-width">
+        <figcaption>Increasing the number of paths to 30.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the color of the sideband to reddish brown.</p>
+    <p>Make the <b>Fill and Stroke</b> dialog box active and click on the
+    <b>Stroke paint</b> tab.</p>
+    <p>Type <b>45200fff</b> in the <b>RGBA</b> text box and press &lt;Enter&gt;
+    to set the color value.</b>
+      <figure>
+        <img src = "images/Sidebang10.gif" alt = "Changing the color of the
+        lines from yellow to reddish brown" class = "img-width">
+        <figcaption>Changing the color of the lines from yellow to reddish
+        brown.</figcaption>
+      </figure>
+    </li>
+    <li><p>The sidebang needs to be positioned underneath the larger body of
+    hair it is partially situated upon and behind the ear.</p>
+    <p>Click on the <b>Lower selection one step</b> icon in the <b>Tool Controls
+    Bar</b> to lower the sidebang so that it lies underneath the upper larger
+    body of hair and underneath the ear. By arranging the sidebang in this
+    stacking order of the image stack, you have given this area of the hair and
+    face a three-dimensional feel.</p>
+      <figure>
+        <img src = "images/Sidebang11.gif" alt = "Lowering the sidebang so that
+        it lies underneath the upper body of hair and the ear" class =
+        "img-width">
+        <figcaption>Lowering the sidebang so that it lies underneath the upper
+        body of hair and the ear.</figcaption>
+      </figure>
+    </li>
+    <li><p>The sidebang looks thin. It is composed of evenly spaced lines.
+    The <b>Interpolate Sub-Paths</b> Live Path Effect does not have the
+    randomizing capabilites that <b>Stitch Sub-Paths</b> has. However, we can
+    create an impression that the sidebang is more substantial than it currently
+    looks. We will create an underlying object that mimics the geometry of the
+    sidebang and give it a gradient that suggests that there is more hair
+    underneath and covered by the lines you drew that partially obscure
+    details.</p>
+    <p>Select the Ellipse tool (<img src = "images/EllipseToolIcon.gif" alt =
+    "Ellipse tool icon" width = "26">) in the toolbox and draw an ellipse that
+    roughly mimics the size and shape of the sidebang. The ellipse might have a
+    reddish brown fill color because that was the last color you used in
+    coloring the sidebang. That color is the color you want for the
+    sidebang so that it harmonizes with the rest of the hair.</p>
+      <figure>
+        <img src = "images/Sidebang12.gif" alt = "Drawing an ellipse" class =
+        "img-width">
+        <figcaption>Drawing an ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the ellipse still selected, click on the <b>Radial gradient</b>
+    icon (<img src = "images/RadialGradientIcon.gif" alt = "Radial gradient
+    icon" width = "26">) in the <b>Fill and Stroke &ndash; Fill</b> dialog box.
+    The ellipse now has a radial gradient attached to it that changes from
+    reddish brown to transparent at the edge. You will see different gradient
+    swatches in your <b>Radial gradient</b> library listing &mdash; what you
+    see in the figure below is the result of my experiments.</p>
+      <figure>
+        <img src = "images/Sidebang13.gif" alt = "Setting a gradient to the
+        ellipse" class = "img-width">
+        <figcaption>Setting a gradient to the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>If the <b>Move gradients</b> icon isn&rsquo;t highlighted in the
+    <b>Tool Controls Bar</b>, click on it to activate it. If it is not made
+    active, you will still be able to move the ellipse, but its gradient will
+    remain behind, which can become irksome.</p>
+      <figure>
+        <img src = "images/MoveGradientsIcon.gif" alt = "Move gradients icon
+        unhighlighted" class = "img-width">
+        <figcaption>Move gradients icon unhighlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the ellipse (with gradient) to the sidebang and position it so
+    that you can envision how it will appear when its orientation, size, and
+    gradient are adjusted to agree with the sidebang geometry.</p>
+      <figure>
+        <img src = "images/Sidebang14.gif" alt = "Moving the ellipse with
+        gradient to the sidebang" class = "img-width">
+        <figcaption>Moving the ellipse with gradient to the
+        sidebang.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Create and edit gradients</b> icon (<img src =
+    "images/EditGradientsIcon.gif" alt = "Create and edit gradients icon" width
+    = "26">) in the toolbox. The <b>Radial gradient</b> tool appears in the
+    ellipse. The square node controls the reddish brown center of the radial
+    gradient and the two circular nodes control the transparency at the edge.
+    The default edge transparency for new objects is <b>100%</b>
+    transparency. This is what we want.</p>
+    </li>
+    <li><p>Rotate one of the circular gradient nodes so that a longer
+    directional handle (line) is aligned with the major axis (the long
+    direction) of the ellipse.</p>
+      <figure>
+        <img src = "images/Sidebang15.gif" alt = "Rotating the Radial gradient
+        tool" class = "img-width">
+        <figcaption>Rotating the Radial gradient tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">) active. Select the ellipse if it became
+    deselected, and move it, resize it, and rotate it until it closely mimics
+    the underlying sidebang object.</p>
+      <figure>
+        <img src = "images/Sidebang16.gif" alt = "Moving, resizing, and rotating
+        the ellipse to mimic the shape of the sidebang" class = "img-width">
+        <figcaption>Moving, resizing, and rotating the ellipse to mimic the
+        shape of the sidebang.</figcaption>
+      </figure>
+    </li>
+    <li><p>Adjust the gradient by moving the gradient tool handles in and/or
+    out until you are satisfied with the result.</p>
+      <figure>
+        <img src = "images/Sidebang17.gif" alt = "Adjusting the radial gradient"
+        class = "img-width">
+        <figcaption>Adjusting the radial gradient.</figcaption>
+      </figure>
+    </li>
+    <li><p>You can see the upper half of the gradient ellipse. You will lower
+    it so that it lies underneath the body of hair above and the sidebang
+    lines.</p>
+    <p>The gradient ellipse still selected, click on the <b>Lower selection one
+    step</b> icon (<img src = "images/LowerSelection1StepIcon.gif" alt = "Lower
+    selection one step icon" width = "26">) in the <b>Tool Controls Bar</b>
+    twice: first to lower the gradient ellipse to underneath the upper body of
+    hair, and second to lower it below the sidebang lines. If, however, it is
+    visible over the top of the ear, then click on the <b>Lower selection one
+    step</b> icon (<img src = "images/LowerSelection1StepIcon.gif" alt = "Lower
+    selection one step icon" width = "26">)again to lower the ellipse so that
+    it appears <u>behind</u> the ear, thus maintaining the illusion of
+    depth.</p>
+      <figure>
+        <img src = "images/Sidebang18.gif" alt = "Lowering the gradient ellipse
+        in the image stack" class = "img-width">
+        <figcaption>Lowering the gradient ellipse in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reduce the magnification of the artwork so that you can assess
+    whether your current work appears as you want it to. Make whatever
+    corrections, modifications, and other edits as you see fit.</p>
+      <figure>
+        <img src = "images/Sidebang19.gif" alt = "Reduced magnification of
+        artwork" class = "img-width">
+        <figcaption>Reduced magnification of artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Save your artwork with File &gt; Save.</p>
+    </li>
+    <li><p>Now you&rsquo;ll do the backbang (I don&rsquo;t think that this word
+    exists but it&rsquo;ll work for now). The steps you take will be almost
+    exactly like the ones that you took in drawing the sidebang. You
+    won&rsquo;t include a gradient, however.</p>
+    <p>Draw the two sub-paths. Make sure you draw them going in the same
+    direction.</p>
+      <figure>
+        <img src = "images/Backbang01.gif" alt = "Drawing two sub-paths" class
+        = "img-width">
+        <figcaption>Drawing two sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the two sub-paths using &lt;Shift&gt;-click.</p>
+      <figure>
+        <img src = "images/Backbang03.gif" alt = "Group-selecting the two
+        sub-paths" class = "img-width">
+        <figcaption>Group-selecting the two sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine to convert the two sub-paths into one
+    compound sub-path.</p>
+      <figure>
+        <img src = "images/Backbang04.gif" alt = "Combining the two sub-paths
+        into one sub-path" class = "img-width">
+        <figcaption>Combining the two sub-paths into one sub-path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Path Effects and select <b>Interpolate
+    Sub-Paths</b> in the <b>Live Path Effects Selector</b>. You obtain
+    five linearly interpolated paths.</p>
+      <figure>
+        <img src = "images/Backbang05.gif" alt = "Applying the Interpolate
+        Sub-Paths Live Path Effect" class = "img-width">
+        <figcaption>Applying the Interpolate Sub-Paths Live Path
+        Effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Using the <b>Fill and Stroke &ndash; Stroke style</b> dialog box,
+    change the stroke <b>Width</b> to <b>1.500 px</b>.</p>
+      <figure>
+        <img src = "images/Backbang06.gif" alt = "Changing the line stroke
+        width to 1.5 pixels" class = "img-width">
+        <figcaption>Changing the line stroke width to 1.5 pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Path Effects</b> dialog box active and change the number
+    of <b>Steps</b> to <b>40</b>.</p>
+      <figure>
+        <img src = "images/Backbang07.gif" alt = "Changing the number of steps
+        to 40" class = "img-width">
+        <figcaption>Changing the number of steps to 40.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke &ndash; Stroke paint</b> dialog box and
+    type <b>32170bff</b> in the <b>RGBA</b> text box to give the lines a dark
+    reddish brown color.</p>
+      <figure>
+        <img src = "images/Backbang08.gif" alt = "Giving the backbang lines a
+        dark reddish brown color" class = "img-width">
+        <figcaption>Giving the backbang lines a dark reddish brown
+        color.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the backbang object still selected, lower it in the image
+    stack by clicking on the <b>Lower selection one step</b> icon (<img src =
+    "images/LowerSelection1StepIcon.gif" alt = "Lower selection one step icon"
+    width = "26">) in the <b>Tool Controls Bar</b> once so that it is situated
+    between the overlying large body of hair and the triangle of hair on the
+    nape of the neck.</p>
+      <figure>
+        <img src = "images/Backbang09.gif" alt = "Lowering the backbang in the
+        image stack" class = "img-width">
+        <figcaption>Lowering the backbang in the image stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Though we can&rsquo;t make the spacing between backbang lines uneven,
+    we can simulate the effect a little bit by making the lines a little
+    thicker.</p>
+    <p>Make the <b>Fill and Stroke &ndash; Stroke style</b> dialog box active
+    and change the stroke <b>Width</b> to <b>1.750 px</b>. The slight increase
+    in width and the upper part of the hair on the nape of the hair produces a
+    slight confusion in line geometry that can pass for uneven spacing.</p>
+      <figure>
+        <img src = "images/Backbang10.gif" alt = "Increasing line width to 1.75
+        pixels" class = "img-width">
+        <figcaption>Increasing line width to 1.75 pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reduce the magnification of your artwork so that you can assess how
+    it appears from a vantage point a little farther away. Make any edits that
+    you feel are desirable or necessary.</p>
+      <figure>
+        <img src = "images/Backbang11.gif" alt = "Reducing the magnification of
+        the artwork" class = "img-width">
+        <figcaption>View of the current artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Save your artwork with File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing the Ponytail Using the <i>Stitch Sub-Paths</i> Live Path
+    Effect</h2>
+  </header>
+  <p>You will draw the ponytail using <b>Stitch Sub-Paths</b>. The <b>Start
+  spacing variance</b> and <b>End spacing variance</b> options are great for
+  creating the subtle unevenness strands of hair naturally have in a long
+  ponytail.</p>
+  <ol>
+    <li><p>With the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), select the ponytail.</p>
+      <figure>
+        <img src = "images/Ponytail01.gif" alt = "Selecting the ponytail" class
+        = "img-fluid">
+        <figcaption>Selecting the ponytail.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the ponytail selected, choose Edit &gt; Duplicate to
+    duplicate it and move it to one side of the artwork.</p>
+      <figure>
+        <img src = "images/Ponytail02.gif" alt = "Duplicating the ponytail and
+        moving it to one side of the artwork" class = "img-fluid">
+        <figcaption>Duplicating the ponytail and moving it to one side of the
+        artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    tool icon" width = "26">), draw two sub-paths that will define the top
+    and bottom sides of a stitch-path live path effect object. Draw them in
+    the same direction, that is, from left to right or vice versa. If you draw
+    them in opposite directions, the stitch paths will criss-cross, producing
+    an effect that you do not want.</p>
+      <figure>
+        <img src = "images/Ponytail03.gif" alt = "Drawing the top and bottom
+        sub-paths in preparation for applying the Stitch Sub-Paths Live Path
+        Effect" class = "img-fluid">
+        <figcaption>Drawing the top and bottom sub-paths in preparation for
+        applying the <b>Stitch Sub-Paths</b> Live Path Effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the sub-paths using &lt;Shift&gt;-click.</p>
+      <figure>
+        <img src = "images/Ponytail04.gif" alt = "Group-selecting the sub-paths"
+        class = "img-fluid">
+        <figcaption>Group-selecting the sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine to merge the two sub-paths into one
+    compound sub-path that the <b>Stitch Sub-Paths</b> Live Path Effect can
+    use.</p>
+      <figure>
+        <img src = "images/Ponytail05.gif" alt = "Combining the two sub-paths
+        into one compound sub-path" class = "img-fluid">
+        <figcaption>Combining the two sub-paths into one compound
+        sub-path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Path Effects&hellip;.</p>
+    </li>
+    <li><p>When the <b>Path Effects</b> dialog box appears, click on the <b>Add
+    path effects</b> plus sign icon (<img src = "images/AddPathEffectIcon.gif"
+    alt = "Add Path Effect icon" width = "26">). The <b>Live Path Effects
+    Selector</b> appears.</p>
+    <figure>
+      <img src = "images/LivePathEffectsSelector1.gif" alt = "Live Path Effect
+      Selector with the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+      <figcaption>Live Path Effects Selector with the <b>Stitch Sub-Paths</b>
+      icon highlighted.</figcaption>
+    </li>
+    <li><p>Scroll to the bottom of the <b>Live Path Effects Selector</b> until the
+    <b>Stitch Sub-Paths</b> Live Path Effect appears.</p>
+    </li>
+    <li><p>Click on the <b>Stitch Sub-Paths</b> icon. The figure below shows
+    five stitch paths that are four pixels wide. Five is the default number of
+    paths when you apply <b>Stitch Sub-Paths</b> for the first time to a
+    combined path object. Your lines might have a different width and color.</p>
+    <p>We gave the lines a yellow stroke so that they can be seen easily because
+    of the strong color contrast. We also gave them a stroke width of
+    <b>30</b>using the <b>Fill and Stroke &ndash; Stroke style</b> dialog
+    box.</p>
+      <figure>
+        <img src = "images/Ponytail06.gif" alt = "Activating the Stitch
+        Sub-Paths Live Path Effect with five stitch paths showing" class =
+        "img-fluid">
+        <figcaption>Activating the Stitch Sub-Paths Live Path Effect with five
+        stitch paths showing.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the <b>Number of paths</b> to <b>20</b>. There are so many
+    lines that, at 3 pixels width, they would merge and create a yellow
+    swath.</p>
+      <figure>
+        <img src = "images/Ponytail07.gif" alt = "The number of stitch lines
+        changed to 20" class = "img-fluid">
+        <figcaption>The number of stitch lines changed to 20.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add path effects</b> plus sign icon (<img src =
+    "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+    The <b>Live Path Effects Selector</b> appears.</p>
+    <p>Click on the <b>Envelope Deformation</b> icon.</p>
+      <figure>
+        <img src = "images/LivePathEffectsSelector3.gif" alt = "Live Path Effect
+        Selector with the Envelope Deformation icon highlighted" class =
+        "img-fluid">
+        <figcaption>Live Path Effect Selector with the Envelope Deformation icon
+        highlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>Envelope Deformation</b> Live Path Effect is added to the
+    Live Path Listing and is highlighted, informing you that it is active.</p>
+    <p>Note that you will occasionally see spurious lines extending beyond the
+    bounding box. This lines result from minor discrepancies in how some lines
+    are calculated and rendered by Inkscape. They are easy to eliminate by
+    redrawing bend paths and original sub-paths, by changing the number of
+    stitching paths, and by changing the character of randomness of hair spacing
+    and length (start and end edges). The changes you make can be very small in
+    order to eliminate those rendering errors. You might also see spurious holes
+    in the paths, which also result from calculation errors. Again, just make
+    minor changes as suggested above to make them disappear.</p>
+      <figure>
+        <img src = "images/Ponytail08.gif" alt = "Adding the Envelope
+        Deformation Live Path Effect to the list of available live path effect
+        functions" class = "img-fluid">
+        <figcaption>Adding the Envelope Deformation Live Path Effect to the
+        list of available live path effect functions.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Left bend path</b> icon (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) and adjust
+    the left side of the stitch-path object using the line segment and end nodes
+    so that the stitch lines bend in agreement with the left edge of the
+    underlying reddish brown background object. Note that a hand icon appears
+    by the cursor whenever it is positioned above an object that can be
+    manipulated.</p>
+      <figure>
+        <img src = "images/Ponytail09.gif" alt = "Adjusting the left side of
+        the stitch-path object" class = "img-fluid">
+        <figcaption>Adjusting the left side of the stitch-path
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Right bend path</b> icon (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) and adjust
+    the right side of the stitch-path object by moving the line segment and end
+    nodes. Note that the left side of the stitch lines move a little to the
+    right, also. You will correct this shortly.</p>
+      <figure>
+        <img src = "images/Ponytail10.gif" alt = "Adjusting the right side of
+        the stitch-path object" class = "img-fluid">
+        <figcaption>Adjusting the right side of the stitch-path
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Top bend path</b> icon (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) and adjust
+    the top side of the stitch-path object if it needs fine-tuning.<p>
+      <figure>
+        <img src = "images/Ponytail11.gif" alt = "Adjusting the top side of
+        the stitch-path object" class = "img-fluid">
+        <figcaption>Adjusting the top side of the stitch-path object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Bottom bend path</b> icon (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) and adjust
+    the bottom side of the stitch-path object if it needs fine-tuning.<p>
+      <figure>
+        <img src = "images/Ponytail12.gif" alt = "Adjusting the bottom side of
+        the stitch-path object" class = "img-fluid">
+        <figcaption>Adjusting the bottom side of the stitch-path
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Left bend path</b> icon (<img src =
+    "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">) again. This
+    time, double-click on the middle of the bend path to add a node at that
+    location. This new node will help you do fine control of the curvature of
+    the left side of the stitch paths.</p>
+      <figure>
+        <img src = "images/Ponytail13.gif" alt = "Adding a new node to the left
+        bend path" class = "img-fluid">
+        <figcaption>Adding a new node to the left bend path.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the upper node of the direction handle and drag it upward
+    until the curvature of the stitch paths in the upper left part of the path
+    object come into close agreement with the left edge path.</p>
+    <p>Then click on the lower end node of the left bend path and move it to do
+    the same type of adjustment with the lower left corner of the stitch line
+    path object.</p>
+      <figure>
+        <img src = "images/Ponytail14.gif" alt = "Adjusting the left bend path" class = "img-fluid">
+        <figcaption>Adjusting the left bend path.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you see any micro-adjustments that need to be made on the right
+    side of the stitch paths, then click on the <b>Right bend path</b> icon
+    (<img src = "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">)
+    again and move the bend line and its nodes as you see fit.</b>
+      <figure>
+        <img src = "images/Ponytail15.gif" alt = "Micro-adjusting the right side
+        of the stitch path object" class = "img-fluid">
+        <figcaption>Micro-adjusting the right side of the stitch path
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Stitch Sub-Paths</b> bar in the <b>Path Effects</b>
+    dialog box and increase the <b>Number of paths</b> to <b>30</b>.</p>
+      <figure>
+        <img src = "images/Ponytail16.gif" alt = "Increasing the number of
+        stitch paths to 30" class = "img-fluid">
+        <figcaption>Increasing the number of stitch paths to 30.</figcaption>
+      </figure>
+    </li>
+    <li><p>Enter the values shown below into the <b>Start spacing variance</b>
+    and <b>End spacing variance</b> text boxes and click on their associated
+    <b>Random number generator</b> icons until you obtain the kind of natural
+    look to the strands of hair in the ponytail that fall pleasingly on the eye.
+    Remember that the smaller the value, the less variation you see in spacing.
+    You turn the <b>Random number generator</b> off when you enter <b>0</b> into
+    the text box.</p>
+    <p><b>Note:</b> you will occasionally see spurious line extensions and open
+    spaces that occur here and there. Eliminate them by click on a <b>Random
+    number generator</b> icon again, or by making small changes in the number
+    of stitch paths. They can be an annoyance, but they are easy to
+    eliminate.</p>
+      <figure>
+        <img src = "images/Ponytail17.gif" alt = "Adding a natural-looking
+        unevenness to the ponytail hair strands using the Start and End spacing
+        variance options" class = "img-fluid">
+        <figcaption>Adding a natural-looking unevenness to the ponytail hair
+        strands using the Start and End spacing variance options.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the color of the hair strands to a reddish brown color (I used
+    <b>4a2912ff</b> in the <b>RGBA</b> text box), the <b>Blend mode</b> to
+    <b>Screen</b>, and the <b>Opacity (%)</b> to </b>70.0</b>.</p>
+      <figure>
+        <img src = "images/Ponytail18.gif" alt = "Changing the ponytail hair
+        color to reddish brown with Screen color blending" class = "img-fluid">
+        <figcaption>Changing the ponytail hair color to reddish brown with
+        <b>Screen</b> color blending.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the ponytail to deselect it, and then margquee-select the
+    ponytail so that both the stitch-hair object and the underlying flat color
+    background object are selected. Press &lt;Ctrl&gt;-G to group them.</p>
+    </li>
+    <li><p>If the <b>Snap</b> Controls Bar isn&rsquo;t active, choose View
+    &gt; Show/Hide, and check the Snap Controls Bar checkbox. Click on <b>Enable
+    snapping (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable
+    snapping icon" width = "26">), <b>Snap other points (centers, guide origins,
+    gradient handles, etc.)</b> (<img src = "images/SnapNodesPathsHandlesIcon.gif"
+    alt = "Snap other points icon" width = "26">), and <b>Snap centers of
+    objects</b> (<img src = "images/SnapCentersOfObjectsIcon.gif" alt = "Snap
+    centers of objects icon" width = "26">). (The <b>Snap centers of objects</b>
+    icon has been darkened to make details more visible.)</p>
+    <p>With the <b>Select</b> tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), move the ponytail so that
+    it lies directly ontop of the original flat red-brown background. Because the
+    <b>Snap centers of objects</b> tool is activated, you will see a pop-up
+    tooltip letting you know when the center of the ponytail is directly ontop
+    of the flat color background area as shown below.</p>
+      <figure>
+        <img src = "images/Ponytail19.gif" alt = "Moving the ponytail so that
+        it lies directly above the original flat color background object" class
+        = "img-fluid">
+        <figcaption>Moving the ponytail so that it lies directly above the
+        original flat color background object.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the ponytail still selected, click on the <b>Lower selection
+    one step</b> icon (<img src = "images/LowerSelection1StepIcon.gif" alt =
+    "Lower selection one step icon" width = "26">) in the <b>Tool Controls
+    Bar</b> two or three times to lower it below the knot at the top of the
+    ponytail and below the flat color ponytail background object.</p>
+    <p>When the underlying flat color ponytail background appears, click off
+    the artwork, click again on the flat color ponytail object, which now be at
+    the top of the image stack, and press the &lt;Del&gt; or &lt;Delete&gt; key
+    to delete it.</p>
+      <figure>
+        <img src = "images/Ponytail20.gif" alt = "Finished ponytail" class =
+        "img-fluid">
+        <figcaption>Finished ponytail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make any corrections and adjustments that you feel are necessary,
+    then File &gt; Save your artwork, and File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+  <p>You have learned how to draw hair using Live Path Effects. You now have
+  a feel for how to use <b>Stitch Sub-Paths</b>, <b>Interpolate
+  Sub-Paths</b>, <b>Envelope Deformation</b>, and <b>Lattice Deformation</b>
+  to draw, make major and minor adjustments to, and add a natural look to human
+  hair. Hair, fur, cloth, and other materials that are made up of fibers, short
+  and long, can be imitated with these drawing tools. Live Path Effect tools
+  are indeed sophisticated in their complexity, and yet this complexity allows
+  you to draw things that are naturally complex in nature.</p>
+  <p>Gradient, tranparency, and color blending tools are great supplementary
+  and complementary aids in creating a feeling of depth where, the deeper you
+  go, the less light gets through to places underneath an illuminated and yet
+  open surface.</p>
+  <p>Continue to explore these tools with different starting models, lighting,
+  and shapes to create something that looks remarkably close to reality, either
+  as we know it or as you would like to see it!</p>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>What is the primary distinction between <b>Stitch Sub-Paths</b>,
+    <b>Interpolate Sub-Paths</b>, <b>Envelope Deformation</b>, and <b>Lattice
+    Deformation</b>?
+    </li>
+    <li>What tools are available for you to add depth to hair, fur, or cloth?
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p><b>Stitch Sub-Paths</b> and <b>Interpolate Sub-Paths</b> allow you
+    to determine how to draw and then actually draw the strands of hair, fur,
+    or threads of cloth that make up the foundation of that facet of your
+    artwork.</p>
+    <p><b>Envelope Deformation</b>, and <b>Lattice Deformation</b> allow you to
+    shape and reshape the envelope that encompasses the body of hair, fur, or
+    cloth so that the entire geometry of the shape conforms with your concept.
+    The strands or filaments have to be drawn already in order for Envelope
+    Deformation</b>, and <b>Lattice Deformation</b> to mold them into what you
+    envision.<p>
+    </li>
+    <li><p>The <b>Linear gradient</b>, <b>Radial gradient</b>,
+    <b>Transparency/Opacity</b>, and color <b>Blend mode</b> tools are available
+    to help you give depth, shading, illumination, iridescence, and fine
+    texturing produced by an external light source (internal light sources is
+    not explored in this particular tutorial).</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
