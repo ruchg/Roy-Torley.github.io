@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 16, Part A &ndash; Live Path Effects</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education,, drawing hair, live path effects,
+  stroke subpaths, subpath interpolation, stitch subpaths, envelope deformation,
+  lattice deformation 2, path effect editor, color blending, transparency,
+  opacity">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 16, Part A &ndash; Drawing Hair Using Live Path
+          Effects</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6 mt-5"><p class = "lead">Inkscape&rsquo;s Live Path
+      Effects offer the graphic designer a way to draw hair, fur, and other
+      objects that need to appear as a series of wavy curves. By combining
+      sub-path stitching, envelope deformation, lattice deformation, and
+      sub-path interpolation, the artist can draw areas where the filament look
+      of hair, fur, and textiles adds texture, depth, and attractive detail to
+      the composition of a piece of artwork.</p>
+      </div>
+    </div>
+<section>
+  <p>This tutorial comes in two parts. In this part, Tutorial 16, Part A, we
+  will focus on the <b>Stitch Sub-Paths</b> Live Path Effect to draw hair. We
+  will use the <b>Envelope Deformation</b> and <b>Lattice Deformation</b> Live
+  Path Effects to refine the overall shapes of areas of hair and create the
+  smooth flow of hair that is trained into a ponytail.</p>
+  <p>Tutorial 16, Part B, will introduce <b>Sub-Path Interpolation</b> for more
+  flow effects.</p>
+  <p>You&rsquo;ll learn how to do the following techniques:</p>
+  <ul type = "disc">
+    <li>draw curves that connect two boundary curves.
+    </li>
+    <li>refine the shape of a multi-curve object using envelope deformation
+    and lattice deformation tools.
+    </li>
+    <li>Use transparency and color blending to create a sense of hair depth.
+    </li>
+  </ul>
+  <p>In this tutorial, you will learn how to draw hair. You will be working
+  with three <b>Live Path Effects</b>. <b>Stitching Sub-paths</b> is a live-path
+  function with which you draw a starting line or curve, and an ending line or
+  curve. These two boundaries are called <i>sub-paths</i> and help you define
+  where a group of cross-lines start and where they end &mdash; you are
+  graphically &ldquo;stitching&rdquo; the two sub-paths together.</p>
+  <p>A second and related live-path function is the sub-path interpolation live
+  path effect. Instead of stitching two sub-paths together, you draw two lines
+  or curves that make the sides of an area that you will fill with parallel or
+  sub-parallel curves that change in shape from one sub-path on one side to
+  the other path on the other side of the space to be filled. We will cover
+  sub-path interpolation in the second part of this tutorial.</p>
+  <p>For more information about <b>Live Path Effects</b>, go to Help &gt;
+  Inkscape Manual &gt; 8. Live Path Effects (LPEs), and click on <b>Stitch
+  Sub-Paths</b> or <b>Interpolate Sub-Paths</b>.
+  </p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial16A/Tutorial16A_end.svg"><b>Tutorial16A_end.svg</b></a>
+    and store it in a convenient location.</p>
+    </li>
+    <li><p>File &gt; Open file <b>Tutorial16A_end.svg</b>. This file displays a
+    completed illustration of a young woman with a ponytail, facing away from
+    the viewer.</p>
+    <p>If you like, choose View &gt; Zoom &gt; Zoom Out to reduce the view of
+    the finished artwork, adjust the window size, and leave it on your screen
+    as you work. (Use the Select tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) to select and move the artwork
+    where you want it in the window.) If you don&rsquo;t want to leave the
+    image open, choose File &gt; Close.</p>
+    </li>
+
+  <p><b>Resource:</b> For an illustration of the finished artwork in this
+  tutorial, see the top of this page.</p>
+  </li>
+  <li><p>Download the art file <a href =
+    "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial16A/Tutorial16A_start.svg"><b>Tutorial16A_start.svg</b></a>
+    and store it in a convenient location.</p>
+      <figure>
+        <img src = "images/Tutorial16A_start.gif" alt = "Young woman"
+        class = "img-fluid">
+        <figcaption>Young woman &ndash; Tutorial 16, Part A starting
+        artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As&hellip; and save the file as
+    <b>Ponytail.svg</b> in a convenient location. This file will be your
+    work file.</p>
+    </li>
+  </ol>
+  <p>The art file contains the image of a young woman facing away from the
+  camera. The image is on two layers: the bottom layer, which is locked,
+  contains the woman as a mannequin figure; the second layer contains hair
+  and right ear.</p>
+  <figure style = "float: left;" class = "ml-5 mr-5">
+    <img src = "images/Mannequin.gif" alt = "Image of the head of a mannequin"
+    class = "img-fluid">
+    <figcaption>Image of the head of a mannequin &ndash; bottom layer.</figcaption>
+  </figure>
+  <figure style = "float: left;">
+    <img src = "images/HairAndEar.gif" alt = "Image of the plan of the
+    mannequin's hair and ear" class = "img-fluid">
+    <figcaption>Image of the plan of the mannequin&rsquo;s hair and ear &ndash;
+    upper layer.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  <p>The hair is divided into separate areas. Each area contains hair whose flow
+  has its own starting and ending points, degree of curvature, color and
+  gradient shading. Each area has its own place in the overall image stack
+  to create a sense of hair design as might be done in a salon.</p>
+  <figure>
+    <img src = "images/HairAreas.gif" alt = "Exploded view of the different
+    areas of hair" class = "img-fluid">
+    <figcaption>Exploded view of the different areas of hair.</figcaption>
+  </figure>
+  <p>The woman&rsquo;s ear is its own grouped object so that it can be placed
+  between two bodies of hair to enhance the sense of a 3-D presentation.</p>
+  <figure>
+    <img src = "images/Ear.gif" alt = "Image of the mannequin's right ear"
+    class = "img-fluid">
+    <figcaption>Image of the mannequin&rsquo;s right ear.</figcaption>
+  </figure>
+  <p>The task of this tutorial is to create overlays that you will place
+  ontop of the areas of hair to create the look of strands of trained hair
+  that follow the curvature of each area. The coloration of underlying areas
+  and overlying hair filaments will be different to give the appearance of
+  darker hair underneath that is not reached by the light, and lighter-colored,
+  variegated hair that is reflecting light. The combination colors and styles of
+  coloration produce subtle depth.</p>
+</section>
+<section>
+  <header>
+    <h2>Drawing Hair Using the <i>Stitch Sub-Paths</i> Live Path Effect</h2>
+  </header>
+  <p>The <b><i>Stitch Sub-Paths</i> Live Path Effect</b> is a great tool for
+  &ldquo;stringing together &rdquo; a starting and an ending boundary path,
+  here called <i>sub-paths</i>. This section shows you how to analyze the
+  underlying geometry that can guide you in determining how hair should flow
+  and then in drawing it.</p>
+  <ol>
+    <li><p>Select the top area of hair with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/ClickingOnTopArea.gif" alt = "Selecting the top area
+        of hair" class = "img-fluid">
+        <figcaption>Selecting the top area of hair.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Duplicate to duplicate the area and then drag the
+    duplicated area to a side where you can work on it without the distraction
+    of adjacent hair areas.</p>
+    <figure>
+      <img src = "images/DuplicatingTopArea.gif" alt = "Duplicating and moving
+      the top area of hair" class = "img-fluid">
+      <figcaption>Duplicating and moving the top area of hair.</figcaption>
+    </figure>
+  </li>
+  <li><p>The hair in this top area ideally appear as if it is coming from over
+  the top edge and down into the lower, narrower part of the area that is
+  constricted before it enters the ponytail. The figure below provides an idea
+  template of how hair filaments might flow from top to bottom.</p>
+  <p>You will create a &ldquo;current&rdquo; of hair that flows from over the
+  top of the area into the narrow lower portion at the bottom using the
+  <b>Stitch Sub-Paths</b> Live Path Effect.</p>
+    <figure>
+      <img src = "images/TrialStitching.gif" alt = "Envisioning stitched paths"
+      class = "img-fluid">
+      <figcaption>Envisioning stitched paths.</figcaption>
+    </figure>
+  </li>
+  <li><p>Using the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+  Tool icon" width = "26">), draw two paths (sub-paths), one that follows the
+  top curvature of the hair area and ends at a point just above the length of
+  &ldquo;straight&rdquo; curve above the bottom, and the other following the
+  curve that defines the bottom of the area.</p>
+  <aside><p><b>Note:</b> In order for <b>Stitch Sub-Paths</b> to work properly
+  in this particular task, both sub-paths need to be draw in the same direction:
+  either right-to-left as shown below, or left-to-right. If the sub-paths are
+  drawn but in opposing directions, <b>Stitch Sub-Paths</b> will make the hair
+  paths criss-cross, which is what we don&rsquo;t want.</p>
+  </aside>
+    <figure>
+      <img src = "images/SubPath1.gif" alt = "Drawing sub-paths" class =
+      "img-fluid">
+      <figcaption>Drawing the sub-paths.</figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure><p>Inkscape now &ldquo;sees&rdquo; the two sub-paths as two separate
+    objects. <b>Stitch Sub-Paths</b> needs to see them as one path in order for
+    it to work. The <b>Path Combine</b> function merges them into one item.</p>
+    <p>First, group-select the two sub-paths using &lt;Shift&gt;-click. Each
+    sub-path is enclosed in its own bounding box.</p>
+      <img src = "images/GroupSelectingSubPaths.gif" alt = "Group-selecting
+      sub-paths" class = "img-fluid">
+      <figcaption>Group-selecting sub-paths.</figcaption>
+    </figure>
+  </li>
+  <li><p>Choose Path &gt; Combine. The sub-paths are now enclosed in one large
+  common bounding box and Inkscape now &ldquo;sees&rdquo; the two sub-paths as
+  one compound sub-path.</p>
+    <figure>
+      <img src = "images/CombiningSubPaths.gif" alt = "Combining sub-paths"
+      class = "img-fluid">
+      <figcaption>Combining sub-paths.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the sub-paths still selected, choose Path &gt; Path
+  Effects&hellip;. The <b>Path Effects</b> dialog box appears.</p>
+    <figure>
+      <img src = "images/ChoosingPathEffects.gif" alt = "Choosing Path Effects"
+      class = "img-fluid">
+      <figcaption>Choosing Path Effects.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Add path effect</b> plus sign icon (<img src =
+  "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+  The <b>Live Path Effects Selector</b> appears.</p>
+  <p>Scroll to the bottom of the <b>Live Path Effects Selector</b> until the
+  <b>Stitch Sub-Paths</b> Live Path Effect appears.</p>
+    <figure>
+      <img src = "images/LivePathEffectsSelector1.gif" alt = "Live Path Effect
+      Selector with the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+      <figcaption>Live Path Effects Selector with the <b>Stitch Sub-Paths</b>
+      icon highlighted.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Stitch Sub-Paths</b> icon.</p>
+  </li>
+  <li><p>The <b>Stitch Sub-Paths</b> dialog box appears. The <b>Number of paths</b>
+  might be different from that in the figure below, but that is not a
+  problem. The lines, however, might have a different stroke color. In the
+  figure, we chose a stroke color of yellow and a stroke width of <b>3 px</b>,
+  using the <b>Fill and Stroke&hellip;</b>, <b>Stroke paint</b></b> and
+  <b>Stroke style</b> dialog boxes. The lines are easily visible and allow for
+  easy modification. You will change the color of the lines to a more
+  &ldquo;hair-like&rdquo; color shortly. Note that you can have both the
+  <b>Fill and Stroke</b> and <b>Path Effects</b> dialogs active at the same
+  time.</p>
+    <figure>
+      <img src = "images/StitchSubPaths1.gif" alt = "Stitching sub-paths" class
+      = "img-fluid">
+      <figcaption>Stitching sub-paths. Note that the original stitch sub-paths
+      have disappeared.</figcaption>
+    </figure>
+  </li>
+  <li><p>Change the <b>Number of paths</b> from <b>5</b> to <b>120</b>.</p>
+    <figure>
+      <img src = "images/120Paths.gif" alt = "Changing the number of paths from
+      5 to 120" class = "img-fluid">
+      <figcaption>Changing the number of paths from 5 to 120.</figcaption>
+    </figure>
+  </li>
+  <li><p>Using the <b>Fill and Stroke&hellip;</b> <b>Stroke style</b> dialog
+  box, change the hair stroke <b>Width</b> to <b>1.000 px</b>. You now have a
+  better idea of how to morph the hair pattern into what actually looks like
+  hair.</p>
+    <figure>
+      <img src = "images/HairWidth1.000px.gif" alt = "Changing the hair stroke
+      width to 1.000 pixel" class = "img-fluid">
+      <figcaption>Changing the hair stroke width to 1.000 pixel.</figcaption>
+    </figure>
+    <p>The shadowy wavy patterns in the hair are calle Moir&eacute; patterns.
+    They are frequently visible in folds of cloth, or strands of hair that
+    overlay each other, creating eye-catching, and yet attractive, interference
+    patterns, such as waves and rays that radiate in or out in unpredictable
+    directions.</p>
+  </li>
+  <li><p>The right side of the hair needs to be reshaped to match with the
+  right side of the underlying area. Hair does not usually flow in a purely
+  linear way &ndash; it usually has a degree of curvature in its flow. You will
+  create a curved flow pattern using the <b>Envelope Deformation</b> Live Path
+  Effect.</p>
+  <p>Make the <b>Path Effects</b> dialog active and click on the <b>Add path
+  effect</b> plus sign icon (<img src = "images/AddPathEffectIcon.gif" alt =
+  "Add Path Effect icon" width = "26">). The <b>Live Path Effects Selector</b>
+  appears.</p>
+    <figure>
+      <img src = "images/LivePathEffectsSelector2.gif" alt = "Live Path Effects
+      Selector with the Envelope Deformation Live Path Effect icon highlighted"
+      class = "img-fluid">
+      <figcaption>Live Path Effects Selector with the <b>Envelope
+      Deformation</b> Live Path Effect highlighted.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the <b>Envelope Deformation</b> icon. The <b>Envelope
+  Deformation</b> dialog box appears.</p>
+  <figure>
+    <img src = "images/EnvelopeDeformationDialogBox.gif" alt = "Envelope
+    Deformation dialog box" class = "img-fluid">
+    <figcaption>Envelope Deformation dialog box.</figcaption>
+  </figure>
+  </li>
+  <li><p>The right side of the stitching line object needs the most adjustment
+  of the four sides. You can accomplish this using the <b>Edit on-canvas</b>
+  tool for the <b>Right bend path</b> (<img src = "images/BendPathToolIcon.gif"
+  alt = "Right bend path tool icon" width = "26">). Note that the icons for the
+  four bend path tools look exactly like the Node tool in the toolbox.</p>
+  <p>Click on the <b>Right bend path</b> tool icon.</p>
+    <figure>
+      <img src = "images/RightBendPathToolIcon.gif" alt = "Right bend path tool
+      icon" class = "img-fluid">
+      <figcaption>Right bend path tool icon.</figcaption>
+    </figure>
+  </li>
+  <li><p>The <b>Right bend path</b> tool is activated. A solid blue bounding
+  box envelope surrounds the hair area in addition to the <b>Select</b> tool
+  dashed bounding box. The right side of the deformation envelope is highlighted
+  in red, informing you that it is the active side, awaiting your attention.</p>
+    <figure>
+      <img src = "images/RightBendPathToolActivated.gif" alt = "Right bend path
+      tool activated" class = "img-fluid">
+      <figcaption>Right bend path tool activated.</figcaption>
+    </figure>
+  </li>
+  <li><p>Place the cursor over the right side of the deformation rectangle.
+  The cursor changes from the Node cursor to a hand cursor, indicating that it
+  is hovering over an object that it can manipulate.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation1.gif" alt = "The Bend path cursor
+      changes to a hand cursor when placed over a bend tool line" class =
+      "img-width">
+      <figcaption>The Bend path cursor changes to a hand cursor when placed
+      over a bend tool line.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the line and drag it to the lower right. Watch the rightmost
+  stitch lines as you drag so that you can match the curvature of the lines
+  with the curvature of the underlying shape.</p>
+  <p>Use &lt;Ctrl&gt;-Z to undo any action that you consider a mistake and redo.
+  You also have the option of fine tuning your work later. Any adjustments that
+  you make now are <u>not</u> set in stone.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation2.gif" alt = "" class = "img-width">
+      <figcaption>Envelope Deformation 2.</figcaption>
+    </figure>
+  </li>
+  <li><p>Now the bottom curve needs adjustment. Click on the <b>Edit on-canvas</b>
+  tool for the <b>Bottom bend path</b> (<img src = "images/BendPathToolIcon.gif"
+  alt = "Bottom bend path tool icon" width = "26">). The bottom bend path is
+  highlighted in red, indicating that it is ready for manipulation.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation3.gif" alt = "The bottom bend path
+      is active and highlighted" class = "img-width">
+      <figcaption>The bottom bend path is active and highlighted in
+      red.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the left-hand node of the bottom path bend line to activate
+  it and drag it a little down to the left. Notice how quickly the bottom part
+  of the stitched paths object responds to small adjustment moves. Stop when
+  you get a good shape match.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation4.gif" alt = "Adjusting the bottom
+      part of the stitched sub-path overlay" class = "img-width">
+      <figcaption>Adjusting the bottom part of the stitched sub-path
+      overlay.</figcaption>
+    </figure>
+  </li>
+  <li><p>The left side of the stitched path object can use some
+  micro-adjustment in the overlap.</p>
+  <p>Click on the <b>Left bend path</b> tool icon and drag the left-hand node
+  to the left a very little bit.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation5.gif" alt = "Fine adjusting the
+      left side of the stitch sub-paths object" class = "img-width">
+      <figcaption>Fine adjusting the left side of the stitch sub-paths
+      object.</figcaption>
+    </figure>
+  </li>
+  <li><p>The right side of the stitched sub-path object can use a little more
+  micro-adjustment in the overlap.</p>
+  <p>Click on the <b>Right bend path</b> tool icon and pull the right bend path
+  to the right and down a very little bit to make the rightmost lines cover
+  the very little bit of exposed dark brown area.</p>
+    <figure>
+      <img src = "images/EnvelopeDeformation6.gif" alt = "" class = "img-width">
+      <figcaption>Micro-adjusting the right side of the stitched sub-path
+      object.</figcaption>
+    </figure>
+  </li>
+  <li><p>You will now change the color of the hair from yellow to a dark
+  reddish brown.</p>
+  <p>In the <b>Fill and Stroke</b> dialog box, click on the <b>Stroke paint</b>
+  tab, and enter the hexadecimal code for a dark reddish brown stroke color
+  <b>3c2316ff</b> in the <b>RGBA</b> text box.</p>
+    <figure>
+      <img src = "images/ReddishBrownStrokeColor.gif" alt = "Changing the hair
+      stroke color from yellow to reddish brown" class = "img-width">
+      <figcaption>Changing the hair stroke color from yellow to reddish
+      brown.</figcaption>
+    </figure>
+  </li>
+  <li><p>The strands of hair are almost invisible against the darker reddish
+  brown of the background. You will make the hair glisten by giving it a
+  gradient highlight.<p>
+  <p>Click on the <b>Linear gradient</b> icon (<img src =
+  "images/LinearGradientIcon.gif" alt = "Linear gradient icon" width = "26">)
+  in the <b>Stroke paint</b> dialog box and then click on the <b>Create and
+  edit gradients</b> tool icon (<img src =
+  "images/EditGradientsIcon.gif" alt = "Create and edit gradient tool icon"
+  width = "26">) in the toolbox.</p>
+    <figure>
+      <img src = "images/StartingGradient.gif" alt = "Activating the Linear
+      Gradient tool" class = "img-fluid">
+      <figcaption>Activating the Linear Gradient tool.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click on the circular node on the gradient tool line and drag it to
+  the upper area of the hair area shape. Click on the square node on the
+  opposite end of the gradient tool line and drag it to the lower area of the
+  hair area shape.</p>
+  </li>
+  <li><p>Double-click in the middle of the gradient line to add a gradient stop
+  at that point. Its shape is a small diamond, colored blue because it is
+  active. That midpoint gradient stop will control a band of lighter reddish
+  brown which will be the highlight.</p>
+  <p>With the midpoint stop still selected (colored blue), click on the
+  <b>HSL</b> tab (<b>H</b>ue, <b>S</b>aturation, <b>L</b>ightness), and enter
+  the numbers shown in the figure below. Move the two nodes on the gradient
+  tool line to obtain a highlight that looks reasonable to you.</p>
+    <figure>
+      <img src = "images/GradientHighlighting.gif" alt = "Creating a gradient
+      highlight" class = "img-fluid">
+      <figcaption>Creating a gradient highlight.</figcaption>
+    </figure>
+  </li>
+  <li><p>Some stitch lines poke out at the top and extend out on the right.</p>
+  <p>Micro-adjust them so that they won&rsquo;t stick out by clicking on the
+  <b>Select</b> tool (<img src = "images/SelectionTool.gif" alt = "Selection
+  tool icon" width = "26">) and moving the sizing handles on the object&rsquo;s
+  bounding box to align the upper and lower images just right.</p>
+    <figure>
+      <img src = "images/HairFineAdjustment.gif" alt = "Making fine adjustments
+      to the sub-path stitch overlay" class = "img-fluid">
+      <figcaption>Making fine adjustments to the sub-path stitch
+      overlay.</figcaption>
+    </figure>
+  </li>
+  <li><p>Marquee-select the hair shape to group-select both the underlying
+  dark reddish brown hair area and the stitch-path object. Click the <b>Group
+  selected objects</b> icon (<img src = "images/GroupSelectedObjectsIcon.gif"
+  alt = "Group selected objects icon" width = "26">) to group the two
+  objects.</p>
+  </li>
+  <li><p>You will now replace the original flat colored hair area with the
+  new area with the stitched-sub-path overlay.</p>
+  <p>Move the grouped hair area to near the model&rsquo;s head.</p>
+    <figure>
+      <img src = "images/Replacement1.gif" alt = "Moving the hair area with
+      overlay to near the mannequin's head" class = "img-fluid">
+      <figcaption>Moving the hair area with overlay to near the model&rsquo;s
+      head.</figcaption>
+    </figure>
+  </li>
+  <li><p>If the <b>Snap</b> Controls Bar isn&rsquo;t active, choose View
+  &gt; Show/Hide, and check the Snap Controls Bar checkbox. Click on <b>Enable
+  snapping (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable
+  snapping icon" width = "26">), <b>Snap other points (centers, guide origins,
+  gradient handles, etc.)</b> (<img src = "images/SnapNodesPathsHandlesIcon.gif"
+  alt = "Snap other points icon" width = "26">), and <b>Snap centers of
+  objects</b> (<img src = "images/SnapCentersOfObjectsIcon.gif" alt = "Snap
+  centers of objects icon" width = "26">). (The <b>Snap centers of objects</b>
+  icon has been darkened to make details more visible.)</p>
+  <p>With the <b>Select</b> tool (<img src = "images/SelectionTool.gif" alt =
+  "Selection tool icon" width = "26">), drag the finished area of hair so that
+  it lies directly ontop of the original flat red-brown area. Because the
+  <b>Snap centers of objects</b> tool is activated, you will see a pop-up
+  tooltip letting you know when the center of the hair is directly ontop of the
+  flat color area as shown below.</p>
+    <figure>
+      <img src = "images/Replacement2.gif" alt = "Hair object moved to lie
+      directly ontop of lower flat color area with tooltip" class = "img-fluid">
+      <figcaption>Hair object moved to lie directly ontop of lower flat color
+      area with tooltip.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the hair object still selected, click on the <b>Lower selection
+  one step</b> icon (<img src = "images/LowerSelection1StepIcon.gif" alt =
+  "Lower selection one step icon" width = "26">) until it disappears underneath
+  the flat color area and the knot above the ponytail. It is now two levels
+  down in the image stack.</p>
+    <figure>
+      <img src = "images/Replacement3.gif" alt = "" class = "img-fluid">
+      <figcaption>The hair object is now situated underneath the flat color
+      area and the knot above the ponytail.</figcaption>
+    </figure>
+  </li>
+  <li><p>Click away from the artwork to deselect it and then click on the flat
+  reddish brown area. Because the flat colored area lies ontop of the hair
+  object, it is the object that is preferentially selected.</p>
+  <p>Move the flat color area off the artwork to reveal the hair object
+  underneath.</p>
+    <figure>
+      <img src = "images/Replacement4.gif" alt = "Click-drag the flat color
+      object off the hair object" class = "img-fluid">
+      <figcaption>Click-dragging the flat color object off the hair
+      object.</figcaption>
+    </figure>
+  </li>
+  <li><p>With the flat color object still selected, press the &lt;Del&gt; or
+  &lt;Delete&gt; key to delete it.</p>
+  </li>
+  <li>
+    <figure>
+      <img src = "images/Replacement5.gif" alt = "Hair object finished and
+      positioned" class = "img-fluid">
+      <figcaption>Hair object finished and positioned.</figcaption>
+    </figure>
+  </li>
+  <li><p>You have just drawn hair with its own color, highlighting, flow, and
+  placement in the image stack that makes up the young woman&rsquo;s head.</p>
+  <p>Choose File &gt; Save to save your artwork.</p>
+</ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing Hair Using the <i>Stitch Sub-Paths</i> Live Path Effect, Color
+    Blending, and the <i>Lattice Deformation 2</i> Live Path Effect
+    Function</h2>
+  </header>
+  <p>We explore working with stitching sub-paths in combination with color
+  blending and using the <b>Lattice Deformation 2</b> Live Path Effect to create
+  a second area of trained hair so that it exhibits a natural look to a
+  viewer.</p>
+  <ol>
+    <li><p>Select the right-side area of hair with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/RightSide01.gif" alt = "Selecting the right-side area
+        of hair on the figure" class = "img-fluid">
+        <figcaption>Selecting the right-side area of hair on the
+        figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Duplicate the area by pressing &lt;Ctrl&gt;-D and move the duplicate
+    to the side of the figure.</p>
+      <figure>
+        <img src = "images/RightSide02.gif" alt = "Duplicating the right-side
+        area of hair and moving it to one side of the figure" class =
+        "img-fluid">
+        <figcaption>Duplicating the right-side area of hair and moving it to one
+        side of the figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Using the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    Tool icon" width = "26">), draw two paths (sub-paths): one following the
+    top curvature of the hair area and the other following the curve at the
+    lower left corner of the shape. Draw both paths in the same direction,
+    that is, from left to right, or from right to left.</p>
+      <figure>
+        <img src = "images/RightSide03.gif" alt = "Drawing the two sub-paths
+        in preparation for applying the Stitch Sub-Paths Live Path Effect"
+        class = "img-fluid">
+        <figcaption>Drawing the two sub-paths in preparation for applying the
+        Stitch Sub-Paths Live Path Effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the two sub-paths using &lt;Shift&gt;-click. Each
+    sub-path is enclosed in its own bounding box.</p>
+      <figure>
+        <img src = "images/RightSide03b.gif" alt = "Group-selecting the two
+        sub-paths" class = "img-width">
+        <figcaption>Group-selecting the two sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine. The sub-paths are now enclosed in one large
+    common bounding box and are now merged into one compound path.</p>
+    <figure>
+      <img src = "images/CombinedPaths.gif" alt = "Combined sub-paths" class =
+      "img-width">
+      <figcaption>Combined sub-paths.</figcaption>
+    </figure>
+    </li>
+    <li><p>With the sub-paths still selected, choose Path &gt; Path
+    Effects&hellip;. The <b>Path Effects</b> dialog box appears.</p>
+      <figure>
+        <img src = "images/PathEffectsDialogBox.gif" alt = "Path Effects dialog
+        box" class = "img-width">
+        <figcaption>Path Effects dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add path effect</b> plus sign icon (<img src =
+    "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+    The <b>Live Path Effects Selector</b> appears.</p>
+    <p>Scroll to the bottom of the <b>Live Path Effects Selector</b> until the
+    <b>Stitch Sub-Paths</b> Live Path Effect appears.</p>
+      <figure>
+        <img src = "images/LivePathEffectsSelector1.gif" alt = "Live Path Effect
+        Selector with the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+        <figcaption>Live Path Effects Selector with the <b>Stitch Sub-Paths</b>
+        icon highlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Stitch Sub-Paths</b> icon.</p>
+    </li>
+    <li><p>The <b>Stitch Sub-Paths</b> dialog box appears. The <b>Number of paths</b>
+    is <b>5</b>, which is the default number for newly created path objects like
+    this, but that is not a problem. The lines, however, might have a different
+    stroke color. In the figure, we chose a stroke color of yellow and a stroke
+    width of <b>4 px</b>, using the <b>Fill and Stroke&hellip;</b>, <b>Stroke
+    paint</b></b> and <b>Stroke style</b> dialog boxes. The lines are easily
+    visible and allow for easy modification. You will change the color of the
+    lines to a more &ldquo;hair-like&rdquo; color shortly.</p>
+      <figure>
+        <img src = "images/RightSide04.gif" alt = "Stitch Sub-Paths applied to
+        sub-paths with five stitch lines appearing" class
+        = "img-fluid">
+        <figcaption>Stitch Sub-Paths applied to sub-paths with five stitch
+        lines appearing. Note that the two sub-paths have
+        disappeared.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the <b>Number of paths</b> from <b>5</b> to <b>80</b>. The
+    stitch lines are thick enough (4 pixels width) that they form a swath of
+    yellow.</p>
+      <figure>
+        <img src = "images/RightSide05.gif" alt = "Changing the number of paths
+        from five to 80" class = "img-fluid">
+        <figcaption>Changing the number of paths from five to 80.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke</b> dialog box active, click on the
+    <b>Stroke style</b> tab, and change the stroke <b>Width</b> to
+    <b>1.500 px</b>. You can start to see individual lines.</p>
+      <figure>
+        <img src = "images/RightSide06.gif" alt = "Changing the stroke width
+        from 4 pixels to 1.5 pixels" class = "img-fluid">
+        <figcaption>Changing the stroke width from 4 pixels to 1.5
+        pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>Inkscape allows you to randomly change the spacing between adjacent
+    stitch lines. You will apply this function to create uneven spacing between
+    lines.<p>
+    <p>Make the <b>Stitch Sub-Paths</b> dialog box active. Enter <b>7</b> into
+    the <b>Start spacing variance</b> and <b>End spacing variance</b> text
+    boxes. Then click on the <b>Random number generator</b> icon (<img src =
+    "images/RandomNumberGeneratorIcon.gif" alt = "Random number generator icon"
+    width = "26">) for each option and continue clicking until you get a
+    spacing style that you like.</p>
+    <p><b>Note:</b> each time you click a <b>Random number generator</b> icon,
+    Inkscape creates a new sequence of random numbers that you can use in turn
+    in creating unevenness in how far stitch paths are positioned from each
+    other. This feature is particularly useful in producing the trained, and yet
+    subtley uneven spacing between hair strands in this project. Larger values
+    for a random number generator produce larger variations in random values.
+    They can result in larger spacings between adjacent lines. A value of
+    <b>0</b> creates regular spacing, that is, the <b>Random number
+    generator</b> is turned off.</p>
+    <p>Experiment with different values for a random number generator and see
+    what you get. The more you use it, the more you develop your intuition for
+    how to use it.</p>
+      <figure>
+        <img src = "images/RightSide07.gif" alt = "Creating uneven spacing
+        between stitch lines" class = "img-fluid">
+        <figcaption>Creating uneven spacing between stitch lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add path effect</b> plus sign icon (<img src =
+    "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+    The <b>Live Path Effects Selector</b> appears.</p>
+      <figure>
+        <img src = "images/LivePathEffectsSelector3.gif" alt = "Live Path
+        Effects Selector with the Lattice Deformation 2 Live Path Effect icon
+        highlighted" class = "img-fluid">
+        <figcaption>Live Path Effects Selector with the <b>Lattice Deformation
+        2</b> Live Path Effect highlighted.</figcaption>
+    </figure>
+    </li>
+    <li>Click on the <b>Lattice Deformation 2</b> icon. The deformation lattice
+    (or deformation grid) appears encompassing the stitch line object. Note that
+    it does not totally include the underlying swath of color, indicating that
+    only the yellow lines will be affected.</p>
+    <p>In the <b>Path Effects</b> dialog box, <b>Lattice Deformation 2</b> has
+    been added to the path effects listing and is highlighted, indicating that
+    it is the currently active path effect, awaiting your commands.</p>
+      <figure>
+        <img src = "images/LatticeDeformation2.gif" alt = "Lattice Deformation
+        2 Live Path Effect showing grid" class = "img-width">
+        <figcaption>Lattice Deformation 2 Live Path Effect showing
+        grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>There are movable nodes where lattice lines cross. Click on a node
+    to select it and then drag it around to get the feel for how they affect
+    the yellow lines.</p>
+    <p>When you feel comfortable moving them around (even somewhat comfortable
+    is very okay), experiment with moving them so that allow the yellow lines
+    bend conformably with the bounding left and right edges of the underlying
+    shape. If you don&rsquo;t like a result, then copy the node geometry in the
+    figure below. Fine-tune their positions as you see fit. The more you play
+    with the lattice, the more confident you will feel using this tool and the
+    more easily you will be able to manipulation shapes into how you envision
+    them.</p>
+      <figure>
+        <img src = "images/RightSide08.gif" alt = "Warping the Lattice
+        Deformation 2 grid to bend the yellow stitch lines into curve
+        agreement with the edges of the underlying shape" class = "img-fluid">
+        <figcaption>Warping the Lattice Deformation 2 grid to bend the yellow
+        stitch lines into curve agreement with the edges of the underlying
+        shape.</figcaption>
+      </figure>
+    </li>
+    <li><p>The hair color needs to be changed from yellow to a reddish brown
+    color that matches the underlying color. It should be lighter in color
+    because it is being illuminated by a light source off-camera. Using the
+    <b>Screen</b> color blend will heighten the effect of a diffuse light
+    source and also give the impression that there is underlying hair receiving
+    less illumination.</p>
+    <p>Make the <b>Fill and Stroke</b> dialog box active, click on the
+    <b>Stroke paint</b> tab, and type <b>7e1b1bff</b> into the <b>RGBA</b>
+    text field. Click on the down arrow at the right of the <b>Blend mode</b>
+    selection box and choose <b>Screen</b> in the color blend mode list. Set
+    the value of <b>Opacity (%)</b> to <b>70.0</b>.</p>
+      <figure>
+        <img src = "images/RightSide09.gif" alt = "Setting the stitch hair
+        stroke to reddish brown and transparency to <b>70.0</b> percent" class
+        = "img-fluid">
+        <figcaption>Setting the stitch hair stroke to reddish brown and
+        transparency to <b>70.0</b> percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the artwork (you need to select both the overlying
+    hair object <u>and</u> the underlying hair shape) and press &lt;Ctrl&gt;-G
+    to group them.</p>
+    <p>Move the grouped hair object onto the figure&rsquo;s head so that it
+    completely covers the original area of hair. You can optionally delete the
+    original area by lowering the grouped object by one level, deselecting the
+    original area, and then selecting the original one simply by clicking on it
+    (it is now at the top of the image stack). You can then delete it by
+    pressing the &lt;Del&gt; or &lt;Delete&gt; key.</p>
+      <figure>
+        <img src = "images/RightSide10.gif" alt = "Moving the grouped hair
+        object onto the figure" class = "img-fluid">
+        <figcaption>Moving the grouped hair object onto the figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>If the grouped hair object lies above the knot at the top of the
+    ponytail, then select the object and click on the <b>Lower selection
+    one step</b> icon (<img src = "images/LowerSelection1StepIcon.gif" alt =
+    "Lower selection one step icon" width = "26">) until it disappears underneath
+    the knot.</p>
+      <figure>
+        <img src = "images/RightSide11.gif" alt = "Lowering the grouped hair
+        object so that it lies underneath the knot at the top of the ponytail"
+        class = "img-fluid">
+        <figcaption>Lowering the grouped hair object so that it lies underneath
+        the knot at the top of the ponytail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Deselect the grouped hair object by clicking anywhere off the
+    artwork. It&rsquo;s possible that the grouped hair object is not exactly
+    in place on the figure&rsquo;s head, as illustrated below. If this is the
+    case, then it is very easy to fix.</p>
+      <figure>
+        <img src = "images/RightSide12.gif" alt = "Small misplacement of the
+        grouped hair object" class = "img-fluid">
+        <figcaption>Small misplacement of the grouped hair object.</figcaption>
+      </figure>
+    </li>
+    <li><p>Zoom in with the <b>Zoom</b> tool or increase the magnification
+    using the magnification indicator at the lower right corner of the work
+    window until you can clearly see how large the discrepancy in placement
+    is.</p>
+    <p>Select the grouped hair object with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">) and
+    move it (up, down, right, and/or left) until it&rsquo;s top curve matches
+    that of the top area of hair.</p>
+      <figure>
+        <img src = "images/RightSide13.gif" alt = "Fine-adjusting the placement
+        of the grouped hair object" class = "img-fluid">
+        <figcaption>Fine-adjusting the placement of the grouped hair
+        object.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are satisfied with now things look, deselect the grouped
+    hair object.</p>
+    </li>
+    <li><p>The top area of hair does not have a random look to the placement of
+    hair filaments. It is unrealistic to see such mathematical precision in
+    combed hair. There is <u>always</u> a little bit of unevenness.</p>
+    <p>Select the top area of hair.</p>
+    <p>Make the <b>Path Effects</b> dialog box active.</p>
+    <p>Click on the <b>Stitch Sub-Paths</b> Live Path Effect.</p>
+      <figure>
+        <img src = "images/RightSide14.gif" alt = "Preparing to add uneven
+        spacing to the top area of hair" class = "img-fluid">
+        <figcaption>Preparing to add uneven spacing to the top area of
+        hair.</figcaption>
+      </figure>
+    </li>
+    <li><p>Set both <b>Start spacing variance</b> and <b>End spacing
+    variance</b> to <b>4.00</b>.</p>
+    <p>Click either or both associated <b>Random number generator icons</b>
+    (<img src = "images/RandomNumberGeneratorIcon.gif" alt = "Random number
+    generator icon" width = "26">) and continue clicking until you get a
+    spacing style that you like.</p>
+      <figure>
+        <img src = "images/RightSide15.gif" alt = "Selecting the top area of
+        hair" class = "img-fluid">
+        <figcaption>Selecting the top area of hair.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are satisfied with what you see, deselect the artwork by
+    pressing &lt;Esc&gt;.</p>
+      <figure>
+        <img src = "images/RightSide16.gif" alt = "Deselecting the current
+        artwork"
+        class = "img-fluid">
+        <figcaption>Deselecting the current artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Save your work with File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Drawing Hair Using the <i>Stitch Sub-Paths</i> Live Path Effect,
+    Transparency, and the <i>Lattice Deformation 2</i> Live Path Effect
+    Function</h2>
+  </header>
+  <p>This section can act as a review of the previous two sections: you will
+  be using the same tools and techniques as you draw hair that makes up the knot
+  above the ponytail. Instead of using color blending, you will use the
+  <b>Opacity</b> tool to use transparency as a way to shade the upper layer of
+  hair differently from the color texture underneath.</p>
+  <ol>
+    <li><p>Select the knot of hair above the ponytail with the Select tool
+    (<img src = "images/SelectionTool.gif" alt = "Selection tool icon" width =
+    "26">).</p>
+      <figure>
+        <img src = "images/Knot01.gif" alt = "Selecting the knot of hair above
+        the ponytail" class = "img-fluid">
+        <figcaption>Selecting the knot of hair above the ponytail.</figcaption>
+      </figure>
+    </li>
+    <li><p>Duplicate the area by pressing &lt;Ctrl&gt;-D and move the duplicate
+    to the side of the figure.</p>
+      <figure>
+        <img src = "images/Knot02.gif" alt = "Duplicating the knot and moving it
+        to the side of the figure" class = "img-fluid">
+        <figcaption>Duplicating the knot and moving it to the side of the
+        figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Using the Pen tool (<img src = "images/PenToolIcon.gif" alt = "Pen
+    Tool icon" width = "26">), draw two paths (sub-paths): one following the
+    left side of the hair area and the other following the right side of the
+    shape. Draw both paths in the same direction,
+    that is, from up to down, or from down to up.</p>
+      <figure>
+        <img src = "images/Knot03.gif" alt = "Drawing the two sub-paths in
+        preparation for applying the Stitch Sub-Paths Live Path Effect" class =
+        "img-fluid">
+        <figcaption>Drawing the two sub-paths in preparation for applying the
+        Stitch Sub-Paths Live Path Effect.</figcaption>
+      </figure>
+    </li>
+    <li><p>Group-select the two sub-paths using &lt;Shift&gt;-click. Each
+    sub-path is enclosed in its own bounding box.</p>
+      <figure>
+        <img src = "images/Knot04.gif" alt = "Group-selecting the two sub-paths"
+        class = "img-fluid">
+        <figcaption>Group-selecting the two sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Path &gt; Combine. The sub-paths are now enclosed in one large
+    common bounding box and are now merged into one compound path.</p>
+      <figure>
+        <img src = "images/Knot05.gif" alt = "Combined sub-paths" class = "img-fluid">
+        <figcaption>Combined sub-paths.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the sub-paths still selected, choose Path &gt; Path
+    Effects&hellip;. The <b>Path Effects</b> dialog box appears.</p>
+      <figure>
+        <img src = "images/Knot06.gif" alt = "Path Effects dialog box" class =
+        "img-fluid">
+        <figcaption>Path Effects dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add path effect</b> plus sign icon (<img src =
+    "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+    The <b>Live Path Effects Selector</b> appears.</p>
+    <p>Scroll to the bottom of the <b>Live Path Effects Selector</b> until the
+    <b>Stitch Sub-Paths</b> Live Path Effect appears.</p>
+      <figure>
+        <img src = "images/LivePathEffectsSelector1.gif" alt = "Live Path Effect
+        Selector with the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+        <figcaption>Live Path Effects Selector with the <b>Stitch Sub-Paths</b>
+        icon highlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Stitch Sub-Paths</b> icon.</p>
+    </li>
+    <li><p>The <b>Stitch Sub-Paths</b> dialog box appears. The <b>Number of
+    paths</b> is <b>5</b>, the default number for new path objects as you saw
+    in the previous section. The lines, however, might have a different stroke
+    color. In the figure, we chose a stroke color of yellow and a stroke width
+    of <b>4 px</b>, using the <b>Fill and Stroke&hellip;</b>, <b>Stroke
+    paint</b> and <b>Stroke style</b> dialog boxes. The lines are easily
+    visible and allow for easy modification. You will change the color of the
+    lines to a more &ldquo;hair-like&rdquo; color shortly.</p>
+      <figure>
+        <img src = "images/Knot07.gif" alt = "Live Path Effect Selector with
+        the Stitch Sub-Paths icon highlighted" class = "img-fluid">
+        <figcaption>Live Path Effect Selector with the <b>Stitch Sub-Paths</b>
+        icon highlighted.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the <b>Number of paths</b> from <b>5</b> to <b>35</b>. The
+    stitch lines are so thick (3 pixels width) that they form a swath of
+    yellow with little spacing between adjacent lines.</p>
+      <figure>
+        <img src = "images/Knot08.gif" alt = "Changing the number of paths from
+        five to 80" class = "img-fluid">
+        <figcaption>Changing the number of paths from five to 80.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Fill and Stroke</b> dialog box active, click on the
+    <b>Stroke style</b> tab, and change the stroke <b>Width</b> to
+    <b>1.500 px</b>. You can now see individual lines.</p>
+      <figure>
+        <img src = "images/Knot09.gif" alt = "Changing the stroke width from 3
+        pixels to 1.5 pixels" class = "img-fluid">
+        <figcaption>Changing the stroke width from 3 pixels to 1.5
+        pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add path effect</b> plus sign icon (<img src =
+    "images/AddPathEffectIcon.gif" alt = "Add Path Effect icon" width = "26">).
+    The <b>Live Path Effects Selector</b> appears.</p>
+      <figure>
+        <img src = "images/LivePathEffectsSelector3.gif" alt = "Live Path
+        Effects Selector with the Lattice Deformation 2 Live Path Effect icon
+        highlighted" class = "img-fluid">
+        <figcaption>Live Path Effects Selector with the <b>Lattice Deformation
+        2</b> Live Path Effect highlighted.</figcaption>
+      </figure>
+    </li>
+    <li>Click on the <b>Lattice Deformation 2</b> icon. The deformation lattice
+    (or deformation grid) appears encompassing the stitch line object. Note that
+    it does not totally include the underlying swath of color, indicating that
+    only the yellow lines will be affected.</p>
+    <p>In the <b>Path Effects</b> dialog box, <b>Lattice Deformation 2</b> has
+    been added to the path effects listing and is highlighted, indicating that
+    it is the currently active path effect, awaiting your commands.</p>
+      <figure>
+        <img src = "images/LatticeDeformation3.gif" alt = "Lattice Deformation
+        2 Live Path Effect showing grid" class = "img-width">
+        <figcaption>Lattice Deformation 2 Live Path Effect showing
+        grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the nodes around in the lattice grid until the stitch lines
+    lie conformably with the upper right and lower left edges of the underlying
+    shape. If you find that you&rsquo;re having difficulty getting the effect
+    you want, then copy the node placement in the figure below. The grid
+    won&rsquo;t look like an organized lattice anymore, but the stitch lines
+    flow in agreement with the underlying shape edges, which is what you
+    want.</p>
+      <figure>
+        <img src = "images/Knot10.gif" alt = "Warping the Lattice Deformation 2
+        grid to bend the yellow stitch lines into curve agreement with the
+        edges of the underlying shape" class = "img-fluid">
+        <figcaption>Warping the Lattice Deformation 2 grid to bend the yellow
+        stitch lines into curve agreement with the edges of the underlying
+        shape.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now make the spacing between stitch lines uneven to
+    simulate real hair.</p>
+    <p>Make the <b>Stitch Sub-Paths</b> dialog box active. Enter <b>3</b> into
+    the <b>Start spacing variance</b> and <b>End spacing variance</b> text
+    boxes. Then click on the <b>Random number generator</b> icon (<img src =
+    "images/RandomNumberGeneratorIcon.gif" alt = "Random number generator icon"
+    width = "26">) for each option and continue clicking until you get a
+    spacing style that you like.</p>
+      <figure>
+        <img src = "images/Knot11.gif" alt = "Creating uneven spacing between
+        stitch lines" class = "img-fluid">
+        <figcaption>Creating uneven spacing between stitch lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>The hair color needs to be changed from yellow to a reddish brown
+    color that matches the underlying color, but darker. It should be darker in
+    color because it is receiving less illumination than the right side of the
+    figure&rsquo;s hair and head.</p>
+    <p>Make the <b>Fill and Stroke</b> dialog box active, click on the
+    <b>Stroke paint</b> tab, and type <b>271207ff</b> as the hexadecimal color
+    value into the <b>RGBA</b> text field if it doesn&rsquo;t have that value
+    already. If <b>Normal</b> is not the current color blend mode, then click
+    on the down arrow at the right of the <b>Blend mode</b> selection box and
+    choose <b>Normal</b> in the list. Set the value of <b>Opacity (%)</b> to
+    <b>70.0</b>.</p>
+      <figure>
+        <img src = "images/Knot12.gif" alt = "" class = "img-fluid">
+        <figcaption>Setting the stitch hair stroke to reddish brown and
+        transparency to <b>70.0</b> percent.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select the artwork (you need to select both the overlying
+    hair object <u>and</u> the underlying hair shape), and press &lt;Ctrl&gt;-G
+    to group them.</p>
+    <p>Move the grouped hair object onto the figure&rsquo;s head so that it
+    completely covers the original knot shape. You can optionally delete the
+    original knot by lowering the grouped object by one level, deselecting the
+    original knot, and then selecting the original one simply by clicking on it
+    (it is now at the top of the image stack). You can then delete it by
+    pressing the &lt;Del&gt; or &lt;Delete&gt; key.</p>
+      <figure>
+        <img src = "images/Knot13.gif" alt = "Moving the grouped hair object
+        onto the figure" class = "img-fluid">
+        <figcaption>Moving the knot object onto the figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Zoom in with the <b>Zoom</b> tool or increase the magnification
+    using the magnification indicator at the lower right corner of the work
+    window so that you can clearly see whether there is any discrepancy in
+    placement.</p>
+    <p>Select the knot object with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">) and
+    move it (up, down, right, and/or left) until it&rsquo;s you are satisfied
+    with the placement of the know.</p>
+      <figure>
+        <img src = "images/Knot14.gif" alt = "Good placement of the knot" class
+        = "img-fluid">
+        <figcaption>Good placement of the knot.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you are satisfied with how things look, deselect the grouped
+    hair object.</p>
+      <figure>
+        <img src = "images/Knot15.gif" alt = "View of the current artwork"
+        class = "img-fluid">
+        <figcaption>View of the current artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save to save your artwork. File &gt; Quit to exit
+    Inkscape.</p>
+    </li>
+  </ol>
+  <p>You have learned how to draw and texture hair using the <b>Stitch
+  Sub-Paths</b>, <b>Envelope Deformation</b>, and <b>Lattice Deformation</b>
+  Live Path Effects. Color blending and transparency refine your sense of how
+  to create three-dimensionality using color to give subtle, and yet believable
+  depth to your artwork. You will finish the artwork of this tutorial in
+  Tutorial 16, Part B, where you will be introduced to the <b>Sub-Path
+  Interpolation</b> Live Path Effect which can make filling certain shapes with
+  lines easier than with <b>Stitch Sub-Paths</b>.</p>
+</section>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>How are <b>Stitch Sub-Paths</b>, <b>Envelope Deformation</b>, and
+    <b>Lattice Deformation</b> related as workflow tools as you create hair?
+    </li>
+    <li>How are <b>Envelope Deformation</b> and <b>Lattice Deformation</b>
+    different from each other?
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>The <b>Stitch Sub-Paths</b>, <b>Envelope Deformation</b>, and
+    <b>Lattice Deformation</b> tools are related in your workflow in that you
+    first draw the hair using <b>Stitch Sub-Paths</b>. To make the hair strands
+    curved, you need to modify their original straight lengths using either
+    <b>Envelope Deformation</b> or <b>Lattice Deformation</b>. <b>Envelope
+    Deformation</b> can be used for simple shapes and <b>Lattice Deformation</b>
+    should be used for shapes having complex geometries.</p>
+    </li>
+    <li><p><b>Envelope Deformation</b> affects the overall shape of an object
+    using sides of a bounding box envelope. The top, left, right, and bottom
+    sides are separable tools whereby you can change the shape of each
+    side&rsquo;s line segment and end nodes without affecting the other
+    sides.</p>
+    <p><b>Lattice Deformation</b> works via a lattice grid whereby you can
+    change the curvature and location of points both on the edges and inside a
+    shape, producing complex modifications that <b>Envelope Deformation</b>
+    can&rsquo;t do.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
