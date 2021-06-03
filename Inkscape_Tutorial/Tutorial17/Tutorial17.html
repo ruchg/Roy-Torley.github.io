@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 17 &mdash; Combining Inkscape Graphics and Gimp
+  or Photoshop Images</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, importing graphics files, filters,
+  extensions, colorizing, masking images, mask, bitmap image, scaled vector
+  graphics, SVG">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+      <a id = "Top"></a>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 17 &mdash; Combining Inkscape Graphics and Gimp or
+          Photoshop Images</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinishedArtwork.gif" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+      <div class = "col-md-6 mt-5"><p class = "lead">You can easily add an
+      image created in an image-editing program to an Inkscape file. This is an
+      effective method for seeing how a photograph looks incorporated with a
+      line drawing or for trying out an Inkscape special effect on bitmap
+      images.</p>
+      </div>
+    </div>
+
+<hr>
+
+<section>
+  <p>In this lesson, you&rsquo;ll learn how to do the following:</p>
+  <ul>
+    <li>Differentiate between vector and bitmap graphics.
+    </li>
+    <li>Import embedded Gimp and Photoshop&reg; graphics in an Inkscape file.
+    </li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Combining Artwork</h2>
+  </header>
+  <p>You can combine Inkscape artwork with images from other graphics
+  applications in a variety of ways for a wide range of creative results.
+  Sharing artwork between applications lets you combine continuous-tone
+  paintings and photographs with line art. Even though Inkscape lets you create
+  certain types of raster images, Gimp and Photoshop excel at many image-editing
+  tasks; once done, the images can then be placed in Inkscape.</p>
+  <p>To illustrate how you can combine bitmap images with vector art and work
+  between applications, this tutorial steps you through the process of creating
+  a composite image. In this tutorial, you will add bitmap images created to a
+  postcard created in Inkscape. Then you&rsquo;ll adjust the color in the photo,
+  mask the photo, and sample color from the photo to use in the Inkscape
+  artwork. You&rsquo;ll update a positioned image and then export your postcard
+  to Gimp to complete the type treatment.</p>
+</section>
+<section>
+  <header>
+    <h2>Vector Versus Bitmap Graphics</h2>
+  </header>
+  <p>Inkscape creates vector graphics, also called draw graphics, which are
+  made up of shapes based on mathematical expressions. These graphics consist
+  of clear, smooth lines that retain their crispness when scaled. They are
+  appropriate for illustrations, type, and graphics, such as logos that may be
+  scaled to different sizes.</p>
+  <p><i>Bitmap images</i>, also called raster images, are based on a grid of
+  pixels and are created by image-editing applications such as Gimp and Adobe
+  Photoshop. In working with bitmap images, you edit groups of pixels rather
+  than objects of shapes. Because bitmap graphics can represent subtle
+  gradations of shade and color, they are appropriate for continuous-tone
+  images such as photographs or artwork created in painting programs. A
+  disadvantage of bitmap graphics is that they lose definition and appear
+  jagged when scaled up. You can see the ragged the edges are in the rasterized
+  image below.</p>
+  <figure>
+    <img src = "images/ChessLogoVector.gif" alt = "Vector art logo example" class =
+    "img-fluid">
+    <figcaption>Logo drawn as vector art.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/ChessLogoRaster.gif" alt = "Bitmap art logo example"
+    class = "img-fluid">
+    <figcaption>Logo rasterized as bitmap art.</figcaption>
+  </figure>
+  <div class = "clear: left;"></div>
+  <p>In deciding whether to use Inkscape or a bitmap image program such as Gimp
+  for creating and combining graphics, consider both the elements of the image
+  and how the image will be used. In general, use Inkscape if you need to
+  create art or type with clean lines that will look good at any magnification.
+  In most cases, you will also want to use Inkscape for laying out a design,
+  because Inkscape offers more flexibility in working with type and with
+  reselecting, moving, and altering images. You can create raster images in
+  Inkscape but its pixel-editing tools are limited. Use Gimp or Photoshop for
+  images that need pixel-editing, color correcting, painting, and other special
+  effects.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Download art file <b>Tutorial17_end.svg</b> and store it in a
+    convenient location.</p>
+      <figure>
+        <img src = "images/Tutorial17_end.gif" alt = "Tutorial 17 finished
+        artwork" class = "img-fluid">
+        <figcaption>Tutorial 17 finished artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Choose View &gt; Zoom &gt; Zoom Out to make the finished artwork
+    smaller, adjust the window size, and leave it on-screen as you work. (Move
+    the artwork where you want it in the window.) If you don&rsquo;t want to
+    leave the image open, choose File &gt; Close.</p>
+    </li>
+    <aside><p><b>Resource:</b> For an illustration of the finished artwork in
+    this lesson, see the beginning of this page.</b></p>
+    </aside>
+    <li><p>Now download the starting art file <b>Tutorial17_start.svg</b> and
+    store it in a convenient location.</p>
+    </li>
+    <li><p>Now you&rsquo;ll open the start file to begin the lesson.</p>
+    <p>Choose File &gt; Open, and open the <b>Tutorial17_start.svg</b> file.</p>
+    <p>The file has been prepared with three layers: the Text layer, and two
+    additional layers: Layer 1 and Checkerboard, on which you&rsquo;ll place
+    images. Checkerboard also contains objects that you&rsquo;ll make into a
+    mask.</p>
+      <figure>
+        <img src = "images/Tutorial17_start.gif" alt = "Tutorial 17 start file"
+        class = "img-fluid">
+        <figcaption>Tutorial 17 starting artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As&hellip; and name the file
+    <b>Postcard.svg</b>.</p>
+    </li>
+  </ol>
+</section>
+<a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+class = "img-fluid"></a>
+<section>
+  <header>
+    <h2>Importing an SVG (Scaled Vector Graphics) Image File</h2>
+  </header>
+  <p>You&rsquo;ll begin by placing an <i><b>SVG</b></i> &nbsp;image file in the
+  Inkscape document as an embedded file. Imported files can be embedded or
+  linked. Embedded files are added to the Inkscape file, and the Inkscape file
+  size increases to reflect the addition of the imported file. Linked files
+  remain as separate, external files, with a link to the imported file in the
+  Inkscape file. (The linked file must always accompany the Inkscape file, or
+  the link will break and the imported file will not appear in the Inkscape
+  artwork.)</p>
+  <p>Remember that <b>SVG</b> stands for <b>S</b>caled <b>V</b>ector
+  <b>G</b>raphics which means that drawings are mathematical expressions that a
+  graphics program, such as Inkscape and Adobe Illustrator&reg; can understand
+  and render (that is, draw) precisely, no matter how large or small the artwork
+  is.</p>
+  <ol>
+    <li><p>Click on the <b>Layers</b> icon (<img src = "images/LayersIcon.gif"
+    alt = "Layers Icon" width = "26">) in the <b>Tool Controls Bar</b> to make
+    the <b>Layers</b> dialog box active. Resize the dialog box to make all the
+    layers visible if needed.</p>
+    </li>
+    <li><p>In the <b>Layers</b> dialog box, select the Checkerboard layer.</p>
+      <figure>
+        <img src = "images/SelectingCheckerboardLayer.gif" alt = "Selecting the
+        Checkboard layer" class = "img-fluid">
+        <figcaption>Selecting the Checkboard layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you import an image, it is added to the selected layer.
+    You&rsquo;ll use the Checkerboard layer for the imported image, because the
+    layer includes artwork for a mask for the image that you&rsquo;ll create
+    later in the tutorial.</p>
+    </li>
+    <li><p>Choose File &gt; Import&hellip;</p>
+    </li>
+    <li><p>When the <b>Select file to import</b> dialog box appears, navigate
+    to the <b>Chess.svg</b> file, select it, and click on the <b>Open</b>
+    button.</p>
+      <figure>
+        <img src = "images/SelectFileToImportDialogBox.gif" alt = "Select file
+        to import dialog box" class = "img-fluid">
+        <figcaption><b>Select file to import</b> dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>SVG input</b> dialog box appears. Leave <b>DPI for rendered
+    SVG</b> and <b>Image Rendering Mode</b> at their default settings.</p>
+      <figure>
+        <img src = "images/SVGInputDialogBox.gif" alt = "SVG input dialog box"
+        class = "img-fluid">
+        <figcaption><b>SVG input</b> dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click the <b>OK</b> button. The image is imported onto the
+    Checkerboard layer. In the figure below, it is placed at the upper left
+    corner of the checkerboard. You can see that, like the checkerboard, the
+    imported image of the chess pieces lies underneath the text, which lies in
+    the Text layer above. It is as if you are working with tracing paper.</p>
+      <figure>
+        <img src = "images/BitmapFileImported.gif" alt = "Bitmap image file
+        imported and placed in the Checkerboard layer" class = "img-fluid">
+        <figcaption>Bitmap image file imported and placed in the Checkerboard
+        layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>The image you just imported contains two grouped components:
+    the background chessboard and chess pieces, and a masked image of the chess
+    Queen piece, cut out and positioned exactly ontop of the image of the Queen
+    in the background image.</p>
+      <figure>
+        <img src = "images/SVGInputFile.gif" alt = "SVG input file" class =
+        "img-fluid">
+        <figcaption>SVG input file.</figcaption>
+      </figure>
+    <li><p>Now you&rsquo;ll move the imported images, using <b>Snap</b> tools to
+    place the image precisely.<p>
+    <p>Make the <b>Snap Controls Bar</b> active. Choose View &gt; Show/Hide &gt;
+    Snap Controls Bar is it is not visible or has been iconified.</p>
+    </li>
+    <li><p>Click on the <b>Enable snapping (%)</b> (<img src =
+    "images/EnableSnappingIcon.gif" alt = "Enable snapping icon" width = "26"
+    >), <b>Snap bounding boxes</b> (<img src =
+    "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width =
+    "26" >), and <b>Snap bounding box corners</b> (<img src =
+    "images/SnapBoundingBoxCornersIcon.gif" alt = "Snap bounding box corners
+    icon" width = "26" >) icons.<p>
+    </li>
+    <li><p>Click-drag the imported image until one of its corners coincides
+    with its corresponding corner on the checkerboard image. The snap function
+    will alert you when the image corner is close enough to an underlying corner
+    to be snapped precisely into place. The square with dashed-line sides is an
+    artifact of the positioning process.</p>
+      <figure>
+        <img src = "images/PositioningImportedImage.gif" alt = "Positioning the
+        imported image" class = "img-fluid">
+        <figcaption>Positioning the imported image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now you will move the image below the checkerboard, and duplicate
+    it.</p>
+    </li>
+  </ol>
+  <aside><p><b>Importing Files</b></p>
+  <p>The <b>Import</b> command places files from other applications into
+  Inkscape. Files can be embedded, or included in, the Inkscape file, or they
+  can be linked to the Inkscape file. Linked files remain independent of the
+  Inkscape file, resulting in a smaller Inkscape file. Depending on a preference
+  you set for updating links, the linked image in the Inkscape file may
+  change when the artwork in the linked file changes.</p>
+  <p>By default, the <b>Embed</b> option is selected in the <b>bitmap image
+  import</b> dialog box which opens after you have selected your image file to
+  import. If you deselect the <b>Link</b> option, the <b>Embed</b> option
+  automatically activates and the artwork is embedded in the Inkscape file,
+  resulting in a larger Inkscape file.</b>
+  </p>
+  </aside>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Duplicating an Imported Image</h2>
+  </header>
+  <p>You can duplicate placed images just as you do other objects in an
+  Inkscape file. The copy of the image can then be modified independently of
+  the original.</p>
+  <ol>
+    <li><p>Now you&rsquo;ll duplicate the Chess.svg image in the <b>Layers</b>
+    palette and move it into its own layer.</p>
+    <p>Click on the <b>Unlocked Layer</b> icon (<img src =
+    "images/UnlockedLayerIcon.gif" alt = "Unlocked layer icon" width = "26">)
+    for the <b>Text</b> layer to toggle it locked (<img src =
+    "images/LockedLayerIcon.gif" alt = "Locked layer icon" width = "26">) so the
+    text won&rsquo; be accidentally manipulated as you work.</p>
+    <p>Make the <b>Checkerboard</b> layer the active layer, if it isn&rsquo;
+    already, and click on the background image.</p>
+      <figure>
+        <img src = "images/MakeCheckerboardLayerActive.gif" alt = "Making the
+        Checkerboard layer active" width = "img-fluid">
+        <figcaption>Making the Checkerboard layer active.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the background image selected, press
+    &lt;Shift&gt;-&lt;Ctrl&gt;-G to ungroup the background image and the Queen
+    chess piece image. Do <u>not</u> click on the Queen chess piece. The Queen
+    chess piece is a separate image apart from the background and is to remain
+    on the <b>Checkerboard</b> layer.</p>
+      <figure>
+        <img src = "images/UngroupingBackgroundAndQueen.gif" alt = "Ungrouping
+        the background and Queen chess piece images" class = "img-fluid">
+        <figcaption>Ungrouping the background and Queen chess piece
+        images.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the artwork to deselect it and then reselect the background
+    image. Don&rsquo;t select the Queen image. You will move only the
+    background.</p>
+    <li>
+    <p>Choose Edit &gt; Duplicate to duplicate just the background.</p>
+    </li>
+  <li><p>Press &lt;Shift&gt;-&lt;PgDn&gt; to move the background image down to
+  Layer 1. The Layer 1 bar becomes highlighted, indicating that it is now the
+  active layer.</p>
+    <figure>
+      <img src = "images/MoveDuplicateBackground2Layer1.gif" alt = "Moving the
+      duplicate background to Layer 1" class = "img-fluid">
+      <figcaption>Moving the duplicate background to Layer 1. Layer 1 becomes
+      highlighted.</figcaption>
+    </figure>
+    </li>
+    <li><p>Hide the top <b>Text</b> layer and <b>Checkerboard</b> layer, leaving
+    only <b>Layer 1</b> showing to verify that the duplicate Background image
+    did indeed move to the bottom layer.</p>
+      <figure>
+        <img src = "images/CheckLayer1.gif" alt = "Checking that the background
+        image did move to Layer 1" class = "img-fluid">
+        <figcaption>Checking that the background image did move to
+        Layer 1.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Layer 1</b> label in the <b>Layer 1</b> bar and
+    rename the layer <b>Blue Chess</b>. You will shortly colorize the duplicated
+    background with a blue hue.</p>
+      <figure>
+        <img src = "images/BlueChessLabel.gif" alt = "Layer 1 renamed to Blue
+        Chess" class = "img-fluid">
+        <figcaption>Layer 1 renamed to Blue Chess.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now take the imported original background and chess piece
+    images and put them into new layers below the Checkerboard layer.</p>
+    <p>Make the Checkerboard layer active again by clicking on its
+    <b>Layer</b> bar in the <b>Layers</b> palette.</p>
+    </li>
+    <li><p>Click on the <b>Create a new layer</b> plus sign icon (<img src =
+    "images/PlusSignIcon.gif" alt = "Create a new layer plus sign icon" width =
+    "26">).</p>
+    </li>
+    <li><p>When the <b>Add layer</b> dialog box appears, select <b>Below
+    current</b> and label the new layer <b>Background</b>.</p>
+      <figure>
+        <img src = "images/NewBackgroundLayer.gif" alt = "Creating
+        the new Background layer" class = "img-fluid">
+        <figcaption>New layer created to house the background
+        image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Add</b> button. The <b>Layers</b> palette now shows
+    <b>Background</b> as the next layer down from the <b>Checkerboard</b>
+    layer.</p>
+      <figure>
+        <img src = "images/NewLayerDownInStack.gif" alt = "New layer down in the
+        layer stack" class = "img-fluid">
+        <figcaption>New layer down in the layer stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now move the background image down to the <b>Background</b>
+    layer.</p>
+    <p>Click on the background image (and not the Queen chess piece image). The
+    <b>Checkerboard</b> layer bar is now highlighted, indicating that it is now
+    the active layer.</p>
+      <figure>
+        <img src = "images/ClickOnBackgroundImage.gif" alt = "Selecting the
+        background image" class = "img-fluid">
+        <figcaption>Selecting the background image.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the background image selected, choose Layer &gt; Move Selection
+    to Layer Below</b>. The <b>Background</b> layer bar is now highlighted.
+    The checkerboard and Queen chess piece are now visible.</p>
+      <figure>
+        <img src = "images/BackgroundImageMoved.gif" alt = "Moving the
+        background image to its own layer" class = "img-fluid">
+        <figcaption>Moving the background image to its own layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the Queen chess piece onto its own layer.</p>
+    <p>Select the <b>Checkerboard</b> layer bar in the <b>Layers</b>
+    palette.</p>
+    </li>
+    <li><p>Click on the <b>Create a new layer</b> plus sign icon (<img src =
+    "images/PlusSignIcon.gif" alt = "Create a new layer plus sign icon" width =
+    "26">).</p>
+    </li>
+    <li><p>Choose <b>Below current</b> in the <b>Position</b> text box and label
+    the new layer <b>Masked Queen</b>.</p>
+    </li>
+    <li><p>Click on the <b>Add</b> button.</p>
+      <figure>
+        <img src = "images/AddMaskedQueenLayer.gif" alt = "Adding the Masked
+        Queen layer" class = "img-fluid">
+        <figcaption>Adding the Masked Queen layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Queen chess piece to select it.</p>
+      <figure>
+        <img src = "images/SelectingQueenChessPiece.gif" alt = "Selecting the
+        Queen chess piece" class = "img-fluid">
+        <figcaption>Selecting the Queen chess piece.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Shift&gt;-&lt;PgDn&gt; to move the Queen chess piece down
+    in the layer stack to the <b>Masked Queen</b> layer. The <b>Masked Queen</b>
+    layer bar highlights, indicating that it is the active layer.</p>
+      <figure>
+        <img src = "images/MoveQueenChessPiece.gif" alt = "Moving the
+        Queen chess piece image to its own layer" class = "img-fluid">
+        <figcaption>Moving the Queen chess piece image to its own
+        layer.</figcaption>
+      </figure>
+      <p>You can now see the stacking order of the layers: 1) Text topmost,
+      2) Checkerboard image, 3) Masked Queen chess piece, 4) Background, and
+      finally, 5) the bottommost background image (Blue Chess) which is not
+      visible under the overlying Background image.</p>
+        <figure>
+          <img src = "images/LayerBreakdown.gif" alt = "Layer break-down"
+          class = "img-fluid">
+          <figcaption>Layer break-down.</figcaption>
+        </figure>
+    </li>
+    <li><p>Choose File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Adjusting Color in a Bitmap Image</h2>
+  </header>
+  <p>You can use filters to modify colors in bitmap images in a variety of ways.
+  You can use filters to convert to a different color mode (such as RGB, CMYK,
+  or grayscale) or to adjust individual color values. You can also use filters
+  to saturate or desaturate (darken or lighten) colors, or invert colors
+  (create a color negative).</p>
+  <figure>
+    <img src = "images/ColorizingAnImportedImageFile.gif" alt = "Examples of
+    color filters" class = "img-fluid">
+    <figcaption>Colorizing an imported image file using color
+    filters.</figcaption>
+  </figure>
+  <p>In this section, you&rsquo;ll adjust colors in the background
+    chessboard image in the Checkerboard layer. Later in this tutorial,
+    you&rsquo;ll apply a mask to this image and then adjust colors in the Blue
+    Chess layer so that the two layers appear in contrasting colors through the
+    mask.</p>
+  <ol>
+    <li><p>In the <b>Layers</b> palette, select the <b>Background</b> layer.</p>
+    </li>
+    <li><p>Click the eye icon to all the layers <u>except</u> the
+    <b>Background</b> layer to hide them.</p>
+    <p>When you hide a layer, all objects on that layer are deselected, hidden,
+    and locked.</p>
+      <figure>
+        <img src = "images/HidingAllButTheBackgroundLayer.gif" alt = "Hiding all
+        but the Background layer" class = "img-fluid">
+        <figcaption>Hiding all but the Background layer.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the <b>Background</b> layer active if it isn&rsquo;t already
+    and select the background image.</p>
+    </li>
+    <li><p>You will now colorize the image with a strong yellow hue.</p>
+    <p>Choose Extensions &gt; Raster &gt; Colorize&hellip; and click on the
+    <b>CMYK</b> tab. Move the <b>Y</b> slider to <b>100</b> for 100 percent
+    yellow and the <b>A</b> slider to <b>28</b> for 28% opacity. Check the
+    <b>Live preview</b> checkbox to see the filter effect before you set the
+    filter values.</p>
+      <figure>
+        <img src = "images/ColorizeYellow.gif" alt = "Colorizing the background
+        image yellow" class = "img-fluid">
+        <figcaption>Colorizing the background image yellow.</figcaption>
+      </figure>
+      <p>The <b>Raster</b> option was chosen in the <b>Extensions</b> menu
+      because the image is a rasterized (pixel-based) jpeg image.</p>
+    </li>
+    <li><p>Click on the <b>Apply</b> button, then the <b>Close</b> button.</p>
+    </li>
+    <li><p>Click outside the image, and then choose File &gt; Save.</p>
+    </li>
+    <li><p><p>Click the eye icon to all the layers to unhide them.</p>
+    <p>You can now review your current piece of artwork.</p>
+      <figure>
+        <img src = "images/CurrentArtwork.gif" alt = "Current artwork" class =
+        "img-width">
+        <figcaption>Current artwork.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Masking an Image</h2>
+  </header>
+  <p>Masks crop part of an image so that only a portion of the image appears
+  through the shape of the mask. You can make a mask from a single path or a
+  compound path.</p>
+  <h4>Creating Compound Path and Opacity Masks</h4>
+  <p>In this section, you&rsquo;ll create a compound path from the checkerboard
+  pattern on the Checkerboard layer and create an opacity mask from the
+  compound path, so that the Background layer appears through the mask. Then
+  you&rsquo;ll adjust the colors in the Blue Chess layer to contrast with the
+  Background layer.</p>
+  <ol>
+    <li><p>Click on the eye icon of all the layers in the <b>Layer</b> palette
+    except for the <b>Checkerboard</b> layer.</p>
+      <figure>
+        <img src = "images/OnlyCheckerboard.gif" alt = "Keeping only the
+        Checkerboard layer visible" class = "img-fluid">
+        <figcaption>Keeping only the Checkerboard layer visible.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select one of the black squares.</p>
+      <img src = "images/SelectBlackSquare.gif" alt = "Selecting a black square"
+      class = "img-fluid">
+      <figcaption>Selecting a black square.</figcaption>
+    </li>
+    <li><p>Choose Edit &gt; Select Same &gt; Fill and Stroke. All the black
+    squares become selected.</p>
+      <img src = "images/AllBlackSquaresSelected.gif" alt = "All black squares
+      selected" class = "img-fluid">
+      <figcaption>All black squares selected.</figcaption>
+    </li>
+    <li><p>Choose Path &gt; Object to Path. Right now you&rsquo; see no
+    changes, but Inkscape no longer &ldquo;sees&rdquo; the squares as square
+    objects but as a collection of paths and nodes.</p>
+    </li>
+    <li><p>Choose Path &gt; Combine. The square paths have been merged into one
+    compound path, which can be used as a mask.</p>
+      <figure>
+        <img src = "images/CombinePaths.gif" alt = "Combining paths" class =
+        "img-fluid">
+        <figcaption>Combining paths. Note that individual squares no longer
+        have their own bounding boxes.</figcaption>
+      </figure>
+    <p><b>Note:</b> the <b>Mask</b> function will work only when the mask is a
+    single item, that is, a single object. You make separate individual objects
+    into one either by grouping them using the <b>Group selected objects</b>
+    function or by converting the objects into paths and then using the
+    <b>Combine</b> paths function.</p>
+    <p>Combined paths act just like grouped objects. The only difference lies
+    behind the scenes. Inkscape still &ldquo;sees&rdquo; grouped objects as,
+    indeed single objects that have been collected together to form a compound
+    entity in which all of its components are still recognized as squares,
+    circles, and other shapes that will still have their shape identity if that
+    group is ungrouped &mdash; you will get all of your original shapes back
+    again.</p>
+    <p>On the other hand, objects that have been converted into paths have lost
+    all of their shape attributes and are &ldquo;seen&rdquo; only as collections
+    of lines, curves, and nodes. When combined into a single compound path, that
+    entity is still a collection of lines, curves, and nodes. Combined paths can
+    be broken apart using the <b>Break apart</b> path function, but the result
+    is still a collection of lines, curves, and nodes, but with no shape
+    information.</p>
+    <p>Path effect functions work on paths. Some of these functions first
+    convert an object with shape information into a path because that is how
+    they work. They won&rsquo;t work on objects containing shape information.
+    That is simply how those functions have been put together. Yet, you can
+    manipulate those converted objects in ways that you can&rsquo;t with
+    regular shape tools.</p>
+    </li>
+    <li><p>Click off the artwork to deselect it.</p>
+    </li>
+    <li><p>In the <b>Layers</b> palette, lock the <b>Text</b>, <b>Masked
+    Queen</b>, and <b>Blue Chess</b> layers. Make the <b>Checkerboard</b> and
+    <b>Background</b>, and <b>Blue Chess</b> layers visible.</p>
+      <figure>
+        <img src = "images/PreparingLayersForMasking.gif" alt = "Preparing
+        layers for masking" class = "img-fluid">
+        <figcaption>Preparing layers for masking.</figcaption>
+      </figure>
+    </li>
+    <li><p>The Checkerboard mask is one compound path and is situated above the
+    Background layer, which how you want them to be &mdash; the mask is always
+    above the object so it can &ldquo;cookie-cut&rdquo; the image immediately
+    underneath it.</p>
+    <p>Select both the Checkerboard mask and the Background images by choosing
+    Edit &gt; Select All.</p>
+    </li>
+    <li><p>Choose Object &gt; Clip &gt; Set. The parts of the yellow-colorized
+    background image underneath the black squares remain. The original colors of
+    the Blue Chess background fill the spaces where the white squares were.</p>
+      <figure>
+        <img src = "images/MaskApplied.gif" alt = "Applying the mask" class =
+        "img-fluid">
+        <figcaption>Applying the mask.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now give the Blue Chess image a strong blue hue to contrast with
+    the yellow.</p>
+    <p>Unlock the <b>Blue Chess</b> layer and lock the <b>Background</b>
+    layer.</p>
+    </li>
+    <li><p>Choose Extension &gt; Raster &gt; Colorize&hellip;. We used the color
+    <b>Wheel</b> to choose blue with an <b>A</b>lpha (opacity) value of
+    <b>40</b> percent. When you are satisfied with the color and opacity you
+    chose, click on the <b>Apply</b> button and then <b>Close</b>.</p>
+      <figure>
+        <img src = "images/BlueBlueChess.gif" alt = "Blue Chess image colorized
+        blue" class = "img-fluid">
+        <figcaption>Blue Chess image colorized blue.</b>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h4>Editing a Masked Image</h4>
+  </header>
+  <p>The contrast between the blue and yellow squares of the background is low.
+  The focus of the card is supposed to be on the Queen chess piece &mdash; the
+  title of the card is, after all, &ldquo;The Queen&rsquo;s Gambit.&rdquo; It
+  makes sense to have the background more subdued in comparison with the
+  coloration of the Queen and highlight the Queen so that she &ldquo;pops&rdquo;
+  visually out of the picture.</p>
+  <p>
+  <ol>
+    <li><p>In the <b>Layers</b> palette, unlock both the <b>Background</b> and
+    <b>Blue Chess</b> layers if they aren&rsquo;t already unlocked. Lock the
+    <b>Text</b>, <b>Checkerboard</b>, and <b>Masked Queen</b> layers so they
+    won&rsquo;t be affected by the colorizing you will do next.</p>
+    <p>Choose Edit &gt; Select All in All Layers to select all objects in those
+    layers that are unlocked. Objects in locked or hidden layers will not be
+    selected.</p>
+    <p>Choose Extensions &gt; Raster &gt; Colorize&hellip;</p>
+    <p>Set cyan <b>C = 60</b>, magenta <b>M = 60</b>, yellow <b>Y = 0</b>,
+    black <b>K = 61</b>, and opacity <b>A = 40</b>. The composite background
+    image is given a subdued dark purple overlay.</p>
+    <p>Click on the <b>Apply</b> button, then click on <b>Close</b>.</p>
+      <figure>
+        <img src = "images/ColorizeLayersDarkPurple.gif" alt = "Colorizing the
+        background layers a transparent dark purple" class = "img-fluid">
+        <figcaption>Colorizing the background layers a transparent dark
+        purple.</figcaption>
+      </figure>
+    </li>
+    <li><p>The Queen and King chess pieces need a little more definition to
+    light and dark areas &mdash; they are a little too subdued.</p>
+    <p>With the two background layers still selected (reselect them if they
+    have been deselected using Edit &gt; Select All in All Layers), choose
+    Filters &gt; Color &gt; Lightness-Contrast&hellip;.</p>
+    <p>In the <b>Lightness-Contrast</b> dialog box that appears, set
+    <b>Lightness = 1.00</b> and <b>Contrast = 1.20</b>.</p>
+    <p>Click <b>Apply</b>, then <b>Close</b>.</p>
+      <figure>
+        <img src = "images/BrightnessContrast.gif" alt = "Adjusting brightness and
+        contrast of the two background images" class = "img-fluid">
+        <figcaption>Adjusting brightness and contrast of the two background
+        images (colors already adjusted).</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now adjust the bright and contrast settings for the Queen
+    chess piece.</p>
+    <p>Unlock the <b>Masked Queen</b> layer and lock the <b>Background</b> and
+    <b>Blue Chess</b> layers.</p>
+    <p>Select the <b>Masked Queen</b> layer to make it the active layer.</p>
+    <p>Select the Queen chess piece image</p>
+    <p>Choose Filters &gt; Color &gt; Lightness-Contrast&hellip;.</p>
+    <p>Set <b>Lightness = 1.00</b> and <b>Contrast = 1.20</b>.</p>
+    <p>Click <b>Apply</b>, then <b>Close</b>.</p>
+    <p>See how the Queen stands out from the background and other chess
+    pieces.</p>
+      <figure>
+        <img src = "images/QueenBrightnessContrast.gif" alt = "Adjusting
+        brightness and contrast of the Queen chess piece image" class =
+        "img-fluid">
+        <figcaption>Adjusting brightness and contrast of the Queen chess piece
+        image"</figcaption>
+      </figure>
+    </li>
+    <li><p>The text at the bottom of the card should be simplified.</p>
+    <p>Unlock the <b>Text</b> layer and select the bottom text.</p>
+      <figure>
+        <img src = "images/SelectBottomText.gif" alt = "Selecting the bottom
+        text" class = "img-fluid">
+        <figcaption>Selecting the bottom text.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the <b>Text tool</b> (<img src = "images/TextToolIcon.gif"
+    alt = "Text tool icon" width = "26">) in the toolbox and drag the tool
+    cursor across the bottom two lines of text to highlight them.</p>
+      <figure>
+        <img src = "images/SelectBottomTwoLines.gif" alt = "Selecting the bottom
+        two lines" class = "img-fluid">
+        <figcaption>Selecting the bottom two lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press the &lt;Del&gt; or &lt;Delete&gt; key to delete the two
+    lines.</p>
+      <figure>
+        <img src = "images/DeleteBottomTwoLinesOfText.gif" alt = "Deleting the
+        bottom two lines" class = "img-fluid">
+        <figcaption>Deleting the bottom two lines.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make the Select tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">) active and use it to center the now
+    one line of text.</p>
+      <figure>
+        <img src = "images/CenteredBottomText.gif" alt = "Centering the
+        bottom line of text" class = "img-fluid">
+        <figcaption>Centering the bottom line of text.</figcaption>
+      </figure>
+    </li>
+    <li><p>Dismiss the <b>Layers</b> palette unless you want to continue
+    working on the artwork.</p>
+      <figure>
+        <img src = "images/FinishedArtwork.gif" alt = "Finished artwork" class
+        = "img-fluid">
+        <figcaption>Finished artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save and then File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Exploring on Your Own</h2>
+  </header>
+  <p>Now that you know how to import, mask, and apply color filters to an image
+  in an Inkscape file, you can import other images and apply a variety of
+  modifications to them. You can also create masks for images from objects you
+  create in Inkscape. For more practice, try the following:</p>
+  <ul>
+    <li><p>Repeat the tutorial by making a copy of the Chess.svg file, call it
+    <b>Chess2.svg</b>. In addition to adjusting color in the component images,
+    apply transformation effects, such as shearing or rotating, or filters or
+    effects, such as one of the extension Distort filters/effects, to create
+    stylistic contrast between the two images in the checkerboard pattern.</p>
+    </li>
+    <li><p>Use the basic shapes tools or the drawing tools to draw objects to
+    create a compound path to use as a mask. Then place the Chess.svg image
+    into the file with the compound path, and apply the compound path as a
+    mask.</p>
+    </li>
+    <li><p>Create large type and use the type as a mask to mask a placed
+    object.</p>
+    </li>
+  </ul>
+</section>
+
+<a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+class = "img-fluid"></a>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>Describe the difference between linking and embeding a placed file in
+    Inkscape.
+    </li>
+    <li>How do you create an opacity mask for an imported image?
+    </li>
+    <li>What kinds of objects can be used as masks?
+    </li>
+    <li>What color modifications can you apply to a selected object using
+    filters?
+    </li>
+  </ol>
+</section>
+
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>A linked file is a separate, external file connected to the Inkscape
+    file by an electronic link. A linked file does not add significantly to the
+    size of the Inkscape file. The linked file <u>must</u> accompany the
+    Inkscape file to preserve the link and ensure that the imported file appears
+    in the Inkscape file.</p>
+    <p>An embedded file is included in the Inkscape file. The Inkscape file size
+    reflects the addition of the embedded file. Because the embedded file is
+    part of the Inkscape file, there is no link to break.</p>
+    </li>
+    <li><p>You create an opacity mask by placing the object to be used as a
+    mask on top of the object to be masked. Then you select the mask and the
+    objects to be masked, and choose Object &gt; Mask &gt; Set.</p>
+    </li>
+    <li><p>A mask can be a simple or compound path. You can use type as a mask.
+    You can import opacity masks with from Gimp and Photoshop. You can also
+    create layer clipping masks with any shape that is the topmost object of a
+    group or layer.</p>
+    </li>
+    <li><p>You can use filters to change the color mode (RGB, CMYK, HSL, HSV, or
+    Grayscale) or adjust individual colors in a selected object. You can also
+    saturate or desaturate colors or invert colors in a selected object. You
+    can apply color modifications to placed images, as well as to artwork
+    created in Inkscape.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
