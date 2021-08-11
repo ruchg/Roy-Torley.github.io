@@ -1,0 +1,1669 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 18 &mdash; Using Patterns to Create an Engraving
+  Effect</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, importing graphics files, clipping,
+  composite image, intaglio, engraving, masking images, mask, bitmap image,
+  patterns, vignette, blurring, scaled vector graphics, SVG">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <a id = "Top"></a>
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+        <a id = "Top"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 18 &mdash; Using Patterns to Create an Engraving
+          Effect</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-11 offset-md-1">
+        <figure class = "mt-3">
+          <img src = "images/FinalArtwork.png" alt = "Finished artwork"
+          class = "img-fluid">
+        </figure>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-11 offset-md-1"><p class = "lead">Inkscape&rsquo;s
+      Patterns feature allows you to fill an empty space with different
+      geometric shapes, such as straight, curved, and zig-zag lines. With line
+      patterns, you can make your artwork look like a piece of intaglio printing
+      or engraving. You can combine line patterns with background images,
+      incorporate gradients and blurs, and mask imported bitmap images that
+      produces a composite picture of multi-dimensional breadth and depth to
+      capture the viewer&rsquo;s attention.</p>
+      </div>
+    </div>
+
+<hr>
+
+<div class = "row">
+<section>
+  <p>In this lesson, you&rsquo;ll learn how to do the following:</p>
+  <ul>
+    <li>Create line grids using the Patterns feature to simulate engraving.
+    </li>
+    <li>Blur edges of bitmap images using masking to produce vignettes.
+    </li>
+    <li>Embed bitmap images into a host Inkscape file.
+    </li>
+    <li>Create a background cloud image using a gradient and blurred brush
+    strokes.
+    </li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h2>Combining Artwork</h2>
+  </header>
+  <p>In the previous tutorial (Tutorial 17), you combined Inkscape artwork with
+  images from other graphics, producing a mult-faceted composite image for a
+  poster. In this tutorial, you&rsquo;ll continue combining continuous-tone
+  photographs with vector-based line art. </p>
+  <p>You will open an Inkscape file that contains a bitmap image of a mountain
+  (Mt. Hood in the state of Oregon, USA) with a map overlay that defines areas
+  of lightness and darkness. You will separate and fill each individual area
+  with a different line pattern to simulate horizontal line engraving of light
+  and dark areas. In another Inkscape file, you will import bitmap images of
+  rare Oregon orchid flowers brought in from the Internet and create vignettes
+  out of them. Finally, you will create a background image of a lightly clouded
+  sky with a linear gradient and a few blurred brush strokes to imitate
+  separate, distant individual clouds. You will combine all of these images
+  into one to create a composite poster image.</p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial18/Tutorial18_end.svg"><b>Tutorial18_end.svg</b></a>
+    and store it in a convenient location.</p>
+      <figure>
+        <img src = "images/Tutorial18_end.gif" alt = "Tutorial 18 finished
+        artwork" alt = "Tutorial 18 finished artwork" class = "img-fluid">
+        <figcaption>Tutorial 18 finished artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Choose View &gt; Zoom &gt; Zoom Out to make the finished artwork
+    smaller, adjust the window size, and leave it on-screen as you work. (Move
+    the artwork where you want it in the window.) If you don&rsquo;t want to
+    leave the image open, choose File &gt; Close.</p>
+    </li>
+    <aside><p><b>Resource:</b> For an illustration of the finished artwork in
+    this lesson, see the beginning of this page.</b></p>
+    </aside>
+    <li><p>Now download the starting art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial18/Tutorial18_start.svg"><b>Tutorial18_start.svg</b></a>
+    and store it in a convenient location.</p>
+    </li>
+    <li><p>Open the start file to begin the lesson.</p>
+    <p>Choose File &gt; Open, and open the <b>Tutorial18_start.svg</b> file.</p>
+      <figure>
+        <img src = "images/Tutorial18_start.png" alt = "Photo of Mt. Hood at
+        sunrise" class = "img-fluid">
+        <figcaption>Tutorial 18 starting art file: Mt. Hood at
+        Sunrise.</figcaption>
+      </figure>
+    </li>
+    <p>This file contains a bitmap image of Mt. Hood in the state of Oregon,
+    USA, taken at sunrise. The original image can be downloaded from
+    <a href = "https://www.goodfreephotos.com/united-states/oregon/other-oregon/landscape-of-mount-hood-at-sunrise-oregon.jpg.php">
+    <b>https://www.goodfreephotos.com/united-states/oregon/other-oregon/landscape-of-mount-hood-at-sunrise-oregon.jpg.php</b></a>.</p>
+    <p>Areas of different shading have been delineated on the mountain that will
+    contain different pattern fills. The final effect is to produce an image
+    simulating intaglio printing or engraving with horizontal lines.</p>
+    </li>
+  </ol>
+  </div>
+  <div class = "row">
+    <div class = "col-md-4">
+      <h4>Intaglio Printing</h4>
+      <p><i>Intaglio</i> is the family of printing and printmaking techniques
+      where an image is acid-etched or mechanically cut into a surface, usually
+      of metal, such as copper or zinc. The lines, curves, and other cuts hold
+      ink which is then transferred onto a page. When a sharp cutting
+      instrument, like a <i>burin</i> (a strong steel needle meant for digging
+      grooves and pits into a metal plate) is used to create the image
+      prototype, this particular method of creating an image is called
+      <i>engraving</i>. An example of line engraving technique in action and a
+      finished piece of artwork are shown on the right.</p>
+    </div>
+    <div class = "col-md-4">
+      <figure>
+        <img src = "images/Engraving with a burin.jpg" alt = "Engraving with a
+        burin" class = "img-fluid">
+        <figcaption>Engraving with a burin.</figcaption>
+      </figure>
+    </div>
+    <div class = "col-md-4">
+      <figure>
+        <img src = "images/Nline Engraving German Late 19th Century.png" alt =
+        "Engraving of a 19th Century Russian balalaika" class = "img-fluid">
+        <figcaption>Engraving of a 19<sup>th</sup> Century Russian
+        balalaika.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Separating Areas of Different Shading</h2>
+    <p>At first glance, Mt. Hood is a mesh (and a mess) of overlapping pieces of
+    slope. Each piece will contain its own color of engraving. You will
+    group-select the central portion of the mountain that contains the map, make
+    a duplicate of the map and move it down from the image. You will then make a
+    duplicate of that map and disassemble it into its various parts for
+    individual treatment.</p>
+  </header>
+  <ol>
+    <li><p>With the Select Tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">), draw a rectangle around the
+    mapped area to group-select all the map pieces. Make sure all pieces are
+    within the rectangle. (For review on group-selecting, see Tutorial 2,
+    Using the Select Tool.)</p>
+      <figure>
+        <img src = "images/GrabMap.png" alt = "Group-selecting the mapped areas
+        of the mountain image" class = "img-fluid">
+        <figcaption>Group-selecting the mapped areas of the mountain
+        image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Release the left mouse button. Each area is enclosed inside its own
+    bounding box.</p>
+      <figure>
+        <img src = "images/MapGrabbed.png" alt = "Group-selected areas
+        showing bounding boxes" class = "img-fluid">
+        <figcaption>Group-selected areas showing individual bounding
+        boxes.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the map still selected, press &lt;Ctrl&gt;-D to duplicate the
+    map. The borders become darker indicating that each area border has
+    another lying directly ontop of it.</p>
+      <figure>
+        <img src = "images/MapDuplicated.png" alt = "Duplicating the map
+        boundaries" class = "img-fluid">
+        <figcaption>Duplicating the mapped area borders.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the duplicate map still selected, move it down from the
+    mountain image.</p>
+      <figure>
+        <img src = "images/MovingMapDuplicate.png" alt = "Moving the map
+        duplicate" class = "img-fluid">
+        <figcaption>Moving the map duplicate.</figcaption>
+      </figure>
+    </li>
+    <li>Now, with the duplicate map still selected, make yet another duplicate
+    using &lt;Ctrl&gt;-D, drag it down, and then dissect it into its various
+    pieces by selecting each piece and moving it out so you can see its
+    individual geometry. Each piece of the jigsaw puzzle is to have its own
+    color of engraving.</p>
+      <figure>
+        <img src = "images/MountainTornApart.png" alt = "Separating individual
+        map areas" class = "img-fluid">
+        <figcaption>Separating individual map areas.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Creating a Pattern Palette for the Engraving Effect</h2>
+  </header>
+  <p>Engraving colors into a piece of artwork can be a delicate and tricky
+  endeavor. Engraving color fills are alternate colored and white lines and
+  curves, resulting from the transfer of the ink in the line and curve grooves
+  dug into the metal engraving plate interlayered with white lines from the
+  raised areas between the grooves. You see an average color when you stand back
+  from the work, and alternating colored and white lines when you look more
+  closely, as shown below.</p>
+  <figure>
+    <img src = "images/Nemo.png" alt = "An engraving by Alphonse de Neuville
+    from Jules Verne's 2000 Leagues Under the Sea" class = "img-fluid">
+    <figcaption>An engraving by Alphonse de Neuville from Jules Verne's 2000
+    Leagues Under the Sea.</figcaption>
+  </figure>
+  <p>A technique that helps in keeping engraved fills equivalent in lightness
+  (or darkness) to an original color involves making the starting color for the
+  colored lines darker than the original. Neighboring white lines can create
+  an average brightness that mimics the original color to satisfaction. It can
+  take a certain amount of experimentation to get the color balance just right.
+  In this tutorial, you will be provided reasonable starting colors to create
+  your engraving palette.</p>
+  <ol>
+    <li><p>The figure below shows a palette of six colors to the right of the
+    artwork. The bottommost color will be used as a solid fill for the
+    bottommost area of hill topography at the base of Mt. Hood. All other
+    colors will serve as the base color for an engraving grid. Each rectangle of
+    color has its corresponding hexadecimal code, or hex code, for short, above
+    it. The final <b>ff</b> on each code stands for its opacity, which is 100%
+    in each instance.</p>
+    <figure>
+      <img src = "images/SelectingPaletteColors.png" alt = "Selecting palette
+      colors" class = "img-fluid">
+      <figcaption>Selecting palette colors.</figcaption>
+    </figure>
+    <p>Note how the colors become light as you go from bottom to top. They
+    are to represent areas of distance and shadow, in keeping with how mountains
+    can appear lighter and bluer as they recede into the distance.</p>
+    </li>
+    <li><p>You will now create the engraving grid from the dark blue rectangle
+    second from the bottom.</p>
+    <p>Select and duplicate the dark blue rectangle with &lt;Ctrl&gt;-D, and
+    move the duplicate off to the side.</p>
+      <figure>
+        <img src = "images/MovingDarkBlue.gif" alt = "Moving the duplicate dark
+        blue rectangle" class = "img-width">
+        <figcaption>Moving the duplicate dark blue rectangle.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make a second duplicate rectangle and move it down to below the first
+    duplicate.</p>
+    </li>
+    <li><p>Activate the Snap Tools toolbar if it isn&rsquo;t active already, and
+    click on the <b>Enable snapping (%)</b> (<img src =
+    "images/EnableSnappingIcon.gif" alt = "Enable snapping icon" width = "26">),
+    <b>Snap bounding boxes</b> (<img src = "images/SnapBoundingBoxesIcon.gif"
+    alt = "Snap bounding boxes icon" width = "26">), and <b>Snap bounding
+    box corners</b> (<img src = "images/SnapBoundingBoxCornersIcon.gif" alt =
+    "Snap bounding box corners icon" width = "26">) icons.</p>
+    </li>
+    <li><p>With the snap tools activated, position the lower dark blue duplicate
+    rectangle so that it is exactly in line with the upper duplicate. It will
+    snap into place.</p>
+      <figure>
+        <img src = "images/MovedDuplicate.gif" alt = "Moving the second
+        duplicate dark rectangle down" class = "img-width">
+        <figcaption>Moving the second duplicate dark rectangle
+        down.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the lower rectangle still selected, click on the white color
+    swatch in the Color palette to give the rectangle a white color fill.</p>
+      <figure>
+        <img src = "images/LowerHalfWhite.gif" alt = "Changing the fill color of
+        the lower rectangle from dark blue to white" class = "img-width">
+        <figcaption>Changing the fill color of the lower rectangle from dark
+        blue to white.</figcaption>
+      </figure>
+    </li>
+    <li><p>&lt;Shift&gt;-click the upper rectangle to group-select it.</p>
+      <figure>
+        <img src = "images/ShiftClickUpperRectangle.gif" alt = "Shift-click the
+        upper rectangle to group-select it" class = "img-width">
+        <figcaption>&lt;Shift&gt;-clicking the upper rectangle to group-select
+        it.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Ctrl&gt;-G to group the two selected rectangles.</p>
+      <figure>
+        <img src = "images/GroupTwoRectangles.gif" alt = "Grouping the two
+        selected rectangles" class = "img-width">
+        <figcaption>Grouping the two selected rectangles.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Object &gt; Pattern &gt; Objects to Pattern to convert the
+    grouped rectangular object into a pattern template.</p>
+    </li>
+    <li><p>Click on the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) in the toolbox</p>
+    <p>Note there there is an &times; in the upper left square handle of the
+    rectangle. This &times; is the reference point or origin for the Pattern
+    tool, much like the <b>0</b> on a number line.</p>
+      <figure>
+        <img src = "images/ActivateNodeTool.gif" alt = "Activating the Node
+        tool" class = "img-width">
+        <figcaption>Activating the Node tool.</figcaption>
+      </figure>
+    </li>
+    <li>With the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">) still active, click-drag the &times; up a little
+    bit from its original location. A circle and square handle move up along
+    with the &times.</p>
+    <p>The circular handle, which you won't use, governs the angle
+    at which the lines (or any other pattern figure) are oriented. You'll keep
+    the lines horizontal.</p>
+    <p>The square handle, however, governs how thick or thin the grid lines are.
+    You can move the square up or down, and the two rectangles that make up the
+    pattern template grow either thicker or thinner, depending upon which
+    direction you move the square. If there were vertical lines, moving the
+    square left or right would change their thickness. In this case, there are
+    no vertical lines, so we don&rsquo;t need to be concerned about them.</p>
+      <figure>
+        <img src = "images/MoveXUp.gif" alt = "Moving the Pattern
+        tool up" class = "img-width">
+        <figcaption>Moving the Pattern tool up.</figcaption>
+      </figure>
+    </li>
+    <li><p>Hover the Node tool (<img src = "images/NodeToolIcon.gif" alt = "Node
+    tool icon" width = "26">) over the square handle. It turns red to show that
+    it is active and ready for manipulation.</p>
+      <figure>
+        <img src = "images/HoverOverSquare.gif" alt = "Hovering over the Pattern
+        tool square" class = "img-width">
+        <figcaption>Hovering over the Pattern tool square.</figcaption>
+      </figure>
+    </li>
+    <li><p>Keeping the Node tool on the square handle (it should stay red so
+    long as you hover over it), drag it up toward the Patter tool reference
+    handle.</p>
+    <p>Two things happen as the square approaches the &times. First of all,
+    the two rectangles become thinner and more appear in the space that
+    originally contained two. Also, the circular handle approaches the reference
+    handle, moving along a horizontal line. This is what you want in making
+    your engraving grids.</p>
+    <p>Stop a short distance away from the reference point, and move the red
+    square up toward the circle. The grid lines continue to become thinner. Stop
+    when you feel a reasonable thinness has been reached.</p>
+    <p>By keeping the Pattern tool reference handle, square grid thickness
+    handle, and the circular grid orientation handle is close proximity, you can
+    keep close tabs (pun intentional) on what you doing with the tool.</p>
+      <figure>
+        <img src = "images/MovingPatternTool.gif" alt = "Moving the Pattern
+        tool" class = "img-width">
+        <figcaption>Moving the Pattern tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Select Tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">) and move the newly created
+    engraving grid to the side.</p>
+    </li>
+    <li><p>Repeat Steps 2 to 14 to create engraving grids for the remaining
+    color rectangles.</p>
+    </li>
+    <li><p>Organize your engraving grids so that you have a palette of colored
+    grids that you can use in selecting colors for each area of the mountain
+    map &dlquo;jig-saw puzzle.&rdquo;
+      <figure>
+        <img src = "images/EngravingGridPalette.gif" alt = "Completed engraving
+        grid palette" class = "img-width">
+        <figcaption>Completed engraving grid palette.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <p>There is more about Patterns in the Inkscape Manual at Help &gt; Inkscape
+  Manual &gt; 10. Attributes &gt; Fill and Stroke Paint &gt; Patterns.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Creating the Engraving Effect</h2>
+    <p>You have now created an engraving palette. Your next step is to put it to
+    good use. In this section, you will use Inkscape&rsquo;s Clip tool to turn
+    each area into an engraving.</p>
+  </header>
+  <ol>
+    <li><p>Determine which shapes should have lighter or darker grids and
+    organize them by shade category. Below, shapes are categorized from lightest
+    shading at the top row to the solid blue at the bottom. Their associated
+    engraving grid is on the right of each row. The first shape in the second
+    row from the top is a composite shape and will receive its own individual
+    treatment.</p>
+      <figure>
+        <img src = "images/MatchingShapes2GridColors.gif" alt = "Matching map
+        shapes to grid colors" class = "img-fluid">
+        <figcaption>Matching map shapes to grid colors.</figcaption>
+      </figure>
+    </li>
+    <li><p>Make a duplicate of the top jigsaw puzzle shape (&lt;Ctrl&gt;-D)
+    and move it to a place where you can work with it without having other
+    items interfere. Make a duplicate of its associated engraving grid and
+    enlarge it so that the jigsaw puzzle piece totally fits inside. Note that
+    the grid retains its spacing when you resize its enclosing rectangle.</p>
+      <figure>
+        <img src = "images/TopShapeAndGrid.gif" alt = "Duplicate engraving
+        grid and associated shape" class = "img-width">
+        <figcaption>Duplicate engraving grid and associated
+        shape.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the puzzle shape so it lies completely ontop of the engraving
+    grid.</p>
+      <figure>
+        <img src = "images/MovingTopShapeOverGrid.gif" alt = "Moving the top
+        shape over its enlarged grid" class = "img-fluid">
+        <figcaption>Moving the top shape over its enlarged grid.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Select Tool (<img src = "images/SelectionTool.gif"
+    alt = "Selection tool icon" width = "26">), marquee-select both the shape
+    and the rectangle.</p>
+      <figure>
+        <img src = "images/Marquee-SelectingShapeAndGrid.gif" alt =
+        "Marquee-selecting the top shape and its associated grid" class =
+        "img-fluid">
+        <figcaption>Marquee-selecting the top shape and its associated
+        grid.</figcaption>
+      </figure>
+    </li>
+    <li>Both the shape and rectangle should now have their own bounding boxes
+    to show that they have been group-selected.</p>
+      <figure>
+        <img src = "images/ShapeAndGridGroupSelected.gif" alt = "Shape and grid
+        group-selected" class = "img-fluid">
+        <figcaption>Shape and grid group-selected.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Object &gt; Clip &gt; Set. The outline of the shape disappears
+    along with the outer portion of the engraving rectangle. Only that part of
+    the rectangle inside the shape remains, which is what you want.</p>
+      <figure>
+        <img src = "images/TopShapeEngraved.gif" alt = "Top shape engraved"
+        class = "img-fluid">
+        <figcaption>Top shape engraved.</figcaption>
+      </figure>
+      <p>This figure is the lightest one in the artwork. All others are to be
+      darker to represent shadowing and less snow cover.</p>
+    </li>
+    <li><p>Repeat Steps 2 to 6 for the remaining shapes and their associated
+    engraving grids.</p>
+      <figure>
+        <img src = "images/EngravedAreas.gif" alt = "All areas engraved"
+        class = "img-fluid">
+        <figcaption>All areas engraved.</figcaption>
+      </figure>
+    </li>
+    <li><p>The composite shape mentioned in Step 1 is not a grouped shape. You
+    will use the original composite shape to make one colored engraving and use
+    a duplicate to delete a portion, leaving the other portion to be paired with
+    a grid of a different color.</p>
+    <p>The left-hand portion of the composite shape will receive a light color
+    grid fill, and the right-hand portion will receive a darker grid fill,
+    as hinted at by the figure below.</p>
+      <figure>
+        <img src = "images/CompositeArea1.gif" alt = "Composite area"
+        class = "img-fluid">
+        <figcaption>Composite area and grids to use.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the composite shape with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">), make
+    a duplicate shape with &lt;Ctrl&gt;-D, and move the duplicate to below the
+    original shape.</p>
+      <figure>
+        <img src = "images/SpecialShapeAndDuplicate.gif" alt = "Special shape
+        and duplicate" class = "img-fluid">
+        <figcaption>Composite shape and duplicate.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">) in the toolbox. All nodes in the composite
+    shape border appear.</p>
+      <figure>
+        <img src = "images/SpecialShapeNodeToolActivated.gif" alt = "Composite
+        shape, selected, with Node tool activated" class = "img-fluid">
+        <figcaption>The composite selected and with the Node tool
+        activated.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marquee-select those nodes on the left-hand shape that are not
+    on the right-hand shape.</p>
+      <figure>
+        <img src = "images/SpecialShapeNodeToolFirstSelection.gif" alt =
+        "First selection of nodes with the Node tool" class = "img-fluid">
+        <figcaption>First selection of nodes with the Node tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Release the mouse key. Those nodes that are within the marquee are
+    highlighted. The remaining nodes on the border of the right-hand shape are
+    still grey, meaning that they have not been selected.</p>
+      <figure>
+        <img src = "images/SelectedNodes1Swipe.gif" alt = "First swipe with the
+        Node tool" class = "img-fluid">
+        <figcaption>First swipe with the Node tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Delete segment between two non-endpoint nodes
+    icon</b> (<img src = "images/DeleteSegmentBetween2NonendpointNodes.gif" alt
+    = "Delete segment between two non-endpoint nodes icon" width = "26">) in
+    the Node Tool toolbar. Most of the left-hand shape is deleted. There are
+    only a couple of branches left of the border which you will delete
+    one-by-one.</p>
+      <figure>
+        <img src = "images/LineSegmentsDeleted.gif" alt = "Deleting line
+        segments" class = "img-fluid">
+        <figcaption>Deleting line segments.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the bottommost line segment of the figure with the Node tool
+    (<img src = "images/NodeToolIcon.gif" alt = "Node tool icon" width = "26">)
+    to select it. Note how its two endpoints become highlighted.</p>
+      <figure>
+        <img src = "images/DeleteIndividualSegment.gif" alt = "Deleting an
+        individual line segment" class = "img-fluid">
+        <figcaption>Deleting an individual line segment.</figcaption>
+      </figure>
+    </li>
+    <li>Click on the <b>Delete segment between two non-endpoint nodes
+    icon</b> (<img src = "images/DeleteSegmentBetween2NonendpointNodes.gif" alt
+    = "Delete segment between two non-endpoint nodes icon" width = "26">) in
+    the Node Tool toolbar to delete the segment.</p>
+    <p>Do the same for the remaining segments until only the right-hand shape
+    remains.</p>
+      <figure>
+        <img src = "images/RemainingSegments1.gif" alt = "Remaining line
+        segments after deleting" class = "img-fluid">
+        <figcaption>Remaining line segments after deleting.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the artwork to deselect it.</p>
+      <figure>
+        <img src = "images/RemainingSegments2.gif" alt = "Shape with nodes
+        hidden" class = "img-fluid">
+        <figcaption>Shape with nodes hidden.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now move the complete composite shape over its engraving grid and
+    the small right-hand shape over its darker-colored grid in preparation
+    for clipping.</p>
+      <figure>
+        <img src = "images/PreppingForClipping.gif" alt = "Preparing the shapes
+        and engraving grids for clipping" class = "img-fluid">
+        <figcaption>Preparing the shapes and engraving grids for
+        clipping.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select each shape-grid pair separately and choose Object &gt; Clip
+    &gt; Set to apply the clipping function. The Clip function doesn&rsquo;t
+    work when you apply it on both pairs at the same time.</p>
+      <figure>
+        <img src = "images/ShapesClipped.gif" alt = "Clipping the two composite
+        shape parts" class = "img-fluid">
+        <figcaption>Clipping the two composite shape parts.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>You will now position the smaller, darker shape ontop of the
+      larger lighter-colored shape using the Snap tool. If the Snap Tool toolbar
+      isn&rsquo;t active, make it visible and select the <b>Enable snapping
+      (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable snapping
+      icon" width = "26">), <b>Snap bounding boxes</b> (<img src =
+      "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width
+      = "26">), and <b>Snap bounding box corners</b> (<img src =
+      "images/SnapBoundingBoxCornersIcon.gif" alt = "Snap bounding box corners
+      icon" width = "26">) icons. The Snap tool will enable you to position the
+      darker shape ontop of the other lighter one with precision. The upper
+      shape will snap into place and you will see a textbox informing you that
+      bounding box corners have snapped together.</p>
+      <p>Group the composite shape by group-selecting it and press
+      &lt;Ctrl&gt;-G. It will be easy to move as a single unit as a result.</p>
+      <figure>
+        <img src = "images/EmplacingCompositeParts.gif" alt = "Assembling
+        composite parts" class = "img-fluid">
+        <figcaption>Assembling composite parts.</figcaption>
+      </figure>
+    </li>
+    <li><p>You have made all the pieces that will fit together to make Mt. Hood
+    as a piece of engraving artwork. Now it is time to assemble them.</p>
+      <figure>
+        <img src = "images/PiecesCollectedForReassembling.gif" alt = "All areas
+        collected for reassembling the mountain" class = "img-fluid">
+        <figcaption>All areas collected for reassembling the
+        mountain.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Assembling the Pieces of Engraving Work</h2>
+  </header>
+  <p>If you enjoy putting together jigsaw puzzles, then you will love this
+  section. Here, you will take all the pieces of Mt. Hood that you drew and fit
+  them together much as you would a jigsaw puzzle. The difference is that you
+  will also determine where each piece is situated in the image stack. Some
+  pieces need to be partially situated underneath other pieces in the image
+  stack to give the impression of depth or of one part of the mountain casting a
+  shadow on another. It will be as if you were working with a three-dimensional
+  puzzle!</p>
+  <ol>
+    <li><p>A good first step is to take the largest piece of the mountain and
+    make it the background upon which all the other pieces will lie.</p>
+    <p>Make the Snap Tool toolbar active and click on the <b>Enable snapping
+    (%)</b> (<img src = "images/EnableSnappingIcon.gif" alt = "Enable snapping
+    icon" width = "26">), <b>Snap bounding boxes</b> (<img src =
+    "images/SnapBoundingBoxesIcon.gif" alt = "Snap bounding boxes icon" width =
+    "26">), and <b>Snap bounding box corners</b> (<img src =
+    "images/SnapBoundingBoxCornersIcon.gif" alt = "Snap bounding box corners
+    icon" width = "26">) icons.</p>
+    <p>Move or copy the piece that contains the summit (the biggest piece) and
+    move it so that it fits exactly inside the black outline that has the same
+    shape. A tooltip box will inform you when positioning is exact.</p>
+      <figure>
+        <img src = "images/Jigsaw01.gif" alt = "Positioning the first and
+        largest piece of the mountain puzzle on the figure" class = "img-fluid">
+        <figcaption>Positioning the first and largest piece of the mountain
+        puzzle on the figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now position the piece in a good place in the image stack.</p>
+    <p>With the puzzle piece still selected, click on the <b>Raise selection to
+    top</b> icon (<img src = "images/RaiseSelection2TopIcon.gif" alt = "Raise
+    selection to top icon" width = "26">) to put the piece at the top of the
+    image stack.</p>
+    <p>Press the <b>Lower selection one step</b> icon (<img src =
+    "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection one step icon"
+    width = "26">) several times. As you press the <b>Lower selection one
+    step</b> icon, the black border of a different puzzle piece will appear as
+    the selected piece is put underneath it in the image stack.</p>
+    <p>When the puzzle piece disappears, you have put it underneath the original
+    background picture. You know where the piece is and now it&rsquo;s time to
+    raise it one step in the image stack.</p>
+    <p>Press the <b>Raise selection one step</b> icon (<img src =
+    "images/Raise1StepIcon.gif" alt = "Raise selection one step icon"
+    width = "26">) to raise the puzzle piece to lie directly upon the background
+    picture and underneath all the black borders for the other pieces. This is
+    how you can work with the third dimension of this three-dimensional jigsaw
+    puzzle.</p>
+      <figure>
+        <img src = "images/Jigsaw02.gif" alt = "Positioning the first and
+        largest piece of the mountain puzzle in the image stack" class =
+        "img-fluid">
+        <figcaption>Positioning the first and largest piece of the mountain
+        puzzle in the image stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the second largest puzzle piece into its place on the figure
+    where you see its black outline. The Snap function will inform you when
+    positioning is exact.</p>
+      <figure>
+        <img src = "images/Jigsaw03.gif" alt = "Positioning the second largest
+        piece of the mountain puzzle on the figure" class = "img-fluid">
+        <figcaption>Positioning the second largest piece of the mountain puzzle
+        on the figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the second piece still selected, bring it to the top of the
+    image stack by pressing the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">), and then pressing the <b>Lower selection one step</b> icon
+    (<img src = "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection
+    one step icon" width = "26">) until it disappears underneath the first piece
+    you have put in.</p>
+    <p>Press the <b>Raise selection one step</b> icon (<img src =
+    "images/Raise1StepIcon.gif" alt = "Raise selection one step icon"
+    width = "26">) to bring the puzzle piece up one level so that it sits ontop
+    of the first puzzle piece. You should see the black borders for other pieces
+    that will lie ontop of what you just inserted. These other pieces, once
+    included, will represent a hill, a cliff on the mountain, and their shadows,
+    giving your artwork a sense of depth. The piece you just moved is lighter
+    compared to the underlying piece because it represents a portion of slope
+    whose snow is reflecting more sunlight than the background.</p>
+      <figure>
+        <img src = "images/Jigsaw04.gif" alt = "Positioning the second largest
+        piece of the mountain puzzle in the image stack" class = "img-fluid">
+        <figcaption>Positioning the second largest piece of the mountain puzzle
+        in the image stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>The next piece is a hill that stands in front and to our right of
+    Mt. Hood. Move this next, slightly darker puzzle piece into its place on the
+    figure where you see its black outline. The Snap function will let you know
+    when it&rsquo;s in position.</p>
+      <figure>
+        <img src = "images/Jigsaw05.gif" alt = "Moving the hill piece into place
+        on the mountainside" class = "img-fluid">
+        <figcaption>Moving the hill piece into place on the
+        mountainside.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the hill piece still selected, bring it to the top of the
+    image stack by pressing the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">), and then pressing the <b>Lower selection one step</b> icon
+    (<img src = "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection
+    one step icon" width = "26">) until it disappears underneath the second,
+    very light piece you have put already in. Then, press the <b>Raise selection
+    one step</b> icon (<img src = "images/Raise1StepIcon.gif" alt = "Raise
+    selection one step icon" width = "26">) so that it sits ontop of the second
+    puzzle piece.</p>
+    Note that the bottom of the hill piece is just a straight line. That part
+    will be hidden by another, overlying piece that will represent closer hill
+    country.</p>
+      <figure>
+        <img src = "images/Jigsaw06.gif" alt = "Hill piece now properly
+        positioned in the image stack" class = "img-fluid">
+        <figcaption>Hill piece now properly positioned in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now give the hill you just inserted a shadow.</p>
+    <p>Move the next, even darker puzzle piece that looks like a triangle into
+    place where you see its corresponding black outline. The Snap function, of
+    course, will let you know when it&rsquo;s in position.</p>
+      <figure>
+        <img src = "images/Jigsaw07.gif" alt = "Moving the hill shadow into
+        place in the figure" class = "img-fluid">
+        <figcaption>Moving the hill shadow into place in the
+        figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the hill piece still selected, bring it to the top of the
+    image stack by pressing the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">), and then pressing the <b>Lower selection one step</b> icon
+    (<img src = "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection
+    one step icon" width = "26">) until it is partially covered by the hill
+    piece. You don&rsquo;t have to lower it any further in the image stack
+    because it just needs to be behind the hill, representing its shadow on the
+    main mountain slope in back of it, and heightening the suggestion of
+    three-dimensionality. You will attend to the black border curves and lines
+    later.</p>
+      <figure>
+        <img src = "images/Jigsaw08.gif" alt = "Putting the hill shadow piece
+        into place in the image stack so that it hints at really being a
+        shadow" class = "img-fluid">
+        <figcaption>Putting the hill shadow piece into place in the image stack
+        so that it hints at really being a shadow.</figcaption>
+      </figure>
+    </li>
+    <li><p>Just as you did in Step 7, move the even darker puzzle piece of front
+    hill country, seen in the figure below, into position in the black border
+    having the same shape. This piece of the puzzle represents even closer hill
+    country with less snow and more forest, seen at a distance.</p>
+    <p>Make sure that this piece is at the top of the image stack by clicking on
+    the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">). It represents the closest piece of landscape at this moment
+    (but it won&rsquo;t last for long).</p>
+      <figure>
+        <img src = "images/Jigsaw09.gif" alt = "Moving the next puzzle piece
+        into position on the mountain slope" class = "img-fluid">
+        <figcaption>Moving the next puzzle piece into position on the mountain
+        slope.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now move the solid dark blue shape into place. It represents the
+    closest piece of landscape in the figure. Make sure that it is topmost in
+    the image stack by clicking on the <b>Raise selection to top</b> icon (<img
+    src = "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top
+    icon" width = "26">).</p>
+      <figure>
+        <img src = "images/Jigsaw10.gif" alt = "Putting the solid dark blue
+        puzzle piece into place" class = "img-fluid">
+        <figcaption>Putting the solid dark blue puzzle piece into
+        place.</figcaption>
+      </figure>
+    </li>
+    <li><p>The next piece you will insert represents the shadow cast into a
+    valley cut by a glacier (Reid Glacer) from the ridge leading up to a rock
+    point (Illumination Rock).</p>
+    <p>Move or copy the shape shown in the figure below and move it into its
+    place designated by its outline, just as you have been doing previously.</p>
+      <figure>
+        <img src = "images/Jigsaw11.gif" alt = "Inserting a shadow piece" class
+        = "img-fluid">
+        <figcaption>Inserting a shadow piece.</figcaption>
+      </figure>
+    </li>
+    <li><p>Because this shape is the shadow for the very light puzzle piece to
+    its right, you light place it underneath that right-hand piece so that it
+    is partially hidden by it.</p>
+    <p>Click on the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">) and then click on the <b>Lower selection one step</b> icon
+    (<img src = "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection
+    one step icon" width = "26">) until you see the shadow partially underneath
+    the ridge defined by the right-hand puzzle piece. If you don&rsquo;t see
+    the shadow, then you might have lowered it too far and it is now underneath
+    the main slope of the mountain. Press the <b>Raise selection to top</b> icon
+    (<img src = "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to
+    top icon" width = "26">) until the shadow piece appears. Don&rsquo;t mind
+    the straight line border. You will take care of that shortly.</p>
+      <figure>
+        <img src = "images/Jigsaw12.gif" alt = "The shadow puzzle piece placed
+        properly in the image stack" class = "img-fluid">
+        <figcaption>The shadow puzzle piece placed properly in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>The next piece (seen below) represents an area of rock that is not
+    fully covered by snow, so it has a dark blue color (for distant rock). Move
+    it into place as you have been doing up to now.</p>
+      <figure>
+        <img src = "images/Jigsaw13.gif" alt = "Moving a dark puzzle piece into
+        place" class = "img-fluid">
+        <figcaption>Moving a dark puzzle piece into place.</figcaption>
+      </figure>
+    </li>
+    <li><p>This area of rock with some snow is the most forward part of Mt.
+    Hood and yet behind the closest strip of landscape (the solid dark blue
+    puzzle piece).</p>
+    <p>Put it at the top of the image stack by clicking on the <b>Raise
+    selection to top</b> icon (<img src = "images/RaiseSelection2TopIcon.gif"
+    alt = "Raise selection to top icon" width = "26">) and then click on the
+    <b>Lower selection one step</b> icon (<img src =
+    "images/LowerSelectionOneStepIcon.gif" alt = "Lower selection one step icon"
+    width = "26">) until the bottom of the shape disappears behind the solid
+    dark blue of the forefront.</p>
+      <figure>
+        <img src = "images/Jigsaw14.gif" alt = "The dark puzzle piece placed
+        just underneath the solid dark blue piece" class = "img-fluid">
+        <figcaption>The dark puzzle piece placed just underneath the solid dark
+        blue piece.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now insert another shadow cast by a ridge on the
+    mountain.</p>
+    <p>Move and position the puzzle piece (shown below) as you&rsquo;ve been
+    doing over these past many steps so that it&rsquo;s comfortably nestled
+    inside the black border meant only for it.</p>
+      <figure>
+        <img src = "images/Jigsaw15.gif" alt = "Inserting the next shadow piece"
+        class = "img-fluid">
+        <figcaption>Inserting the next shadow piece.</figcaption>
+      </figure>
+    </li>
+    <li><p>Bring the shadow to the top of the image stack and then lower it
+    step by step until it disappears behind the light blue of the main mountain
+    slope. Then, click on the <b>Raise selection one step</b> icon (<img src =
+    "images/Raise1StepIcon.gif" alt = "Raise selection one step icon" width =
+    "26">) perhaps once to bring it back into sight. There should the outlines
+    of two small shapes above it.</p>
+      <figure>
+        <img src = "images/Jigsaw16.gif" alt = "Second shadow placed properly in
+        the image stack" class = "img-fluid">
+        <figcaption>Second shadow placed properly in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>Move a sub-shadow into position. This piece of the puzzle represents
+    a area of deep shadow, which should have a darker color than that of the
+    underlying piece.</p>
+    <p>As you are about to position the shadow, note that there is a problem.
+    The piece of shadow that you are moving has exactly the same color as the
+    underlying shadow. This is a mistake.</p>
+      <figure>
+        <img src = "images/Jigsaw17.gif" alt = "A problem with shadows" class =
+        "img-fluid">
+        <figcaption>A problem with shadows.</figcaption>
+      </figure>
+    </li>
+    <li><p>Yes, we have a problem with shadow coloration. However, it is very
+    easy to fix.</p>
+    <p>The piece of shadow we just moved needs to be a little darker so that it
+    will stand out from the background shadow.</p>
+    <p>Move the piece of shadow off the artwork, and copy and move another piece
+    of shadow that is darker, to near the first piece. The first piece is going
+    to take on the darker engraving grid. Note that both objects are clipped
+    objects. This is important to know for this kind of troubleshooting.</p>
+      <figure>
+        <img src = "images/PreppingForRelease.gif" alt = "Prepping clipped
+        object for release for clipping function" class = "img-fluid">
+        <figcaption>Prepping clipped object for release for clipping
+        function.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Select Tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), click on one of the shapes to select
+    it. Choose Object &gt; Clip &gt; Release. Do the same for the other shape.
+    Both clipped objects separate into their respective outlines and background
+    engraving grid.</p>
+      <figure>
+        <img src = "images/Release.gif" alt = "Releasing (unsetting) the clip
+        function on the two engraved objects" class = "img-fluid">
+        <figcaption>Releasing (unsetting) the clip function on the two engraved
+        objects.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the lighter-colored grid and delete it. Click on the shape
+    on the darker grid and delete that shape.</p>
+      <figure>
+        <img src = "images/1ShapeAnd1Color.gif" alt = "The problem shape paired
+        with its correct color" class = "img-fluid">
+        <figcaption>The problem shape paired with its correct color.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the remaining shape so that it lies ontop of the darker
+    engraving grid.</p>
+      <figure>
+        <img src = "images/ShapeOverRectangle.gif" alt = "The problem shape
+        moved over the correct rectangle in preparation for clipping" class =
+        "img-fluid">
+        <figcaption>The problem shape moved over the correct rectangle in
+        preparation for clipping.</figcaption>
+      </figure>
+    </li>
+    <li><p>Marqee-select the grid and shape to group-select them. Choose Edit
+    &gt; Clip &gt; Set. Problem fixed.</p>
+      <figure>
+        <img src = "images/ShapeHasCorrectColor.gif" alt = "Clipping has been
+        applied and the shape now has its correct grid color fill" class =
+        "img-fluid">
+        <figcaption>Clipping has been applied and the shape now has its correct
+        grid color fill.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now you can move the corrected shape into position.</p>
+      <figure>
+        <img src = "images/ShapeMoved.gif" alt = "The fixed shape moved into
+        position on the mountain figure" class = "img-fluid">
+        <figcaption>The fixed shape moved into position on the mountain
+        figure.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the shadow shape to the top of the image stack, then lower it
+    step-by-step down the stack until it disappears behind the underlying
+    shadow. Then, raise it back up one step so that it lies ontop of the lighter
+    larger shadow.</p>
+      <figure>
+        <img src = "images/ShapePlacedInImageStack.gif" alt = "The problem shape
+        moved into position on the mountain figure" class = "img-fluid">
+        <figcaption>The problem shape placed into position in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the next piece of deep shadow into place.</p>
+      <figure>
+        <img src = "images/Jigsaw18.gif" alt = "Moving the smaller piece of deep
+        shadow into place" class = "img-fluid">
+        <figcaption>Moving the smaller piece of deep shadow into
+        place.</figcaption>
+      </figure>
+    </li>
+    <li>As you did in Step 24, move the piece of dark shadow to the top of the
+    image stack, and lower it step-by-step until it disappears behind the
+    lighter, larger shadow background underneath, then raise it one step so it
+    reappears.</p>
+      <figure>
+        <img src = "images/Jigsaw19.gif" alt = "Placing the smaller piece of
+        deep shadow into place in the image stack" class = "img-fluid">
+        <figcaption>Placing the smaller piece of deep shadow into place in the
+        image stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the next piece of shadow into place (see the figure below).</p>
+      <figure>
+        <img src = "images/Jigsaw20.gif" alt = "Moving the next piece of
+        shadow into place" class = "img-fluid">
+        <figcaption>Moving the next piece of shadow into place.</figcaption>
+      </figure>
+    </li>
+    <li><p>If the piece of shadow lies ontop of the main slope of the mountain,
+    then you are done with this piece. If you don&rsquo;t see it but see its
+    bounding box, then it is underneath the mountain slope. In this case, raise
+    it step-by-step by clicking the <b>Raise selection one step</b> icon (<img
+    src = "images/Raise1StepIcon.gif" alt = "Raise selection one step icon"
+    width = "26">) until it appears. Now you&rsquo;re done with this piece.</p>
+      <figure>
+        <img src = "images/Jigsaw21.gif" alt = "Making sure that the newly
+        emplaced piece of shadow lies ontop of the main mountain slope piece"
+        class = "img-fluid">
+        <figcaption>Making sure that the newly emplaced piece of shadow lies
+        ontop of the main mountain slope piece.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now, move the left outrunner of Mt. Hood (see below) into
+    position.</p>
+      <figure>
+        <img src = "images/Jigsaw22.gif" alt = "Moving the left outrunner of
+        Mt. Hood into position behind the mountain" class = "img-fluid">
+        <figcaption>Moving the left outrunner of Mt. Hood into position, for
+        now, in front of the mountain.</figcaption>
+      </figure>
+    </li>
+    <li><p>From what you know now about moving an image up and down in an image
+    stack, move the outrunner piece down the stack until it disappears behind
+    the picture. Move it back up one level so that it reappears as a piece of
+    the mountain but behind the main part, as shown in the figure below.</p>
+      <figure>
+        <img src = "images/Jigsaw23.gif" alt = "The left-hand outrunner piece
+        moved into position" class = "img-fluid">
+        <figcaption>The left-hand outrunner piece moved into
+        position in the image stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>The outrunner puzzle piece has a couple of internal color details
+    that are addressed by the composite puzzle piece you worked on earlier in
+    Steps 8 to 19 in the section on &ldquo;Creating the Engraving
+    Effect.&rdquo; Move this puzzle piece into its spot on the map.</p>
+      <figure>
+        <img src = "images/Jigsaw24.gif" alt = "Moving the composite puzzle
+        piece into place" class = "img-fluid">
+        <figcaption>Moving the composite puzzle piece into place.</figcaption>
+      </figure>
+    </li>
+    <li><p>As you have done with most of the other pieces of this graphic design
+    jigsaw puzzle, click on the <b>Raise selection to top</b> icon (<img src =
+    "images/RaiseSelection2TopIcon.gif" alt = "Raise selection to top icon"
+    width = "26">) to put this puzzle piece at the top of the image stack,
+    then lower it step-by-step in the stack until it disappears behind the piece
+    that you emplaced just earlier. Then, press <b>Raise selection one step</b>
+    icon (<img src = "images/Raise1StepIcon.gif" alt = "Raise selection one
+    step icon" width = "26">) so that it reappears above the background
+    outrunner piece but behind the solid dark blue foreground piece of
+    landscape. This juxtaposition of puzzle pieces in the image stack allows
+    you to project an illusion of depth at this side of the mountain.</p>
+      <figure>
+        <img src = "images/Jigsaw25.gif" alt = "Composite shape properly placed
+        in the image stack" class = "img-fluid">
+        <figcaption>Composite shape properly placed in the image
+        stack.</figcaption>
+      </figure>
+    </li>
+    <li><p>You have now put in, arranged, and ordered all the pieces of the
+    jigsaw puzzle of Mt. Hood, sentinel mountain in the state of Oregon. As an
+    aside, it is actually a dormant volcano, the highest peak in Oregon, and a
+    great place to visit (speaking from experience). It had its last major
+    eruption in 1781 to 1782. It had a few hiccups afterward, but otherwise, it
+    has been quiet (thankfully so).</p>
+      <figure>
+        <img src = "images/Jigsaw26.gif" alt = "The current view of the Mt. Hood
+        artwork" class = "img-fluid">
+        <figcaption>The current view of the Mt. Hood artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>It is now time to delete the black borders of the puzzle pieces.</p>
+    <p>With the Select Tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection tool icon" width = "26">), select a black border.</p>
+      <figure>
+        <img src = "images/SelectStroke.gif" alt = "Selecting an object's black
+        stroke" class = "img-fluid">
+        <figcaption>Selecting an object&rsquo;s black stroke.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Select Same &gt; Stroke Color. All shape borders
+    are selected.</p>
+      <figure>
+        <img src = "images/SelectSameStrokeColor.gif" alt = "Selecting objects
+        with the same black stroke color" class = "img-fluid">
+        <figcaption>Selecting objects with the same black stroke
+        color.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Delete. The black borders of all the puzzle pieces
+    disappear, leaving engraving color fills behind.</p>
+      <figure>
+        <img src = "images/Jigsaw27.gif" alt = "Deleting the puzzle piece
+        borders" class = "img-fluid">
+        <figcaption>Deleting the puzzle piece borders.</figcaption>
+      </figure>
+    <li><p>Marquee-select the mountain (and not the background behind it) and
+    group the puzzle pieces by clicking on the <b>Group selected objects</b>
+    icon (<img src = "images/GroupIcon.gif" alt = "Group selected objects icon"
+    width = "26">) in the toolbar.</p>
+    <p>Move Mt. Hood off the background picture in preparation for receiving
+    one that you will draw.</p>
+      <figure>
+        <img src = "images/Jigsaw28.gif" alt = "Mt. Hood with no background"
+        class = "img-fluid">
+        <figcaption>Mt. Hood with no background.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Creating a Sky Background Using a Gradient and Blurring for Clouds</h2>
+  </header>
+  <p>A band of cirrostratus clouds is visible in the sky behind Mt. Hood in the
+  original picture, along with a few almost invisible stratus clouds in the
+  foreground. The sky background will add badly needed contrast to the mountain
+  so your viewers can see it. Below is a draft of what how Mt. Hood can look
+  with a sky behind it.</p>
+  <figure>
+    <img src = "images/EngravingPlusOriginalSky.gif" alt = "Engraving of Mt.
+    Hood with original sky behind it" class = "img-fluid">
+    <figcaption>Engraving of Mt. Hood with original sky behind it.</figcaption>
+  </figure>
+  <ol>
+    <li><p>Start by drawing a rectangle having the same width as the Mt. Hood
+    artwork, and giving it a fill color of <b>7d86d0ff</b> and a stroke color
+    of <b>none</b>.</p>
+      <figure>
+        <img src = "images/Sky01.gif" alt = "Drawing a rectangle to contain sky
+        details" class = "img-fluid">
+        <figcaption>Drawing a rectangle to contain sky details.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the rectangle still selected, make the <b>Fill and Stroke</b>
+    palette active by choosing Object &gt; Fill and Stroke&hellip;, click on
+    the <b>Fill</b> tab, and then click on the <b>Linear gradient</b> icon (<img
+    src = "images/LinearGradientIcon.gif" alt = "Linear gradient icon" width =
+    "26">) in the toolbar.</p>
+    <p>Click on the <b>Create and edit gradients</b> icon (<img src =
+    "images/CreateAndEditGradientsIcon.gif" alt = "Create and edit gradients
+    icon" width = "26">) in the toolbox to activate the Gradient tool.</p>
+      <figure>
+        <img src = "images/Sky02.gif" alt = "Activating the Gradients tool"
+        class = "img-fluid">
+        <figcaption>Activating the Gradients tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now create the band of very light blue cirrostratus clouds
+    as a gradient band.</p>
+    <p>Click on the <b>Insert new stop</b> (<img src =
+    "images/InsertNewStopIcon.gif" alt = "Insert new stop icon" width = "26">)
+    icon in the Gradient toolbar to add a new gradient stop to the middle of
+    the gradient tool line. The new stop appears as a small blue diamond in
+    the middle of the gradient tool line. This stop will govern how the band of
+    clouds is placed and oriented.</p>
+      <figure>
+        <img src = "images/Sky03.gif" alt = "Inserting a new gradient stop"
+        class = "img-fluid">
+        <figcaption>Inserting a new gradient stop.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the new gradient stop still showing blue (selected), click on
+    the white color swatch in the Color palette. A white vertical gradient band
+    appears in the middle of the rectangle.</p>
+      <figure>
+        <img src = "images/Sky04.gif" alt = "Creating a white vertical gradient
+        band" class = "img-fluid">
+        <figcaption>Creating a white vertical gradient band.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the <b>Create and edit gradients</b> cursor (<img src =
+    "images/EditGradientCursor.gif" alt = "Gradient cursor" width = "26">)
+    active, click-drag one of the end gradient stops to the top side of the
+    rectangle and the other stop to the bottom side. Note how the orientation of
+    the white gradient strip changes from vertical to horizontal as you move the
+    stops.</p>
+      <figure>
+        <img src = "images/Sky05.gif" alt = "Moving the end gradient stops to
+        rectangle top and bottom sides making the white gradient strip
+        horizontal" class = "img-fluid">
+        <figcaption>Moving the end gradient stops to rectangle top and bottom
+        sides making the white gradient strip horizontal.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the top gradient stop to the right side a little bit so that
+    the gradient tool line is angled at about five degrees from the vertical.
+    The white gradient band is now angled at about five degrees down from the
+    horizontal.</p>
+    <p>Drag the middle gradient stop up to raise the white band to near the top
+    of the rectangle. You are building, step-by-step, the band of clouds that
+    serve as part of the background for Mt. Hood.</p>
+      <figure>
+        <img src = "images/Sky06.gif" alt = "Raising and angling the white
+        gradient band" class = "img-fluid">
+        <figcaption>Raising and angling the white gradient band.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the rectangle with the Select tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">) and
+    move it to the Mt. Hood artwork. If it covers the mountain, then lower the
+    sky image to the bottom of the image stack by clicking on the <b>Lower
+    selection to bottom</b> icon (<img src =
+    "images/LowerSelection2BottomIcon.gif" alt = "Lower selection to bottommost
+    icon" width = "26">) in the toolbar.
+      <figure>
+        <img src = "images/Sky07.gif" alt = "Sky background placed behind Mt.
+        Hood" class = "img-fluid">
+        <figcaption>Sky background placed behind Mt. Hood.</figcaption>
+      </figure>
+    </li>
+    <li><p>The summit of Mt. Hood can be made more visible by making the sky
+    behind it less white.</p>
+    <p>Make the sky bluer by raising the bottom gradient stop until it is above
+    Mt. Hood&rsquo;s slope. Note how the cloud strip becomes narrower and Mt.
+    Hood&rsquo;s becomes easier to see because of the enhanced contrast of the
+    deeper blue behind it.</p>
+      <figure>
+        <img src = "images/Sky08.gif" alt = "Raising bottom gradient stop to
+        enhance deep blue of sky behind Mt. Hood's summit" class = "img-fluid">
+        <figcaption>Raising bottom gradient stop to enhance deep blue of sky
+        behind Mt. Hood&rsquo;s summit.</figcaption>
+      </figure>
+    </li>
+    <li><p>The band of cirrostratus clouds is too white. Tone the whiteness down
+    by making the cloud strip a very light blue.</p>
+    <p>Click on the middle gradient stop with the <b>Edit gradients</b> cursor
+    (<img src = "images/EditGradientCursor.gif" alt = "Gradient cursor" width =
+    "26">)to make it active. The diamond turns blue, indicating that it has
+    been selected and is awaiting your command.</p>
+      <figure>
+        <img src = "images/Sky09.gif" alt = "Making the middle gradient stop
+        active" class = "img-fluid">
+        <figcaption>Making the middle gradient stop active.</figcaption>
+      </figure>
+    </li>
+    <li>In the <b>RGBA</b> text field in the <b>Fill and Stroke &mdash; Fill</b>
+    palette, type in <b>d7dbefff</b> &lt;Enter&gt; to give the cloud band a
+    light blue tint. The sky behind Mt. Hood becomes a little darker and the
+    summit stands out a little more.</p>
+      <figure>
+        <img src = "images/Sky10.gif" alt = "Giving the cloud band a light blue
+        tint" class = "img-fluid">
+        <figcaption>Giving the cloud band a light blue tint.</figcaption>
+      </figure>
+    </li>
+    <li><p>Add a few small clouds to give texture to the sky.</p>
+    <p>Choose the <b>Draw calligraphic or brush strokes</b> tool (<img src =
+    "images/CalligraphyToolIcon.gif" alt = "Draw calligraphic or brush strokes
+    tool icon" width = "26">) in the toolbox.</p>
+    <p>In the <b>Calligraphy/Brush Stroke</b> toolbar, select <b>Dip pen</b> in
+    the <b>Choose a preset</b> option box, a <b>Width</b> of <b>15</b>, and
+    <b>Thinning</b> of <b>10</b>. All other settings can be left alone.</p>
+    <p>Draw a thin, wavy cloud by click-dragging the <b>Calligraphy</b> pen
+    cursor (<img src = "images/CalligraphyToolCursor.gif" alt = "Calligraphy
+    Tool cursor" width = "26">) in a long, lazy line with a slight gentle curve
+    to it.</p>
+      <figure>
+        <img src = "images/Sky11.gif" alt = "Drawing a cloud with the
+        Calligraphy pen" class = "img-fluid">
+        <figcaption>Drawing a cloud with the Calligraphy pen.</figcaption>
+      </figure>
+    </li>
+    <li><p>Set the cloud&rsquo;s color to <b>96a3ecff</b> in the <b>Fill</b>
+    palette&rsquo;s <b>RGBA</b> text box &mdash; this color is a slightly darker
+    blue than that of the underlying strip of clouds. It is there strictly for
+    texture, not to detract your attention from the rest of the poster.</p>
+    <p>Keep the <b>Fill</b> palette active for the next task.</b>
+      <figure>
+        <img src = "images/Sky12.gif" alt = "Setting the cloud's color to a
+        slightly darker blue than that of the underlying strip of clouds" class
+        = "img-fluid">
+        <figcaption>Setting the cloud&rsquo;s color to a slightly darker blue
+        than that of the underlying strip of clouds.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now blur the cloud so that it looks even more distant than it does
+    now.</p>
+    <p>With the cloud selected, set its <b>Blur (%)</b> amount to <b>14.4</b>
+    in the <b>Blur (%)</b> slider bar (you can also type in <b>14.4</b> in the
+    text box to the right of the slider bar). Then click off the artwork to
+    deselect the cloud.</p>
+      <figure>
+        <img src = "images/Sky13.gif" alt = "Blurring the cloud" class =
+        "img-fluid">
+        <figcaption>Blurring the cloud.</figcaption>
+      </figure>
+    </li>
+    <li><p>Draw a couple more clouds to the right of Mt. Hood&rsquo;s summit
+    with the <b>Draw calligraphic or brush strokes</b> tool (<img src =
+    "images/CalligraphyToolIcon.gif" alt = "Draw calligraphic or brush strokes
+    tool icon" width = "26">). Use the same pen settings and color. Draw them
+    in the same orientation as the first cloud to suggest a constant
+    upper-elevation wind direction.</p>
+      <figure>
+        <img src = "images/Sky14.gif" alt = "Drawing two more clouds" class =
+        "img-fluid">
+        <figcaption>Drawing two more clouds.</figcaption>
+      </figure>
+    </li>
+    <li><p>Give the upper right cloud a blur of <b>14.4</b> percent and the
+    lower one a blur of <b>27</b> percent. The difference in fuzziness gives
+    them a more natural look because all clouds don&rsquo;t condense equally.
+    (I&rsquo;m not sorry about the pun.)
+      <figure>
+        <img src = "images/Sky15.gif" alt = "Drawing two more clouds" class =
+        "img-fluid">
+        <figcaption>Drawing two more clouds.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click anywhere off the artwork to deselect the cloud.</p>
+      <figure>
+        <img src = "images/Sky16.gif" alt = "Deselecting the cloud" class =
+        "img-fluid">
+        <figcaption>Deselecting the cloud.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Using the Masking Function to Create Vignettes</h2>
+  </header>
+  <p>A vignette is a picture whose sides are blurred to where they fade into
+  the color of their background. In this section, you will create two vignettes
+  of rare Oregon orchids for placement on each side of Mt. Hood.</p>
+  <ol>
+    <li>Download Inkscape file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial18/Orchids.svg"><b>Orchids.svg</b></a>
+    and store it in a convenient location.</p>
+    <p>Choose File &gt; Open, navigate to where <b>Orchids.svg</b> is located
+    and open it. The file contains two bitmap images of orchid flower.</p>
+    <p>You&rsquo;ll start this section by working with the top picture of the
+    Calypso orchids (see the figure below).</p>
+      <figure>
+        <img src = "images/Calypso01.gif" alt = "Picture of two Calypso orchids
+        in the wild" class = "img-fluid">
+        <figcaption>Two Calypso orchids in the wild.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Rectangle Tool (<img src = "images/RectangleTool.gif"
+    alt = "Rectangle Tool icon" width = "26">), draw a rectangle over the
+    picture of the orchids. Give it a stroke thickness of 20 pixels and no
+    color fill.</p>
+      <figure>
+        <img src = "images/Calypso02.gif" alt = "20-pixel thick rectangle drawn
+        around picture of Calypso orchids" class = "img-fluid">
+        <figcaption>20-pixel thick rectangle drawn around picture of Calypso
+        orchids.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">), and click-drag the circular adjustment
+    handles to round the corners of the rectangle. Note that there are two
+    handles, one ontop of the other. One handle controls rounding in one
+    direction, the other controls rounding on sides adjacent to the first side
+    of rounding.</p>
+      <figure>
+        <img src = "images/Calypso03.gif" alt = "Rounding the corners of the
+        rectangular border with the Node tool" class = "img-fluid">
+        <figcaption>Rounding the corners of the rectangular border with the Node
+        tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the rectangle border still selected, make the <b>Fill and
+    Stroke</b> palette active and click on the <b>Stroke</b> tab. Adjust the
+    <b>Blur</b> to <b>14.4</b> percent in the <b>Blur (%)</b> slider.</p>
+      <figure>
+        <img src = "images/Calypso04.gif" alt = "Blurring the rounded
+        rectangular border of the picture" class = "img-fluid">
+        <figcaption>Blurring the rounded rectangular border of the
+        picture.</figcaption>
+      </figure>
+    </li>
+    <li><p>Complete the mask by giving the rectangle a white fill (click on the
+    white swatch in the Color Palette).
+      <figure>
+        <img src = "images/Calypso05.gif" alt = "Giving the blurred rectangle a
+        white color fill" class = "img-fluid">
+        <figcaption>Giving the blurred rectangle a white color
+        fill.</figcaption>
+      </figure>
+    </li>
+    <li></p>Choose Object &gt; Clip &gt; Set to apply the mask to the orchid
+    image underneath.</p>
+      <figure>
+        <img src = "images/Calypso06.gif" alt = "Applying the mask function"
+        class = "img-fluid">
+        <figcaption>Applying the mask function.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Deselect to deselect the clipped object.</p>
+      <figure>
+        <img src = "images/Calypso07.gif" alt = "Completed vignette of the
+        Calypso orchids" class = "img-fluid">
+        <figcaption>Completed vignette of the Calypso orchids.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save to save your artwork.</p>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>The next orchid in the <b>Orchids.svg</b> file is known as the
+    Phantom Orchid or Snow Orchid. The image used in this tutorial can be found
+    at the photo archives of <a href =
+    "https://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+0806+1062">
+    Calphotos</a>.</p>
+      <figure>
+        <img src = "images/Phantom01.gif" alt = "Picture of a Phantom Orchid
+        flower" class = "img-fluid">
+        <figcaption>Picture of a Phantom Orchid flower. The photographer is Earl
+        Nance, &copy;2006.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the Rectangle Tool (<img src = "images/RectangleTool.gif"
+    alt = "Rectangle Tool icon" width = "26">), draw a rectangle over the
+    picture of the orchids. Give it a stroke thickness of 20 pixels and no
+    color fill.</p>
+      <figure>
+        <img src = "images/Phantom02.gif" alt = "20-pixel thick rectangle drawn
+        around the picture of a Phantom Orchid flower" class = "img-fluid">
+        <figcaption>20-pixel thick rectangle drawn around the picture of a
+        Phantom Orchid flower.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the Node tool (<img src = "images/NodeToolIcon.gif" alt =
+    "Node tool icon" width = "26">), and click-drag the circular adjustment
+    handles to round the corners of the rectangle just as you had done with
+    the Calypso orchids.</p>
+      <figure>
+        <img src = "images/Phantom03.gif" alt = "Rounding the corners of the
+        rectangular border with the Node tool" class = "img-fluid">
+        <figcaption>Rounding the corners of the rectangular border with the Node
+        tool.</figcaption>
+      </figure>
+    </li>
+    <li><p>Give the rectangle border at <b>14.4</b> percent blur, just you had
+    done with the Calypso orchids.</p>
+      <figure>
+        <img src = "images/Phantom04.gif" alt = "Blurring the rounded
+        rectangular border of the picture" class = "img-fluid">
+        <figcaption>Blurring the rounded rectangular border of the
+        picture.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click the white color swatch in the Color Palette to give the
+    rectangle a white color fill.</p>
+      <figure>
+        <img src = "images/Phantom05.gif" alt = "Giving the blurred rectangle a
+        white color fill" class = "img-fluid">
+        <figcaption>Giving the blurred rectangle a white color fill.</figcaption>
+      </figure>
+    </li>
+    <li></p>Choose Object &gt; Clip &gt; Set to apply the mask.</p>
+      <figure>
+        <img src = "images/Phantom06.gif" alt = "Applying the mask function"
+        class = "img-fluid">
+        <figcaption>Applying the mask function.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Edit &gt; Deselect to deselect the clipped object.</p>
+      <figure>
+        <img src = "images/Phantom07.gif" alt = "Completed vignette of the
+        Phantom Orchid" class = "img-fluid">
+        <figcaption>Completed vignette of the Phantom Orchid.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save, but don&rsquo;t close the file.</p>
+    </li>
+    <p>You now have two orchid vignettes to add to the poster foreground.</p>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Adding the Vignettes to the Artwork and Adjusting the Composition</h2>
+  </header>
+  <ol>
+    <li><p>With the file <b>Orchids.svg</b> still open, &lt;Shift&gt;-click on
+    the two vignettes to group-select them.</p>
+    </li>
+    <li><p>Choose Edit &gt; Copy to copy them to your computer&rsquo;s
+    Clipboard.</p>
+    </li>
+    <li><p>If the <b>Tutorial18_start.svg</b> file isn&rsquo;t open, then File
+    &gt; Open, navigate to the file and open it.</p>
+    </li>
+    <li><p>Choose Edit &gt; Paste to paste the two vignettes onto the artwork
+    of Mt. Hood.</p>
+    </li>
+    <li><p>Move the vignettes so that they are placed in the upper corners of
+    the poster rectangle. Now you can start doing precision positioning.</p>
+      <figure>
+        <img src = "images/WholeThing01.gif" alt = "First step in assembling the
+        whole poster" class = "img-fluid">
+        <figcaption>First step in assembling the whole poster.</figcaption>
+      </figure>
+    </li>
+    <li><p>Bring down a guideline to line up the top of the two vignettes.</p>
+      <figure>
+        <img src = "images/WholeThing02.gif" alt = "First step in assembling the
+        whole poster" class = "img-fluid">
+        <figcaption>First step in assembling the whole poster.</figcaption>
+      </figure>
+    </li>
+    <li><p>Both vignettes should have the same height for the sake of good
+    composition.</p>
+    <p>Bring down another guideline to use as a size adjustment line for
+    scaling both the vignettes. Then, &lt;Ctrl&gt;-click and drag a corner
+    sizeing handle on both vignettes to resize until the bottom sides snap to
+    the bottom guideline.</p>
+      <figure>
+        <img src = "images/WholeThing03.gif" alt = "First step in assembling the
+        whole poster" class = "img-fluid">
+        <figcaption>First step in assembling the whole poster.</figcaption>
+      </figure>
+    </li>
+    <li><p>The vignettes are too high up in the poster. There is too much
+    &ldquo;white space&rdquo; (unused space) between the vignettes and the slope
+    of Mt. Hood, producing an unbalanced look.</p>
+    <p>Lower the vignettes by removing the guidelines and clicking on the
+    <b>Enable snapping (%)</b> icon (<img src = "images/EnableSnappingIcon.gif"
+    alt = "Enable snapping icon" width = "26">) to turn it and subordinate
+    snapping tools off.</p>
+    <p>&lt;Shift&gt;-click both vignettes to group-select them and
+    &lt;Ctrl&gt;-drag them straight down until the summit of Mt. Hood is about
+    halfway between them in height.</p>
+      <figure>
+        <img src = "images/WholeThing04.gif" alt = "Lowering the two vignettes
+        to improve composition" class = "img-fluid">
+        <figcaption>Lowering the two vignettes to improve composition.</figcaption>
+      </figure>
+    </li>
+    <li><p>So far, there are only images in this poster. It is time to put in
+    text.</p>
+    <p>A font that has some of the same line characteristics as the Mt.
+    Hood artwork would be good at maintaining the theme of line art. We choose
+    <b>Relief Serif</b>. If this font is not on your computer, you can download
+    it for free at
+    <a href = "https://freefontsdownload.net/free-reliefserif-font-104101.htm">
+    <b>FreeFontsDownload.net</b></a>,
+    <a href = "https://www.fontpalace.com/font-details/relief-serif/">
+    <b>fontpalace</b></a>, and
+    <a href = "https://fontzone.net/font-details/relief-serif"><b>FontZone</b></a>.
+    There are other font sites on the Internet, too.</p>
+    <p>Click on the Text tool icon (<img src = "images/TextToolIcon.gif" alt =
+    "Text Tool icon" width = "26">) in the toolbox. Then click somewhere between
+    the two vignettes and type on three lines <i>Oregon, Sentinel Mountains,
+    Orchids of Mystery</i>. Your text might look different from that in the
+    figure below, especially in font size. That is not a problem.</p>
+      <figure>
+        <img src = "images/WholeThing05.gif" alt = "Typing in the poster text"
+        class = "img-fluid">
+        <figcaption>Typing in the poster text.</figcaption>
+      </figure>
+    </li>
+    <li><p>Center-justify the text by clicking on the <b>Text alignment</b> icon
+    in the <b>Text Tool</b> toolbar and selecting the <b>Center text</b>
+    option.</p>
+      <figure>
+        <img src = "images/CenterTextOption.gif" alt = "Center Text option"
+        class = "img-fluid">
+        <figcaption>Selecting the text center-justification option.</figcaption>
+      </figure>
+    <p>Center-justifying the poster text has a more pleasing effect on the
+    eye.</p>
+      <figure>
+        <img src = "images/WholeThing06.gif" alt = "Center-justifying the poster
+        text" class = "img-fluid">
+        <figcaption>Center-justifying the poster text.</figcaption>
+      </figure>
+    </li>
+    <li><p>Reduce the font size to <b>28</b> pixels, and spacing between
+    baselines (line spacing) of <b>1.25</b> pixels.</p>
+      <figure>
+        <img src = "images/FontSizeAndLineSpacing.gif" alt = "Reducing the font
+        size to 28 and setting the line spacing to 1.25" class = "img-fluid">
+        <figcaption>Reducing the font size to 28 pixels and setting the line
+        spacing to 1.25 pixels.</figcaption>
+      </figure>
+    </li>
+    <li><p>There is extra and unnecessary sky background above the vignettes and
+    poster text. To reduce the extra space, click in the sky toward the top of
+    the artwork and click-drag the top-middle sizing handle of the sky image
+    down about half the distance between the top of the sky image and the top
+    side of the two vignettes.</p>
+      <figure>
+        <img src = "images/WholeThing08.gif" alt = "Reducing the amount of
+        unnecessary sky in the background" class = "img-fluid">
+        <figcaption>Reducing the amount of unnecessary sky in the
+        background.</figcaption>
+      </figure>
+    </li>
+    <li><p>When you&rsquo;re satisfied with your result, press &lt;Esc&gt; to
+    deselect the artwork.</p>
+      <figure>
+        <img src = "images/FinalArtwork.png" alt = "Final artwork" class =
+        "img-fluid">
+        <figcaption>Final artwork.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save and File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+  <p>You have just finished Tutorial 18 and learned how to create the
+  appearance of engraving, old-style pictures or vignettes, and how to
+  complement the appearance of engraved images and engraving-style fonts.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Exploring Further</h2>
+  </header>
+    <p>This tutorial shows you only one way of many of using patterns, creating
+    an engraving effect, and creating the vignette look. Experiment with
+    creating engraving images where colored lines alternate with lines of other
+    colors. Engraving lines don&rsquo;t have to be all horizontal. They can be
+    at any angle, curved, bent (using the Live Path Effect Bend function),
+    and made into hatched images where lines and curves cross. Find pictures on
+    the Internet whose borders can be blurred a lot, as seen in many portraits
+    from the 1800s and early 1900s, and give your imagination full reign.</p>
+</section>
+
+<hr>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
