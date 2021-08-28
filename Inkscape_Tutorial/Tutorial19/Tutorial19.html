@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 19 &mdash; Using Using Inkscape in Animation</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, importing graphics files, bitmap to
+  svg conversion, basic animation, 2-D animation, scaled vector graphics, SVG,
+  scaled vector graphics, embedding video, enve">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+  <style>
+    .video-header {
+      font-family: Constantia, Garamond, Georgia, "Times New Roman", serif;
+      font-size: 300%;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <div class = "container">
+    <a id = "Top"></a>
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+        <a id = "Top"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 19 &mdash; Using Using Inkscape in Animation</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-11 offset-md-1">
+        <div class = "embed-responsive embed-responsive-4by3">
+          <video height = "768" width = "1080" controls>
+            <source src = "videos/McBirneyVideoClip.mp4" type = "video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class = "video-header text-center mt-n1 ml-5">Science with a Sense of
+        Humor</p>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-11 offset-md-1">
+      <p class = "lead">Inkscape can create backgrounds over which figures can
+      be animated. Moreover, Inkscape can create those figures to be animated.
+      An external animation program can then help you determine how those
+      figures are to be moved and placed over the background you have either
+      created or are about to create. When the components work to satisfaction,
+      the animation file can then be rendered, that is, drawn into an animation
+      video clip that can be embedded in an HTML file and displayed in a
+      browser.</p>
+      </div>
+    </div>
+
+<hr>
+
+<div class = "row">
+<section>
+  <p>In this lesson, you&rsquo;ll learn how to do the following:</p>
+    <ul>
+      <li>Import a bitmap image.
+      </li>
+      <li>Convert a bitmap image into an svg graphic image.
+      </li>
+      <li>Import a svg image file into a separate animation program.
+      </li>
+      <li>Animate a portion of an imported background.
+      </li>
+      <li>Render the animation into a video clip.
+      </li>
+      <li>Embed the animation video clip into an HTML file that can be uploaded
+      to the World Wide Web.
+      </li>
+    </ul>
+</section>
+<section>
+  <header>
+    <h2>Inkscape and Animation</h2>
+  </header>
+  <p>At the time of writing this tutorial (18 August 2021), Inkscape does not
+  have the capabilities of producing animation. However, it can help you create
+  the building blocks that go into animation. These building blocks include
+  backgrounds and figures for later animation. Backgrounds and figures, though
+  they are static images, can be imported into an animation program which can
+  then create the type of motion you would see if you drew figures on
+  consecutive pages in a writing pad, and then flipped the pages rapidly enough
+  to simulate motion. In this case, you don&rsquo;t have to draw every single
+  page. The computer does much of the tedious work of drawing and flipping the
+  pages for you.</p>
+</section>
+<section>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <p>You will work with the background first.</p>
+  <ol>
+    <li><p>Download image file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial19/Background_original.jpg"><b>Background_original.jpg</b></a>
+    and store it in a convenient location.</p>
+      <figure>
+        <img src = "images/Background_original.jpg" class = "img-fluid">
+        <figcaption>Original image for animation background. Dr. Alex McBirney
+        looks out at us from specimen C.</figcaption>
+      </figure>
+      <p>This image is reproduced from a book on <u>Igneous Petrology</u>,
+      written by Alexander McBirney. <u>Igneous Petrology</u> is an out-of-print
+      university textbook about the chemistry and mineralogy of lavas that
+      McBirney and colleagues obtained out in the field. Circles A, B, C, and D
+      are drawings of thin slices of different lava rocks, called thin sections,
+      used here in studying what different lava rocks look like under a
+      microscope. McBirney hand-drew all of these images.</p>
+      <p>As an experiment, Dr. McBirney also drew little cartoon caricatures of
+      himself in several of the specimens. He wanted to test whether serious
+      scientific publishing companies were indeed stringently careful in
+      reviewing the books they were about to publish.</p>
+      <p>Every little representation of the good professor made it through the
+      review process unscathed, which makes one wonder about the power of close
+      scrutiny of some book publishing companies. One such leprechaun peers out
+      at us from specimen C.</p>
+      <p>You will animate Dr. McBirney. He will puff a smoke ring out of his
+      pipe and then wink at you.</p>
+    </li>
+    <li><p>The background image is a jpg, that is, it is a bitmap image. You
+    will convert it into a scaled vector graphic (.svg) file so that the
+    animation program you&rsquo;ll be working with shortly can accept it.</p>
+    </li>
+    <aside><p><b>Resource:</b> For an illustration of the finished animation in
+    this lesson, see the beginning of this page.</b></p>
+    </aside>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Choose File &gt; Import &hellip;, navigate to where you are storing file
+    <b>Background_original.jpg</b>, and open it.</p>
+    </li>
+    <li><p>You will now convert the bitmap image into an .svg image by using
+    Inkscape&rsquo;s <b>Trace Bitmap</b> function.</p>
+    <p>Click on the image with the Select Tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/BackgroundSelected.gif" alt = "Selecting the
+        background image in preparation for conversion to svg" class =
+        "img-fluid">
+        <figcaption>Selecting the background bitmap image in preparation for
+        conversion from jpg to svg.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the image selected, choose Path &gt; Trace Bitmap &hellip;.</p>
+    </li>
+    <li><p>Change the default <b>Brightness threshold</b> from <b>0.450</b> to
+    <b>0.500</b>. This setting produces good definition of curves and lines
+    in the conversion process.</p>
+      <figure>
+        <img src = "images/TraceBitmap.gif" alt = "Trace Bitmap dialog box"
+        class = "img-fluid">
+        <figcaption>Trace Bitmap dialog box. Brightness threshold is changed to
+        <b>0.500</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Update</b> button. A small preview representation of
+    the converted appears in the right-hand window in the dialog box.</p>
+      <figure>
+        <img src = "images/Update.gif" alt = "Clicking on the Update button and
+        previewing the soon-to-be-converted image" class = "img-fluid">
+        <figcaption>Clicking on the Update button and previewing the
+        soon-to-be-converted image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>OK</b> button. After a few seconds, an svg image is
+    created from the jpg and is overlain over the jpg.</p>
+      <figure>
+        <img src = "images/SVGCreated.gif" alt = "SVG conversion completed"
+        class = "img-fluid">
+        <figcaption>SVG conversion completed.</figcaption>
+      </figure>
+    </li>
+    <li><p>The svg image is already selected, as can be seen by its bounding
+    box and sizing handles.</p>
+    <p>Move the converted image off the underlying bitmap version of the
+    image so that the two can be compared.</p>
+      <figure>
+        <img src = "images/ImageComparison.gif" alt = "Comparing bitmap and svg
+        images" class = "img-fluid">
+        <figcaption>Comparing bitmap and svg images.</figcaption>
+      </figure>
+    <p>The svg image compares very well to the original bitmap jpg image.</p>
+    </li>
+    <li><p>Dismiss the <b>Trace Bitmap</b> dialog box and delete the bitmap
+    image, keeping only the converted svg version.</p>
+    </li>
+    <li><p>File &gt; Save As&hellip; and save the svg image as
+    <b>Background.svg</b> in a convenient storage location.</p>
+    </li>
+    <li><p>File &gt; Quit to exit Inkscape.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Downloading and Installing the <i>enve</i> Animation Program</h2>
+  </header>
+  <p>Maurycy Liebner is developing an animation program, called <b>enve</b>
+  that allows you to create two-dimensional vector and bitmap animation.
+  Animations can also include sound and video. It is easy to download and
+  install. The installer file is 82.5 megabytes in size, of moderate size for
+  modern-day computers.</p>
+  <p><b>enve</b> is not a video editor, such as <b>VSDC Video Editor</b> and
+  <b>Openshot</b> (both are freeware video editing programs), but an animator,
+  which is a different animal. It takes vector (svg) images that you create and
+  and makes time-based changes to them as you desire. <b>enve</b>, for an aside,
+  stands for:
+    <figure>
+      <img src = "images/enveAnatomy.png" alt = "enve is not a video editor"
+      class = "img-fluid">
+    </figure>
+  <ol>
+    <li><p>Download <b>enve</b> from its download site at <a href =
+    "https://maurycyliebner.github.io/dow/index"><b>https://maurycyliebner.github.io/dow/index</b></a>.
+    </p>
+    </li>
+    <li><p>Double-click on the installer program to start the installation
+    process.</p>
+    </li>
+    <li><p>If a warning dialog box appears <b>Do you want to allow this app
+    from an unknown publisher to make changes to your device?</b>, click on
+    <b>Yes</b>. The Ready to Install dialog box appears.</p>
+    </li>
+    <li><p>Click on the <b>Install</b> button.</p>
+      <figure>
+        <img src = "images/Ready2Install.gif" alt = "Ready to Install dialog
+        box" class = "img-fluid">
+        <figcaption>Ready to Install dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>The next dialog box that appears asks you whether you want a desktop
+    shortcut icon installed. Check the checkbox if you so desire and then click
+    on the <b>Next</b> button.</p>
+      <figure>
+        <img src = "images/SelectAdditionalTasks.gif" alt = "Select Additional
+        Tasks dialog box" class = "img-fluid">
+        <figcaption>Select Additional Tasks dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p><b>enve</b> is installed on your computer. Because the <b>enve</b>
+    file isn&rsquo;t large, it installs quickly.</p>
+      <figure>
+        <img src = "images/Installing.gif" alt = "Installing progress box" class
+        = "img-fluid">
+        <figcaption>Installing progress box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Once installation has completed, you are given the option of
+    launching <b>enve</b> immediately. Keep the checkbox checked and click on
+    the <b>Finish</b> button to launch <b>enve</b>.</p>
+      <figure>
+        <img src = "images/CompletingSetup.gif" alt = "Completing the Setup box"
+        class = "img-fluid">
+        <figcaption>Completing the Setup box.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Getting Acquainted with <i>enve</i></h2>
+  </header>
+  <ol>
+    <li><p>When <b>enve</b> first launches, its welcome page shows you a request
+    window for support. If you can help Maurycy out, it would be wonderful on
+    your part. Otherwise, click on the <b>Done</b> button to reveal the main
+    welcome window.</p>
+      <figure>
+        <img src = "images/WelcomeMat1.gif" alt = "enve welcome page with
+        request for support dialog box" class = "img-fluid">
+        <figcaption><i>enve</i> welcome page with request for support dialog
+        box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Every time that you launch <b>enve</b>, a new animated technique tip
+    is shown in the initial file open dialog box.</p>
+      <figure>
+        <img src = "images/WelcomeMat2.gif" alt = "enve welcome page with
+        request for support dialog box dismissed" class = "img-fluid">
+        <figcaption><i>enve</i> welcome page with request for support dialog
+        box dismissed.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>New</b> button in the <b>Open File/Create New
+    File</b> dialog box. The <b>Scene Settings</b> dialog box appears.</p>
+      <figure>
+        <img src = "images/SceneSettings1.gif" alt = "Scene Settings dialog box"
+        class = "img-fluid">
+        <figcaption>Scene Settings dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Change the width to <b>1080</b> and the height to <b>768</b>.</p>
+    <p>This animation will be five seconds long, so set the <b>Duration</b> to
+    <b>0</b> to <b>50 Frames</b> at <b>10</b> frames per second
+    (<b>Fps</b>).</p>
+      <figure>
+        <img src = "images/SceneSettings2.gif" alt = "Scene Settings dialog box
+        with settings updated" class = "img-fluid">
+        <figcaption>Scene Settings dialog box with settings updated.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Ok</b> button. The <b>enve</b> window appears.</p>
+      <figure>
+        <img src = "images/enveWindow.png" alt = "enve work window" class =
+        "img-fluid">
+        <figcaption>The <i>enve</i> window with main components
+        labeled.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>enve</b> screen has many of the tools that Inkscape has. They
+    are organized differently, and yet their functions are basically the
+    same.</p>
+    <p>Look at the <b>Object Mode Toolbar</b>. The first eight icons on the left
+    are similar to those found on Inkscape&rsquo;s toolbox, as shown below.</p>
+      <figure>
+        <img src = "images/SelectToolbarLabels.png" alt = "Object Mode Tools
+        Control bar" class = "img-fluid">
+        <p></p>
+        <figcaption>Object Mode Tools Control bar and comparison of first eight
+        enve graphics tools with Inkscape&rsquo;s.</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+    <aside>
+      <h4>Note:</h4>
+      <p><b>enve</b>&rsquo;s capabilities will not be explored in detail &ndash;
+      that topic is outside the scope of this tutorial and well deserves its
+      own stand-alone tutorial. Only those tools and techniques needed to draw
+      the animation shown here will be touched upon. The point of this tutorial
+      and project is to show you how Inkscape can contribute to the creation
+      of animated 2-D graphic art in an easy-to-learn and easy-to-understand
+      way.</p>
+      <p>There are tutorials on how to use <b>enve</b> already on the Internet
+      &mdash; most of them are video clips &mdash; and they can expand your
+      imagination on what is <u>freely</u> available to you if you are
+      interested in exploring this area of graphic arts further. <b>enve</b>
+      has only recently been developed and is still undergoing refinement and
+      expansion of its capabilities. As <b>enve</b> continues to grow, so will
+      the number of tutorials available on how to use it; all of it free for you
+      to download, learn, enjoy, and create.</p>
+    </aside>
+  <section>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <header>
+      <h2>Putting the Animation Together</h2>
+    </header>
+  <ol>
+    <li><p>You&rsquo;ll start by importing the background upon which the
+    animation will take place.</p>
+    <p>Choose File &gt; Import File&hellip;, navigate to where you have file
+    <b>Background.svg</b> stored, select it, and click on the <b>Open</b>
+    button to open it. The background image appears after a few seconds.</p>
+    </li>
+      <figure>
+        <img src = "images/ImportSVG.gif" alt = "Importing the original svg
+        art file" class = "img-fluid">
+        <figcaption>Importing the original svg art file.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>Object Mode</b> tool should be active by default when you
+    first start <b>enve</b>. Hover the <b>Object Mode</b> tool cursor over a
+    black area to activate the moving function. A black border appears
+    indicating that the image can be manipulated.</p>
+    <p>Click-drag the image to the center of the canvas. So far, tools work just
+    as they do in Inkscape.</p>
+      <figure>
+        <img src = "images/MoveImage2Center.png" alt = "Moving the image to the
+        center of the canvas" class = "img-fluid">
+        <figcaption>Moving the image to the center of the canvas.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now scale the image so that it fills the canvas. Here is
+    where the scaling function differs from what Inkscape has.</p>
+    <p>With the <b>Object Mode</b> cursor active, click on a black area in the
+    image so that a black border appears around the whole image. The image is
+    now manipulable.</p>
+    <p>Press <b>S</b> to turn on scaling. A dashed line appears between the
+    cursor and a circle with a cross inside it.</p>
+    <p>This circle is called the image&rsquo;s <b>pivot point</b> (<img src =
+    "images/PivotPoint.gif" alt = "Pivot Point" width = "26">). It acts as an
+    origin from which an object can be resized, or about which an object can be
+    rotated, hence pivot point.</p>
+    <p>Without pressing any key, just pull the cursor away from the pivot point.
+    The image expands. If the image is off-center, then turn off the scaling
+    function by clicking the mouse, repositioning the mouse, and then pressing
+    <b>S</b> again to turn scaling back on.</p>
+      <figure>
+        <img src = "images/ScalingImage1.png" alt = "Pressing S to scale the
+        image" class = "img-fluid">
+        <figcaption>Pressing S to scale the image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Move the image and rescale it until it fills the canvas. Play around
+    with moving and rescaling the image so that you get a feel for how the two
+    functions work.</p>
+      <figure>
+        <img src = "images/ScalingImage2.gif" alt = "Pressing S to scale the
+        image" class = "img-fluid">
+        <figcaption>Pressing S to scale the image.</figcaption>
+      </figure>
+    </li>
+    <li><p>Save your work by choosing File &gt; Save As&hellip;. When the
+    <b>Save File</b> dialog box appears, name your animation file
+    <b>GeniusAtWork</b>) so that the HTML page that you will embed it in later
+    will recognize it, navigate to where you want to store it, and click on
+    the <b>Save</b> button. <b>enve</b> automatically appends the extension
+    <b>.ev</b> to the filename so that <b>enve</b> can recognize it as an
+    <b>enve</b> file.</p>
+    </li>
+    <li><p>Now that you have a good idea of how to use both the moving and
+    scaling functions, you will now use <b>enve</b>&rsquo;s zoom function.</p>
+    <p>The zoom function is different from the scale function because it
+    magnifies the whole canvas, not just a selected object. <u>Do note that</u>,
+    when you scale an object, you are resizing it for the animation you intend
+    to create. Zooming in on an object does not rescale it for the animation
+    &mdash; it increases or decreases the magnification of whatever you are
+    looking at, like a telescope or microscope, so that you can see details
+    better that you need to see without resizing the image. So, scaling actually
+    resizes images and image components, and you will see that resizing in the
+    animation. Zooming should be used strictly for better viewing without
+    changing the size of images for purposes of the animation.</p>
+    <p>You zoom in by pressing &lt;Ctrl&gt;-<b>+</b> (Control key and plus sign)
+    and zoom out pressing &lt;Ctrl&gt;-<b>-</b> (Control key and minus sign).
+    For quick zooming, press the Control key and roll the mouse wheel. To
+    return to the default magnification, press &lt;Ctrl&gt;-<b>0</b> (Control
+    key and zero).</p>
+    <p>Zoom in on Dr. McBirney using a combination of the move function and the
+    zoom function. Don&rsquo;t use the scaling function with <b>S</b> because
+    you will resize the background image. Zoom works as if you are looking more
+    closely at what you&rsquo;re working on.</p>
+      <figure>
+        <img src = "images/ScalingImage3.gif" alt = "Pressing the Control key
+        and rolling the mouse wheel to zoom in on McBirney" class = "img-fluid">
+        <figcaption>Pressing the Control key and rolling the mouse wheel to zoom
+        in on Dr. McBirney.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now start drawing a smoke ring that will come out of Dr.
+    McBirney&rsquo;s pipebowl. Click on the <b>Circle Mode</b> icon (<img src =
+    "images/CircleModeIcon.gif" alt = "Circle Mode icon" width = "26">) in the
+    toolbar and draw a circle near the pipebowl. By default, it will have a
+    black stroke and transparent color fill.</p>
+      <figure>
+        <img src = "images/DrawCircle1.gif" alt = "Drawing the beginning of the
+        smoke ring circle" class = "img-fluid">
+        <figcaption>Drawing the beginning of the smoke ring circle.</figcaption>
+      </figure>
+    </li>
+    <li><p>The circle you just drew is selected. The word <b>Circle</b> appears
+    in the <b>Selected Objects</b> panel on the left side of the <b>enve</b>
+    canvas and is highlighted.</p>
+    <p>Click on the <b>Expand Item</b> arrow (<img src =
+    "images/ExpandArrow.gif" alt = "Expand Item arrow" width "26">) to show the
+    components and attributes that can contribute to animating the circle.</p>
+      <figure>
+        <img src = "images/CircleObjectExpanded.gif" alt = "Expanding the circle
+        object in the Selected Objects panel" class = "img-fluid">
+        <figcaption>Expanding the circle object in the Selected Objects
+        panel.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now activate the Animation Recorder by clicking on the
+    white discs in front of items that are to be animated. By clicking on these
+    discs, the Animation Recorder &ldquo;remembers&rdquo; which objects and
+    object attributes are to be changed with time. The Animation Recorder also
+    allows you to change how animated items are to change according to your
+    vision.</p>
+    <p>Click on the white disc on the <b>transform</b> item line. It turns
+    red, indicating that <b>transform</b> functions can be changed.</p>
+    </li>
+    <li><p>Click on the <b>Expand Item</b> arrow (<img src =
+    "images/ExpandArrow.gif" alt = "Expand Item arrow" width "26">) for the
+    <b>outline</b> attribute.</p>
+    </li>
+    <li><p>Make the black circle thicker and color it medium gray.</p>
+    <p>Click on the <b>thickness</b> Animation Recorder disc (it turns red)
+    and change the thickness to <b>3</b> in the number box.</p>
+    </li>
+    <li><p>In the <b>Fill and Stroke</b> panel, click on the <b>Stroke</b> tab
+    and <b>Flat</b> tab (for <u>flat</u> color). Both tabs highlight and the
+    color palette appears. Note that the <b>Fill and Stroke</b> panel resembles
+    Inkscape&rsquo;s <b>Fill and Stroke</b> panel, so working with it should be
+    easy.</p>
+    </li>
+    <li><p>Click on the <b>HSV</b> tab (<b>H</b>ue <b>S</b>aturation
+    <b>V</b>alue).</p>
+    </li>
+    <li><p>Set <b>H = 0</b>, <b>S = 0</b>,  <b>V = .5</b>, and <b>A = 1</b>.
+    <b>V</b> acts like the lightness value <b>L</b> in the <b>HSL</b> color
+    model. The value of <b>0.500</b> gives you a medium gray color. Remember
+    that <b>A</b> stands for <b>alpha channel</b>, the opacity/transparency
+    value you&rsquo; been working with in earlier Inkscape tutorials.</p>
+    <p>The gray color will not change during the animation, so leave the
+    <b>red</b>, <b>green</b>, and <b>blue</b> color recorder discs white. The
+    smoke ring will dissipate with time, so it will become transparent toward
+    the end of the animation. This feature is activated by clicking on the disc
+    for <b>alpha</b>.</p>
+    </li>
+    <li><p>The smoke ring will move around, so its position needs to be recorded
+    . Click on the white discs for <b>center</b>, <b>horizontal radius</b>, and
+    <b>vertical radius</b>.</p>
+      <figure>
+        <img src = "images/ChangingCircleAttributes.png" alt = "Changing the
+        attributes of the beginning circle" class = "img-fluid">
+        <figcaption>Changing the attributes of the beginning
+        circle. Red arrows point to those items that are to be recorded by the
+        <b>Animation Recorder</b>.</figcaption>
+      </figure>
+      <p>If you change the <b>Color model</b> option at the bottom of the
+      <b>Fill and Stroke</b> panel to <b>HSV</b>, the color labels in the
+      <b>Selected Objects</b> panel will change to <b>hue</b>,
+      <b>saturation</b>, and <b>value</b> to reflect the change. The color model
+      changes, but the color does not.</p>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>With the circle still selected, click-drag it so that it sits over
+    the top of the pipebowl.</p>
+      <figure>
+        <img src = "images/MoveCircleOverPipeBowl.gif" alt = "Moving the circle
+        over the pipe bowl" class = "img-fluid">
+        <figcaption>Moving the circle over the pipe bowl.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the <b>Point Mode</b> tool (<img src =
+    "images/PointModeIcon.gif" alt = "Point Mode tool icon" width = "26">).
+    Two nodes appear on the circle selection ring.</p>
+      <figure>
+        <img src = "images/CircleNodesVisible.gif" alt = "Circle nodes visible
+        in Point mode" class = "img-fluid">
+        <figcaption>Circle nodes visible in Point mode.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag a node inward with the <b>Point Mode</b> cursor so that
+    you obtain an ellipse.</p>
+      <figure>
+        <img src = "images/SqueezeEllipseIntoPipeMouth.gif" alt = "Squeezing the
+        ellipse into the mouth of the pipe" class = "img-fluid">
+        <figcaption>Squeezing the ellipse into the mouth of the
+        pipe.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click off the ellipse to deselect it.</p>
+    </li>
+    <li><p>You will now rotate the ellipse so that its orientation is in
+    agreement with where the opening of the pipebowl should be.</p>
+    <p>Place the <b>Object Mode</b> cursor to a side of the ellipse and press
+    <b>R</b>. A dashed line appears connecting the ellipse&rsquo;s pivot point
+    with the <b>Object Mode</b> cursor.</p>
+    </li>
+    <li><p>Move the cursor to rotate the ellipse into a good orientation. Once
+    you&rsquo;re satisfied with the orientation, click the left mouse button to
+    turn off the Rotation function.</p>
+      <figure>
+        <img src = "images/RotateEllipse.gif" alt = "Rotating the ellipse" class
+        = "img-fluid">
+        <figcaption>Rotating the ellipse.</figcaption>
+      </figure>
+    </li>
+    <li><p>Fine-adjust the placement and orientation of the smoke ring by
+    click-dragging the selected circle to move it, pressing <b>S</b> to
+    fine-resize it, pressing <b>R</b> to fine-rotate it, and using the <b>Point
+    Mode</b> tool (<img src = "images/PointModeIcon.gif" alt = "Point Mode tool
+    icon" width = "26">) to fine-adjust its ellipticity.</p>
+      <figure>
+        <img src = "images/FineAdjustSmokeRing.gif" alt = "Fine-adjusting the
+        smoke ring" class = "img-fluid">
+        <figcaption>Fine-adjusting the smoke ring.</figcaption>
+      </figure>
+    </li>
+    <li><p>The starting image for the smoke ring is now complete. It&rsquo;s
+    time to return the canvas and image size back to normal. Before you do that,
+    click on the <b>Object Mode</b> tool icon (<img src =
+    "images/ObjectModeIcon.gif" alt = "Object Mode icon" width = "26">), then
+    click on a black piece of the background image to select it.</p>
+    </li>
+    <li><p>Press &lt;Ctrl&gt;-A to select both the background image and smoke
+    ring image to group-select them. By group-selecting both images, you can
+    move and rescale them as a single object. Otherwise, you will move and
+    rescale the background, but the smoke ring will remain in its original
+    location and not change in size.</p>
+    </li>
+    <li><p>Move the grouped image with the <b>Object Mode</b> tool icon (<img
+    src = "images/ObjectModeIcon.gif" alt = "Object Mode icon" width = "26">)
+    into place on the canvas, rescale it with <b>S</b> if you need to, and then
+    press &lt;Ctrl&gt;-<b>0</b> to zoom the canvas to its default size.</p>
+      <figure>
+        <img src = "images/SmokeRing02.gif" alt = "Bringing the canvas back to
+        its default size" class = "img-fluid">
+        <figcaption>Bringing the canvas back to its default size. Note that the
+        pivot point for the smoke ring is visible for your
+        convenience.</figcaption>
+      </figure>
+    </li>
+    <li><p>Press &lt;Shift&gt;-&lt;Ctrl&gt;-G to ungroup the background and
+    smoke ring images.</p>
+    </li>
+    <li><p>Save your work by choosing File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Using the Timeline</h2>
+  </header>
+  <p>The Timeline is where all the kinetic action takes place. You can start an
+  animation at one point in time, stop or pause it at another, change when
+  things happen, and finally render everthing into a video clip. In this
+  section, you will make the smoke ring that you drew appear out of Dr.
+  McBirney's and float upwards, expanding out and fading as it goes.</p>
+  <ol>
+    <li><p>The <b>Circle</b> object should be highlighted and a yellow disc
+    should be visible under Time Frame <b>0</b>. If, however, you see
+    <b>Group</b>, then the two images (background and smoke ring) are still
+    grouped. Press &lt;Shift&gt;-&lt;Ctrl&gt;-G again. If you still see
+    <b>Group</b>, then troubleshoot. Click on the <b>Group</b> label and then
+    press &lt;Shift&gt;-&lt;Ctrl&gt;-G. The label should change into two labels:
+    <b>Circle</b> and <b>layer1</b>.</p>
+    </li>
+    <li><p>Because the smoke ring object is located in the Frame 0 column, the
+    animation will start immediately. In this animation, you will have the
+    animation start after one second of silence (a theatrical pause).</p>
+    <p>Click on the <b>Circle</b> label to make it the selected object.</p>
+      <figure>
+        <img src = "images/ClickOnObjectButton.gif" alt = "Clicking on the
+        object button" class = "img-fluid">
+        <figcaption>Clicking on the object button.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click-drag the Timeline Frame cursor to Frame 10.</p>
+    <p>Click-drag the yellow disc until it lies in the Frame <b>10</b>
+    column.</p>
+      <figure>
+        <img src = "images/MovingObjectButtonTo10Frames.png" alt = "Moving the
+        object button to the 10 frames mark and making Frame 10 active" class =
+        "img-fluid">
+        <figcaption>Moving the object button to the 10 frames mark and making
+        Frame 10 active.</figcaption>
+      </figure>
+      <p>Because the animation was set to ten frames per second in the
+      beginning, the animation will start after one second.</p>
+    </li>
+    <li><p>You will now create the first half of the smoke ring&rsquo;s
+    journey to the top of the specimen background.</p>
+    <p>Give the smoke ring 12 frames to reach its half-way point. Move the
+    Timeline Frame cursor to Frame <b>22</b>.</p>
+    </li>
+    <li><p>With the <b>Object Mode</b> tool icon (<img src =
+    "images/ObjectModeIcon.gif" alt = "Object Mode icon" width = "26">), click
+    on the smoke ring image to select it and move it about half-way up the
+    microscope specimen image and to the left by about the same amount of
+    distance.</p>
+    <p>With the ring image still selected, press <b>S</b> to scale it and
+    increase its size to about half of what its final size is to be.</p>
+    <p>The thickness of the ring has increased with resizing. To keep the ring
+    thickness under control, change the <b>thickness</b> to <b>2</b>
+    &lt;Enter&gt; in the <b>Selected Objects</b> panel.</p>
+    <p>Now, press <b>R</b> and rotate the ellipse so that it is in line with
+    the east-west direction. Click with the left mouse button when the ellipse
+    is oriented satisfactorily.</p>
+      <figure>
+        <img src = "images/SmokeRing03.gif" alt = "Scale the smoke ring to about
+        half of its intended full size" class =
+        "img-fluid">
+        <figcaption>Scale the smoke ring up to about half of its intended full
+        size and set its <b>thickness</b> to <b>2</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select the <b>Point Mode</b> tool (<img src =
+    "images/PointModeIcon.gif" alt = "Point Mode tool icon" width = "26">),
+    select the node on the ellipse&rsquo;s long side, and move it inward to make
+    the ellipse narrower.
+      <figure>
+        <img src = "images/SmokeRing04.gif" alt = "Using the Point Mode tool to
+        make the smoke ellipse narrower" class = "img-fluid">
+        <figcaption>Using the Point Mode tool to make the smoke ellipse
+        narrower.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now preview the animation that you have created so far.</p>
+    <p>Click-drag the Timeline frame cursor back to <b>0</b>.</p>
+    <p>Click on the <b>Render Preview</b> arrow.</p>
+      <figure>
+        <img src = "images/RenderPreviewArrow.png" alt = "Render Preview arrow"
+        class = "img-fluid">
+        <figcaption>Render Preview arrow.</figcaption>
+      </figure>
+      <p>Your animation should be similar to the one below.</p>
+      <div class = "embed-responsive embed-responsive-4by3">
+        <video width = "1080" height = "768" controls>
+          <source src = "videos/McBirneyPartial1.mp4" type = "video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </li>
+    <br>
+    <li><p>File &gt; Save.</p>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>You will now create the second (and last) leg of the smoke
+    ring&rsquo;s journey to the top.</p>
+    <p>Drag the Timeline Frame cursor to Frame <b>34</b>.</p>
+    <p>Type <b>2</b> in the <b>thickness</b> number field in the <b>Selected
+    Objects</b> panel so the ring doesn&rsquo;t turn into a helium-filled
+    doughnut.</p>
+    <p>Select the <b>Point Mode</b> tool (<img src = "images/PointModeIcon.gif"
+    alt = "Point Mode tool icon" width = "26">) and stretch out the ellipse to
+    what you feel its final size should be, and, if need be, make it
+    narrower.</b>
+      <figure>
+        <img src = "images/SmokeRing06.gif" alt = "Stretching out the ellipse"
+        class = "img-fluid">
+        <figcaption>Stretching out the ellipse.</figcaption>
+      </figure>
+      <p>Your animation should be similar to the one below.</p>
+      <div class = "embed-responsive embed-responsive-4by3">
+        <video width = "1080" height = "768" controls>
+          <source src = "videos/McBirneyPartial2.mp4" type = "video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </li>
+    <br>
+    <li><p>The smoke ring has made it to the top. It will now dissipate away
+    into nothingness.</p>
+    <p>Drag the Frame cursor to Frame <b>45</b>. Select the smoke ring with the
+    <b>Object Mode</b> tool (<img src = "images/ObjectModeIcon.gif" alt =
+    "Object Mode icon" width = "26">) and change its opacity (alpha channel) to
+    <b>alpha = 0</b>. The smoke ring disappears. Only its trace is visible to
+    let you know where it is (this trace does not appear in the animation).</p>
+    <p>If the ring&rsquo;s thickness has changed, then change it back to
+    <b>2</b>.</p>
+      <figure>
+        <img src = "images/SmokeRing07.gif" alt = "Making the smoke ring
+        disappear at Frame 45" class = "img-fluid">
+        <figcaption>Making the smoke ring disappear at Frame 45. The object disc
+        was moved to Frame 37 to draw out the time length of the second leg by
+        a fraction of a second.</figcaption>
+      </figure>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>Back-track through the animation one frame at time by pressing the
+    left arrow. The smoke ring starts to reappear as you go back in time. It
+    should start fading out at Frame 45, not at some time earlier than Frame
+    37.</p>
+    <p>To fix this discrepancy in the fade-out, click at the top of the Frame
+    44 column to highlight it.<p>
+    </li>
+    <li><p>Make sure the ellipse is selected. Its alpha value will be some low
+    value, such as <b>0.333</b> in the figure below.</p>
+    <p>Change the value to <b>1</b>, that is full opacity. The ellipse is now
+    opaque and it will start its fade-out in the next frame.</b>
+      <figure>
+        <img src = "images/PrematureFadeOutAtEnd.gif" alt = "Premature fade-out
+        at end" class = "img-fluid">
+        <figcaption>Premature fade-out at end.</figcaption>
+      </figure>
+    </li>
+    <li><p>There is one last loose end to tie up. The smoke ring is visible in
+    Dr. McBirney&rsquo;s pipe at the very beginning of the animation. It should
+    become visible starting at Frame 10.</p>
+    <p>Click at the top of Frame 9, then click on the <b>Circle</b> object disc
+    to select it, then press &lt;Ctrl&gt;-D to duplicate it. An object disc
+    appears in the <b>Circle</b> object row which is a duplicate of the original
+    object next-door at Frame 10.</p>
+    <p>Change the alpha value to <b>0</b>. The microscopic smoke ring disappears
+    and remains gone from the very beginning of the animation up to Frame 9. It
+    then appears and goes on its wayward journey from Frame 10 on.</p>
+      <figure>
+        <img src = "images/SmokeRing08.gif" alt = "Setting the smoke to ring
+        fully transparent at Frame 9" class = "img-fluid">
+        <figcaption>Setting the smoke ring to full transparency at Frame
+        9.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save to save your work.</p>
+    </li>
+    <li><p>Below is the animation with the smoke ring visible starting at
+    Frame 0.</p>
+      <div class = "embed-responsive embed-responsive-4by3">
+        <video width = "1080" height = "768" controls>
+          <source src = "videos/McBirneyPartial3.mp4" type = "video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </li>
+    <li><p>Below is the animation with the smoke ring visible starting at
+    Frame 10.</p>
+      <div class = "embed-responsive embed-responsive-4by3">
+        <video width = "1080" height = "768" controls>
+          <source src = "videos/McBirneyPartial4.mp4" type = "video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Adding a Second Animation</h2>
+  </header>
+  <p>You will now make Dr. McBirney wink after the smoke ring has
+  dissipated.</p>
+  <ol>
+    <li><p>With the <b>Object Mode</b> tool (<img src = "images/ObjectModeIcon.gif"
+    alt = "Object Mode icon" width = "26">) active, press &lt;Ctrl&gt;-G to
+    group the smoke ring and background images. Doing this allows you to move
+    everything as a unit.</p>
+    <p>Zoom in on Dr. McBirney using &lt;Ctrl&gt; with the mouse roll wheel and
+    move the whole image as needed so that the good doctor fills the canvas.
+    Magnifying the image will help tremendously in drawing the eye wink.</p>
+    <p>Move the Timeline Frame cursor to Frame <b>40</b>, where this second
+    animation will start.</p>
+    </li>
+    <li><p>Click on the <b>Circle</b> label to activate the smoke ring
+    circle. The <b>Circle</b> bar highlights, indicating that it is active
+    and the <b>Selected Objects</b> panel populates with <b>Circle</b> data.</p>
+    </li>
+    <li><p>Expand the <b>outline</b> attribute and set <b>alpha = 0</b> to
+    ensure full tranparency of the smoke ring at that frame. A blue object point
+    appears in the Frame 40 column on the <b>Circle</b> timeline.</p>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/Wink01.png" alt = "Magnifying Dr. McBirney" class =
+        "img-fluid">
+        <figcaption>Magnifying Dr. McBirney. Time frame 40 is active,
+        <b>Circle</b> is active, and <b>Circle&rsquo;s</b> alpha channel is set
+        to <b>0</b>.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Circle Mode</b> icon (<img src =
+    "images/CircleModeIcon.gif" alt = "Circle Mode icon" width = "26">) in the
+    toolbar and draw a circle that is large enough to cover Dr. McBirney&rsquo;s
+    right eye. This circle will represent the eyelid in the wink which, of
+    course, covers the eye. Note that the circle has no color fill and but a
+    black stroke. Click with the left mouse button to turn off the circle
+    function when the circle is of a good size.</p>
+      <figure>
+        <img src = "images/Wink02.gif" alt = "Drawing a circle around Dr.
+        McBirney's right eye" class = "img-fluid">
+        <figcaption>Drawing a circle around Dr. McBirney&rsquo;s right
+        eye.</figcaption>
+      </figure>
+    </li>
+    <li><p>The circle will be listed in the <b>Selected Objects</b> panel as
+    <b>Circle 0</b> to differentiate it from the earlier <b>Circle</b> that
+    represents the smoke ring.</p>
+      <figure>
+        <img src = "images/Wink03.gif" alt = "The circle listed as Circle 0 in
+        the Selected Objects panel" class = "img-fluid">
+        <figcaption>The circle listed as <b>Circle 0</b> in the <b>Selected
+        Objects</b> panel.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Expand Item</b> arrow (<img src =
+    "images/ExpandArrow.gif" alt = "Expand Item arrow" width "26">) to show the
+    components and attributes that can contribute to animating the eye-wink
+    circle.</p>
+      <figure>
+        <img src = "images/Wink04.gif" alt = "Expanding the circle object in the
+        Selected Objects panel" class = "img-fluid">
+        <figcaption>Expanding the circle object in the Selected Objects
+        panel.</figcaption>
+      </figure>
+    </li>
+    <li><p>The <b>fill</b> attribute is grayed out, a sign that the circle does
+    not have a color fill. You will give it an opaque white color fill that will
+    make Dr. McBirney&rsquo;s eye disappear during the wink.<p>
+    <p>Go to the <b>Fill and Stroke</b> panel, and click on the <b>Fill</b> and
+    <b>Flat</b> tabs. They will highlight.</p>
+      <figure>
+        <img src = "images/Wink05.gif" alt = "Clicking on the Fill and Flat tabs
+        in the Fill and Stroke panel" class = "img-fluid">
+        <figcaption>Clicking on the <b>Fill</b> and <b>Flat</b> tabs
+        in the <b>Fill and Stroke</b> panel.</figcaption>
+      </figure>
+    </li>
+    <li><p>Create an opaque white color fill by sliding all four sliders to the
+    right end of the sliders.</p>
+    <p>If you are using a different color model than RGB, then move the sliders
+    appropriately so that you obtain a solid opaque white color fill.</p>
+      <figure>
+        <img src = "images/Wink06.gif" alt = "Moving all color sliders to the
+        right end of the slider bars to obtain an opaque while color fill" class
+        = "img-fluid">
+        <figcaption>Moving all color sliders to the right end of the slider bars
+        to obtain an opaque while color fill (RGB color model).</figcaption>
+      </figure>
+    </li>
+    <li><p>Once you have set the circle&rsquo;s color fill to opaque white,
+    the <b>fill</b> attribute in the <b>Selected Objects</b> panel shows that it
+    is now active and can be manipulated.</p>
+      <figure>
+        <img src = "images/FillAttributeActive.gif" alt = "Fill attribute now
+        active" class = "img-fluid">
+        <figcaption>Fill attribute now active.</figcaption>
+      </figure>
+    </li>
+    <li><p>The circle outline needs to be eliminated. The white color fill
+    is to be animated &mdash; the fill is transparent before and after the wink,
+    but fully opaque during the wink to cover the eye.</p>
+    <p>Expand the <b>fill</b> and <b>outline</b> attributes.</p>
+      <figure>
+        <img src = "images/FillAndOutlineExpanded.gif" alt = "Expanding both the
+        fill and outline attributes" class = "img-fluid">
+        <figcaption>Expanding both the <b>fill</b> and <b>outline</b>
+        attributes.</figcaption>
+      </figure>
+    </li>
+      <figure>
+        <img src = "images/AdjustingFillAndOutlineAttributes.png" alt =
+        "Adjusting the fill and outline attributes" class = "img-fluid">
+        <figcaption>Adjusting the fill and outline attributes.</figcaption>
+      </figure>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>Now that the closed eyelid has been drawn, it&rsquo;s time to draw
+    the lower part of the eyelid edge.</p>
+    <p>Click on the <b>Draw Path Mode</b> icon (<img src =
+    "images/DrawPathModeIcon.gif" alt = "Draw Path Mode icon" width =
+    "26">).</p>
+    <p>Click-drag the <b>Draw Path Tool</b> icon to draw the lower eyelid edge.
+    Note that it works just like Inkscape&rsquo;s <b>Pencil Tool</b>.</p>
+      <figure>
+        <img src = "images/Wink10.gif" alt = "Drawing the lower edge of the
+        eyelid" class = "img-fluid">
+        <figcaption>Drawing the lower edge of the eyelid.</figcaption>
+      </figure>
+    </li>
+    <li><p>Color the lower eyelid edge black.</p>
+    <p>Coloring is to be applied to the stroke of the eyelid edge &mdash; there
+    will be no fill. The white circle you already drew takes care of that.</p>
+    <p>Click on the <b>Stroke</b> and <b>Flat</b> tabs, and drag the RGB sliders
+    to the left of their slider bars. Set the <b>A</b> value (alpha or opacity)
+    to <b>1</b>. Don&rsquo;t worry about drawing a precise half-circle. Doing
+    that is the next task.</p>
+      <figure>
+        <img src = "images/Wink11.gif" alt = "Drawing the lower edge of the
+        eyelid" class = "img-fluid">
+        <figcaption>Drawing the lower edge of the eyelid.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now click on the <b>Point Mode</b> tool (<img src =
+    "images/PointModeIcon.gif" alt = "Point Mode tool icon" width = "26">) and
+    then click on one of the end-nodes of the eyelid curve you just drew.
+    Both nodes now have directional handles that you can work with to smoothen
+    the eyelid curve, just like working with Inkscape&rsquo;s <b>Node</b>
+    tool.</p>
+      <figure>
+        <img src = "images/Wink12.gif" alt = "Nodes with directional handles"
+        class = "img-fluid">
+        <figcaption>Nodes with directional handles.</figcaption>
+      </figure>
+    </li>
+    <li><p>Adjust the directional handles until you get an eyelid that looks ...
+    like an eyelid.</p>
+      <figure>
+        <img src = "images/Wink13.gif" alt = "Adjusting the eyelid curvature
+        using the directional handles" class = "img-fluid">
+        <figcaption>Adjusting the eyelid curvature using the directional
+        handles.</figcaption>
+      </figure>
+    </li>
+    <li><p>The curve of the eyelid is thin compared to the surrounding
+    strokes.</p>
+    <p>Increase its <b>thickness</b> to <b>2</b>. You will find the
+    eyelid&rsquo;s <b>thickness</b> attribute under <b>Path</b> &gt;
+    <b>Outline</b> in the <b>Selected Objects</b> panel.</p>
+    <p>Click on the Animation Recorder button for <b>alpha</b>. You will make
+    the lower eyelid become visible only during the wink &mdash; it will be
+    hidden everywhere else.</p>
+      <figure style = "float: left;" class = "ml-5 mr-5">
+        <img src = "images/Wink14.gif" alt = "Changing the eyelid thickness to
+        two and adding the eyelid alpha channel to the Animation Recorder" class
+        = "img-fluid">
+        <figcaption>Changing the eyelid thickness to<br>two and adding the
+        eyelid<br>alpha channel to the<br>Animation Recorder.</figcaption>
+      </figure>
+      <figure style = "float: left;">
+        <img src = "images/Wink15.gif" alt = "Result" class = "img-fluid">
+        <figcaption>Result.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <div style = "clear: left;"></div>
+  <ol start = "17">
+    <li><p>Dr. McBirney&rsquo;s right eye is in full wink at Frame 40. Press the
+    right arrow to test the animation frame by frame. His right eye should be
+    open at Frame 39 and earlier. It isn&rsquo;t.</p>
+    <p>Dr. McBirney&rsquo;s right eye is still closed at Frame 38 and
+    earlier. To remedy this problem, move the Timeline Frame cursor to
+    Frame 39.</p>
+      <figure>
+        <img src = "images/Frame39NoOpenEye.gif" alt = "Dr. McBirney's eye is
+        not open at Frame 39" class = "img-fluid">
+        <figcaption>Dr. McBirney&rsquo;s eye is not open at
+        Frame 39.</figcaption>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>Click on <b>Circle 0</b> to make that animation item active. Its
+    data shows up in the <b>Selected Objects</b> panel.</p>
+      <figure>
+        <img src = "images/Circle0Selected.png" alt = "Circle 0 animation item
+        selected" class = "img-fluid">
+        <figcaption><b>Circle 0</b> animation item selected.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>Set <b>Circle 0</b>&rsquo;s alpha (opacity) to <b>0</b>. Dr.
+      McBirney&rsquo;s right eye appears. However, the closed lower eyelid is
+      still visible.</p>
+      <figure>
+        <img src = "images/AlphaSetTo0.gif" alt = "Circle 0's alpha value set to
+        zero" class = "img-fluid">
+        <figcaption><b>Circle 0</b>&rsquo;s alpha value set to
+        zero</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>Path</b> label in the timeline to make it active.
+    The <b>Path</b>&rsquo;s data appears in the <b>Selected Objects</b>
+    panel.</p>
+    <p>Set the <b>Path</b>&rsquo;s alpha value to <b>0</b> to make it
+    transparent. Only the path trace appears and the lower eyelid is transparent
+    for Frame 39 and all earlier frames.</p>
+      <figure>
+        <img src = "images/LowerEyelidSetTo0.png" alt = "Lower eyelid's alpha
+        value set to zero" class = "img-fluid">
+        <figcaption>Lower eyelid&rsquo;s alpha value set to zero.</figcaption>
+      </figure>
+    </li>
+    <li><p>Test this part of the animation.</p>
+    <p>Use the left arrow to move the Timeline Frame cursor to Frame 40. The
+    lower eyelid is still transparent and remains that way for the remaining
+    frames.</p>
+      <figure>
+        <img src = "images/LowerEyelidStillTransparent.gif" alt = "Lower eyelid
+        still tranparent at Frame 40" class = "img-fluid">
+        <figcaption>Lower eyelid still tranparent at Frame 40.</figcaption>
+      </figure>
+    </li>
+    <li><p>With the lower eyelid still selected and the Timeline cursor still on
+    Frame 40, set the alpha value of the lower eyelid to <b>1</b> in the
+    <b>Selected Objects</b> panel. The lower eyelid appears.</p>
+    <p>Now retest the animation to make sure that Dr. McBirney&rsquo;s wink
+    actually starts at Frame 40 without any muss or fuss.</p>
+      <figure>
+        <img src = "images/LowerEyelidSetTo1.gif" alt = "Lower eyelid's alpha
+        value set to one" class = "img-fluid">
+        <figcaption>Lower eyelid&rsquo;s alpha value set to one.</figcaption>
+      </figure>
+    </li>
+    <li><p>File &gt; Save.</p>
+    </li>
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+    <li><p>Have Dr. McBirney &ldquo;unwink&rdquo; at Frame <b>47</b>.</p>
+    <p>Move the Timeline cursor to Frame <b>47</b>.</p>
+        <figure>
+          <img src = "images/TimelineCursorAtFrame47.png" alt = "Timeline
+          cursor at Frame 47" class = "img-fluid">
+          <figcaption>Timeline cursor at Frame 47.</figcaption>
+        </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/LowerEyelidEndingTransparency.png" alt = "Lower
+        eyelid curve at ending transparency frame" class = "img-fluid">
+        <figcaption>Lower eyelid curve at ending transparency
+        frame.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/EyelidEndingTransparency.png" alt = "White eyelid
+        disk at ending transparency frame" class = "img-fluid">
+        <figcaption>White eyelid disc at ending transparency frame.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/WinkGradientChangeAtFrame44.gif" alt = "Wink
+        gradient change at Frame 44" class = "img-fluid">
+        <figcaption>Wink gradient change at Frame 44.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/LowerEyelidCorrection.gif" alt = "Correcting the
+        transparency for the lower eyelid curve" class = "img-fluid">
+        <figcaption>Correcting the transparency for the lower eyelid
+        curve.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src = "images/WhiteEyelidDiscCorrection.gif" alt = "Correcting the
+        transparency for the white eyelid disc" class = "img-fluid">
+        <figcaption>Correcting the transparency for the white eyelid
+        disc.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now test the animation by using the left and right arrows to go back
+    and forth sequentially through the wink animation. If it doesn&rsquo;t work
+    to satisfaction, troubleshoot where you think the problem might lie. It can
+    always be fixed.</p>
+    </li>
+    <li><p>Press &lt;Ctrl&gt;-A to select all components of the animation and
+    then press &lt;Ctrl&gt;-G to group them.</p>
+    </li>
+    <li><p>Press &lt;Ctrl&gt;-<b>0</b> to return the canvas to its default
+    zoom magnification. Move the grouped image so that it is centered on the
+    canvas.</p>
+    </li>
+    <li><p>Test preview your work by first moving the Timeline Frame cursor to
+    Frame <b>0</b> and then by clicking on the <b>Render Preview</b> arrow.</p>
+      <figure>
+        <img src = "images/RenderPreviewArrow2.png" alt = "Render Preview arrow"
+        class = "img-fluid">
+        <figcaption>Render Preview arrow.</figcaption>
+      </figure>
+    </li>
+    <li><p>You should a see work of animation similar to the one below.</p>
+      <div class = "embed-responsive embed-responsive-4by3">
+        <video width = "1080" height = "768" controls>
+          <source src = "videos/McBirneyFinalVideo.mp4" type = "video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </li>
+    <br>
+    <li><p>File &gt; Save.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Embedding an Animation into HTML for Web Presentation</h2>
+  </header>
+  <p>In this tutorial, embedding is almost a brainless task, it is that
+  easy.</p>
+  <ol>
+    <li><p>Download HTML file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial19/MyHTMLPage.html">MyHTMLPage.html</a> and store it in
+    a convenient location.</p>
+    </li>
+    <li><p>Copy or move your <b>MyAnimation.mp4</b> video clip to the same
+    folder where the HTML file is being stored.</p>
+    </li>
+    <li><p>Test your Web page by double-clicking on <b>MyHTMLPage.html</b>.</p>
+    </li>
+    <li><p>If the page and animation work well, then you are done. Enjoy your
+    animation, make friends and influence people!</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Final Thoughts on <i>enve</i>, Inkscape, and Animation</h2>
+  </header>
+  <p>You have now learned how to create a basic animation using Inkscape in
+  conjunction with the <b>enve</b> 2-D animation program. There are other 2-D
+  programs available on the Web. Not only that, there are 3-D programs, such as
+  Anim8or, Art of Illusion, and last but not least, Blender, to broaden
+  extend your frontier of what&rsquo;s possible in the graphic arts. There is
+  more than enough to spend a lifetime on, enhancing your technical and creative
+  skills and feeding your imagination.</p>
+  <p>Inkscape&rsquo;s strength lies in its capabilities for drawing 2-D artwork
+  with high quality that compares favorably with other drawing software
+  available on the market. Although it does not offer animation, programmers
+  and programming enthusiasts have made great strides in creating software that
+  suggests that great things are already on the way to your desktop or laptop.
+  <b>enve</b> is one of these shining new stars attracting the attention of
+  many graphic artists who want to expand their horizons into the realm of art
+  that moves.</p>
+  <p>Because <b>enve</b> has many of the same drawing tools and features as
+  Inkscape, it makes basic sense to consider it as a next reasonable step to
+  take in your journey as a developing graphic artist. This tutorial is only
+  meant to get you started on that road. There are other animation programs out
+  there to choose from as your skill set and imagination grow and evolve.</p>
+  <p>Use this tutorial as a way to start playing with animation possibilities
+  and produce exciting new, fun and funny, meaningful, awe-inspiring, great art
+   that is of your creation. There is still magic in this universe of ours!</p>
+</section>
+</div>
+
+<hr>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png"
+  alt = "Link to Table of Contents" class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
