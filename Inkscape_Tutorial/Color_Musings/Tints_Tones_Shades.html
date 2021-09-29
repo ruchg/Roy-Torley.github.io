@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Thoughts and Theory on Tints, Tones, and Shading</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, scaled vector graphics, SVG,
+  scaled vector graphics, tint, tone, shading, shade, color theory, tint theory,
+  tone theory, shading theory, printing, printing preparation">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <div class = "container">
+    <a id = "Top"></a>
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Thoughts and Theory on Tints, Tones, and Shading</h1>
+        </header>
+    </div>
+    <div class = "row">
+      <div class = "col-md-4 offset-md-1">
+        <img src = "images/Tone04.png" alt = "Tone Scale Slider" class =
+        "img-fluid">
+        <div class = "mt-4">
+        <img src = "images/Tone05.png" alt = "Tone Scale Slider" class =
+        "img-fluid">
+        </div>
+      </div>
+      <div class = "col-md-6 offset-md-1 mt-2">
+      <p class = "lead">Preparing a piece of graphic artwork for print using a
+      printing press requires that attention be paid to details, such as
+      brightness, contrast, gamma correction, the type of printer, and more, so
+      that the printed result matches to satisfaction what you see on-screen.
+      Applying tinting, tones, and shading to enhance or subdue colors is part
+      of the process. The musings and theory presented below are directed to
+      understanding what tint, tone, and shading are all about in a framework
+      built on basic color theory, algebra, and geometry.</p>
+      </div>
+    </div>
+  </div>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Defining Our RGB Color Space</h2>
+  </header>
+<div class = "row">
+<section>
+  <p>Consider a 3-D cube whose x, y, and z axes represent the <b>R</b>ed,
+  <b>G</b>reen, and <b>B</b>lue color space, or <b>RGB</b> space. The origin, at
+  point (0, 0, 0) represents black. Diagonally opposite the origin, across the
+  cube, is point (255, 255, 255), which represents white. Each edge goes from 0
+  to 255 in color values. There are 16,777,216 individual 24-bit color points
+  contained in and on the cube that can be used to color an individual pixel.
+  Because each pixel can be colored individually, we have available to us, as
+  graphic artists, what feels like an infinity of image possibilities. The
+  number of possibilities is huge to where your mind will melt, and yet it can
+  be calculated and each color number can be manipulated with computer
+  programming techniques. We see this capability in action with Inkscape.</p>
+  <figure>
+    <img src = "images/RGBCube.png" alt = "RGB color-space cube" class =
+    "img-fluid">
+    <figcaption>RGB color-space cube.</figcaption>
+  </figure>
+  <p>We can portray grayscale colors on the line segment that connects black at
+  the cube&rsquo;s origin (0, 0, 0), to white at point (255, 255, 255), along
+  the cube&rsquo; body diagonal.</p>
+  <figure>
+    <img src = "images/GrayscaleLine.png" alt = "RGB color-space cube showing
+    the grayscale line" class = "img-fluid">
+    <figcaption>RGB color-space cube showing the grayscale line.</figcaption>
+  </figure>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Introduction to Color Shading</h2>
+  </header>
+  <p>Consider a color, any color, inside the RGB color cube. I picked (235, 199,
+  56), which is close to Bright Sun Yellow and RAL Zinc Yellow.</p>
+  <p>If you have either of these colors as a paint, you add shading to the color
+  by adding a drop of pure black paint to a small amount of the yellow and
+  mixing thoroughly. To add more shading, you add another, and more drops of
+  black paint, thoroughly mixing, until you achieve the degree of darkness that
+  you are looking for (see <a href = "https://www.beachpainting.com/blog/color-hue-tint-tone-and-shade/"><b>Beach Painting Contractors</b></a>).</p>
+  <p>You can create a shaded version of your original color by adding black
+  in a drawing program, such as Inkscape. It is just like moving the point that
+  represents your original color, here Bright Sun Yellow, straight towards the
+  origin of the color cube, which represents black.</p>
+  <p>Unlike your mixing bowl of paint, you can move your color point back and
+  forth along the color path to adjust the degree of shading. With the paint,
+  you can only add black paint. With Inkscape, you can both add and remove the
+  black paint with a clear conscience.</p>
+  <figure>
+    <img src = "images/Shading01.png" alt = "Shading path connecting your
+    original Bright Sun Yellow color with black" class = "img-fluid">
+    <figcaption>Shading path connecting your original Bright Sun Yellow color
+    with black.</figcaption>
+  </figure>
+  <p>As you move from Bright Sun Yellow to black, the mixed color will darken
+  from 100% yellow to 100% black, going through all shades in between.</p>
+  <figure>
+    <img src = "images/Shading02.png" alt = "Different shades of Bright Sun
+    Yellow, going from the original color through to black" class = "img-fluid">
+    <figcaption>Different shades of Bright Sun Yellow, including the end colors
+    black and Bright Sun Yellow.</figcaption>
+  </figure>
+  <p>This color path that connects your original color to black can be
+  reexpressed as a shading slider bar that you can adjust to integer precision
+  (no real numbers &mdash; all color values are integer values).</p>
+  <p>The degree of shading, the RGB code for the new shaded color, the code for
+  black, and, finally, the code for your starting color are all related by an
+  equation shown below as a color example. This equation is easy to translate
+  into computer code that can then be made incarnate as an application dedicated
+  to shading colors.</p>
+  <figure>
+    <img src = "images/Shading03.png" alt = "Shading Slider Bar" class =
+    "img-fluid">
+    <figcaption>Shading Slider Bar.</figcaption>
+  </figure>
+  <p>Inkscape&rsquo;s tint function is accessed by choosing Filters &gt; Colors
+  &gt; Fade to Black or White&hellip; For <b>Fade to:</b>, choose <b>Black</b>.
+  You can see the tint function in action below.</p>
+</div>
+<div class = "row">
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Shade1.00.png" alt = "Shade color slider bar at 100% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Shade color slider bar at 100% spot color or hue.</figcaption>
+  </figure>
+  </div>
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Shade0.8.png" alt = "Shade color slider bar at 80% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Shade color slider bar at 80% spot color or hue.</figcaption>
+  </figure>
+  </div>
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Shade0.5.png" alt = "Shade color slider bar at 50% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Shade color slider bar at 50% spot color or hue.</figcaption>
+  </figure>
+  </div>
+</div>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <div class = "row">
+  <header>
+    <h2>Introduction to Color Tinting</h2>
+  </header>
+  <p>Color tinting works in the same way as with shading, except that now, we
+  add pure white to our original color, instead of black (see <a href = "https://www.beachpainting.com/blog/color-hue-tint-tone-and-shade/"><b>Beach Painting Contractors</b></a>).
+  The result is that we obtain a lighter, desaturated version of the original
+  color. The color tint path, which is also a straight line, now takes us from
+  the original color inside the RGB color cube to the far corner of the cube
+  where white (255, 255, 255) is located.</p>
+  <figure>
+    <img src = "images/Tint01.png" alt = "Tinting path from our original color
+    to the far corner of the color cube where pure white is located" class =
+    "img-fluid">
+    <figcaption>Tinting path from our original color at P(235, 199, 56) to the
+    far corner of the color cube where pure white (255, 255, 255) is
+    located.</figcaption>
+  </figure>
+  <p>The tinting path is not a continuation of the shading path. When the color
+  you want to shade or tint is off the grayscale path, the shading and tinting
+  processes always take different paths from one another when it comes to color
+  adjustment. They appear as two line segments having different points of origin
+  and orientations in the figure below.</p>
+  <figure>
+    <img src = "images/Tint02.png" alt = "The tinting path is different from
+    the shading path" class = "img-fluid">
+    <figcaption>The tinting path is different from the shading
+    path.</figcaption>
+  </figure>
+  <p>Just as with the shading path, points along the tinting path give you
+  different tints of the original Bright Sun Yellow (or any color), simulating
+  different proportions of white with the yellow.</p>
+  <figure>
+    <img src = "images/Tint03.png" alt = "Different points along the tinting
+    path yield different mixtures of white and Bright Sun Yellow" class =
+    "img-fluid">
+    <figcaption>Different points along the tinting path yield different mixtures
+    of white and Bright Sun Yellow.</figcaption>
+  </figure>
+  <p>The tint path can be reexpressed as a color slider bar that demonstrates
+  how you can mix different percentages of white and, here, Bright Sun Yellow to
+  to achieve a lighter, desaturated version of the original color. The equation
+  that gives you the RGB code for the new desaturated color is shown under the
+  bar in the figure below as an example of how values are used. Like the
+  equation shown earlier for shading, it is a basic algebraic equation used in
+  a 3-D space where <i>x</i>, <i>y</i>, and <i>z</i> are replaced by RGB.</p>
+  <figure>
+    <img src = "images/Tint04.png" alt = "Tint color slider bar" class =
+    "img-fluid">
+    <figcaption>Tint color slider bar.</figcaption>
+  </figure>
+  <p>Inkscape&rsquo;s tint function uses the same dialog box as the shade
+  function. The tint function is accessed by choosing Filters &gt; Colors &gt;
+  Fade to Black or White&hellip; For <b>Fade to:</b>, choose <b>White</b>. You
+  can see the tint function in action below.</p>
+</div>
+<div class = "row">
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Tint1.00.png" alt = "Tint color slider bar at 100% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Tint color slider bar at 100% spot color or hue.</figcaption>
+  </figure>
+  </div>
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Tint0.5.png" alt = "Tint color slider bar at 50% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Tint color slider bar at 50% spot color or hue.</figcaption>
+  </figure>
+  </div>
+  <div class = "col-md-4">
+  <figure>
+    <img src = "images/Tint0.2.png" alt = "Tint color slider bar at 20% spot
+    color or hue" class = "img-fluid">
+    <figcaption>Tint color slider bar at 20% spot color or hue.</figcaption>
+  </figure>
+  </div>
+  </div>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <div class = "row">
+  <header>
+    <h2>Introduction to Color Toning</h2>
+  </header>
+  <p>Color toning takes shading and tinting up a notch when it comes to color
+  manipulation. Color toning is done by adding gray to your original color to
+  subdue its hue, like shading with black and tinting with white. However, gray
+  does not come as a single hue or pure color. You have light grays, medium
+  grays, dark grays, off-white, off-black, and if you include black and white,
+  there are 256 shades of gray on our RGB color cube&rsquo;s grayscale line.</p>
+  <p>We won&rsquo;t work with black and white in this section because they are
+  used separately in shading and tinting. Here, color toning involves strict
+  grays whose gamut (color range) starts at (01, 01, 01) and ends at (254, 254,
+  254), not (0, 0, 0) to (255, 255, 255).</p>
+  <p>You will get a different range of colors to choose from when your color
+  range ends (or starts) with a different shade of gray. Below is one tone line
+  that start with a particular spot color and ends on a light gray. For example,
+  the addition of light gray to your original color acts to subdue its
+  intensity.</p>
+  <figure>
+    <img src = "images/Tone01.png" alt = "Toning a magenta color with light
+    gray" class = "img-fluid">
+    <figcaption>Toning a magenta color with light gray.</figcaption>
+  </figure>
+  <p>Now, keep the original color the same but change the gray tone to a darker
+  gray. See how the range of color changes to subdued, and yet darker
+  possibilities for your color palette.</p>
+  <figure>
+    <img src = "images/Tone02.png" alt = "Toning a magenta color with dark
+    gray" class = "img-fluid">
+    <figcaption>Toning a magenta color with dark gray.</figcaption>
+  </figure>
+  <p>Both ends of the color tone line can be changed. This flexibility of
+  changing how light or how dark your starting gray color is <u>and</u> changing
+  your starting spot color or hue requires working with two color gamuts: one
+  gamut for the grayscale line and the other for your spot color or hue.</p>
+  <p>The gray that you choose from the grayscale line becomes the new beginning
+  for the tone scale line. You can now find a tone balance between a good gray
+  and your original color to de-highlight the latter according to your
+  vision.</p>
+  <figure>
+    <img src = "images/Tone03.png" alt = "Working with a grayscale gamut and
+    spot color or hue gamut to give a color a tone" class = "img-fluid">
+    <figcaption>Working with a grayscale gamut and spot color or hue gamut to
+    give a color a tone.</figcaption>
+  </figure>
+  <p>The figure below shows how a light spot color can be made more subdued
+  with the judicious application of light gray to its toning gamut.</p>
+  <figure>
+    <img src = "images/Tone04.png" alt = "Working with a grayscale gamut and
+    spot color or hue gamut to give a color a tone" class =
+    "img-fluid">
+    <figcaption>Giving a lighter spot color a lighter gray tone.</figcaption>
+  </figure>
+  <p>Two color gamut slider bars can be coded and linked so that a result from
+  the grayscale gamut slider is immediately applied to the beginning of the
+  second tonal scale gamut for the spot color. Color tones, being defined by
+  two slider bars, allow you to create subtleties in color intensity that
+  suggest differences in depth, how the viewer should direct their attention,
+  and elicit different moods and feelings.</p>
+  <p>Percentages are for recording those selections of color that are important
+  to your work.</p>
+  <figure>
+    <img src = "images/Tone05.png" alt = "How an Inkscape color toning
+    application might look" class = "img-fluid">
+    <figcaption>How an Inkscape color toning application might
+    look.</figcaption>
+  </figure>
+  <p>Working with color tones requires a feel for what works best for your
+  artwork. As you experiment with different combinations of gray and spot color
+  or hue, you will gain the experience and the intuition required to adjust
+  colors freely, easily, and with confidence.</p>
+</section>
+<div class = "row mt-2">
+  <div class = "col-md-2">
+    <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+    class = "img-fluid"></a>
+  </div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png"
+  alt = "Link to Table of Contents" class = "img-fluid"></a>
+</div>
+</div>
+
+</div>
+
+<hr>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
