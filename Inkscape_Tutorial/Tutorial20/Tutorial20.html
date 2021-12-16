@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang = "en-us" >
+<head>
+  <meta charset = "utf-8" >
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Inkscape Tutorial 20 &mdash; Printing Artwork and Producing Color Separations</title>
+  <meta name = "author" content = "Roy F. Torley" >
+  <meta name = "keywords" content = "Inkscape, graphic design, graphic arts,
+  tutorial, self-teaching, self-education, importing graphics files, bitmap to
+  svg conversion, basic animation, 2-D animation, scaled vector graphics, SVG,
+  scaled vector graphics, embedding video, enve">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel = "stylesheet" href = "css/styles.css">
+  <style>
+    .video-header {
+      font-family: Constantia, Garamond, Georgia, "Times New Roman", serif;
+      font-size: 300%;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <div class = "container">
+    <a id = "Top"></a>
+    <div class = "row mt-2">
+      <div class = "col-md-2">
+        <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png" alt = "Link to Table of Contents"
+        class = "img-fluid"></a>
+        <a id = "Top"></a>
+      </div>
+    </div>
+  	<div class = "row mt-2">
+  		<div class = "col-md-10 offset-md-1">
+        <header>
+          <h1>Tutorial 20 &mdash; Printing Artwork and Producing Color
+          Separations</h1>
+        </header>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-5 offset-md-1">
+        <img src = "images/Tutorial20_circus.gif" alt = "Tutorial 20 image of
+        a circus poster" class = "img-fluid">
+      </div>
+      <div class = "col-md-6">
+      <p class = "lead">The quality and color of your final printed output are
+      determined by the process you follow to prepare an image for print.
+      Whether you&rsquo;re printing a draft of your work on a desktop printer or
+      outputting color separations to be printed on a commercial press, learning
+      fundamental printing concepts helps ensure that your printed results meet
+      your expectations.</p>
+      </div>
+    </div>
+
+<hr>
+
+<div class = "row">
+<section>
+  <p>In this lesson, you&rsquo;ll learn about the following:</p>
+    <ul>
+      <li>Different types of printing requirements and printing devices.
+      </li>
+      <li>Printing concepts and printing terminology.
+      </li>
+      <li>Basic color principles.
+      </li>
+      <li>How to separate your color artwork into its component colors for
+      output to print.
+      </li>
+      <li>How to use spot colors for two-color printing.
+      </li>
+      <li>Special considerations when outputting to print.
+      </li>
+    </ul>
+</section>
+<section>
+  <header>
+    <h2>Printing: An Overview</h2>
+  </header>
+  <p>When you print a document from a computer, data is sent from the document
+  to the printing device, either to be printed on paper or to be converted to a
+  positive or negative image on film. For black-and-white, grayscale, or low
+  quantities of color artwork, many people use desktop printers. However, if you
+  require large quantities of printed images, such as a brochure or magazine ad,
+  you&rsquo;ll need to prepare your artwork for output on a commercial printing
+  press. Printing on a commercial press is an art that requires time and
+  experience to perfect. In addition to close communication with a printing
+  professional, learning basic printing concepts and terminology will help you
+  produce printed results that meet your expectations.</p>
+  <p><b>Note:</b> This lesson assumes that you have a desktop printer for use
+  with the exercises. If you don&rsquo;t have a desktop printer available, read
+  the sections and skip the step-by-step instructions.</p>
+  <p>Different printing requirements require different printing processes. To
+  determine your printing requirements, consider the following:</p>
+  <ul>
+    <li>What effect do you want the printed piece to have on your audience?
+    </li>
+    <li>Will your artwork be printed in black and white? Color?
+    </li>
+    <li>Does it require special paper?
+    </li>
+    <li>How many printed copies do you need?
+    </li>
+    <li>If you&rsquo;re printing in color, is precise color matching necessary,
+    or will approximate color matching suffice?
+    </li>
+  </ul>
+  <p>Take a minute to consider several types of print jobs:</p>
+  <ul>
+    <li><b>A black-and-white interoffice newsletter</b>, requiring a low
+    quantity of printed copies. For this type of printing job, you can generally
+    use a 300-600 dpi (dots per inch) desktop laser printer to output the
+    original, and then use a copy machine to reproduce the larger quantity.
+    </li>
+    <li><b>A business card using black and one other color.</b> The term
+    two-color printing typically refers to printing with black and one other
+    color, although it may also refer to printing with two colors that are not
+    black. Two-color printing is less expensive than four-color printing and
+    lets you select exact color matches, called spot colors, which can be
+    important for logos. For precise color matching, two-color printing is done
+    on a printing press; if only an approximate color match is required, you
+    might use a desktop color printer.
+    </li>
+    <li><b>A party invitation using two colors and tints of those colors.</b> In
+    addition to printing two solid colors, you can print tints of the colors to
+    add depth to your printed artwork. Two-color printing is often done on
+    colored paper that compliments the ink colors and might be done on a desktop
+    color printer or on a printing press, depending on the desired quantity and
+    the degree of color matching required.
+    </li>
+    <li><b>A newspaper.</b> Newspapers are typically printed on a printing press
+    because they are time-sensitive publications printed in large quantities. In
+    addition, newspapers are generally printed on large rolls of newsprint,
+    which are then trimmed and folded to the correct size.
+    </li>
+    <li><b>A fashion magazine or catalog requiring accurate color
+    reproduction.</b> Four-color printing refers to mixing the four process
+    ink colors (cyan, magenta, yellow, and black, or CMYK) for printed output.
+    When accurate color reproduction is required, printing is done on a printing
+    press using CMYK inks. CMYK inks can reproduce a good amount of the visible
+    color spectrum, with the exception of neon or metallic colors. You&rsquo;ll
+    learn more about color models in the next section.
+    </li>
+  </ul>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>About Printing Devices</h2>
+  </header>
+  <p>Now that you&rsquo;ve looked at several types of publications and different
+  ways to reproduce them, you&rsquo;ll begin learning basic printing concepts
+  and printing terminology.</p>
+  <header>
+    <h3>Halftone Screens</h3>
+  </header>
+  <p>To reproduce any type of artwork, a printing device typically breaks down
+  the artwork into a series of dots of various sizes called a halftone screen.
+  Black dots are used to print black-and-white or grayscale artwork. For color
+  artwork, a halftone screen is created for each ink color (cyan, magenta,
+  yellow, and black); these then overlay one another at different angles to
+  produce the full range of printed color. To see a good example of how
+  individual halftone screens overlay each other at different angles on a
+  printed page, look at a color comics page through a magnifying glass.</p>
+  <p>The size of the dots in a halftone screen determines how light or dark
+  colors appear in print. The smaller the dot, the lighter the color appears;
+  the larger the dot, the darker the color appears.</p>
+  <figure>
+    <img src = "images/Halftone_Screen.png" alt = "Enlarged detail showing dots
+    in a halftone screen" class = "img-fluid">
+    <figcaption>Enlarged detail showing dots in a halftone screen.</figcaption>
+  </figure>
+
+  <section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h3>Screen Frequency</h3>
+  </header>
+  <p>Screen frequency (also called line screen ruling, or halftone frequency)
+  refers to the number of rows or lines of dots used to render an image on film
+  or paper. In addition, the rows of dots are broken down into individual
+  squares, called halftone cells. Screen frequency is measured in lines per inch
+  (<b>lpi</b>) and is a fixed value you can set for your printing device.</p>
+  <p>As a general rule, higher screen frequencies produce finer detail in
+  printed output. This is because the higher the screen frequency, the smaller
+  the halftone cells, and subsequently, the smaller the halftone dot in the
+  cell.</p>
+  <p>However, a high screen frequency alone does not guarantee high-quality
+  output. The screen frequency must be appropriate to the paper, the inks, and
+  the printer or printing press used to output the artwork. Your printing
+  professional will help you select the appropriate screen value for your
+  artwork and output device.</p>
+    <figure>
+      <img src = "images/image-asset.jpeg" alt = "Pictures of the Mona Lisa
+      shown at different screen frequencies" class = "img-fluid">
+      <figcaption>Pictures of the Mona Lisa shown at different screen
+      frequencies.</figcaption>
+    </figure>
+  </section>
+  <section>
+  <header>
+    <h3>Output Device Resolution</h3>
+  </header>
+  <p>The resolution of a printing device describes the number of dots the
+  printing device has available to render, or create, a halftone dot. The higher
+  the output device resolution, the higher the quality of the printed output.
+  For example, the printed quality of an image output at 2400 dots per inch
+  (<b>dpi</b>) is higher than the printed quality of an image output at 300 dpi.
+  Inkscape is resolution-independent and will always print at the printing
+  device&rsquo;s highest resolution capability.</p>
+  <p>The quality of printed output depends on the relationship between the
+  resolution of the output device (<b>dpi</b>) and the screen frequency
+  (<b>lpi</b>). As a general rule, high-resolution output devices use higher
+  screen frequency values to produce the highest quality images. For example,
+  an imagesetter with a resolution of 2400 dpi and a screen frequency of 177 lpi
+  produces a higher quality image than a desktop printer with a resolution of
+  300 to 600 dpi and a screen frequency of 85 lpi.</p>
+  <p>Color is produced by a computer monitor and printing device using two
+  different color models (methods for displaying and measuring color). The human
+  eye perceives color according to the wavelength of the light it receives.
+  Light containing the full color spectrum is perceived as white; in the absence
+  of light, the eye perceives black.</p>
+  <p>The <i>gamut</i> of a color model is the range of colors that can be
+  displayed or printed. The largest color gamut is that viewed in nature; all
+  other color gamuts produce a subset of nature&rsquo;s color gamut. The two
+  most common color models are red, green, and blue (<b>RGB</b>), the method
+  by which monitors display color; and cyan, magenta, yellow, and black
+  (<b>CMYK</b>), the method by which images are printed using four process ink
+  colors.</p>
+  </section>
+  <section>
+  <header>
+    <h3>The RGB Color Model</h3>
+  </header>
+  <p>A large percentage of the visible spectrum of color can be represented by
+  mixing three basic components of colored light in various proportions. These
+  components are known as the <b>additive colors</b>: red, green and blue
+  (<b>RGB</b>). The RGB color model is called the <b>additive color model</b>
+  because various percentages of each colored light are added to create color.
+  All monitors display color using the <b>RGB</b> color model.</p>
+</section>
+<section>
+  <header>
+    <h3>The CMYK Color Model</h3>
+  </header>
+  <p>If 100% of red, green, or blue is subtracted from white light, the
+  resulting color is cyan, magenta, or yellow, respectively. For example, if an
+  object absorbs (subtracts) 100% red light and reflects green and blue, cyan is
+  the perceived color. Cyan, magenta, and yellow are called the <b>subtractive
+  primaries</b>, and they form the basis for printed colors. In addition to
+  cyan, magenta, and yellow, black ink is used to generate true black and to
+  deepen the shadows in images. These four inks (<b>CMYK</b>) are often called
+  <i>process colors</i> because they are the four standard inks used in the
+  printing process.</p>
+ </section>
+ <section>
+  <header>
+    <h3>RGB and CMYK Color Models</h3>
+  </header>
+  <figure>
+    <img src = "images/ColorMixing.png" alt = "Additive and subtractive color
+    mixing models" class = "img-fluid">
+    <figcaption>Additive and subtractive color mixing models. The numbers are
+    <b>rgb</b> color codes.</figcaption>
+  </figure>
+</section>
+<section>
+  <header>
+    <h3>Spot Colors</h3>
+  </header>
+  <p>Whereas process colors are reproduced using cyan, magenta, yellow, and
+  black inks, <i>spot colors</i> are premixed inks used in place of, or in
+  addition to, CMYK colors. Spot colors can be selected from color-matching
+  systems, such as the <b>PANTONE&reg;</b> or <b>TOYO&trade;</b> color
+  libraries. Many spot colors can be converted to their process color
+  equivalents when printed; however, some spot colors, such as metallic or
+  iridescent colors, require their own plate on press.</p>
+  <p>Use spot colors in the following situations:</p>
+  <ul>
+    <li>To save money on one-color and two-color print jobs. (When your printing
+    budget won&rsquo;t allow for four-color printing, you can still print
+    relatively inexpensively using one or two colors.)
+    </li>
+    <li>To print logos or other graphic elements that require precise color
+    matching. You want the printer in San Francisco to use the same color of red
+    as the printer in Seattle.
+    </li>
+    <li>To print special inks, such as metallic, fluorescent, or pearlescent
+    colors.
+    </li>
+  </ul>
+</section>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Getting Started</h2>
+  </header>
+  <ol>
+    <li><p>Start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial20/Tutorial20_start.svg"><b>Tutorial20_start.svg</b></a> and
+    store it in a convenient location.</p>
+      <figure>
+        <img src = "images/Tutorial20_start.gif" alt = "Starting art file
+        Tutorial20_start" class = "img-fluid">
+        <figcaption>Starting art file <b>Tutorial20_start.svg</b>.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <ol start = "3">
+    <li><p>Choose File &gt; Save As&hellip; and name the file
+    <b>CommunityOutreach.svg</b>.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Color Management</h2>
+  </header>
+  <p>Although all color gamuts overlap, they don&rsquo;t match exactly, which is
+  why some colors on your monitor can&rsquo;t be reproduced in print. The colors
+  that can&rsquo;t be reproduced in print are called <i>out-of-gamut</i> colors
+  because they are outside the spectrum of printable colors.</p>
+  <p>You might want or need to print your artwork on a special type of paper.
+  Paper types include:</p>
+  <ul>
+    <li><i>repro paper</i> (offset or printing paper)</li>
+    <li><i>coated paper</i> (couch&eacute; paper)</li>
+    <li><i>tissue paper</i></li>
+    <li><i>newsprint paper</i></li>
+    <li><i>cardboard</i></li>
+    <li><i>Kraft paper</i></li>
+    <li><i>paperboard</i>, and</li>
+    <li><i>fine arts paper types</i>, such as cold-press water-color paper,
+    Hahnem&uuml;hle German etching paper, luster photo paper, fiber papers,
+    and many more among the plethora of species and subspecies of printing sheet
+    media.
+    </li>
+  </ul>
+  <p>You might see a completely different set and range of colors
+  on the printed sheet in comparison to what you see on your computer
+  screen.</p>
+  <p>To compensate for these differences and to ensure the closest match between
+  on-screen colors and printed colors, Inkscape includes a color management
+  system (CMS) that lets you select profiles for your monitor and for the output
+  device to which you&rsquo;ll print. Selecting a color profile controls the
+  conversion of RGB values to CMYK values at print time. To select a color
+  profile, you use Inkscape&rsquo;s color management system.</p>
+  <p>The point of color management is not to help you achieve better colors in
+  print, but to help keep in check expectations as to how the artwork will
+  print. Color management, essentially, makes your RGB monitor represent colors
+  as they appear when printed in CMYK.</p>
+  <ol>
+    <li><p>Choose Edit &gt; Preferences&hellip; &gt; Input/Output &gt; Color
+    management to bring up the <b>Color management</b> dialog box.</p>
+      <figure>
+        <img src = "images/ColorManagementDialogBox.gif" alt = "Color management
+        dialog box" class = "img-fluid">
+        <figcaption>Color management dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>In the <b>Display adjustment</b> section, click on the down-arrow in
+    the current <b>Display profile</b> selection field. Inkscape comes with two
+    settings already installed: <b>&lt;none&gt;</b> and
+    <b>sRGB61966-2.1</b>. The default value is <b>&lt;none&gt;</b>.</p>
+      <figure>
+        <img src = "images/ColorManagementNone.gif" alt = "Color management
+        dialog box" class = "img-fluid">
+        <figcaption>Color management display options <b>none</b> and
+        <b>sRGB61966-2.1</b>.</figcaption>
+      </figure>
+    </li>
+    <aside><p>The <b>sRGB61966-2.1</b> setting option comes from the North
+    America General Purpose 2 display color setting. It provides all-purpose
+    general color settings for images on-screen, in print, and on the Web. It is
+    widely used in North America. (The <b>sRGB</b> stands for <b>s</b>tandard
+    <b>R</b>ed <b>G</b>reen <b>B</b>lue.) <b>sRGB</b> is often the
+    &ldquo;default&rdquo; color space for images that contain no color space
+    information.</p>
+    </aside.
+    <li><p>In this tutorial, you can use either <b>&lt;none&gt;</b> or select
+    the <b>sRGB61966-2.1</b> predefined set of color management settings
+    provided in Inkscape. Each set has a corresponding color profile and
+    conversion options designed to preserve consistent color for a particular
+    publishing workflow under typical conditions. For more information on color
+    management settings, visit <a href = "https://en.wikipedia.org/wiki/Color_management">
+    <b>https://en.wikipedia.org/wiki/Color_management</b></a>.</p>
+    </li>
+    <li><p>Choose the Display profile you desire and leave the remaining options
+    at their default values. Dismiss the dialog box.</p>
+    </li>
+  </ol>
+
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h3>Printing Black-and-White Proofs</h3>
+  </header>
+  <p>As a general rule, you should print black-and-white proofs of all your
+  documents at different stages of your work to check the layout and to verify
+  the accuracy of text and graphics before preparing the document for final
+  output.</p>
+  <p>Now you&rsquo;ll print a draft of the <b>CommunityOutreach.svg</b>
+  file.</p>
+  <ol>
+    <li><p>Choose File &gt; Print, leave all choices set at the default and
+    click <b>Okay</b>.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h3>Soft-proofing Colors</h3>
+  </header>
+  <p>In a color-managed work flow, you can use the precision of color profiles
+  to soft-proof your document directly on the monitor. Soft-proofing lets you
+  preview on-screen how your document&rsquo;s colors will look when reproduced
+  on a particular output device.</p>
+  <p>The reliability of soft-proofing completely depends, however, on the
+  quality of your monitor, your monitor profile, and the ambient lighting
+  conditions of your workstation area. In other words, if you are working in an
+  inconsistent environment, with varying light throughout the day, you might not
+  get reliable results.</p>
+  <p>Inkscape currently has only one device profile as a proof setting:
+  <b>Agfa: Swop standard</b>. Swop stands for <b>S</b>pecifications for
+  <b>W</b>eb <b>O</b>ffset <b>P</b>ublications, which is both a company and
+  name of a set of specifications whose goal is to make data for printing
+  consistent, reliable, and of high quality across different printing and
+  viewing devices.</p>
+  <p>For this tutorial, you will download and install a device profile developed
+  by the European Color Initiative (ECI), an organization whose goal is to develop and
+  enhance device-independent processing of color data in digital publication
+  systems.</p>
+  <p>Click on <a href = "https://www.athesiadruck.com/fileadmin/user_upload/Files/Downloads/PSO_Uncoated_ISO12647_eci.icc"><b>https://www.athesiadruck.com/fileadmin/user_upload/Files/Downloads/PSO_Uncoated_ISO12647_eci.icc</b></a>
+  to download this device profile.</p>
+  <p>Right-click on the downloaded file and select <b>Install</b> in the
+  short-cut menu. (It&rsquo;s just like installing a font, but this time
+  it&rsquo;s a color profile.)</p>
+  <p>Exit Inkscape and then restart it so that Inkscape will &ldquo;see&rdquo;
+  the new profile and add it to its list of device profiles.</p>
+  <ol start = "3">
+    <li><p><b>In the Color management</b> dialog box, click on the down arrow in
+    the <b>Device profile</b> selection box.</p>
+    </li>
+    <li><p>Use the <b>Device profile</b> menu to select <b>PSO Uncoated ISO
+    12647 (ECI)</b>, which you just downloaded and installed.</p>
+    </li>
+    <li><p>Choose <b>View</b> and check the <b>Color-Managed View</b>
+    checkbox to create a color preview. The image automatically shifts colors to
+    display what it would look like were it printed according to the PSO
+    Uncoated ISO 12647 profile.</p>
+    <div class = "row">
+      <div class = "col-md-6">
+    <figure>
+      <img src = "images/HospitalOriginal.gif" alt = "Community outreach image
+      with color management turned off" class = "img-fluid">
+      <figcaption>Community outreach image with the <b>PSO Uncoated ISO 12647
+      (ECI)</b> device setting selected and <b>Color-Managed View</b>
+      turned <b><i>off</i></b>.</figcaption>
+    </figure>
+      </div>
+      <div class = "col-md-6">
+    <figure>
+      <img src = "images/HospitalColorManaged.gif" alt = "Community outreach
+      image with color management turned on" class = "img-fluid">
+      <figcaption>Community outreach image with the <b>PSO Uncoated ISO 12647
+      (ECI)</b> device setting selected and <b>Color-Managed View</b> turned
+      <b><i>on</i></b>.</figcaption>
+    </figure>
+    </div>
+    </div>
+    <div style = "clear: left;"></div>
+    </li>
+    <li><p>You&rsquo;ll now return the settings to the SWOP settings.</p>
+    <p>Choose Edit &gt; Preferences&hellip; &gt; Input/Output &gt; Color
+    management to bring up the <b>Color management</b> dialog box again.</p>
+    <p>Set the <b>Device profile</b> to <b>Agfa: Swop standard</b> and dismiss
+    the dialog box.</p>
+    </li>
+    <li><p>Choose <b>View</b> and uncheck the <b>Color-Managed View</b>
+    checkbox. The image automatically shifts colors to display its original
+    on-screen RGB coloration.</p>
+    </li>
+    <li><p>File &gt; Close to close the file.</p>
+    </li>
+  </ol>
+  <p>Next, you&rsquo;ll work with printing color artwork.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h3>Creating Color Separations</h3>
+  </header>
+  <p>To print color artwork on a printing press, you must first separate the
+  composite art into its component colors: cyan, magenta, yellow, and black, and
+  any spot colors, if applicable. The process of breaking down composite artwork
+  into its component colors is called <i>color separation</i>.</p>
+  <p>Inkscape currently does not have the capability of producing color
+  separations of artwork. However, we have the opportunity here to create CMYK
+  separations using a separate external program called <b>Scribus</b>.</p>
+  <p><b>Scribus</b> has many of the graphic manipulation features that Inkscape
+  has. However, its focus is on preparing artwork for printing, either on a
+  desktop printer or on a printing press. Excepting the section on <b>Working
+  with Two-Color Illustrations</b>, the remainder of this tutorial focuses
+  on using Scribus as a means of producing CMYK color separations and
+  registration marks that help guide a professional printer in printing and
+  cutting sheets to your specifications. I will remind you from time to time
+  that you should consult your professional printer if you have any questions,
+  uncertainties, or problems with document preparation. They are professionals
+  at what they do &mdash; they know their job.</p>
+
+  <h4>Installing Scribus</h4>
+  <p>Complete installation of Scribus is a two-step process.
+  <ol>
+    <li>You will download and install both Scribus and a helper program,
+    <b>Ghostscript</b>.</p>
+    <p>The current version of Scribus is <b>Scribus 1.5.7</b>. You can download
+      it from <a href = "https://www.scribus.net/downloads/"><b>https://www.scribus.net/downloads/</b></a>.</p>
+      <p>Read through which version of Scribus is best for you, download it, and
+      install it keeping all default values.</p>
+    </li>
+    <li><p>Download and install the latest version of <b>Ghostscript</b>
+  (Ghostscript 9.55.0) that&rsquo;s appropriate for your computer from
+  <a href = "https://www.ghostscript.com/releases/gsdnld.html"><b>https://www.ghostscript.com/releases/gsdnld.html</b></a>. Keep
+  all default values during installation.</p>
+  <p>The Ghostscript executable files are located at
+  C:\Program Files\gs\gs9.55.0\bin on my computer. The <i>bin</i> subdirectory
+  contains two versions of Ghostwriter: <b>gswin64.exe</b>, which is written in
+  Postscript, and <b>gswin64c.exe</b>, which is brand new and is "written from
+  the ground up" in the C programming language (hence the &ldquo;c&rdquo; in the
+  gswin64c.exe). Remember where <b>gswin64c.exe</b> is located so you can show
+  Scribus where it is when you configure it.</p>
+  <p>Ghostscript is undergoing serious upgrading to conform better with advances
+  in modern graphics capabilities. The C version allows manipulation of
+  transparency, along with other graphics tools, which the Postscript version
+  cannot. Ghostscript is important in allowing Scribus to import plain-vanilla
+  and enhanced postscript files (.ps and .eps files). You will import Inkscape
+  files that have been converted into .ps or .eps files into Scribus.</p>
+    </li>
+  </ol>
+  <h5>Configuring Scribus</h5>
+  <p>For this tutorial, the only things you need to do are:</p>
+  <ol>
+    <li><p>Start Scribus.</p></li>
+    <li><p>Choose File &gt; Preferences.</p></li>
+    <li><p>Click on <b>External Tools</b>.</p></li>
+    <li><p>Enter the location of the Ghostscript executable file
+    <b>gswin64c.exe</b> on your hard drive in the text field for <b>Postscript
+    Interpreter</b> <u>N</u>ame of Executable:.</p></li>
+    <li><p>Fill out any other text fields in the form as you see fit (you can
+    always come back to them later).</p>
+    <figure>
+      <img src = "images/ConfigureScribus.gif" alt = "Configuring Scribus"
+      class = "img-fluid">
+      <figcaption>Configuring Scribus.</figcaption>
+    </figure>
+    </li>
+    <li><p>Click on <u>O</u>kay. The dialog box vanishes and Scribus is
+    configured.</p></li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h3>Creating and Saving an Inkscape File as an Enhanced Postscript File</h3>
+    <ol>
+      <li><p>Choose File &gt; Open&hellip; and select art file
+      <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial20/Tutorial20_circus.svg"><b>Tutorial20_circus.svg</b></a>.</p>
+        <figure>
+          <img src = "images/Tutorial20_circus.gif" alt = "Circus poster art
+          file" class = "img-fluid">
+          <figcaption>Circus poster art file.</figcaption>
+        </figure>
+      </li>
+      <li><p>Choose File &gt; Save As&hellip;, call the new file
+      <b>circus</b>, and save it as an <b>Encapsulated Postscript (*.eps)</b>
+      file. (Inkscape will automatically append an .eps extension to the file
+      name.)</p>
+        <figure>
+          <img src = "images/SaveAsEPS.gif" alt = "Saving the art file as an
+          enhanced Postscript image file" class = "img-fluid">
+          <figcaption>Saving the art file as an enhanced Postscript image
+          file.</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </header>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h3>Opening an Art File in Scribus</h3>
+  </header>
+  <ol>
+    <li><p>Start Scribus if it isn&rsquo;t active already.</p>
+    </li>
+    <li><p>Click on <u>F</u>ile &gt; <u>O</u>pen&hellip; Navigate to the art
+    file you just created, <b>circus.eps</b>, and open it.</p>
+    </li>
+    <li><p>Select either <b>All Pages</b> or <b>Single Page</b> for the <b>Page
+    Range</b>, and select <b>Import Text As Vectors</b> if it isn&rsquo;t
+    selected already.</p>
+      <figure>
+        <img src = "images/Scribus_open_file.gif" alt = "Scribus open file
+        dialog box" class = "img-fluid">
+        <figcaption>Scribus&rsquo; open file dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>Click on the <b>OK</b> button.</p>
+    </li>
+    <li><p>A diagnostic window with a progress bar appears for a couple of
+    seconds. Then, the <b>circus.eps</b> image appears. It might be overly
+    magnified. If it is, then click on <u>V</u>iew &gt; Zoom &gt; <u>F</u>it to
+    Height so that the image fits completely within the work space.</p>
+      <figure>
+        <img src = "images/Fit_to_Height.gif" alt = "The imported circus.eps
+        is now resized to fit entirely inside the Scribus work space" class =
+        "img-fluid">
+        <figcaption>The imported circus.eps is now resized to fit entirely
+        inside the Scribus work space.</figcaption>
+      </figure>
+      <p>Note how many of the Scribus tool icons are similar to those in
+      Inkscape. They are drawn a little differently but the tool functions are
+      the same.</p>
+    </li>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header><h3>Preparing the Image File for Saving as a Portable Document File
+  (PDF)</h3>
+  </header>
+  <ol>
+    <li><p>Choose File &gt; <u>E</u>xport &gt; Save File as
+    P<u>D</u>F&hellip; The <b>Save as PDF</b> dialog box appears. The
+    <b>General</b> dialog box is active by default.</p>
+    <p>Scribus automatically appends <b>.pdf</b> as the new file extension.</p>
+    <p>Leave the <b>Page Range</b> at the <b>All pages</b> default value.</p>
+    <p>We&rsquo;ll suppose that the professional printer uses PDF 1.6 (Acrobat
+    7) compatible software their printer, so choose that option under
+    <b>Compatibility</b>.</p>
+    <p>Leave all other options at their default values.</p>
+      <figure>
+        <img src = "images/SaveAsPDF_General.gif" alt = "Save As PDF General
+        tab" class = "img-fluid">
+        <figcaption>Save As PDF General tab.</figcaption>
+      </figure>
+      <p>At the beginning of this tutorial, you learned that the relationship
+      between the output device resolution and the screen frequency determines
+      the quality of the printed output. Depending on the output device you
+      select, more than one screen frequency value may be available. Your
+      printing professional will direct you to select the screen frequency
+      appropriate to your artwork. Scribus makes the intelligent decision of
+      300 dots per inch since this resolution value is used very commonly on
+      standard printing machines. Your printing professional will direct you to
+      select the screen frequency appropriate to your artwork if fine-adjusting
+      screen and printer frequency is needed.</p>
+    </li>
+    <li><p>Click on the <b>Color</b> tab. Select the <b>Printer</b> option in
+    the <b>Output Intended For:</b> drop-down selection list.</p>
+      <figure>
+        <img src = "images/SaveAsPDF_Color.gif" alt = "Save As PDF Color tab"
+        class = "img-fluid">
+        <figcaption>Save As PDF Color tab.</figcaption>
+      </figure>
+    </li>
+    <li><p>Dismiss the <b>Save As</b> dialog box and choose File &gt; Document
+    Setup&hellip; Select the <b>Document Information</b> option. The text that
+    you enter in <b>Title</b> text field will in the image proofs that you will
+    create shortly. If you will be creating a lot of proofs for different
+    projects all at the same time, a text label can help you keep track of pages
+    in case a breeze blows everything off the tabletop.</p>
+      <figure>
+        <img src = "images/Scribus_document_information.gif" alt = "Scribus
+        Document Information dialog box" class = "img-fluid">
+        <figcaption>Scribus Document Information dialog box.</figcaption>
+      </figure>
+    </li>
+    <li><p>There will be differences in coloration between what you see on the
+    screen and what comes out of the printer. Colors seen on-screen are RGB
+    additive colors, while those same colors that are made in the printer with
+    the CMYK subtractive color inks they use might produce small but important
+    changes in hue, tinting, toning, or shading. You can see these changes by
+    choosing File &gt; Output Preview and switching between the <b>Screen /
+    Web</b> and <b>Printer</b> Preview Settings panel in the <b>PDF Output
+    Preview</b> dialog box. Note the small difference in hue of the red striping
+    on the tent object.</p>
+      <div class = "row">
+        <div class = "col-md-6">
+      <figure>
+        <img src = "images/OutputPreviewScreen.gif" alt = "Output Preview with
+        setting set to Screen / Web" class = "img-fluid">
+        <figcaption>Output Preview with setting set to Screen /
+        Web.</figcaption>
+      </figure>
+        </div>
+        <div class = "col-md-6">
+      <figure>
+        <img src = "images/OutputPreviewPrinter.gif" alt = "Output Preview with
+        setting set to Printer" class = "img-fluid">
+        <figcaption>Output Preview with setting set to Printer.</figcaption>
+      </figure>
+      </div>
+    </div> <!-- End of row div -->
+    </li>
+    <li><p>To create the actual color separations that will go to the printing
+    press, make sure that the <b>Printer</b> option is selected in the
+    <b>Preview Settings</b> section, then click on the <b>Display CMYK</b>
+    checkbox (which is no longer grayed out and inactive).</p>
+    <p>Uncheck the CMYK color checkboxes except for <b>Cyan</b>. The cyan
+    preview automatically appears.</p>
+      <figure>
+        <img src = "images/Preview_Cyan.gif" alt = "Preview of cyan color
+        separation" class = "img-fluid">
+        <figcaption>Preview of cyan color separation.</figcaption>
+      </figure>
+    </li>
+    <li><p>Uncheck the <b>Cyan</b> checkbox and check the <b>Magenta</b> color
+    checkbox. The coloration immediately changes to magenta.</p>
+      <figure>
+        <img src = "images/Preview_Magenta.gif" alt = "Preview of magenta color
+        separation" class = "img-fluid">
+        <figcaption>Preview of magenta color separation.</figcaption>
+      </figure>
+    </li>
+    <li><p>Do the same for yellow and black.</p>
+      <figure>
+        <img src = "images/Preview_Yellow.gif" alt = "Preview of yellow color
+        separation" class = "img-fluid">
+        <figcaption>Preview of yellow color separation.</figcaption>
+      </figure>
+      <figure>
+        <img src = "images/Preview_Black.gif" alt = "Preview of black color
+        separation" class = "img-fluid">
+        <figcaption>Preview of black color separation.</figcaption>
+      </figure>
+    </li>
+    <li><p>If you are considering using a black ink instead of a judicious
+    combination of cyan, magenta, and yellow inks, keep the black color checkbox
+    checked and check <b>Under Color Removal</b>.
+      <figure>
+        <img src = "images/Preview_Black_Under_Color_Removal.gif" alt = "Preview
+        of black color under color removal separation" class = "img-fluid">
+        <figcaption>Preview of black color under color removal
+        separation.</figcaption>
+      </figure>
+    </li>
+    <li><p>You will now create a PDF file of your artwork.</p>
+    <p>Click on the Close button to close the <b>Output Preview</b> dialog
+    box.</p>
+    <p>Choose <u>F</u>ile &gt; <u>E</u>xport&hellip; &gt; Save as
+    P<u>D</u>F. The <b>Save as PDF</b> dialog box appears.</p>
+    <p>In the <b>General</b> dialog box, change <b>Compatibility</b> to <b>PDF
+    1.6 (Acrobat 7)</b> if it is not that value already. Leave all other
+    settings at their default values.</p>
+    <p>Click on the <b>C<u>o</u>lor</b> tab and change the <b>Output
+    <u>I</u>ntended For:</b> value to <b>Printer</b>.</p>
+    <p>Click on the <b>Pre-Press</b> tab. Click on all Printer Marks checkboxes
+    (Crop Marks, Bleed Marks, Registration Marks, Color Bars, Page Information)
+    so that they will be added onto the PDF image.</p>
+    <p>Uncheck the <b>Use Document Bleeds</b> checkbox and change all four side
+    bleed values (Top, Bottom, Left, Right) to <b>0.1000 in</b>.<p>
+    <p>Click on the <b>Save</b> button to save your new settings. The PDF file
+    you just created should be similar to the one shown below minus the printing
+    mark labels.</p>
+      <figure>
+        <img src = "images/circusPDFPlusPrintingMarks.gif" alt = "Preview
+        of circus poster with full CMYK color" class = "img-fluid">
+        <figcaption>Portable document file image of circus poster with full CMYK
+        color and printing marks.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <p><b>As an exercise:</b></p>
+  <ol>
+    <li><p>Using Inkscape, make an .eps file out of art file
+    <b>CommunityOutreach.svg</b> that you worked with earlier.</p>
+    </li>
+    <li><p>Import it into Scribus.</p>
+    </li>
+    <li><p>Choose File &gt; Document <u>S</u>etup&hellip;</p>
+    </li>
+    <li><p>If the <b>Document Setup</b> dialog box isn&rsquo;t active, click on
+    the <b>Document Setup</b> tab to bring it up.</p>
+    </li>
+    <li><p>Click on the <b>Margins &amp; Bleeds</b> tab.</p>
+    </li>
+    <li>Keep all margins to <b>0.0000 in</b> but set all bleeds to <b>0.0500
+    in</b>.</p>
+    </li>
+    <li><p>Click on the Preview Mode icon (<img src =
+    "images/PreviewModeIcon.gif" alt = "Preview Mode icon" class = "img-fluid">)
+    in the Command Bar to see what the PDF version of the artwork will look
+    like. Note that any part of the artwork that is outside of the artboard is
+    hidden. Click on the Preview Mode icon again to return to normal viewing
+    mode.</p>
+      <figure>
+        <img src = "images/ImageInPreviewMode.gif" alt = "Artwork viewed in
+        Preview Mode" class = "img-fluid">
+        <figcaption>Artwork viewed in Preview Mode.</figcaption>
+      </figure>
+    </li>
+    <li><p>Select <b>PDF Export</b> in the menu panel.</p>
+    </li>
+    <li><p>Click on the <b>Color</b> tab.</p>
+    </li>
+    <li><p>Select <b>Printer</b> in the <b>Output Intended For:</b> field.</p>
+    </li>
+    <li><p>Click on the <b>Prepress</b> tab.</p>
+    </li>
+    <li><p>Check the checkboxes for <b>Crop Marks</b>, <b>Bleed Marks</b>,
+    <b>Color Bars</b>, and <b>Registration Marks</b>. Leave the <b>Bleed
+    Settings</b> at <b>0.0000 in</b> (they&rsquo;ve already been taken care
+    of in the <b>Document Setup Bleeds and Margins</b>).</p>
+    </li>
+    <li><p>Choose File &gt; <u>P</u>rint&hellip; &gt; and click on the
+    <b><u>P</u>rint</b> button. The <b>Save As</b> dialog box will appear when
+    Scribus has finished rendering the artwork for PDF output into a file
+    (processing will take a few seconds). Scribus will automatically append a
+    .pdf extension to the existing filename.</p>
+    </li>
+    <li><p>View the PDF artwork file in a PDF viewer, such as Adobe Acrobat
+    Reader.</p>
+      <figure>
+        <img src = "images/HospitalPDF.gif" alt = "PDF output of Community
+        Outreach art file" class = "img-fluid">
+        <figcaption>PDF output of Community Outreach art file.</figcaption>
+      </figure>
+    </li>
+    <p><b>Note:</b> There are two color bars: one greyscale and the other color.
+    Because the artwork is the size of a business card, the greyscale bar
+    partially underlies the color bar. The bar size is fixed for any size of
+    artwork. The document title also was not included because the default large
+    size of the font prevents the text from fitting. They appear in larger
+    works, however, as you can see in the PDF proof of the circus poster.</p>
+  </ol>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Creating a Trap</h2>
+  </header>
+<p><b>Trapping</b> is used to compensate for any gaps or color shifts that may
+occur between adjoining or overlapping objects when printing. These gaps or
+color shifts occur from misregistration, the result of the paper or the printing
+plates becoming misaligned during printing. Trapping is a technique developed by
+commercial print shops to slightly overprint the colors along common edges.</p>
+<figure class = "ml-5 mr-5" style = "float: left;">
+  <img src = "images/Misregistration.gif" alt = "Gap from misregistration" class
+  = "img-fluid">
+  <figcaption>Gap created by misregistration.</figcaption>
+</figure>
+<figure>
+  <img src = "images/LionTrapping.gif" alt = "Gap removed by trapping" class =
+  "img-fluid">
+  <figcaption>Gap removed by trapping.</figcaption>
+</figure>
+<div style = "clear: left;"></div>
+<aside><p><b><i>About Traps</i></b></p>
+  <p>When overlapping painted objects share a common color, trapping may be
+  unnecessary if the color that is common to both objects creates an automatic
+  trap. For example, if two overlapping objects contain cyan as part of their
+  CMYK values, any gap between them is covered by the cyan content of the object
+  underneath.</p>
+  <p><b>Note:</b> When artwork contains common ink colors, overprinting does not
+  occur on the shared plate &mdash; that is, the topmost overlapping printing
+  ink appears opaque.</p>
+  <p>There are two types of traps: a <i>spread</i>, in which a lighter object
+  overlaps a darker background and seems to expand into the background; and a
+  <i>choke</i>, in which a lighter background overlaps a darker object that
+  falls within the background and seems to squeeze or reduce the object.</p>
+  <figure class = "ml-5 mr-5" style = "float: left;">
+    <img src = "images/Spread.gif" alt = "Spread trapping" class = "img-fluid">
+    <figcaption>Spread: Object overlaps background.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/Choke.gif" alt = "Choke trapping" class = "img-fluid">
+    <figcaption>Choke: Background overlaps object.</figcaption>
+  </figure>
+  <div style = "clear: left;"></div>
+  <p>Although Inkscape and Scribus don&rsquo;t have trapping functionality at
+  this time of writing, you can still discuss both spreads and chokes with your
+  professional printer.</p>
+  <p>Your printer might recommend that you scale your graphic to its final size
+  before a trap is added. The thickness of a trapping increases or decreases if
+  you scale the object. For example, if a graphic has a 0.5-point trap and it is
+  scaled up to five times its original size, the result is a 2.5-point trap for
+  the enlarged graphic.</p>
+</aside>
+<p>Although trapping sounds simple enough, it requires a thorough knowledge of
+color and design and an eye for determining where trapping is necessary. Your
+professional printer can create a trap using two methods: by applying a trap
+filter or trap effect, for simple artwork whose parts can be selected and
+trapped individually; and by setting a stroke value for individual objects you
+want to trap. Like printing, creating a trap is an art that requires time and
+experience.</p>
+<p>We will now consider a simple kind of trap called <b>overprinting</b>.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Overprinting Objects</h2>
+  </header>
+  <p>When preparing an image for color separation, you can define how you want
+  overlapping objects of different colors to print. By default, the top object
+  in the Scribus artwork overprints, or lies ontop of, underlying artwork and
+  prints with the color of the top object only.</p>
+  <p>If, however, you use a technique that knocks out, or eliminates any
+  underlying color, misregistration (gaps between colors) might occur, as you
+  can see below.</p>
+  <figure class = "ml-5 mr-4 col-md-4" style = "float: left;">
+    <img src = "images/LionMisregistration.gif" alt = "Composite image with
+    misregistration of the lion figure" class = "img-fluid">
+    <figcaption>Composite image with misregistration of the lion
+    figure.</figcaption>
+  </figure>
+  <figure class = "mr-4 col-md-4" style = "float: left">
+    <img src = "images/FirstPlate.gif" alt = "First plate for the lion figure"
+    class = "img-fluid">
+    <figcaption>First plate for the lion figure.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/SecondPlateA.gif" alt = "Second plate for the lion
+    figure" class = "img-fluid">
+    <figcaption>Second plate for the lion figure.</figcaption>
+  </figure>
+<div style = "clear: both;"></div>
+  <p>You can also specify to your professional printer an object to
+  <i>overprint</i>, or print on top of, any of the artwork under them.
+  Overprinting is the simplest method you can use to prevent misregistration on
+  press. The overprinted color automatically traps into the background
+  color.</p>
+  <figure class = "ml-5 mr-4 col-md-4" style = "float: left;">
+    <img src = "images/LionRegistration.gif" alt = "Second plate for the lion
+    figure" class = "img-fluid">
+    <figcaption>Composite image with misregistration of the lion
+    figure eliminated.</figcaption>
+  </figure>
+  <figure class = "mr-4 col-md-4" style = "float: left">
+    <img src = "images/FirstPlate.gif" alt = "First plate for the lion figure"
+    class = "img-fluid">
+    <figcaption>First plate for the lion figure.</figcaption>
+  </figure>
+  <figure>
+    <img src = "images/SecondPlateB.gif" alt = "Second plate" class =
+    "img-fluid">
+    <figcaption>Second plate.</figcaption>
+  </figure>
+  <div style = "clear: both;"></div>
+  <p>Depending on what you have discussed with your printing professional, you
+  might want to change the amount of trap specified. It is much like changing
+  the stroke thickness of a shape&rsquo;s border using the <b>Stroke</b>
+  palette in Inkscape.</p>
+  <p>Inkscape doesn&rsquo;t have trapping functionality, but Scribus does. If
+  you want to explore what Scribus can do with trapping, choose Windows
+  &gt; Properties. Then, select an image or image frame. You&rsquo;ll see a
+  boundary appear around the image and the text in the <b>Properties</b> panel
+  will change from grey (inactive) to black (activated).</p>
+  <p>Click on the <b><u>C</u>olors</b> option and note the <b>Overprinting</b>
+  field at the bottom of the dialog box. <b>Knockout</b> and <b>Overprint</b>
+  are the two options available to you. This tutorial will not go any further
+  with trapping because this subject is meant for printing, and working with
+  printing machines and professional printers. Inkscape&rsquo;s focus is on
+  graphic design.</p>
+</section>
+<section>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+  <header>
+    <h2>Working with Two-Color Illustrations</h2>
+  </header>
+  <p>Two-color printing generally refers to black and one spot color, but may
+  also refer to two spot colors. In addition to printing the two solid colors,
+  you can print tints, or screens of the colors. Two-color printing is much less
+  expensive than four-color printing and lets you create a rich range of depth
+  and color when used effectively.</p>
+</section>
+<section>
+  <header>
+    <h3>Editing a Spot Color</h3>
+  </header>
+  <p>In this section, you&rsquo;ll open a two-color version of a circus
+  illustration containing black, a spot color, and tints and a shade of that
+  spot color (the lion figure has been shaded). Before you separate the
+  illustration, you&rsquo;ll replace the current PANTONE spot color with another
+  PANTONE color.</p>
+  <ol>
+    <li><p>Exit Scribus and start Inkscape.</p>
+    </li>
+    <li><p>Download art file <a href = "https://github.com/Roy-Torley/Roy-Torley.github.io/blob/master/Inkscape_Tutorial/Tutorial20/Tutorial20_start2.svg"><b>Tutorial20_start2.svg</b></a>
+    and save it in a convenient location.</p>
+    </li>
+    <li><p>Choose File &gt; Open, and open the <b>Tutorial20_start2.svg</b>
+    file.</p>
+      <figure>
+        <img src = "images/Tutorial20_start2.gif" alt = "Tutorial20_start2 image
+        file" class = "img-fluid">
+        <figcaption>Tutorial20_start2 image file.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose File &gt; Save As, name the file <b>Twocolor.svg</b>, and
+    save it in a convenient location.</p>
+    </li>
+    <li><p>Choose Objects &gt; Fill and Stroke&hellip; and click on
+    <b>Fill</b>.</p>
+    </li>
+    <li><p>Using the Selection tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection Tool icon" width = "26">), click any colored part of the circus
+    tent. Notice the PANTONE_116_C swatch in the Color palette.</p>
+      <figure>
+        <img src = "images/Tent.gif" alt = "Spot color" class = "img-fluid">
+        <figcaption>Spot color.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <p>Next, you&rsquo;ll replace every instance of the spot color (including any
+  tints and shades of the color) with another spot color.</p>
+  <ol start = "7">
+    <li><p>The Swatches palette has three different views which you can use. In
+    order to see the swatch color name and the swatch, choose View &gt;
+    Swatches&hellip;. Click on the right-pointing arrow (<img src =
+    "images/RightPointingArrow.gif" alt = "Right-pointing arrow" width = "26">)
+    at the top right of the color grid and then click on <b>List</b> at the top
+    of the drop-down menu. This view option provides you with a visual of the
+    swatch, and its name or number. In the figure below, I have set the
+    <b>Size</b> to <b>Medium</b>, the <b>Width</b> to <b>Medium</b>, and the
+    <b>Border</b> to <b>Wide</b>.</p>
+      <figure>
+        <img src = "images/ListView.gif" alt = "List View" class = "img-fluid">
+        <figcaption>Change the Swatch palette to List View in order to read<br>
+        the swatch names.</figcaption>
+      </figure>
+    </li>
+    <li><p>Choose Select &gt; Deselect or &lt;Ctrl&gt;-click, or click away from
+    the artwork to deselect the tent.</p>
+    </li>
+  </ol>
+  <p>Next, you&rsquo;ll replace the current PANTONE color with the new PANTONE
+  color.</p>
+  <ol start = "11">
+    <li><p>With the Selection tool (<img src = "images/SelectionTool.gif" alt =
+    "Selection Tool icon" width = "26">), click any colored part of the circus
+    tent, just as you had done in Step 4.</p>
+    </li>
+    <li><p>Choose Edit &gt; Select Same &gt; Fill Color.</p>
+      <figure>
+        <img src = "images/SelectSameFillColor.gif" alt = "Selecting objects
+        having the same fill color" class = "img-fluid">
+        <figcaption>Selecting objects having the same fill color. Note that
+        colors that have been tinted or shaded are also selected.</figcaption>
+      </figure>
+    </li>
+    <li><p>In the Swatches palette, click on swatch PANTONE_193_C. Almost all
+    objects that were painted using spot color PANTONE_116_C are now painted
+    with PANTONE_193_C, including all those objects that are tinted and shaded.
+    Objects that have been tinted or shaded retain their tints and shades with
+    the new spot color or hue. The only exception is the face and front of the
+    acrobat.</p>
+      <figure>
+        <img src = "images/UpdatedPANTONE.gif" alt = "Updated image" class =
+        "img-fluid">
+        <figcaption>Updated image.</figcaption>
+      </figure>
+    <p>It is currently unknown whether this is a bug in Inkscape. There is a
+    way around this idiosyncracy, however.</p>
+    </li>
+    <li><p>Select the front of the acrobat with the Selection tool (<img src =
+    "images/SelectionTool.gif" alt = "Selection Tool icon" width = "26">).</p>
+      <figure>
+        <img src = "images/SelectFrontOfAcrobat.gif" alt = "Selecting the front
+        of the acrobat" class = "img-fluid">
+        <figcaption>Selecting the front of the acrobat.</figcaption>
+      </figure>
+    </li>
+    <li><p>Now click on swatch PANTONE_193_C in the Swatches palette.</p>
+    <p>The color of the acrobat&rsquo;s front changes from PANTONE_116_C to
+    PANTONE_193_C. Notice that the white tinting is maintained.</p>
+      <figure>
+        <img src = "images/ChangeColorOfAcrobatFront.gif" alt = "Changing the
+        color of the front of the acrobat" class = "img-fluid">
+        <figcaption>Changing the color of the front of the acrobat.</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <p>You&rsquo;ve finished the lesson. In an ordinary workflow situation, you
+  would now be ready to send your artwork to a commercial press to be printed.
+  Include proofs of color separation setups when you send your electronic file
+  to a printer. Also tell your printer about any traps you created in the
+  artwork. Keep in mind that you must remain in close communication with your
+  printing professional for each print job. Each print job has unique
+  requirements that you must consider before you begin the process of color
+  separation.</p>
+</section>
+</div> <!-- End of class = row block -->
+<a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+class = "img-fluid"></a>
+
+<hr>
+
+<section>
+  <header>
+    <h2>Review Questions</h2>
+  </header>
+  <ol>
+    <li>How do the RGB and CMYK color gamuts affect the relationship between
+    on-screen colors and printed colors?
+    </li>
+    <li>How can you create a closer match between your on-screen colors and
+    printed colors?
+    </li>
+    <li>What is the benefit of printing interim drafts of your artwork to a
+    black-and-white desktop printer?
+    </li>
+    <li>What does the term color separation mean?
+    </li>
+    <li>What are two ways to output spot colors?
+    </li>
+    <li>What are the advantages of one- or two-color printing?
+    </li>
+    <li>What is trapping?
+    </li>
+    <li>What is a simple method you can use to create trap?
+    </li>
+  </ol>
+</section>
+<section>
+  <header>
+    <h2>Review Answers</h2>
+  </header>
+  <ol>
+    <li><p>Each color model has a gamut of color that overlaps, but does not
+    precisely match the others. Because monitors display color using the RGB
+    color gamut and printed artwork used the smaller CMYK color gamut, there
+    might be times when a printed color cannot precisely match an on-screen
+    color.</p>
+    </li>
+    <li><p>You can select one of Inkscape&rsquo;s built-in color management
+    profiles to better simulate the relationship betwen on-screen colors and
+    printed colors. You can choose View &gt; Proof Setup and select an output
+    device profile. Then choose View &gt; Proof Colors to get an on-screen
+    version of how the artwork will look when printed to the selected
+    device.</p>
+    </li>
+    <li><p>It&rsquo;s a good idea to print black-and-white drafts of your
+    artwork on a desktop printer to check the layout and the accuracy of text
+    and graphics in your publication before incurring the expense of printing
+    to a color printer or imagesetter (for separations).</p>
+    </li>
+    <li><p>Color separation refers to breaking down composite artwork into its
+    component colors &mdash; for example, using the four process colors (cyan,
+    magenta, yellow, and black) to reproduce a large portion of the visible
+    color spectrum.</p>
+    </li>
+    <li><p>You can convert a spot color to its process color equivalents if a
+    precise color match is not required, or you can output a spot color to its
+    own separation.</p>
+    </li>
+    <li><p>One- or two-color printing is less expensive than four-color
+    printing, and you can use spot colors for precise color matching.</p>
+    </li>
+    <li><p>Trapping is a technique developed by commercial print shops to
+    slightly overprint the colors along common edges, and it is used to
+    compensate for any gaps or color shifts that may occur between adjoining or
+    overlapping objects when printed.</p>
+    </li>
+    <li><p>You can specify objects to overprint, or print on top of, any of the
+    artwork under them. Overprinting is the simplest method you can use to
+    create a trap, which compensates for misregistration on press.</p>
+    </li>
+  </ol>
+</section>
+
+<div class = "row mb-1">
+<div class = "col-md-2">
+  <a href = "https://roy-torley.github.io/Inkscape_Tutorial/Inkscape_Tutorial_Contents.html"><img src = "images/ToCButton.png"
+  alt = "Link to Table of Contents" class = "img-fluid"></a>
+</div>
+  <a href = "#Top"><img src = "images/BackToTop.png" alt = "Back to Top link"
+  class = "img-fluid"></a>
+</div>
+</div>
+
+<!-- Creative Commons ShareAlike 4.0 International License information -->
+<div class = "row">
+<div class = "col-md-12">
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" >
+<img src = "images/CreativeCommonsLicenseLogo88x31.png"
+alt = "Creative Commons ShareAlike License"
+class = "img-fluid">&nbsp;This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
